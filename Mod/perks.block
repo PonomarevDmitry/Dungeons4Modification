@@ -409,7 +409,7 @@ evilperk_demons_research.buff
     Factor = factor_cost_res_demon
     Value
       ValueType = Constant
-      Value = -0.15
+      Value = -0.9
 evilperk_demons_revive_resource
   Include = evilperk_base
   EvilPerk
@@ -527,7 +527,7 @@ evilperk_general_research.buff
     Factor = factor_cost_res_dungeon
     Value
       ValueType = Constant
-      Value = -0.3
+      Value = -0.9
 evilperk_general_snots
   Include = evilperk_base
   EvilPerk
@@ -851,7 +851,7 @@ evilperk_horde_research.buff
     Factor = factor_cost_res_horde
     Value
       ValueType = Constant
-      Value = -0.15
+      Value = -0.9
 evilperk_horde_xp
   Include = evilperk_base
   EvilPerk
@@ -1217,7 +1217,7 @@ evilperk_undead_research.buff
     Factor = factor_cost_res_undead
     Value
       ValueType = Constant
-      Value = -0.15
+      Value = -0.9
 evilperk_undead_turned_hero
   Include = evilperk_base
   EvilPerk
