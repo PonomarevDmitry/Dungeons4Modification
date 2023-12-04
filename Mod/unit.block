@@ -9972,12 +9972,12 @@ unit_snot
   WorkerBrain
   Mover
     Speed = 9
-    SlowWhenTransportingFactor = 0.5
+    SlowWhenTransportingFactor = 1
     BattleSpeed = 9
   GoldDigBrain
-    DiggingGoldCapacity = 25
+    DiggingGoldCapacity = 100
     DigAnimation = anim_snot_dig
-    DigDamageBonusPerSecond = 2
+    DigDamageBonusPerSecond = 2000
   CustomUnitName
     Name = name_snot
   EvilHandPickup
@@ -10071,7 +10071,7 @@ unit_snot
     RequiredUnitLevel = 4
   TeleportToJob
     RequiredUnitLevel = 6
-    Cooldown = 15
+    Cooldown = 1
   EvilHandCarriedBrain
   VisualRepresentationByJob
     JobVisuals = Append
@@ -10100,8 +10100,8 @@ unit_snot
   VisualRepresentationChangeHandler
   Attack
     SkillDamageAmount = 5
-    SkillCooldown = 45
-    SkillRange = 40
+    SkillCooldown = 1
+    SkillRange = 4000
   Attachable
   InformWhenDied
     NotificationFirstTimeDied = notification_creature_lost
@@ -10113,7 +10113,7 @@ unit_snot
         PointAmount = 100
   ApplyBuffPeriodically
     BuffToApply = unit_snot.buff_dash
-    Intervall = 45
+    Intervall = 15
     Duration = 10
     RequiredLevel = 2
   ServerAnimation
