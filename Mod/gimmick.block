@@ -1763,7 +1763,7 @@ gimmick_powerchamber.buff_level
         Property = LevelUp.MaxLevel
         Value
           ValueType = StrenghtRounding
-          Value = x
+          Value = x*100
   BuffStrengthScalerActiveCount
     Target
       Required = Append
