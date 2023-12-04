@@ -10014,7 +10014,7 @@ unit_snot
     StoreTortureAction = interaction_torture_prepare_hero
   FillTileBrain
     FillTileAnimation = anim_snot_fill
-    TimeToFillTile = 10
+    TimeToFillTile = 1
   WorkerBringCorpses
   WorkerBuildRoom
     BuildAnimation = anim_snot_build_room
