@@ -5346,6 +5346,7 @@ unit_gnome
   Combat
     CombatType = Ranged
     MaxHealth = 190
+  LowPriorityFightTarget
   EvilSelectable
     GlobalSelectionCategory = F2_All, F4_Ranged, F3_IdleCreatures
     VisualSelectionRadius = 0.534979
@@ -5517,6 +5518,7 @@ unit_gnome_champion
     CombatType = Meele
     Armor = 2
     MaxHealth = 210
+  LowPriorityFightTarget
   EvilSelectable
     GlobalSelectionCategory = F2_All, F3_CloseCombat, F3_IdleCreatures
     VisualSelectionRadius = 0.824505
