@@ -1,0 +1,680 @@
+﻿creep_lavaling
+  Include = unit_creep
+  PrefabReference
+    ClientPrefab = 57f29fde1cdda1b49b4024c6df4616cf
+  Owner = AICreepLavaling12
+  EvilSelectable
+    SelectionColliderHeight = 1.031
+  DestroyWhenKilled
+    TimeUntilDespawn = 0
+  UiDataUnit
+    Portrait = edd1212a03dcdd547bcafee292d56a00
+    Icon = 180c786275813044a8803fea43063c6e
+    Title = unit_npc_fireelemental_capt
+  Combat
+    Armor = 1
+    MaxHealth = 400
+    CombatType = Ranged
+    DamageModifiers = Append
+      Item
+        Aspect = aspect_fire
+        Value = -60
+      Item
+        Aspect = aspect_ice
+        Value = 50
+      Item
+        Aspect = aspect_spells
+        Value = -25
+    WorthXp = 100
+  Attack
+    Range = 12
+    AttackDamageAmount = 25
+    AttackCooldown = 2.8
+    AttackAspects = Append
+      Item = aspect_fire
+    SkillDamageAmount = 0
+    AttackBonusAttacks = 1
+  Mover
+    Speed = 3
+    BattleSpeed = 3
+  SimpleSkillMaster
+    Skills = Append
+      Item
+        LocalName = defaultAttack
+        SkillDefinition = anim_default_attack_ranged_lavaling
+  AttackTarget
+    SimpleSpecialSkills = Append
+      Item
+        Name = defaultAttack
+        Template = creep_lavaling
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_unit_ranged
+      Item = actor_spawn
+      Item = actor_agressive
+  SpawnAnimation
+    Animation = anim_spawn
+  EntityType
+    Types = Append
+      Item = type_creep_lavaling
+  BuffResistances
+    EffectResistences = Lava
+  InformWhenDiscovered
+    Notification = notification_lavaling_spawn
+  DestroyObjectsHandler
+    DestroySkill
+      Name = defaultAttack
+      Template = creep_lavaling
+    OnEffectEvent
+      Name = OnEffect
+      Template = anim_default_attack_ranged_lavaling
+  FightActivity
+    AttackSkill
+      Name = defaultAttack
+      Template = creep_lavaling
+creep_lavaling_elite
+  Include = creep_lavaling
+  PrefabReference
+    ClientPrefab = f4000a24ced5907439f2e85fddffffe4
+  Attack
+    Range = 17
+    AttackDamageAmount = 30
+    AttackBonusAttacks = 1
+  Combat
+    Armor = 4
+    NonThreat = False
+    MaxHealth = 2500
+    WorthXp = 300
+    DamageModifiers
+      Item
+        Aspect = aspect_fire
+        Value = -60
+      Item
+        Aspect = aspect_ice
+        Value = 50
+      Item
+        Aspect = aspect_spells
+        Value = -25
+  UiDataUnit
+    AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+creep_lavaling_gold
+  Include = creep_lavaling_elite
+  RemovedComponent = VisualScale
+  PrefabReference
+    ClientPrefab = 420382fd38329e74e8a12c85eb2e94b2
+  Attack
+    AttackDamageAmount = 50
+    Range = 12
+  Combat
+    MaxHealth = 3700
+    Armor = 5
+    DamageModifiers
+      Item
+        Aspect = aspect_fire
+        Value = -80
+      Item
+        Aspect = aspect_ice
+        Value = 50
+      Item
+        Aspect = aspect_spells
+        Value = -25
+  UiDataUnit
+    AlternativeIcon = bd4b54e48e566224186e945715fcea47
+creep_manaling
+  Include = unit_combat_base
+  PrefabReference
+    ClientPrefab = ad11191e8a94ed44895a41e35eef540d a5b9bff3f866051488e3991c25db0bc0
+  Owner = AiCreepManaling13
+  Combat
+    AggressiveEffect = anim_unit_aggressive
+    Armor = 2
+    MaxHealth = 300
+    DamageModifiers = Append
+      Item
+        Aspect = aspect_magic
+        Value = -100
+    WorthXp = 100
+  Mover
+    BattleSpeed = 4
+    Speed = 4
+  SimpleSkillMaster
+    Skills = Append
+      Item
+        LocalName = attack
+        SkillDefinition = anim_default_attack_ranged_area_manaling
+  AttackTarget
+    SimpleSpecialSkills = Append
+      Item
+        Name = attack
+        Template = creep_manaling
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_unit_ranged
+      Item = actor_spawn
+      Item = actor_agressive
+  Attack
+    Range = 3
+    Area = 2
+    AttackDamageAmount = 4
+    AttackAspects = Append
+      Item = aspect_magic
+    AttackCooldown = 3
+    AttackBonusAttacks = 3
+  DestroyWhenKilled
+    TimeUntilDespawn = 5
+  Manaling
+    EatManaModule = TransformIntoModuleStatic
+    SearchAnimation = anim_manaling_search
+    EatManaAnimation = anim_manaling_eat
+    ConsumedManaPerInterval = 5
+    EatManaInterval = 3
+    DoEatEvent
+      Name = onEffect
+      Template = anim_manaling_eat
+    EatLoopGate
+      Name = loop_gate
+      Template = anim_manaling_eat
+  TransformIntoModule
+    TransformIntoTemplate = creep_manaling
+    EatEffectAnimation = anim_manaling_split
+    TransformIntoCount = 4
+  PathDistanceTracker
+  AggroCanAttackTracker
+  GoofAround
+    IdleActivities = Append
+      Item
+        IdleActivity = WaitRandom
+        Weight = 1
+      Item
+        IdleActivity = WanderRandom
+        Weight = 1
+    StartActivity = WaitRandom
+  WaitRandom
+  WanderRandom
+    PreferredRooms = Append
+      Item = roomid_arcanium
+    IgnoreRoomOwner = True
+  LevelUp
+    ReceiveFightXp = False
+    BaseMaxLevel = 6
+    LevelUpAnimation = anim_manaling_grow
+    LevelUpBuff = creep_manaling.buff_level_up
+    ShowLevelUp = False
+  EntityType
+    Types = Append
+      Item = type_creep
+      Item = type_creep_manaling
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 0.7
+      Offset = 0 0
+  FarseerBody
+    Radius = 0.6
+    Mass = 20
+  TutorialPopupTrigger
+    Trigger = Append
+      Item
+        Key = OnSpawn
+        Value = tut_popup_manaling_spawned
+      Item
+        Key = OnTransform
+        Value = tut_popup_manaling_transformed
+      Item
+        Key = OnLevelUp
+        Value = tut_popup_manaling_big
+  VisualScale
+  VisualRepresentation
+  FightActivity
+    AttackOnOurOwn = False
+    AttackSkill
+      Name = attack
+      Template = creep_manaling
+  SpawnAnimation
+    Animation = anim_spawn
+  EvilSelectable
+    HasBigCollider = False
+    IsMultiSelectable = False
+  EvilHandInteractable
+    RightClick = True
+  UiDataMinimapIcon
+    Icon = a7d6e9a89a967ea4dbcd37f677889f38
+    AlternativeIcon = 6a45bffa7f754534da90f491a9574595
+    DisableIfDead = True
+  VisualRepresentationChangeHandler
+    VisualSwitchAnimation = anim_manaling_visual_change
+    SwitchEvent
+      Name = on_visual_change
+      Template = anim_manaling_visual_change
+creep_manaling.buff_level_up
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    RemoveDeadTargets = False
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Combat.MaxHealthBase
+        Value
+          ValueType = Balancing
+          Value = 100|1.5|1|1|-1|6
+      Item
+        Property = LevelUp.XpForNextLevel
+        Value
+          ValueType = Balancing
+          Value = 25|1|1|0|1|6
+      Item
+        Property = Attack.AttackDamageAmount
+        Value
+          ValueType = Balancing
+          Value = 4|1|1|1|0|6
+      Item
+        Property = Combat.ArmorBase
+        Value
+          ValueType = Balancing
+          Value = 0.5|1|1|1|1|6
+      Item
+        Property = VisualScale.BuffScale
+        Value
+          ValueType = Balancing
+          Value = 0.25|1|1|1|1|6
+creep_manaling_elite
+  Include = creep_manaling
+  PrefabReference
+    ClientPrefab = 16e2ded1880f3de408e3a2509fb4ccc4 495f26f876f2c3048bc31e5fd0fa1fd0
+  LevelUp
+    Level = 3
+creep_manaling_gold
+  Include = creep_manaling
+  PrefabReference
+    ClientPrefab = 2d7a2d4793ebe9d45b15f5feaf51d92d a7e67c2d444b2594ba167158f468b069
+  LevelUp
+    Level = 5
+creep_room_base
+  Abstract = True
+  Include = hidden_room_base
+  DebugIcon = sv_label_2
+  MakeOnceSeen
+  MakeThenDestroyMakerOnceRaidDies
+  Maker
+  MakeThemGroupStrengthFixed
+creep_room_dwarves
+  Include = outpost_room_guard_with_guards
+  RemovedComponent = HeroOutpostRoom
+  RemovedComponent = MakeThenGiveMission
+  RemovedComponent = ScriptVariableContainer
+  Owner = AIPlayer5
+  MakeThenDestroyMakerOnceRaidDies
+creep_room_lavaling
+  Owner = AICreepLavaling12
+  CreepHive
+    RoomTemplate = creep_room_lavaling.room
+    SpawnerTemplate = 
+    Tags = Append
+      Item = Lavaling
+    HiveExtensionIntervalFallback = 999999
+    HiveRoomcountLimitFallback = 0
+    GuardRestockIntervalOverride = Int||lavalings_guardRestockInterval|
+    HiveExtensionIntervalOverride = Int||lavalings_hiveExtensionInterval|
+    HiveRoomcountLimitOverride = Int||lavalings_hiveRoomcountLimit|
+  Location
+    CanNotMove = True
+  ScriptVariableContainer
+  InformWhenDiscovered
+    Dialog = dlg_general_lavaling_room_found
+  PlaySoundWhileInRegion
+    Region = Inside
+    OnlyLocal = True
+    Sfx = atmo_room_lavaling_spawner_atmo_loop
+  ActivateInactiveByGameSetting
+    ActivateIfOrAbove = gs_common_secretrooms_normal
+  ConvertTileArea
+creep_room_lavaling.room
+  CreepRoom
+  TileArea
+    CanChange = False
+  Location
+    CanNotMove = True
+    PlacementMode = Zero
+  FloodFillTileArea
+    WallType = Lake
+creep_room_lavaling.spawner
+  Location
+  EvilSelectable
+    SelectionRadius = 1.89
+    SelectionColliderHeight = 1.83
+    HasBigCollider = False
+  FogOfWarHide
+  IsSeenBy
+  EntityType
+    Types = Append
+      Item = type_creep
+      Item = type_creep_lavaling_spawner
+  UiDataUnit
+    EntityType = Creep
+  UiDataMinimapIcon
+    Icon = e874b0594864cd34d8509e5e21f4041c
+  CreepSpawner
+  FloodFillTileArea
+    WallType = Lake
+  TileArea
+  EvilHandInteractable
+    RightClick = True
+creep_room_lavaling_with_spawner
+  Include = creep_room_lavaling
+  Owner = AICreepLavaling12
+  CreepHive
+    RoomTemplate = creep_room_lavaling_with_spawner.room
+    SpawnerTemplate = creep_room_lavaling_with_spawner.spawner
+    HiveRoomcountLimitOverride = Int||lavalings_hiveRoomcountLimit|
+    HiveExtensionIntervalOverride = Int||lavalings_hiveExtensionInterval|
+    GuardRestockIntervalOverride = Int||lavalings_guardRestockInterval|
+    HiveRoomcountLimitFallback = 0
+    HiveExtensionIntervalFallback = 999999
+  Location
+    CanNotMove = True
+  ScriptVariableContainer
+creep_room_lavaling_with_spawner.room
+  CreepRoom
+  TileArea
+    CanChange = False
+  Location
+    CanNotMove = True
+    PlacementMode = Zero
+  FloodFillTileArea
+    WallType = Lake
+creep_room_lavaling_with_spawner.spawner
+  RemovedComponent = TileArea
+  RemovedComponent = FloodFillTileArea
+  PrefabReference
+    ClientPrefab = 75bdd052bd2ee31468081163d9ad2fc4 a2c0b28129145a0438f6aee7c4df3506
+  Location
+    CanNotMove = True
+  EvilSelectable
+    SelectionColliderHeight = 1.83
+    SelectionRadius = 1.89
+    HasBigCollider = False
+  FogOfWarHide
+  IsSeenBy
+  EntityType
+    Types = Append
+      Item = type_creep
+      Item = type_creep_lavaling_spawner
+  UiDataUnit
+    EntityType = Creep
+  UiDataMinimapIcon
+    Icon = e874b0594864cd34d8509e5e21f4041c
+    DisableIfDead = True
+  CreepSpawner
+  FarseerBody
+    Mass = 500
+    Radius = 2.005584
+    DeactivateWhenDied = True
+    PassThroughEnemy = False
+    SoftPushFriends = True
+    Hold = False
+    NeverHardBlocks = False
+  Unit
+  CloseCombatTracker
+  DestroyWhenKilled
+    TimeUntilDespawn = 10
+  GUIStatusOverhead
+    Style = Auto
+    NameVisibility = Auto
+    MainbarVisibility = Auto
+    ShowMoreOnFocus = False
+    Priority = 0
+    ShowPlayerNameAsName = False
+  Stunned
+    StunnedAnimation = 
+    FreezeAnimation = 
+    CrystalizeAnimation = 
+    MagnetVisualization = 
+  ServerAnimation
+    ProvidedActors
+      Item = actor_gethit
+    VerifyActorSetup = False
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 2.655064
+  CostFieldAdditionalWhileAlive
+    Area = PhxCombinedSensor
+      Sensors = Append
+        Item = PhxOBBSensor
+          HalfWidth = 2
+          HalfHeight = 1
+          Offset = 0 -2.04 0
+        Item = PhxOBBSensor
+          HalfWidth = 1
+          HalfHeight = 2
+          Offset = 1.86 0 0
+        Item = PhxOBBSensor
+          HalfWidth = 1
+          HalfHeight = 2
+          Offset = -1.95 0 0
+  Combat
+    Armor = 2
+    MaxHealth = 10000
+    NoDamageVisualization = False
+    ShowInvulnerableAsImmuneText = False
+    ImmuneText = floating_immune
+    NonThreat = False
+    RegenerationRateOutsideCombat = 0
+    WorthXp = 0
+    CombatType = None
+    DamageModifiers
+    Ignored = False
+    Unkillable = False
+    Invulnerable = False
+    DamageTakenPercent = 0
+    SpellResistance = 0
+    MultiPlayerSpellResistance = 0
+    RegenerationEffect = 
+    ShieldEffect = 
+    AggressiveEffect = 
+    DeathEffect = 
+    HealthLinkedNeed = 
+  LowPriorityFightTarget
+  BuffAnimationHandler
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  ModifyPriorityFightScore
+    ScoreModification = -100000
+  BuffResistances
+    EffectResistences = Lava
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+creep_room_manaling
+  Include = combat_team_base
+  Owner = AiCreepManaling13
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Manaling
+  ActivateInactiveByGameSetting
+    ActivateIfOrAbove = gs_common_secretrooms_normal
+  ConvertTileArea
+  Location
+    CanNotMove = False
+creep_room_spiderling
+  Include = creep_room_spiderling_with_spawner
+  Owner = AiCreepSpiderling14
+  CreepHive
+    SpawnerTemplate = 
+  InformWhenDiscovered
+  PlaySoundWhileInRegion
+    Region = Inside
+    OnlyLocal = True
+    Sfx = atmo_room_spiderling_spawner_atmo_loop
+creep_room_spiderling_with_spawner
+  Owner = AiCreepSpiderling14
+  CreepHive
+    RoomTemplate = creep_room_spiderling_with_spawner.room
+    SpawnerTemplate = creep_room_spiderling_with_spawner.spawner
+    Tags = Append
+      Item = Spider
+    GuardRestockIntervalOverride = Int||spiderlings_guardRestockInterval|
+    HiveExtensionIntervalOverride = Int||spiderlings_hiveExtensionInterval|
+    HiveRoomcountLimitOverride = Int||spiderlings_hiveRoomcountLimit|
+    GuardRestockIntervalFallback = 60
+  Location
+    CanNotMove = True
+  ScriptVariableContainer
+  InformWhenDiscovered
+    Dialog = dlg_general_spider_room_found
+    Notification = notification_spider_room_found
+  ActivateInactiveByGameSetting
+    ActivateIfOrAbove = gs_common_secretrooms_normal
+  ConvertTileArea
+creep_room_spiderling_with_spawner.room
+  CreepRoom
+  TileArea
+    CanChange = False
+  Location
+    CanNotMove = True
+    PlacementMode = Zero
+  NoRoomAllowed
+    NoRoomUi = True
+    NoPickupOrbs = True
+  Room
+    MarkerTexture = 5ffd03f3619c9f84bb6c13c031f4b8f1
+    RoomColor = 1 0 0 1
+    RoomId = roomid_creep_spider
+    CanBeRemoved = False
+  AutoFillTileArea
+creep_room_spiderling_with_spawner.spawner
+  PrefabReference
+    ClientPrefab = f0798ed00e2b99945b56190d733c779d 5af8a8efa482475499bfda8bc491f380
+  Location
+    CanNotMove = True
+  FarseerBody
+    Mass = 500
+    Radius = 2.005584
+  Unit
+  CloseCombatTracker
+  EvilSelectable
+    SelectionColliderHeight = 1
+  FogOfWarHide
+  DestroyWhenKilled
+    TimeUntilDespawn = 10
+  GUIStatusOverhead
+    ShowMoreOnFocus = False
+  IsSeenBy
+  Stunned
+  EntityType
+    Types = Append
+      Item = type_creep
+      Item = type_creep_spiderling_spawner
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_gethit
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 2.655064
+  CostFieldAdditionalWhileAlive
+    Area = PhxCombinedSensor
+      Sensors
+        Item = PhxOBBSensor
+          HalfWidth = 2
+          HalfHeight = 1
+          Offset = 0 -2.04 0
+        Item = PhxOBBSensor
+          HalfWidth = 1
+          HalfHeight = 2
+          Offset = 1.86 0 0
+        Item = PhxOBBSensor
+          HalfWidth = 1
+          HalfHeight = 2
+          Offset = -1.95 0 0
+    RealCost = 200
+  Combat
+    MaxHealth = 3000
+  UiDataUnit
+    Title = object_creep_spawner_spider_capt
+    Description = ""
+    EntityType = Creep
+  UiDataMinimapIcon
+    Icon = 4ee84093af6a6794d8557b50b93487ad
+    DisableIfDead = True
+  CreepSpawner
+  LowPriorityFightTarget
+  BuffAnimationHandler
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  EvilHandInteractable
+    RightClick = True
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+creep_spawner_base
+  Abstract = True
+  PrefabReference
+    ClientPrefab = cbd50ce685d3d2c4a9dc3410accaf624
+  Owner = AIAngryMonster15
+  Location
+    CanNotMove = True
+  FarseerBody
+    Mass = 500
+    Radius = 3.064584
+  Unit
+  CloseCombatTracker
+  Combat
+    MaxHealth = 300
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 3.720809
+      Offset = 0 0
+  EvilSelectable
+    SelectionColliderHeight = 1
+  MakeSomeCombatTeam
+    Tags = Append
+  MakeRegularly
+  MakeExceptIfRaidsAlive
+  MakeThenGiveMission
+    Mission = heromission_destroyheart
+  RaidMember
+  FogOfWarHide
+  DestroyWhenKilled
+    TimeUntilDespawn = 10
+  GUIStatusOverhead
+    ShowMoreOnFocus = False
+  MakeExceptIfDead
+  Maker
+  IsSeenBy
+  Stunned
+  UiDataUnit
+  MakeThemGroupStrengthHeroLevel
+  EntityType
+    Types = Append
+      Item = type_creep
+  ServerAnimation
+  BuffAnimationHandler
+hero_spawner_dwarves
+  Include = creep_spawner_base
+  PrefabReference
+    ClientPrefab = ec54977700e5afc4393b468fb26254d6
+  Owner = AIPlayer5
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Dwarves
+  FarseerBody
+    Radius = 2.005584
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 2.655064
+      Offset = 0 0
+  CostFieldAdditionalWhileAlive
+    Area = PhxCombinedSensor
+      Sensors
+        Item = PhxOBBSensor
+        Item = PhxOBBSensor
+        Item = PhxOBBSensor
+  Combat
+    MaxHealth = 1000
+  UiDataUnit
+    Title = object_creep_spawner_spider_capt
+    Description = ""
+  EntityType
+    Types = Append
+      Item = type_spawner
+      Item = type_evilness_easy
+  MakeRegularly
+    FirstSpawnInterval = 30
+  DimensionRequirement

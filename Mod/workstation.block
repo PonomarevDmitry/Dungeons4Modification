@@ -1,0 +1,2230 @@
+﻿effect_allow_pause
+  Include = effect_base
+  WorkstationEffect
+    Target = User
+    Time = InternalMove
+  BuffProperties
+    Properties = Append
+      Item
+        Property = PauseWorkHandler.EligableForPause
+effect_attach_user
+  Include = effect_base
+  RemovedComponent = BuffProperties
+  WorkstationEffect
+    Time = Action
+    Target = User
+  Buff
+    Parts
+      Item = AttachToCaster
+      Item = WorkstationEffect
+  AttachToCaster
+effect_base
+  Abstract = True
+  Buff
+    Parts
+      Item = WorkstationEffect
+      Item = BuffProperties
+  WorkstationEffect
+  BuffProperties
+    Properties
+      Item
+        Property = FarseerBody.Hold
+effect_bath
+  Include = effect_base
+  WorkstationEffect
+    Time = InternalMove, Action
+    Target = User
+  Buff
+    Parts
+      Item = WorkstationEffect
+      Item = BuffProperties
+      Item = BuffNeedFulfillment
+  BuffNeedFulfillment
+    TargetNeeds
+      Item = need_bath
+    UseCasterStorage = True
+effect_dance
+  Include = effect_base
+  WorkstationEffect
+    Target = User
+    Time = InternalMove, Action
+  Buff
+    Parts
+      Item = WorkstationEffect
+      Item = BuffProperties
+      Item = BuffNeedFulfillment
+  BuffNeedFulfillment
+    TargetNeeds
+      Item = need_dance
+effect_hold_body
+  Include = effect_base
+  WorkstationEffect
+    Target = User
+effect_prevent_interaction
+  Include = effect_base
+  WorkstationEffect
+    Time = Action
+    Target = User
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Combat.Ignored
+      Item
+        Property = WorkstationUser.PreventFightTransition
+      Item
+        Property = FarseerBody.PassThroughEnemy
+effect_prevent_strike_visual
+  Include = effect_base
+  BuffProperties
+    Properties = Append
+      Item
+        Property = MonsterOnStrike.PreventStrikeAnim
+        Value
+          ValueType = Constant
+          Value = 
+  WorkstationEffect
+    Target = User
+    Time = Action
+effect_production
+  Include = effect_base
+  Buff
+    BuffStrenghtScaler = WorkerCollectionStrenghtScaler
+  WorkstationEffect
+    Target = Workstation
+    Time = Action
+  BuffProperties
+    Properties
+      Item
+        Property = FarseerBody.Hold
+      Item
+        Property = GeneralProduction.ProductionSpeed
+        Value
+          ValueType = Strength
+          Value = x
+  WorkerCollectionStrenghtScaler
+    Targets = Append
+      Item
+        Target = workplace_production_base
+        TargetState = InternalMove, Action
+        Extern = False
+        MinWorkTime = 0
+      Item
+        Target = workplace_revive_thalya
+        TargetState = InternalMove, Action
+        Extern = False
+        MinWorkTime = 0
+      Item
+        Target = workplace_totem_reviveunit
+        TargetState = InternalMove, Action
+        Extern = False
+        MinWorkTime = 0
+      Item
+        Target = workplace_dance
+        TargetState = InternalMove, Action
+        Extern = False
+        MinWorkTime = 0
+      Item
+        Target = workplace_worship
+        TargetState = InternalMove, Action
+        Extern = False
+        MinWorkTime = 0
+      Item
+        Target = workstation_gimmick_workshop_battery.produce
+        TargetState = InternalMove, Action
+        Extern = False
+        MinWorkTime = 0
+      Item
+        Target = workstation_gimmick_workshop_battery.produce_2
+        TargetState = InternalMove, Action
+        Extern = False
+        MinWorkTime = 0
+      Item
+        Target = workplace_wait
+        TargetState = InternalMove, Action
+        Extern = False
+        MinWorkTime = 0
+        MaxHealthPercent = -1
+effect_production_wait
+  Include = effect_production
+  RemovedComponent = WorkerCollectionStrenghtScaler
+  WorkstationEffect
+    Time = -1
+  Buff
+    BuffStrenghtScaler = 
+effect_revive_talya
+  Include = effect_base
+  BuffProperties
+    Properties = Append
+      Item
+        Property = GeneralProduction.ProductionSpeed
+        Value
+          ValueType = Constant
+          Value = 1
+  WorkstationEffect
+    Target = Workstation
+    Time = Action
+effect_sleep
+  Include = effect_base
+  WorkstationEffect
+    Target = User
+    Time = Action
+  Buff
+    Parts
+      Item = WorkstationEffect
+      Item = BuffProperties
+      Item = BuffNeedFulfillment
+  BuffNeedFulfillment
+    TargetNeeds
+      Item = need_sleep
+      Item = need_healing
+effect_torture_master
+  Include = effect_base
+  WorkstationEffect
+    Time = Action
+    Target = -1
+  Buff
+    Parts
+      Item = WorkstationEffect
+      Item = BuffProperties
+      Item = BuffNeedFulfillment
+  BuffNeedFulfillment
+    TargetNeeds
+      Item = need_torture
+  BuffProperties
+    Properties
+      Item
+        Property = FarseerBody.Hold
+      Item
+        Property = GeneralProduction.ProductionSpeed
+        Value
+          ValueType = Constant
+          Value = 1
+effect_torture_worker
+  Include = effect_base
+  WorkstationEffect
+    Target = User
+    Time = Action
+  Buff
+    Parts
+      Item = WorkstationEffect
+      Item = BuffProperties
+      Item = BuffTortureModule
+  BuffTortureModule
+effect_train_noexp
+  Include = effect_base
+  WorkstationEffect
+    Time = InternalMove, Action
+    Target = User
+  Buff
+    Parts
+      Item = WorkstationEffect
+      Item = BuffProperties
+      Item = BuffNeedFulfillment
+  BuffNeedFulfillment
+    TargetNeeds
+      Item = need_train
+effect_train_withexp
+  Include = effect_train_noexp
+  Buff
+    Parts
+      Item = WorkstationEffect
+      Item = BuffProperties
+      Item = BuffNeedFulfillment
+      Item = BuffPartGainExp
+    BuffStrenghtScaler = RoomEfficiencyStrengthScaler
+  BuffPartGainExp
+    ExpPerCycle
+      Value = x*10
+      ValueType = Strength
+    TimePerCycle = 3
+    StaticExpGainFactor = factor_exp_gain_arena
+    GainedLevelCounter = stat_arena_lvlups
+    GainedExpCounter = stat_xp_gain_from_arena
+  RoomEfficiencyStrengthScaler
+effect_worship
+  Include = effect_base
+  WorkstationEffect
+    Time = Action
+    Target = User
+  Buff
+    Parts
+      Item = WorkstationEffect
+      Item = BuffProperties
+      Item = BuffNeedFulfillment
+  BuffNeedFulfillment
+    TargetNeeds
+      Item = need_worship
+group_base
+  Abstract = True
+  WorkplaceGroup
+group_potionlodge
+  Include = group_base
+  WorkplaceGroup
+    Workplaces = Append
+      Item = workplace_production_potionlodge
+    Limit = ConstantUserLimitModule
+  ConstantUserLimitModule
+    Limit = 1
+group_production_arcanium
+  Include = group_base
+  WorkplaceGroup
+    Workplaces = Append
+      Item = workplace_production_arcanium
+group_production_brewery
+  Include = group_base
+  WorkplaceGroup
+    Workplaces = Append
+      Item = workplace_production_brewery_fire
+      Item = workplace_production_brewery_tap
+      Item = workplace_production_brewery_cauldron
+    Limit = ConstantUserLimitModule
+  ConstantUserLimitModule
+    Limit = 1
+group_production_workshop
+  Include = group_base
+  WorkplaceGroup
+    Workplaces = Append
+      Item = workplace_production_workshop_levers
+      Item = workplace_production_workshop_wheel
+    Limit = ConstantUserLimitModule
+  ConstantUserLimitModule
+    Limit = 1
+group_relaxcamber_main
+  Include = group_base
+  WorkplaceGroup
+    Workplaces = Append
+      Item = workplace_relaxchamber_bath
+    Limit = RoomTilesUserLimitModule
+  RoomTilesUserLimitModule
+    OnlyInner = True
+  LevelUserSizeModule
+group_torture_worker
+  Include = group_base
+  WorkplaceGroup
+    Workplaces = Append
+      Item = workplace_torture_wait_worker
+    Limit = OtherWorkplaceUserCountLimitModule
+  OtherWorkplaceUserCountLimitModule
+    UserCountSources
+      Item
+        Target = workplace_torture_wait
+        TargetState = InternalMove, Action
+        Extern = False
+      Item
+        Target = workplace_torture_master_backup
+        TargetState = All
+        Extern = True
+group_totem
+  Include = group_base
+  WorkplaceGroup
+    Workplaces = Append
+      Item = workplace_totem_storeunit
+      Item = workplace_totem_reviveunit
+      Item = workplace_totem_levers
+    Limit = ConstantUserLimitModule
+  ConstantUserLimitModule
+    Limit = 1
+interaction_base
+  Abstract = True
+  WorkstationInteraction
+interaction_crypta_setup_corpse
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_crypta
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_setup_crypta
+        Required = RequireAllway
+interaction_dance
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_necrodanicon
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_dance
+        Required = RequireAllway
+    ActivityType = Dance
+  NeedDurationModule
+    TargetNeeds
+      Item = need_dance
+interaction_graveyard_setup_corpse
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_sleep_graveyard
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_setup_graveyard
+        Required = RequireAllway
+interaction_heal_graveyard
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_sleep_graveyard
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_pickup
+          Extern = True
+        Required = RequireOnlyWhenNotFinished
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_heal_graveyard
+        Required = RequireAllway
+    ActivityType = Resting
+interaction_patrol
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_guardroom
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          Extern = False
+          TargetWorkplace = workplace_patrol
+          Selector = Nearest
+        Required = RequireAllway
+    ActivityType = Guard
+interaction_production_arcanium
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_arcanium
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = group_production_arcanium
+        Required = RequireAllway
+    ActivityType = ProduceMana
+interaction_production_brewery
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_brewery
+    Interaction
+      Item = SingleInstructionEntry
+        Repeat = False
+        Instruction
+          TargetWorkplace = workplace_production_brewery_fire
+          Selector = Random
+        Required = RequireAllway
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_production_brewery_tap
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_production_brewery_cauldron
+        PreventWait = True
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_wait
+        Repeat = True
+        PreventWait = True
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_pickup
+        GroupReservation = group_production_brewery
+        PreventWait = False
+      Item = SingleInstructionEntry
+        Required = None
+        GroupReservation = group_production_brewery
+        Instruction
+          Extern = True
+          TargetWorkplace = workplace_store_room
+        PreventWait = True
+    ActivityType = ProduceBeer
+    StartConditions = Append
+      Item = WorkstationInteractionOnlyWhenFreeStorageStatic
+  WorkstationInteractionOnlyWhenFreeStorage
+interaction_production_potionlodge
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_potionlodge
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_production_potionlodge
+        Required = RequireAllway
+        Repeat = False
+      Item = SingleInstructionEntry
+        Instruction
+          Extern = False
+          TargetWorkplace = workplace_wait
+        GroupReservation = group_potionlodge
+        PreventWait = True
+        Required = None
+        Repeat = True
+      Item = SingleInstructionEntry
+        Instruction
+          Extern = True
+          TargetWorkplace = workplace_pickup
+        Required = None
+        GroupReservation = group_potionlodge
+        PreventWait = False
+      Item = SingleInstructionEntry
+        Instruction
+          Extern = True
+          TargetWorkplace = workplace_store_room
+        PreventWait = True
+        GroupReservation = group_potionlodge
+    ActivityType = WorkerProducePotions
+    StartConditions = Append
+      Item = WorkstationInteractionOnlyWhenFreeStorageStatic
+  WorkstationInteractionOnlyWhenFreeStorage
+interaction_production_workshop
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_workshop
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_production_workshop_levers
+        Required = RequireAllway
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_production_workshop_wheel
+        PreventWait = True
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_wait
+        Repeat = True
+        PreventWait = True
+        GroupReservation = group_production_workshop
+      Item = SingleInstructionEntry
+        GroupReservation = group_production_workshop
+        Instruction
+          TargetWorkplace = workplace_pickup
+          Selector = Nearest
+        PreventWait = False
+      Item = SingleInstructionEntry
+        Required = None
+        GroupReservation = group_production_workshop
+        Instruction
+          Extern = True
+          TargetWorkplace = workplace_store_room
+        PreventWait = True
+    ActivityType = WorkerProduceToolboxes
+    StartConditions = Append
+      Item = WorkstationInteractionOnlyWhenFreeStorageStatic
+  WorkstationInteractionOnlyWhenFreeStorage
+interaction_relaxchamaber_refillmana
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_relaxchamber
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          Extern = False
+          TargetWorkplace = workplace_relaxchamber_refilmana
+          Selector = Nearest
+        Required = RequireAllway
+    ActivityType = WorkerRefillBath
+interaction_relaxchamber_bath
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_relaxchamber
+    Interaction
+      Item = SelectorInstructionEntry
+        ToSelectFrom = Append
+          Item
+            Extern = False
+            TargetWorkplace = workplace_relaxchamber_bath
+            Selector = Nearest
+          Item
+            Extern = False
+            TargetWorkplace = workplace_relaxchamber_wait
+            Selector = Nearest
+        Required = RequireAllway
+        PreventWait = True
+        SelectionTarget = workplace_relaxchamber_bath
+        Repeat = True
+    ActivityType = Bath
+interaction_revive_thalia
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_throneroom
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_revive_thalya
+        Required = RequireAllway
+    ActivityType = WorkerResurrectThalya
+interaction_sleep
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_sleep
+    Interaction
+      Item = SingleInstructionEntry
+        Required = RequireAllway
+        Instruction
+          TargetWorkplace = workplace_sleep
+    ActivityType = Sleep
+interaction_sleep_crypta
+  Include = interaction_sleep_graveyard
+  WorkstationInteraction
+    TargetWorkstation = workstation_crypta
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_sleep_crypta
+        Repeat = False
+        PreventWait = False
+        GroupReservation = 
+        Required = RequireAllway
+    ActivityType = Heal
+interaction_sleep_graveyard
+  Include = interaction_sleep
+  WorkstationInteraction
+    TargetWorkstation = workstation_sleep_graveyard
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_sleep_graveyard
+        Repeat = False
+        PreventWait = False
+        GroupReservation = 
+        Required = RequireAllway
+interaction_thalya_relax
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_throneroom
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_throne_thalya
+        Required = RequireAllway
+interaction_torture_prepare_hero
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_torture
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          Extern = False
+          TargetWorkplace = workplace_torture_fill
+          Selector = Nearest
+        Required = RequireAllway
+        PreventWait = True
+    ActivityType = WorkerDragHeroPrison
+interaction_torture_prepare_worker
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_torture
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          Extern = True
+          TargetWorkplace = workplace_torture_fill_worker
+          Selector = Nearest
+        Required = RequireAllway
+        GroupReservation = group_torture_worker
+        PreventWait = True
+    ActivityType = WorkerTorture
+interaction_totem_direct
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_totem
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_totem_storeunit
+          Selector = Nearest
+        Required = RequireOnlyWhenNotFinished
+        PreventWait = True
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_totem_levers
+          Selector = Nearest
+        Required = None
+        PreventWait = True
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_totem_reviveunit
+        Required = None
+        PreventWait = True
+interaction_totem_revive
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_totem
+    Interaction
+      Item = SelectorInstructionEntry
+        Required = RequireAllway
+        GroupReservation = group_totem
+        ToSelectFrom
+          Item
+            TargetWorkplace = workplace_totem_levers
+          Item
+            Extern = False
+            TargetWorkplace = workplace_totem_storeunit
+          Item
+            Extern = True
+            TargetWorkplace = workplace_pickup
+            Selector = Nearest
+        SelectionTarget = workplace_totem_levers
+        PreventWait = False
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_totem_reviveunit
+        GroupReservation = group_totem
+        Required = None
+        PreventWait = True
+    ActivityType = Resurrect
+interaction_torture_master
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_torture
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_torture_wait
+        Required = RequireAllway
+        Repeat = True
+      Item = SelectorInstructionEntry
+        ToSelectFrom
+          Item
+            Extern = True
+            TargetWorkplace = workplace_torture_master
+          Item
+            Extern = True
+            TargetWorkplace = workplace_torture_master_backup
+    ActivityType = Torture
+interaction_train
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_arena
+    Interaction
+      Item = SelectorInstructionEntry
+        Required = RequireAllway
+        ToSelectFrom
+          Item
+            TargetWorkplace = workplace_train_withexp
+            Extern = True
+          Item
+            TargetWorkplace = workplace_train_noexp
+    ActivityType = Train
+interaction_train_idle
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_arena
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          Extern = False
+          TargetWorkplace = workplace_train_withexp
+          Selector = Nearest
+        Required = RequireAllway
+        PreventWait = True
+    ActivityType = Train
+interaction_train_idle_demon
+  Include = interaction_train_idle
+interaction_train_idle_undead
+  Include = interaction_train_idle_demon
+interaction_trap_hamster_driver
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_trap_hamster_wheel
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_trap_hamster_driver
+        Required = RequireAllway
+    ActivityType = WorkerHamster
+interaction_trap_restock
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_trap
+    Interaction
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_trap_restock
+        Required = RequireAllway
+    ActivityType = WorkerBuildTrap
+interaction_trap_restock_complex
+  Include = interaction_trap_restock
+  WorkstationInteraction
+    TargetWorkstation = workstation_trap_complex
+interaction_vortex_fill
+  Include = interaction_base
+  WorkstationInteraction
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_vortex_fill
+        Required = RequireAllway
+    TargetWorkstation = workstation_gimmick_vortex
+    ActivityType = WorkerDragCreature
+interaction_worship
+  Include = interaction_base
+  WorkstationInteraction
+    TargetWorkstation = workstation_room_temple
+    Interaction
+      Item = SingleInstructionEntry
+        Required = RequireAllway
+        Instruction
+          TargetWorkplace = workplace_worship
+    ActivityType = Worship
+workplace_base
+  Abstract = True
+  Workplace
+workplace_dance
+  Include = workplace_base
+  Workplace
+    Limit = RoomTilesUserLimitModule
+    LocationModule = RandomRoomTileLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects
+      Item = effect_dance
+      Item = effect_production
+      Item = effect_prevent_strike_visual
+    RepeartTimingModule = NeedDurationModule
+    UserBuffOnFinishWork = workplace_dance.buff_finish_work
+    FinishBuffDuration = 300
+    WorkTimeCounter = stat_total_dance_time
+  RoomTilesUserLimitModule
+    OnlyInner = True
+  RandomRoomTileLocationModule
+    TileTarget = Inner
+  RandomTimingModule
+    MinDuration = 5
+    MaxDuration = 10
+    TimingPriority = False
+  NeedDurationModule
+    TargetNeeds
+      Item = need_dance
+    FallbackTimingModule = ConstantWorkplaceTimingModule
+  AnimationWorkplaceActionModule
+    TimingModule = RandomTimingModule
+    Config
+      Animation = anim_undead_dance
+      UserActorSlot
+        Name = unit
+        Template = anim_undead_dance
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  EntityType
+    Types = Append
+      Item = type_necrodancicon_workplace
+  ConstantWorkplaceTimingModule
+    Duration = 25
+workplace_dance.buff_finish_work
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    Category = workplace_dance.buff_finish_work
+  BuffProperties
+    Properties = Append
+      Item
+        Property = LevelUp.XpGainBonusFactor
+        Value
+          ValueType = Strength
+          Value = x
+  BuffCategory
+workplace_heal_graveyard
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = HealWithCargoActionModule
+    Trigger = Append
+      Item = OtherWorkplaceTriggerDefinition
+        Targets = Append
+          Item
+            Target = workplace_sleep
+            TargetState = Action
+            Extern = False
+            MinWorkTime = 0
+            MaxHealthPercent = 50
+    Effects = Append
+      Item = effect_hold_body
+  ConstantWorkplaceLocationModule
+  HealWithCargoActionModule
+workplace_patrol
+  Include = workplace_base
+  Workplace
+    LocationModule = RandomRoomTileLocationModule
+    ActionModule = WaitingWorkplaceActionModule
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = StorageMinCapacityTrigger
+  RandomRoomTileLocationModule
+  WaitingWorkplaceActionModule
+    TimingModule = RandomTimingModule
+  RandomTimingModule
+    MinDuration = 1
+    MaxDuration = 5
+workplace_pickup
+  Include = workplace_base
+  Workplace
+    LocationModule = WorkstationPickUpLocationModule
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = HasPickupOutputTrigger
+    ActionModule = PickupCargoWorkplaceActionModule
+  WorkstationPickUpLocationModule
+  PickupCargoWorkplaceActionModule
+workplace_production_arcanium
+  Include = workplace_production_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = RoomStorageTrigger
+    WorkTimeCounter = stat_work_time_for_mana
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -2 2 0
+  AnimationWorkplaceActionModule
+    TimingModule = EndlessTimingModule
+    Config
+      Animation = anim_gimmick_arcanium_workplace
+      UserActorSlot
+        Name = snot
+        Template = anim_gimmick_arcanium_workplace
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  EndlessTimingModule
+workplace_production_base
+  Abstract = True
+  Include = workplace_base
+  Workplace
+    Effects
+      Item = effect_production
+      Item = effect_allow_pause
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = BuffableWorkplaceTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = CanProduceTrigger
+workplace_production_brewery_cauldron
+  Include = workplace_production_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+  AnimationWorkplaceActionModule
+    TimingModule = ProductionTimingModule
+    Config
+      Animation = anim_gimmick_brewery_cauldron
+      UserActorSlot
+        Name = snot
+        Template = anim_gimmick_brewery_cauldron
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -1.3 2.5 160
+  ProductionTimingModule
+workplace_production_brewery_fire
+  Include = workplace_production_base
+  Workplace
+    ActionModule = AnimationWorkplaceActionModule
+    LocationModule = ConstantWorkplaceLocationModule
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -2.1 -3.9 10
+  ConstantWorkplaceTimingModule
+    Duration = 4
+    TimingPriority = False
+  AnimationWorkplaceActionModule
+    TimingModule = ConstantWorkplaceTimingModule
+    Config
+      Animation = anim_gimmick_brewery_fire
+      UserActorSlot
+        Name = snot
+        Template = anim_gimmick_brewery_fire
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+workplace_production_brewery_tap
+  Include = workplace_production_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+  AnimationWorkplaceActionModule
+    TimingModule = ConstantWorkplaceTimingModule
+    Config
+      Animation = anim_gimmick_brewery_tap
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      UserActorSlot
+        Name = snot
+        Template = anim_gimmick_brewery_tap
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 1 -4 45
+  ConstantWorkplaceTimingModule
+    Duration = 4
+    TimingPriority = False
+workplace_production_potionlodge
+  Include = workplace_production_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -0.1 -2.66 0
+  ProductionTimingModule
+  AnimationWorkplaceActionModule
+    TimingModule = ProductionTimingModule
+    Config
+      Animation = anim_gimmick_potion
+      UserActorSlot
+        Name = snot
+        Template = anim_gimmick_potion
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+workplace_production_workshop
+  Include = workplace_production_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = WaitingWorkplaceActionModule
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 2 0 180
+  ConstantWorkplaceTimingModule
+    Duration = 4
+  WaitingWorkplaceActionModule
+    TimingModule = ConstantWorkplaceTimingModule
+workplace_production_workshop_levers
+  Include = workplace_production_workshop
+  RemovedComponent = WaitingWorkplaceActionModule
+  RemovedComponent = ConstantWorkplaceTimingModule
+  Workplace
+    ActionModule = AnimationWorkplaceActionModule
+  AnimationWorkplaceActionModule
+    TimingModule = FullProductionDurationTimingModule
+    Config
+      Animation = anim_gimmick_workshop_levers
+      UserActorSlot
+        Name = user
+        Template = anim_gimmick_workshop_levers
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -4.4 -0.7 90
+  FullProductionDurationTimingModule
+    ProductionDurationFactor = 25
+    MaxTimeValue = 4
+workplace_production_workshop_wheel
+  Include = workplace_production_workshop
+  RemovedComponent = ConstantWorkplaceTimingModule
+  RemovedComponent = WaitingWorkplaceActionModule
+  Workplace
+    ActionModule = AnimationWorkplaceActionModule
+  AnimationWorkplaceActionModule
+    TimingModule = ProductionTimingModule
+    Config
+      Animation = anim_gimmick_workshop_wheel
+      UserActorSlot
+        Name = user
+        Template = anim_gimmick_workshop_wheel
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -2 2 270
+  ProductionTimingModule
+workplace_refinement_base
+  Abstract = True
+  Include = workplace_production_base
+  Workplace
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = HasInputResourcesTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+workplace_relaxchamber_bath
+  Include = workplace_base
+  Workplace
+    LocationModule = RandomRoomTileLocationModule
+    Limit = RoomTilesUserLimitModule
+    ActionModule = AnimationWorkplaceActionModule
+    RepeartTimingModule = NeedDurationModule
+    Effects
+      Item = effect_bath
+      Item = effect_prevent_strike_visual
+    Trigger
+      Item = InternalStorageTriggerDefinition
+        Type = InternalCurrencyStorageTrigger
+        TargetStorage
+          Item
+            Name = mana_pool
+            Template = room_relaxchamber
+  RandomRoomTileLocationModule
+    TileTarget = Inner
+  RoomTilesUserLimitModule
+    OnlyInner = True
+  NeedDurationModule
+    TargetNeeds
+      Item = need_bath
+    FallbackTimingModule = RandomTimingModule
+  AnimationWorkplaceActionModule
+    TimingModule = NeedDurationModule
+    Config
+      Animation = anim_monster_relax
+      UserActorSlot
+        Name = unit
+        Template = anim_monster_relax
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  RandomTimingModule
+    MinDuration = 20
+    MaxDuration = 40
+workplace_relaxchamber_refilmana
+  Include = workplace_base
+  Workplace
+    Trigger
+      Item = InternalStorageTriggerDefinition
+        Type = AutoRestockInternalStorage
+        TargetStorage
+          Item
+            Name = mana_pool
+            Template = room_relaxchamber
+    LocationModule = RandomRoomTileLocationModule
+    ActionModule = StoreCurrencyActionModule
+    Effects
+  RandomRoomTileLocationModule
+    TileTarget = Outer
+    PositionTarget = NextToInnerTile
+    RotationTarget = ToNextInnerTile
+  StoreCurrencyActionModule
+    TargetStorage
+      Name = mana_pool
+      Template = room_relaxchamber
+workplace_relaxchamber_wait
+  Include = workplace_base
+  Workplace
+    LocationModule = RandomRoomTileLocationModule
+    ActionModule = WaitingWorkplaceActionModule
+    Trigger
+      Item = InternalStorageTriggerDefinition
+        Type = InternalCurrencyStorageTrigger
+        TargetStorage
+          Item
+            Name = mana_pool
+            Template = room_relaxchamber
+  RandomRoomTileLocationModule
+    TileTarget = Outer
+    PositionTarget = NextToInnerTile
+    RotationTarget = ToNextInnerTile
+  WaitingWorkplaceActionModule
+    TimingModule = EndlessTimingModule
+  EndlessTimingModule
+workplace_revive_thalya
+  Include = workplace_base
+  Workplace
+    LocationModule = FixedPositionListModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects = Append
+      Item = effect_revive_talya
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = CanProduceTrigger
+    Limit = ConstantUserLimitModule
+  EndlessTimingModule
+  ConstantUserLimitModule
+    Limit = 35
+  AnimationWorkplaceActionModule
+    TimingModule = EndlessTimingModule
+    Config
+      Animation = anim_snot_pray
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+      UserActorSlot
+        Name = snot
+        Template = anim_snot_pray
+  FixedPositionListModule
+    TargetLocations = Append
+      Item = 11.2 -13.6 0
+      Item = 14.1 -11.8 0
+      Item = 11.6 -12 0
+      Item = 13.3 -9.9 0
+      Item = 11.7 -11 0
+      Item = 9.8 -14.9 0
+      Item = 9.9 -13 0
+      Item = 10.1 -11.4 0
+      Item = 9.2 -16.5 0
+      Item = 10.5 -17.3 0
+      Item = 12.2 -17.3 0
+      Item = 14.8 -10.4 0
+      Item = 15.6 -9 0
+      Item = 17.3 -9.4 0
+      Item = 17.1 -10.9 0
+      Item = 17.3 -12.6 0
+      Item = 11.8 -9.6 0
+      Item = 10.9 -8.5 0
+      Item = 10.2 -9.8 0
+      Item = 8.8 -10.3 0
+      Item = 9 -9.1 0
+      Item = 9.9 -7.9 0
+      Item = 7.7 -9.6 0
+      Item = 8 -8.3 0
+      Item = 9.1 -7.3 0
+      Item = 7.9 -7.1 0
+      Item = 6.5 -8.4 0
+      Item = 8.4 -5.9 0
+      Item = 6.6 -6.9 0
+      Item = 5 -8 0
+      Item = 3.3 -9.3 0
+      Item = 3.5 -7.7 0
+      Item = 5.1 -6.6 0
+      Item = 7.2 -5.5 0
+      Item = 7.9 -4 0
+      Item = 5.9 -5 0
+      Item = 3.7 -6.1 0
+      Item = 4.3 -4.5 0
+      Item = 6.3 -3.4 0
+      Item = 4.8 -2.8 0
+workplace_setup_crypta
+  Include = workplace_setup_graveyard
+  UserRestrictionDraggingCorpse
+    TargetStorage = room_crypta.ghost_storage_id
+workplace_setup_graveyard
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = SetupCorpseActionModule
+    UserRestrictions = Append
+      Item = UserRestrictionDraggingCorpse
+  ConstantWorkplaceLocationModule
+  SetupCorpseActionModule
+  UserRestrictionDraggingCorpse
+    TargetStorage = gimmick_graveyard_base.storage_id
+    MatchCorpseGimmick = True
+workplace_sleep
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = Combat
+    Effects
+      Item = effect_sleep
+      Item = effect_prevent_interaction
+      Item = effect_prevent_strike_visual
+    WorkCounter = stat_horde_creatures_slept_in_hideout
+  NeedDurationModule
+    TargetNeeds
+      Item = need_sleep
+      Item = need_healing
+  AnimationWorkplaceActionModule
+    TimingModule = NeedDurationModule
+    Config
+      Animation = anim_monster_rest
+      UserActorSlot
+        Name = actor
+        Template = anim_monster_rest
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  ConstantWorkplaceLocationModule
+workplace_sleep_crypta
+  Include = workplace_sleep_graveyard
+  RemovedComponent = AnimationWorkplaceActionModule
+  Workplace
+    ActionModule = WaitingWorkplaceActionModule
+  WaitingWorkplaceActionModule
+    TimingModule = NeedDurationModule
+workplace_sleep_graveyard
+  Include = workplace_sleep
+  Workplace
+    WorkCounter = 
+workplace_store_room
+  Include = workplace_base
+  Workplace
+    LocationModule = RoomStorageLocationModule
+    ActionModule = StoreRoomWorkplaceActionModule
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = RoomStorageTrigger
+    UserRestrictions = Append
+      Item = UserRestrictionCarry
+  RoomStorageLocationModule
+  StoreRoomWorkplaceActionModule
+  UserRestrictionCarry
+workplace_throne_thalya
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects = Append
+      Item = effect_hold_body
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 12.85 -12.68 133.39
+  RandomTimingModule
+    MinDuration = 50
+    MaxDuration = 75
+  AnimationWorkplaceActionModule
+    TimingModule = RandomTimingModule
+    Config
+      Animation = anim_thalya_sit
+      UserActorSlot
+        Name = thalya
+        Template = anim_thalya_sit
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+workplace_torture_fill
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = SetupCorpseActionModule
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = TortureModule
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 0 2.95 0
+  SetupCorpseActionModule
+workplace_torture_fill_worker
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = WaitingWorkplaceActionModule
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = OtherWorkplaceTriggerDefinition
+        Targets
+          Item
+            Target = workplace_torture_master_backup
+            TargetState = All
+            Extern = False
+          Item
+            Target = workplace_torture_wait
+            TargetState = InternalMove, Action
+            Extern = True
+      Item = WorkplaceTriggerDefiniton
+        Type = TortureModule
+    Effects
+      Item = effect_torture_worker
+  ConstantWorkplaceLocationModule
+  WaitingWorkplaceActionModule
+    TimingModule = EndlessTimingModule
+  EndlessTimingModule
+workplace_torture_master
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceTortureModule
+    Effects
+      Item = effect_torture_master
+      Item = effect_prevent_strike_visual
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = CanProduceTrigger
+      Item = OtherWorkplaceTriggerDefinition
+        TargetCount = 0
+        Targets
+          Item
+            Target = workplace_torture_fill_worker
+            TargetState = All
+            Extern = False
+    WorkCounter = stat_tortured_creatures
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -2.4 2.4 145
+  NeedDurationModule
+    TargetNeeds
+      Item = need_torture
+    ForceTiming = False
+  AnimationWorkplaceTortureModule
+    TimingModule = NeedDurationModule
+    Animation = anim_demon_torture
+    UserSlot
+      Name = unit
+      Template = anim_demon_torture
+    TorturesUnitSlot
+      Name = target
+      Template = anim_demon_torture
+workplace_torture_master_backup
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects
+      Item = effect_torture_master
+      Item = effect_prevent_strike_visual
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = CanProduceTrigger
+      Item = OtherWorkplaceTriggerDefinition
+        Targets
+          Item
+            Target = workplace_torture_fill_worker
+            TargetState = All
+            Extern = False
+        TargetCount = 1
+    WorkCounter = stat_tortured_creatures
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -2.4 2.4 145
+  NeedDurationModule
+    TargetNeeds
+      Item = need_torture
+  AnimationWorkplaceActionModule
+    TimingModule = NeedDurationModule
+    Config
+      Animation = anim_demon_torture
+      UserActorSlot
+        Name = unit
+        Template = anim_demon_torture
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+workplace_torture_wait
+  Include = workplace_base
+  Workplace
+    LocationModule = RandomRoomTileLocationModule
+    ActionModule = WaitingWorkplaceActionModule
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = TileArea
+  RandomRoomTileLocationModule
+    TileTarget = Inner
+  WaitingWorkplaceActionModule
+    TimingModule = EndlessTimingModule
+  EndlessTimingModule
+workplace_torture_wait_worker
+  Include = workplace_base
+  Workplace
+    LocationModule = RandomRoomTileLocationModule
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = TileArea
+  RandomRoomTileLocationModule
+    TileTarget = Inner
+workplace_totem_levers
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects = Append
+      Item = effect_production
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = CanProduceTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = BuffableWorkplaceTrigger
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 4.35 -1.1 305
+  AnimationWorkplaceActionModule
+    TimingModule = FullProductionDurationTimingModule
+    Config
+      Animation = anim_gimmick_totem_levers
+      UserActorSlot
+        Name = user
+        Template = anim_gimmick_totem_levers
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  FullProductionDurationTimingModule
+    ProductionDurationFactor = 30
+    MaxTimeValue = 6
+workplace_totem_reviveunit
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects
+      Item = effect_production
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = CanProduceTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = BuffableWorkplaceTrigger
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -3 -2.3 0
+  ProductionTimingModule
+  AnimationWorkplaceActionModule
+    TimingModule = ProductionTimingModule
+    Config
+      Animation = anim_gimmick_totem_belt
+      UserActorSlot
+        Name = user
+        Template = anim_gimmick_totem_belt
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+workplace_totem_storeunit
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = SetupCorpseActionModule
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = CorpseReviveModule
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+    UserRestrictions
+      Item = UserRestrictionDraggingCorpse
+  ConstantWorkplaceLocationModule
+  UserRestrictionDraggingCorpse
+    TargetStorage = room_totem.storage_id
+  SetupCorpseActionModule
+workplace_train_noexp
+  Include = workplace_base
+  Workplace
+    Effects
+      Item = effect_train_noexp
+      Item = effect_prevent_strike_visual
+    LocationModule = RandomRoomTileLocationModule
+    ActionModule = WaitingWorkplaceActionModule
+    RepeartTimingModule = NeedDurationModule
+    Limit = 
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = TileArea
+    WorkTimeCounter = stat_total_time_in_arena
+  WaitingWorkplaceActionModule
+    TimingModule = RandomTimingModule
+  RandomTimingModule
+    MinDuration = 3
+    MaxDuration = 5
+  NeedDurationModule
+    TargetNeeds
+      Item = need_train
+  RandomRoomTileLocationModule
+workplace_train_withexp
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects
+      Item = effect_train_withexp
+      Item = effect_prevent_strike_visual
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+    UserRestrictions = Append
+      Item = UserRestrictionXPCap
+    WorkTimeCounter = stat_total_time_in_arena
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 0.1 0 0
+  AnimationWorkplaceActionModule
+    TimingModule = RandomTimingModule
+    Config
+      Animation = anim_monster_train
+      UserActorSlot
+        Name = actor
+        Template = anim_monster_train
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  RandomTimingModule
+    MinDuration = 45
+    MaxDuration = 120
+  UserRestrictionXPCap
+workplace_trap_hamster_driver
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects = Append
+      Item = effect_prevent_interaction
+      Item = effect_attach_user
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = VisualizationWorkplaceTrigger
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 0 4.5 180
+  AnimationWorkplaceActionModule
+    TimingModule = EndlessTimingModule
+    Config
+      Animation = anim_trap_hamster_driver
+      UserActorSlot
+        Name = driver
+        Template = anim_trap_hamster_driver
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  EndlessTimingModule
+workplace_trap_restock
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = StoreCurrencyActionModule
+  ConstantWorkplaceLocationModule
+  StoreCurrencyActionModule
+    AutoDetectStorage = True
+workplace_vortex_fill
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = StoreCurrencyActionModule
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -2.3 2.3 135
+  StoreCurrencyActionModule
+    AutoDetectStorage = True
+workplace_wait
+  Include = workplace_base
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = WaitingWorkplaceActionModule
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = CurrencyProductionModule
+    Effects = Append
+      Item = effect_production_wait
+  ConstantWorkplaceLocationModule
+  WaitingWorkplaceActionModule
+    TimingModule = EndlessTimingModule
+  EndlessTimingModule
+workplace_worship
+  Include = workplace_base
+  Workplace
+    Effects
+      Item = effect_worship
+      Item = effect_production
+      Item = effect_prevent_strike_visual
+    Trigger
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+  NeedDurationModule
+    TargetNeeds
+      Item = need_worship
+    FallbackTimingModule = RandomTimingModule
+  ConstantWorkplaceLocationModule
+  AnimationWorkplaceActionModule
+    TimingModule = NeedDurationModule
+    Config
+      Animation = anim_monster_pray
+      UserActorSlot
+        Name = actor
+        Template = anim_monster_pray
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  RandomTimingModule
+    MinDuration = 15
+    MaxDuration = 35
+workstation_crypta
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = sleep_workplace
+        Workplace = workplace_sleep_crypta
+      Item
+        Name = setup
+        Workplace = workplace_setup_crypta
+workstation_definition_base
+  Abstract = True
+  WorkstationDefinition
+workstation_gimmick_arcanium
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_production_arcanium
+        Name = worker
+    Groups
+      Item = group_production_arcanium
+    Parameters = Append
+      Item
+        Workplace
+          Name = worker
+          Template = workstation_gimmick_arcanium
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_production_arcanium
+        Override = 2.3 2.3 225
+workstation_gimmick_arena
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_train_withexp
+        Name = main
+    Parameters = Append
+      Item
+        Workplace
+          Name = main
+          Template = workstation_gimmick_arena
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_train_withexp
+        Override = 0 1.5 180
+workstation_gimmick_brewery
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Groups
+      Item = group_production_brewery
+    Workplaces = Append
+      Item
+        Name = worker_fire
+        Workplace = workplace_production_brewery_fire
+      Item
+        Workplace = workplace_production_brewery_tap
+        Name = worker_tap
+      Item
+        Workplace = workplace_production_brewery_cauldron
+        Name = worker_cauldron
+      Item
+        Workplace = workplace_pickup
+        Name = pickup
+      Item
+        Name = wait_for_output
+        Workplace = workplace_wait
+    Parameters = Append
+      Item
+        Workplace
+          Name = wait_for_output
+          Template = workstation_gimmick_brewery
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_wait
+        Override = 1 3.5 135
+workstation_gimmick_potionlodge
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = worker
+        Workplace = workplace_production_potionlodge
+      Item
+        Name = pickup
+        Workplace = workplace_pickup
+      Item
+        Name = wait_for_output
+        Workplace = workplace_wait
+    Groups = Append
+      Item = group_potionlodge
+    Parameters = Append
+      Item
+        Workplace
+          Name = wait_for_output
+          Template = workstation_gimmick_potionlodge
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_wait
+        Override = 4.1 0.85 325
+workstation_gimmick_torture
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = master_backup
+        Workplace = workplace_torture_master_backup
+      Item
+        Name = hero
+        Workplace = workplace_torture_fill
+      Item
+        Name = worker
+        Workplace = workplace_torture_fill_worker
+      Item
+        Name = master
+        Workplace = workplace_torture_master
+workstation_gimmick_totem
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = worker_setup
+        Workplace = workplace_totem_storeunit
+      Item
+        Name = worker_lever
+        Workplace = workplace_totem_levers
+      Item
+        Name = worker_revive
+        Workplace = workplace_totem_reviveunit
+    Groups
+      Item = group_totem
+workstation_gimmick_vortex
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = fill_normal
+        Workplace = workplace_vortex_fill
+workstation_gimmick_workshop
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_production_workshop_levers
+        Name = worker_levers
+      Item
+        Workplace = workplace_production_workshop_wheel
+        Name = worker_wheel
+      Item
+        Workplace = workplace_pickup
+        Name = pickup
+      Item
+        Name = wait_for_output
+        Workplace = workplace_wait
+    Groups
+      Item = group_production_workshop
+    Parameters = Append
+      Item
+        Workplace
+          Name = wait_for_output
+          Template = workstation_gimmick_workshop
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_wait
+        Override = 0 4 0
+workstation_gimmick_workshop_battery
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = deliver_mana
+        Workplace = workstation_gimmick_workshop_battery.deliver_mana
+      Item
+        Name = deliver_boxes
+        Workplace = workstation_gimmick_workshop_battery.deliver_boxes
+      Item
+        Name = produce_battery
+        Workplace = workstation_gimmick_workshop_battery.produce
+      Item
+        Name = pickup_battery
+        Workplace = workplace_pickup
+      Item
+        Name = store_battery
+        Workplace = workstation_gimmick_workshop_battery.store_product
+      Item
+        Name = produce_battery_2
+        Workplace = workstation_gimmick_workshop_battery.produce_2
+    Groups = Append
+      Item = workstation_gimmick_workshop_battery.group_production
+      Item = workstation_gimmick_workshop_battery.group_perform_production
+workstation_gimmick_workshop_battery.deliver_boxes
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = StoreCurrencyActionModule
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = InternalStorageTriggerDefinition
+        Type = AutoRestockInternalStorage
+        TargetStorage = Append
+          Item
+            Name = box_input
+            Template = gimmick_workshop_battery
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 1.6 4.4 180
+  StoreCurrencyActionModule
+    TargetStorage
+      Name = box_input
+      Template = gimmick_workshop_battery
+    StoreAnimation = anim_gimmick_workshop_input
+    UnitParnterSlot
+      Name = snot
+      Template = anim_gimmick_workshop_input
+    CargoPartnerSlot
+      Name = toolbox
+      Template = anim_gimmick_workshop_input
+    CargoTransferEvent
+      Name = store_toolbox
+      Template = anim_gimmick_workshop_input
+workstation_gimmick_workshop_battery.deliver_mana
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = StoreCurrencyActionModule
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = InternalStorageTriggerDefinition
+        Type = AutoRestockInternalStorage
+        TargetStorage = Append
+          Item
+            Name = mana_input
+            Template = gimmick_workshop_battery
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 0.05 3.9 180
+  StoreCurrencyActionModule
+    TargetStorage
+      Name = mana_input
+      Template = gimmick_workshop_battery
+    StoreAnimation = anim_gimmick_workshop_store_mana
+    UnitParnterSlot
+      Name = snot
+      Template = anim_gimmick_workshop_store_mana
+    CargoPartnerSlot
+      Name = mana
+      Template = anim_gimmick_workshop_store_mana
+    CargoTransferEvent
+      Name = on_store
+      Template = anim_gimmick_workshop_store_mana
+workstation_gimmick_workshop_battery.group_perform_production
+  WorkplaceGroup
+    Workplaces = Append
+      Item = workstation_gimmick_workshop_battery.produce
+      Item = workstation_gimmick_workshop_battery.produce_2
+workstation_gimmick_workshop_battery.group_production
+  WorkplaceGroup
+    Workplaces = Append
+      Item = workstation_gimmick_workshop_battery.produce
+      Item = workplace_pickup
+      Item = workstation_gimmick_workshop_battery.store_product
+      Item = workstation_gimmick_workshop_battery.produce_2
+    Limit = ConstantUserLimitModule
+  ConstantUserLimitModule
+    Limit = 1
+workstation_gimmick_workshop_battery.interaction_boxes
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_workshop_battery
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          Extern = False
+          TargetWorkplace = workstation_gimmick_workshop_battery.deliver_boxes
+        Required = RequireAllway
+workstation_gimmick_workshop_battery.interaction_mana
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_workshop_battery
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workstation_gimmick_workshop_battery.deliver_mana
+        Required = RequireAllway
+workstation_gimmick_workshop_battery.interaction_production
+  WorkstationInteraction
+    TargetWorkstation = workstation_gimmick_workshop_battery
+    Interaction = Append
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workstation_gimmick_workshop_battery.group_perform_production
+          Selector = Random
+        Repeat = True
+        Required = RequireOnlyWhenNotStarted
+        GroupReservation = workstation_gimmick_workshop_battery.group_production
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workplace_pickup
+        Required = None
+        GroupReservation = workstation_gimmick_workshop_battery.group_production
+      Item = SingleInstructionEntry
+        Instruction
+          TargetWorkplace = workstation_gimmick_workshop_battery.store_product
+        Required = RequireAllway
+        GroupReservation = workstation_gimmick_workshop_battery.group_production
+    ActivityType = CreateBattery
+workstation_gimmick_workshop_battery.produce
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects = Append
+      Item = effect_production
+      Item = effect_allow_pause
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = CanProduceTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = BuffableWorkplaceTrigger
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -1.2 3.65 180
+  AnimationWorkplaceActionModule
+    TimingModule = ConstantWorkplaceTimingModule
+    Config
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+      Animation = anim_gimmick_workshop_levers
+      UserActorSlot
+        Name = user
+        Template = anim_gimmick_workshop_levers
+  ConstantWorkplaceTimingModule
+    Duration = 5
+workstation_gimmick_workshop_battery.produce_2
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = AnimationWorkplaceActionModule
+    Effects = Append
+      Item = effect_production
+      Item = effect_allow_pause
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = CanProduceTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = BuffableWorkplaceTrigger
+  ConstantWorkplaceLocationModule
+    RelativeLocation = 5.3 -0.45 270
+  AnimationWorkplaceActionModule
+    TimingModule = ConstantWorkplaceTimingModule
+    Config
+      Animation = anim_gimmick_workshop_handle
+      UserActorSlot
+        Name = user
+        Template = anim_gimmick_workshop_handle
+      UpdateUserPosition = False
+      TeleportOnAbort = True
+      PositionUpdateEvent
+        Name = 
+        Template = 
+  ConstantWorkplaceTimingModule
+    Duration = 5
+workstation_gimmick_workshop_battery.store_product
+  Workplace
+    LocationModule = ConstantWorkplaceLocationModule
+    ActionModule = StoreInFixedPileActionModule
+    Trigger = Append
+      Item = WorkplaceTriggerDefiniton
+        Type = GimmickStateTrigger
+      Item = WorkplaceTriggerDefiniton
+        Type = BuffableWorkplaceTrigger
+  ConstantWorkplaceLocationModule
+    RelativeLocation = -5.5 0 90
+  StoreInFixedPileActionModule
+workstation_pickup
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = main
+        Workplace = workplace_pickup
+workstation_room_arena
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_train_noexp
+        Name = main
+workstation_room_guardroom
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_patrol
+        Name = main
+workstation_room_necrodanicon
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_dance
+        Name = dance_floor
+workstation_room_relaxchamber
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_relaxchamber_bath
+        Name = bath
+      Item
+        Workplace = workplace_relaxchamber_refilmana
+        Name = refill
+      Item
+        Workplace = workplace_relaxchamber_wait
+        Name = wait
+    Groups
+      Item = group_relaxcamber_main
+workstation_room_storage
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_store_room
+        Name = main
+workstation_room_temple
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_worship
+        Name = worship_0
+      Item
+        Workplace = workplace_worship
+        Name = worship_1
+      Item
+        Workplace = workplace_worship
+        Name = worship_2
+      Item
+        Name = worship_3
+        Workplace = workplace_worship
+      Item
+        Name = worship_4
+        Workplace = workplace_worship
+      Item
+        Name = worship_5
+        Workplace = workplace_worship
+      Item
+        Name = worship_6
+        Workplace = workplace_worship
+      Item
+        Name = worship_7
+        Workplace = workplace_worship
+    Parameters = Append
+      Item
+        Workplace
+          Name = worship_0
+          Template = workstation_room_temple
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_worship
+        Override = 2.4 5.6 220
+      Item
+        Workplace
+          Name = worship_1
+          Template = workstation_room_temple
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_worship
+        Override = 5.6 2.4 245
+      Item
+        Workplace
+          Name = worship_2
+          Template = workstation_room_temple
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_worship
+        Override = 5.6 -2.4 300
+      Item
+        Workplace
+          Name = worship_3
+          Template = workstation_room_temple
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_worship
+        Override = 2.4 -5.6 335
+      Item
+        Workplace
+          Name = worship_4
+          Template = workstation_room_temple
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_worship
+        Override = -2.4 -5.6 30
+      Item
+        Workplace
+          Name = worship_5
+          Template = workstation_room_temple
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_worship
+        Override = -5.6 -2.4 65
+      Item
+        Workplace
+          Name = worship_6
+          Template = workstation_room_temple
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_worship
+        Override = -5.6 2.4 130
+      Item
+        Workplace
+          Name = worship_7
+          Template = workstation_room_temple
+        Parameter
+          Name = RelativeLocation
+          Template = workplace_worship
+        Override = -2.4 5.6 155
+workstation_room_throneroom
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = revive
+        Workplace = workplace_revive_thalya
+      Item
+        Name = throne
+        Workplace = workplace_throne_thalya
+workstation_room_torture
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = wait
+        Workplace = workplace_torture_wait
+      Item
+        Name = wait_worker
+        Workplace = workplace_torture_wait_worker
+    Groups
+      Item = group_torture_worker
+workstation_room_totem
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = pickup
+        Workplace = workplace_pickup
+workstation_sleep
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_sleep
+        Name = main
+workstation_sleep_graveyard
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = main
+        Workplace = workplace_sleep_graveyard
+      Item
+        Name = worker_heal
+        Workplace = workplace_heal_graveyard
+      Item
+        Name = worker_setup
+        Workplace = workplace_setup_graveyard
+workstation_trap
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Workplace = workplace_trap_restock
+        Name = main
+workstation_trap_complex
+  Include = workstation_trap
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = secundary
+        Workplace = workplace_trap_restock
+workstation_trap_hamster_wheel
+  Include = workstation_definition_base
+  WorkstationDefinition
+    Workplaces = Append
+      Item
+        Name = driver_seat
+        Workplace = workplace_trap_hamster_driver

@@ -1,0 +1,435 @@
+﻿notification_base
+  Abstract = True
+  UiDataNotification
+notification_cage_killed
+  Include = notification_base
+  UiDataNotification
+    ReRaiseCooldown = -1
+    AutoFadeDuration = 20
+    DialogQuip = dlg_general_cage_killed
+    DialogCooldown = 120
+    Description = ui_event_cage_killed_desc
+    Icon = 1027bcc2262cbe6439fcb02fdac26d6e
+notification_camera_event
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_camera_event_desc
+    Icon = c2a84f4afedf08144939bb4fe1132d9b
+    ReRaiseCooldown = 20
+    AutoFadeDuration = 15
+  TutorialPopupTrigger
+    Trigger
+      Item
+        Key = OnSpawn
+        Value = tut_popup_point_of_interest
+notification_creature_dance
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_dance_desc
+    Icon = 995a56a0f9272e341a14194d6ba0ee50
+    ReRaiseCooldown = -1
+    AutoFadeDuration = 15
+  TutorialPopupTrigger
+    Trigger = Append
+      Item
+        Key = OnSpawn
+        Value = tut_popup_needs
+        Key = OnSpawn
+notification_creature_debt
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_debt_desc
+    UseTargetIcon = True
+    ReRaiseCooldown = -1
+    AutoFadeDuration = 15
+notification_creature_hungry
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_hungry_desc
+    Icon = b094a99dffabdf44c9d6eb2f854f4360
+    ReRaiseCooldown = -1
+    AutoFadeDuration = 15
+  TutorialPopupTrigger
+    Trigger
+      Item
+        Key = OnSpawn
+        Value = tut_popup_needs
+notification_creature_lost
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_lost_desc
+    UseTargetIcon = True
+    Permanent = False
+    ReRaiseCooldown = -1
+    AutoFadeDuration = 20
+notification_creature_lost_forever
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_lost_forever_desc
+    UseTargetIcon = False
+    ReRaiseCooldown = -1
+    Icon = b613bcddfdcc5f548ad5dea5587281df
+    DialogQuip = dlg_general_creature_lost_forever
+    ClickAction = Nothing
+    AutoFadeDuration = 40
+    DialogCooldown = 60
+notification_creature_no_gimmick
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_no_gimmick_desc
+    Icon = edceb67f031d81d49a49fffffdd780da
+    ReRaiseCooldown = 300
+    ClickAction = Nothing
+notification_creature_relaxpool
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_relaxpool_desc
+    Icon = f8047bac3a1cc154ca3f56e592a482b7
+    ReRaiseCooldown = -1
+  TutorialPopupTrigger
+    Trigger
+      Item
+        Key = OnSpawn
+        Value = tut_popup_needs
+notification_creature_sleeping
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_sleeping_desc
+    Icon = 5db0f10197d38704889bcaf585b04287
+    ReRaiseCooldown = -1
+  TutorialPopupTrigger
+    Trigger
+      Item
+        Key = OnSpawn
+        Value = tut_popup_needs
+notification_creature_thirsty
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_thirsty_desc
+    Icon = 963e182e54326224f926b23dd7450540
+    ReRaiseCooldown = -1
+  TutorialPopupTrigger
+    Trigger
+      Item
+        Key = OnSpawn
+        Value = tut_popup_needs
+notification_creature_torture
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_torture_desc
+    Icon = ce533f103394957448e3c91452bdf2f1
+    ReRaiseCooldown = -1
+  TutorialPopupTrigger
+    Trigger = Append
+      Item
+        Key = OnSpawn
+        Value = tut_popup_needs
+        Key = OnSpawn
+notification_creature_train
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_train_desc
+    Icon = 68decabf1178a3346adaf3a28169f3ce
+    ReRaiseCooldown = -1
+  TutorialPopupTrigger
+    Trigger = Append
+      Item
+        Key = OnSpawn
+        Value = tut_popup_needs
+        Key = OnSpawn
+notification_creature_worship
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_worship_desc
+    Icon = 751c27f5829b4f0428cfb0272ff7346e
+    ReRaiseCooldown = -1
+  TutorialPopupTrigger
+    Trigger
+      Item
+        Key = OnSpawn
+        Value = tut_popup_needs
+notification_creep_eat_gurus
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creep_eat_gurus_desc
+    DialogQuip = dlg_general_spider_eat_guru_v1
+    Icon = 98a9bda33ecc9fb4da52828d680cf969
+    ReRaiseCooldown = 60
+    AutoFadeDuration = 15
+    DialogCooldown = 60
+notification_creep_eat_mana
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creep_eat_mana_desc
+    DialogQuip = dlg_general_manaling_eat_mana
+    Icon = c578b7f55f2514b459226eeff6efba5f
+    ReRaiseCooldown = 60
+    DialogCooldown = 60
+notification_creep_steal_gold
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creep_steal_gold_desc
+    DialogQuip = dlg_general_lavaling_eat_gold
+    Icon = 6b62b2fcfd04558478a4038299edd781
+    ReRaiseCooldown = 60
+    DialogCooldown = 60
+notification_dungeon_fight
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_dungeon_fight_desc
+    Permanent = True
+    MiniMapPing = Fight
+    Icon = 9a29f7fd6d1521c4fa12e5ed6e9f60e2
+notification_dungeon_heart_attacked
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_dungeon_heart_attacked_desc
+    DialogQuip = dlg_general_attackthroneroom
+    Permanent = True
+    MiniMapPing = Fight
+    Icon = ad2449ab1757d7b4f835ab52799a32b2
+notification_far_away_treasury
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_far_away_treasury_desc
+    UseTargetIcon = False
+    Icon = d7f93bee0e0895e48a15ee53f040fa3f
+    ReRaiseCooldown = 60
+    AutoFadeDuration = 15
+notification_full_evilness
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_full_evilness_desc
+    Icon = c3f9e9da77bd4f84ea00b5fec3ce491c
+    ClickAction = Nothing
+    ReRaiseCooldown = 300
+notification_full_gold
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_full_gold_desc
+    Icon = af8d346c07884dd41858842e776aa8f8
+    ClickAction = Nothing
+    ReRaiseCooldown = 300
+notification_general_fallen_hero_die
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_lost_desc
+    DialogQuip = dlg_general_fallen_hero_die_random
+    UseTargetIcon = True
+    ReRaiseCooldown = 60
+    DialogCooldown = 60
+notification_general_fallen_hero_die_first
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_creature_lost_desc
+    DialogQuip = dlg_general_fallen_hero_die_first
+    UseTargetIcon = True
+    DialogCooldown = 60
+notification_hero_destroy_room
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_hero_destroy_room_desc
+    DialogQuip = dlg_general_destroy_room
+    Icon = 64a20172a2898974184f5202970b5cb8
+notification_hero_establish_outpost
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_hero_establish_outpost_desc
+    DialogQuip = dlg_general_establish_outpost
+    Icon = c54144cd03cc39747b49bdeeb0116304
+notification_hero_free_prisoner
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_hero_free_prisoner_desc
+    DialogQuip = dlg_general_hero_free_prisoner
+    Icon = 397f961671facba40b014f58da62d88f
+notification_hero_steal_artefact
+  Include = notification_base
+  UiDataNotification
+    Description = dlg_general_artefact_dwarves
+    Icon = e28156e17c41f4743aeb6e6c6bcab684
+    DialogQuip = dlg_general_artefact_dwarves
+notification_hero_steal_gold
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_hero_steal_gold_desc
+    DialogQuip = dlg_general_hero_steal_gold
+    Icon = 2ba42662a258efc49934eb232a763c8a
+notification_heroes_entered_dungeon_t1
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_heroes_entered_dungeon_desc
+    DialogQuip = dlg_general_heroesentereddungeon
+    Icon = 47a3796c0498a284f87932b48908b872
+    ReRaiseCooldown = -1
+    DialogCooldown = 60
+notification_heroes_entered_dungeon_t2
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_heroes_entered_dungeon_desc
+    Icon = a33c0f7da70a39f48a56063029e3a410
+    ReRaiseCooldown = -1
+    DialogQuip = dlg_general_heroesentereddungeon
+    DialogCooldown = 60
+notification_heroes_entered_dungeon_t3
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_heroes_entered_dungeon_desc
+    Icon = dc1e061e3e9603346b9e7b5d91a0e9c6
+    ReRaiseCooldown = -1
+    DialogQuip = dlg_general_heroesentereddungeon
+    DialogCooldown = 60
+notification_lavaling_spawn
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_lavaling_spawn_desc
+    Icon = 180c786275813044a8803fea43063c6e
+    DialogQuip = dlg_general_lavaling_room_found
+notification_long_distance_mining
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_long_distance_mining_desc
+    Icon = d7f93bee0e0895e48a15ee53f040fa3f
+    ReRaiseCooldown = 60
+    AutoFadeDuration = 15
+notification_manaling_levelup
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_manaling_levelup_desc
+    Icon = 719e067d5a807e74fa485549d141dd48
+notification_manaling_spawn
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_manaling_spawn_desc
+    Icon = 23029e1c1ca1b2b43b16b2df2ea0c6e8
+    ClickAction = JumpToTarget
+    DialogQuip = dlg_general_manaling_found
+notification_manaling_transform
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_manaling_transformed_desc
+    Icon = 22fad49795516374f9d8d61a7ea164f4
+    DialogQuip = ""
+notification_new_area_discovered
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_new_area_discovered_desc
+    Icon = c2a84f4afedf08144939bb4fe1132d9b
+    DialogQuip = dlg_general_new_area
+notification_no_guru
+  Include = notification_base
+  UiDataNotification
+    Icon = 8e8d6cf8f51ae5a44b47f22e8096acdb
+    Description = ui_event_no_gurus_desc
+    ReRaiseCooldown = 60
+    ClickAction = Nothing
+notification_patrol
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_patrol_desc
+    Icon = c7b95f67177ec6c449e61510379612bf
+    DialogQuip = dlg_general_patrol
+    ReRaiseCooldown = 60
+notification_payday
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_payday_desc
+    DialogQuip = dlg_general_payday
+    Icon = 70751d9c6bc789d4f9df6bdfe462a4dd
+    ClickAction = Nothing
+notification_payday_guru
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_paydayguru_desc
+    Icon = 41c4142d37ab61343b1a4fed60bbf670
+    ClickAction = Nothing
+    DialogQuip = dlg_general_payday
+notification_portal_attacked
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_portal_attack_desc
+    Icon = 3c8c9f53d91dc5f42aa026ad22a8c5ee
+    Permanent = False
+    DialogQuip = dlg_general_portal_attack
+    MiniMapPing = Fight
+notification_quest_finished
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_quest_finished_desc
+    Icon = 2f84fb70918fda549b883119f43fc177
+    ReRaiseCooldown = -1
+notification_richgold_almost_exhausted
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_richgold_almost_exhausted_desc
+    Icon = f5cd1b727959a4742afc7c2255e52a6d
+    DialogQuip = dlg_general_richgold_almost_exhausted
+    ReRaiseCooldown = 500
+    AutoFadeDuration = 20
+    DialogCooldown = 60
+notification_richgold_exhausted
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_richgold_exhausted_desc
+    Icon = f5cd1b727959a4742afc7c2255e52a6d
+    DialogQuip = dlg_general_richgold_exhausted
+    ReRaiseCooldown = -1
+    DialogCooldown = 60
+notification_spawnerconquered
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_spawnerconquered_desc
+    UseTargetIcon = True
+    Icon = 15c00d08fc3cd1b47a76a08e135c1e75
+notification_spawnerlost
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_spawnerlost_desc
+    UseTargetIcon = True
+    Icon = 86f6e863315742149bcafc81c1c4d9fa
+notification_spider_room_found
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_spider_room_found
+    Icon = f66e218cdcd224644ab110bcffa8bd7d
+    DialogQuip = dlg_general_spider_room_found
+    PlayIfTargetIsCloaked = True
+notification_spider_spreading
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_spider_spreading_desc
+    DialogQuip = dlg_general_spider_spreading
+    ClickAction = Nothing
+    Icon = 51c2a66b1875108498d8d57b8106d223
+    PlayIfTargetIsCloaked = True
+notification_strike
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_strike_desc
+    UseTargetIcon = False
+    Icon = 696d1bf3388bbc04eb1856b29bf16cad
+    ReRaiseCooldown = -1
+    AutoFadeDuration = 20
+    DialogQuip = dlg_general_creaturebecameangry
+    DialogCooldown = 60
+notification_trap_exhausted
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_trap_exhausted_desc
+    Icon = e41b9e41cea4cd64498ad60093e00be2
+    ReRaiseCooldown = -1
+notification_door_destroyed
+  Include = notification_base
+  UiDataNotification
+    Description = ui_event_door_destroyed_desc
+    Icon = e41b9e41cea4cd64498ad60093e00be2
+    ReRaiseCooldown = -1
+notification_tutorial_popup
+  Include = notification_base
+  UiDataNotification
+    Icon = 99595d8cbbd44e44eb48c937f3b174b9
+    Permanent = True
+    ClickAction = OpenTutorialPopup
+    Description = ui_tutorials
+    Stackable = False
+    ReRaiseCooldown = -1

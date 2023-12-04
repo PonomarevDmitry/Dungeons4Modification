@@ -1,0 +1,1172 @@
+﻿buff_perk_potion_armor
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append
+      Item = BuffProperties
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Combat.ArmorBase
+        Value
+          ValueType = Strength
+          Value = x
+  UnitPerkType
+    Effect = buff_perk_potion_armor
+    MinStrength = 1
+    MaxStrength = 1
+    MinStrengthFactor = factor_perk_potion_armor_min
+    MaxStrengthFactor = factor_perk_potion_armor_max
+    NameSuffixMale
+      Item = perk_potion_armor_suffix_m_1
+      Item = perk_potion_armor_suffix_m_2
+      Item = perk_potion_armor_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_armor_suffix_f_1
+      Item = perk_potion_armor_suffix_f_2
+      Item = perk_potion_armor_suffix_f_3
+    BuffStrengthSource = RandomBetweenMinAndMax
+  UiDataGeneric
+    Description = perk_potion_armor_desc
+buff_perk_potion_aspect_fire
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append
+      Item = BuffApplyBuffOnDealDamage
+  BuffApplyBuffOnDealDamage
+    BuffTemplate = buff_perk_potion_aspect_fire.buff
+    Duration
+      Source = Custom
+      CustomValue = 5
+      DynamicValueSource
+        Name = 
+        Template = 
+    Strength
+      Source = Custom
+      CustomValue = 50
+      DynamicValueSource
+        Name = 
+        Template = 
+  UnitPerkType
+    Effect = buff_perk_potion_aspect_fire
+    NameSuffixMale
+      Item = perk_potion_aspect_fire_suffix_m_1
+      Item = perk_potion_aspect_fire_suffix_m_2
+      Item = perk_potion_aspect_fire_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_aspect_fire_suffix_f_1
+      Item = perk_potion_aspect_fire_suffix_f_2
+      Item = perk_potion_aspect_fire_suffix_f_3
+  UiDataGeneric
+    Description = perk_potion_aspect_fire_desc
+buff_perk_potion_aspect_fire.buff
+  Buff
+    Parts = Append
+      Item = CombatDamageModifierBuffPart
+    Category = buff_perk_potion_aspect_fire.buff
+  CombatDamageModifierBuffPart
+    TargetDamageModifier = Append
+      Item
+        Aspect = aspect_fire
+        Value
+          ValueType = Strength
+          Value = x
+  BuffCategory
+buff_perk_potion_aspect_ice
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append
+      Item = BuffApplyBuffOnDealDamage
+  BuffApplyBuffOnDealDamage
+    BuffTemplate = buff_perk_potion_aspect_ice.buff
+    Duration
+      Source = Custom
+      CustomValue = 5
+      DynamicValueSource
+        Name = 
+        Template = 
+    Strength
+      Source = Custom
+      CustomValue = 50
+  UnitPerkType
+    Effect = buff_perk_potion_aspect_ice
+    NameSuffixMale
+      Item = perk_potion_aspect_ice_suffix_m_1
+      Item = perk_potion_aspect_ice_suffix_m_2
+      Item = perk_potion_aspect_ice_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_aspect_ice_suffix_f_1
+      Item = perk_potion_aspect_ice_suffix_f_2
+      Item = perk_potion_aspect_ice_suffix_f_3
+  UiDataGeneric
+    Description = perk_potion_aspect_ice_desc
+buff_perk_potion_aspect_ice.buff
+  Buff
+    Parts = Append
+      Item = CombatDamageModifierBuffPart
+    Category = buff_perk_potion_aspect_ice.buff
+  CombatDamageModifierBuffPart
+    TargetDamageModifier = Append
+      Item
+        Aspect = aspect_physical
+        Value
+          ValueType = Strength
+          Value = x
+  BuffCategory
+buff_perk_potion_aspect_magic
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append
+      Item = BuffApplyBuffOnDealDamage
+  BuffApplyBuffOnDealDamage
+    BuffTemplate = buff_perk_potion_aspect_magic.buff
+    Duration
+      Source = Custom
+      CustomValue = 5
+      DynamicValueSource
+        Name = 
+        Template = 
+    Strength
+      Source = Custom
+      CustomValue = 50
+  UnitPerkType
+    Effect = buff_perk_potion_aspect_magic
+    NameSuffixMale
+      Item = perk_potion_aspect_magic_suffix_m_1
+      Item = perk_potion_aspect_magic_suffix_m_2
+      Item = perk_potion_aspect_magic_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_aspect_magic_suffix_f_1
+      Item = perk_potion_aspect_magic_suffix_f_2
+      Item = perk_potion_aspect_magic_suffix_f_3
+  UiDataGeneric
+    Description = perk_potion_aspect_magic_desc
+buff_perk_potion_aspect_magic.buff
+  Buff
+    Parts = Append
+      Item = CombatDamageModifierBuffPart
+    Category = buff_perk_potion_aspect_magic.buff
+  CombatDamageModifierBuffPart
+    TargetDamageModifier = Append
+      Item
+        Aspect = aspect_physical
+        Value
+          ValueType = Strength
+          Value = x
+  BuffCategory
+buff_perk_potion_aspect_physical
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append
+      Item = BuffApplyBuffOnDealDamage
+  BuffApplyBuffOnDealDamage
+    BuffTemplate = buff_perk_potion_aspect_physical.buff
+    Duration
+      Source = Custom
+      CustomValue = 5
+      DynamicValueSource
+        Name = 
+        Template = 
+    Strength
+      Source = Custom
+      CustomValue = 50
+  UnitPerkType
+    Effect = buff_perk_potion_aspect_physical
+    NameSuffixMale
+      Item = perk_potion_aspect_physical_suffix_m_1
+      Item = perk_potion_aspect_physical_suffix_m_2
+      Item = perk_potion_aspect_physical_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_aspect_physical_suffix_f_1
+      Item = perk_potion_aspect_physical_suffix_f_2
+      Item = perk_potion_aspect_physical_suffix_f_3
+  UiDataGeneric
+    Description = perk_potion_aspect_physical_desc
+buff_perk_potion_aspect_physical.buff
+  Buff
+    Parts = Append
+      Item = CombatDamageModifierBuffPart
+    Category = buff_perk_potion_aspect_physical.buff
+  CombatDamageModifierBuffPart
+    TargetDamageModifier = Append
+      Item
+        Aspect = aspect_physical
+        Value
+          ValueType = Strength
+          Value = x
+  BuffCategory
+buff_perk_potion_base
+  Abstract = True
+  Buff
+  UiDataGeneric
+    Icon = 9a7cca574ad753d4fba8e79f7527dcc1
+    Title = spell_perk_capt
+    Description = spell_perk_desc
+    Flavour = spell_perk_flav
+  UnitPerkType
+    Level = factor_perk_potion_level
+buff_perk_potion_damage
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append
+      Item = BuffProperties
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Attack.AttackDamageFactor
+        Value
+          ValueType = Strength
+          Value = x
+  UnitPerkType
+    Effect = buff_perk_potion_damage
+    MaxStrength = 0.3
+    MinStrength = 0.1
+    MinStrengthFactor = factor_perk_potion_damage_min
+    MaxStrengthFactor = factor_perk_potion_damage_max
+    NameSuffixMale
+      Item = perk_potion_damage_suffix_m_1
+      Item = perk_potion_damage_suffix_m_2
+      Item = perk_potion_damage_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_damage_suffix_f_1
+      Item = perk_potion_damage_suffix_f_2
+      Item = perk_potion_damage_suffix_f_3
+    BuffStrengthSource = RandomBetweenMinAndMax
+  UiDataGeneric
+    Description = perk_potion_damage_desc
+buff_perk_potion_health
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append
+      Item = BuffProperties
+  BuffProperties
+    Properties = Append
+      Item
+        Value
+          ValueType = Strength
+          Value = x
+        Property = Combat.MaxHealthBonusFactor
+  UnitPerkType
+    Effect = buff_perk_potion_health
+    MinStrength = 0.1
+    MaxStrength = 0.3
+    MinStrengthFactor = factor_perk_potion_health_min
+    MaxStrengthFactor = factor_perk_potion_health_max
+    NameSuffixMale
+      Item = perk_potion_health_suffix_m_1
+      Item = perk_potion_health_suffix_m_2
+      Item = perk_potion_health_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_health_suffix_f_1
+      Item = perk_potion_health_suffix_f_2
+      Item = perk_potion_health_suffix_f_3
+    BuffStrengthSource = RandomBetweenMinAndMax
+  UiDataGeneric
+    Description = perk_potion_health_desc
+buff_perk_potion_payday
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append
+      Item = BuffProperties
+  BuffProperties
+    Properties = Append
+      Item
+        Property = MonsterPayday.PayBackSalary
+      Item
+        Property = MonsterPayday.PayBackSalaryFactor
+        Value
+          ValueType = Table
+          Value = 0.5,1,2
+  UnitPerkType
+    Effect = buff_perk_potion_payday
+    NameSuffixMale
+      Item = perk_potion_payday_suffix_m_1
+      Item = perk_potion_payday_suffix_m_2
+      Item = perk_potion_payday_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_payday_suffix_f_1
+      Item = perk_potion_payday_suffix_f_2
+      Item = perk_potion_payday_suffix_f_3
+    BuffStrengthSource = PotionLevel
+  UiDataGeneric
+    Description = perk_potion_payday_desc
+buff_perk_potion_randomdeaddrop
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append   
+      Item = BuffDropRandomResourceOnEvent
+  UnitPerkType
+    Effect = buff_perk_potion_randomdeaddrop
+    NameSuffixMale
+      Item = perk_potion_randomdeaddrop_suffix_m_1
+      Item = perk_potion_randomdeaddrop_suffix_m_2
+      Item = perk_potion_randomdeaddrop_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_randomdeaddrop_suffix_f_1
+      Item = perk_potion_randomdeaddrop_suffix_f_2
+      Item = perk_potion_randomdeaddrop_suffix_f_3
+  UiDataGeneric
+    Description = perk_potion_randomdeaddrop_desc
+  BuffDropRandomResourceOnEvent
+    EventType = Combat.OnDied
+    Entries
+      Item
+        Collectible = gold_orb
+        Amount = (x+1)*500
+      Item
+        Collectible = mana_orb
+        Amount = IF(x==0,100,x*300)
+      Item
+        Collectible = evilness_orb
+        Amount = IF(x==2,100,x*30)
+      Item
+        Collectible = guru_orb
+        Amount = x+1
+      Item
+        Collectible = faith_orb
+        Amount = (x+1)*10
+      Item
+        Collectible = toolbox_orb
+        Amount = x+1
+      Item
+        Amount = x+1
+        Collectible = beer_orb
+buff_perk_potion_regeneration
+  Include = buff_perk_potion_base
+  Buff
+    Parts = Append
+      Item = BuffHealthOverTime
+  BuffHealthOverTime
+    Procentual = True   
+    Interval = 5
+    HealthPerTick
+      Value = 0.01
+  UnitPerkType
+    Effect = buff_perk_potion_regeneration
+    NameSuffixMale
+      Item = perk_potion_regeneration_suffix_m_1
+      Item = perk_potion_regeneration_suffix_m_2
+      Item = perk_potion_regeneration_suffix_m_3
+    NameSuffixFemale
+      Item = perk_potion_regeneration_suffix_f_1
+      Item = perk_potion_regeneration_suffix_f_2
+      Item = perk_potion_regeneration_suffix_f_3
+  UiDataGeneric
+    Description = perk_potion_regeneration_desc
+evilperk_base
+  Abstract = True
+  EvilPerk
+  UiDataGeneric
+  ChallengeProgress
+evilperk_demons_damage_evilness
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_demons_damage_evilness.buff
+  UiDataGeneric
+    Title = evilperk_demons_damage_evilness_capt
+    Description = evilperk_demons_damage_evilness_desc
+    Icon = 6025c8624701a0d42b5a1fb9d6626432
+    Flavour = cha_main12race_good_creature_desc
+  ChallengeProgress
+    CanFail = True
+    FailedVariable = Bool||cha_main12race_good_creature|False
+    FalseMeansFailed = True
+evilperk_demons_damage_evilness.buff
+  Buff
+    Parts = Append
+      Item = CombatDamageModifierBuffPart
+      Item = BuffBonusEvilnessForEvilDeeds
+    TargetSelector = bts_player_evil_boss
+  CombatDamageModifierBuffPart
+    TargetDamageModifier = Append
+      Item
+        Aspect = aspect_demon
+        Value
+          ValueType = Constant
+          Value = 50
+  BuffBonusEvilnessForEvilDeeds
+    BonusFactor = 0.5
+evilperk_demons_research
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_demons_research.buff
+  UiDataGeneric
+    Title = evilperk_demons_research_capt
+    Description = evilperk_demons_research_desc
+    Icon = a862a82d39817214595665ef6d4b0d64
+    Flavour = cha_main06transporter_strike_desc
+  ChallengeProgress
+    CanFail = True
+    FailedVariable = Bool||cha_main06transporter_strike|False
+    FalseMeansFailed = True
+evilperk_demons_research.buff
+  Buff
+    Parts = Append
+      Item = ModifyStaticFactor
+    TargetSelector = bts_player_own
+  ModifyStaticFactor
+    Factor = factor_cost_res_demon
+    Value
+      ValueType = Constant
+      Value = -0.15
+evilperk_demons_revive_resource
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_demons_revive_resource.buff
+  UiDataGeneric
+    Title = evilperk_demons_revive_resource_capt
+    Description = evilperk_demons_revive_resource_desc
+    Icon = ec051fbb96c182a49aa76079a68231ac
+  ChallengeProgress
+evilperk_demons_revive_resource.buff
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    TargetSelector = bts_gimmick_vortex
+  BuffProperties
+    Properties = Append
+      Item
+        Property = CorpseReviveModule.UseAlternativeReviveResource
+        Value
+          ValueType = Constant
+          Value = 
+evilperk_general_damage
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_general_damage.buff
+  UiDataGeneric
+    Title = evilperk_general_damage_capt
+    Description = evilperk_general_damage_desc
+    Icon = 009b2df2a4c7a8f499a869f5a1a400b3
+    Flavour = cha_main20end_level_10_desc
+  ChallengeProgress
+    CounterVariable = Int||cha_main20end_level_10_research_value|0
+    TargetParamVariable = Int||cha_main20end_level_10_research_cap|0
+evilperk_general_damage.buff
+  Buff
+    Parts = Append
+      Item = BuffResearchUnlock
+    TargetSelector = bts_player_own
+  BuffResearchUnlock
+    Unlocks = Append
+      Item = buff_unit_default_attack
+evilperk_general_evil_traps
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_general_evil_traps.buff
+  UiDataGeneric
+    Title = evilperk_general_evil_traps_capt
+    Description = evilperk_general_evil_traps_desc
+    Icon = e892e02b540755846a468c1ada45bdfe
+    Flavour = cha_main19war_traps_desc
+  ChallengeProgress
+    CounterVariable = Int||cha_main19war_traps_count|0
+    TargetParamVariable = Int||cha_main19war_traps_para|0
+evilperk_general_evil_traps.buff
+  Buff
+    Parts = Append
+      Item = BuffEvilnessGeneration
+    TargetSelector = bts_player_own
+  BuffEvilnessGeneration
+    EvilnessBonusForDeathByType = Append
+      Item
+        EntityType = type_trap
+        Evilness = 5
+evilperk_general_payday_guru
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_general_payday_guru.buff
+  UiDataGeneric
+    Title = evilperk_general_payday_guru_capt
+    Description = evilperk_general_payday_guru_desc
+    Icon = a56dffc725b39ba4eaf7cd54fd7947da
+    Flavour = cha_main15drill_gurus_desc
+  ChallengeProgress
+    CounterVariable = Int||cha_main15drill_gurus_count|0
+    TargetParamVariable = Int||cha_main15drill_gurus_para|0
+    CanFail = True
+    FailedVariable = Bool||cha_main15drill_gurus_killed_bool|False
+evilperk_general_payday_guru.buff
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    TargetSelector = bts_monster
+  BuffProperties
+    Properties = Append
+      Item
+        Property = MonsterPayday.UseAlternativePayDayModule
+        Value
+          ValueType = Constant
+          Value = 
+evilperk_general_research
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_general_research.buff
+  UiDataGeneric
+    Title = evilperk_general_research_capt
+    Description = evilperk_general_research_desc
+    Icon = a8dbb07396fe0d14ab81bfc676f49ebf
+    Flavour = cha_main13tanos_no_portals_desc
+  ChallengeProgress
+    CanFail = True
+    FailedVariable = Bool||cha_main13tanos_no_portals|False
+    FalseMeansFailed = True
+evilperk_general_research.buff
+  Buff
+    Parts = Append
+      Item = ModifyStaticFactor
+    TargetSelector = bts_player_own
+  ModifyStaticFactor
+    Factor = factor_cost_res_dungeon
+    Value
+      ValueType = Constant
+      Value = -0.3
+evilperk_general_snots
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_general_snots.buff_xp
+      Item = evilperk_general_snots.buff_spawn
+      Item = evilperk_general_snots.buff_slap
+  UiDataGeneric
+    Icon = 2f93de1eec77f10499b9ced30275e1e2
+    Title = evilperk_general_snots_capt
+    Description = evilperk_general_snots_desc
+    Flavour = cha_main14run_in_time_desc
+  ChallengeProgress
+    CanFail = True
+    FailedVariable = Bool||cha_main14run_in_time|False
+    FalseMeansFailed = True
+evilperk_general_snots.buff_slap
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    TargetSelector = bts_snot
+  BuffProperties
+    Properties = Append
+      Item
+        Property = GettingSlapped.EndlessSlap
+evilperk_general_snots.buff_spawn
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    TargetSelector = bts_player_own
+  BuffProperties
+    Properties = Append
+      Item
+        Property = ThroneRoomSpawner.MaxWorker
+        Value
+          ValueType = Constant
+          Value = 5
+evilperk_general_snots.buff_xp
+  Buff
+    TargetSelector = bts_snot
+    Parts
+      Item = BuffProperties
+  BuffProperties
+    Properties
+      Item
+        Property = LevelUp.XpGainBonusFactor
+        Value
+          ValueType = Constant
+          Value = 1
+evilperk_general_traps_and_doors
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_general_traps_and_doors.buff_doors
+      Item = evilperk_general_traps_and_doors.buff_traps
+      Item = evilperk_general_traps_and_doors.buff_cost
+  UiDataGeneric
+    Icon = 678ec4619cc62db418f06c725d8dcf6e
+    Title = evilperk_general_traps_and_doors_capt
+    Description = evilperk_general_traps_and_doors_desc
+    Flavour = cha_main09journey_thalya_alive_desc
+  ChallengeProgress
+    CanFail = True
+    FailedVariable = Bool||cha_main09journey_thalya_alive|False
+    FalseMeansFailed = True
+evilperk_general_traps_and_doors.buff_cost
+  Buff
+    Parts
+      Item = ModifyStaticFactor
+    TargetSelector = bts_player_own
+  ModifyStaticFactor
+    Factor = factor_cost_gold_door_trap
+    Value
+      ValueType = Constant
+      Value = -0.5
+evilperk_general_traps_and_doors.buff_doors
+  Buff
+    Parts
+      Item = BuffProperties
+    TargetSelector = bts_door
+  BuffProperties
+    Properties
+      Item
+        Property = Combat.MaxHealthBonusFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+evilperk_general_traps_and_doors.buff_traps
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = DynamicAttackValueBuffPart
+    TargetSelector = bts_trap
+  BuffProperties
+    Properties
+      Item
+        Property = Attack.AttackDamageFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+  DynamicAttackValueBuffPart
+    TargetEntries = Append
+      Item
+        TargetTemplate = trap_simple_saw
+        Properties
+          Item
+            Target
+              Name = damage
+              Template = trap_simple_saw
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+      Item
+        TargetTemplate = trap_ground_spike_medium
+        Properties
+          Item
+            Target
+              Name = dmg_fire
+              Template = trap_ground_spike_medium
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+          Item
+            Target
+              Name = dmg_cold
+              Template = trap_ground_spike_medium
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+          Item
+            Target
+              Name = dmg_dot_fire
+              Template = trap_ground_spike_medium
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+      Item
+        TargetTemplate = trap_ground_spike_small
+        Properties = Append
+          Item
+            Target
+              Name = dmg_fire
+              Template = trap_ground_spike_small
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+          Item
+            Target
+              Name = dmg_cold
+              Template = trap_ground_spike_small
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+          Item
+            Target
+              Name = dmg_dot_fire
+              Template = trap_ground_spike_small
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+      Item
+        TargetTemplate = trap_simple_thresher
+        Properties
+          Item
+            Target
+              Name = damage
+              Template = trap_simple_thresher
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+      Item
+        TargetTemplate = trap_trigger_beer
+        Properties
+          Item
+            Target
+              Name = damage
+              Template = trap_trigger_beer
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+          Item
+            Target
+              Name = dot_damage
+              Template = trap_trigger_beer
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+      Item
+        TargetTemplate = trap_trigger_guru
+        Properties
+          Item
+            Target
+              Name = damage
+              Template = trap_trigger_guru
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+      Item
+        TargetTemplate = trap_trigger_hamster.wheel
+        Properties
+          Item
+            Target
+              Name = damage
+              Template = trap_trigger_hamster.wheel
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+      Item
+        TargetTemplate = trap_trigger_lootbox
+        Properties
+          Item
+            Target
+              Name = damage
+              Template = trap_trigger_lootbox
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+      Item
+        TargetTemplate = trap_trigger_slimeball.ball
+        Properties
+          Item
+            Target
+              Name = damage
+              Template = trap_trigger_slimeball.ball
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+      Item
+        TargetTemplate = trap_trigger_slimeball
+        Properties
+          Item
+            Target
+              Name = damage
+              Template = trap_trigger_slimeball
+            Operator = Absolute
+            Value
+              ValueType = Constant
+              Value = 0.5
+evilperk_horde_health
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_horde_health.buff
+  UiDataGeneric
+    Title = evilperk_horde_health_capt
+    Description = evilperk_horde_health_desc
+    Icon = 2fd6b036196cefc47ae6ab9d8a83552a
+  ChallengeProgress
+evilperk_horde_health.buff
+  Buff
+    TargetSelector = bts_horde
+    Parts = Append
+      Item = BuffProperties
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Combat.MaxHealthBonusFactor
+        Value
+          ValueType = Constant
+          Value = 0.15
+evilperk_horde_research
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_horde_research.buff
+  UiDataGeneric
+    Title = evilperk_horde_research_capt
+    Description = evilperk_horde_research_desc
+    Icon = 09ff26e7033cf0b4da5f059e1d0e4aec
+    Flavour = cha_main07storm_hord_only_desc
+  ChallengeProgress
+    CanFail = True
+    FailedVariable = Bool||cha_main07storm_hord_only_failed|False
+evilperk_horde_research.buff
+  Buff
+    Parts = Append
+      Item = ModifyStaticFactor
+    TargetSelector = bts_player_own
+  ModifyStaticFactor
+    Factor = factor_cost_res_horde
+    Value
+      ValueType = Constant
+      Value = -0.15
+evilperk_horde_xp
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_horde_xp.buff
+  UiDataGeneric
+    Title = evilperk_horde_xp_capt
+    Description = evilperk_horde_xp_desc
+    Icon = b7b000987ed6bae4c9e8a76e2995730c
+    Flavour = cha_main10fire_strike_desc
+  ChallengeProgress
+    CanFail = True
+    FailedVariable = Bool||cha_main10fire_strike_bool|False
+evilperk_horde_xp.buff
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    NewTargetActions = Append
+      Item
+        Action = LevelUp.BuffReceiveXP
+        Parameter
+          ValueType = Constant
+          Value = 400
+    TargetSelector = bts_horde
+  BuffProperties
+    Properties = Append
+      Item
+        Property = LevelUp.XpGainBonusFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+evilperk_skill_callback
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_skill_callback.buff
+    IsActivePerk = True
+  UiDataGeneric
+    Icon = af4f5dcaeaa926b4dad6bbee4e2370aa
+    Title = evilperk_skill_callback_capt
+    Description = evilperk_skill_callback_desc
+  ChallengeProgress
+evilperk_skill_callback.buff
+  Buff
+    Parts
+      Item = BuffResearchUnlock
+    TargetSelector = bts_player_own
+  BuffResearchUnlock
+    Unlocks
+      Item = anim_skill_callback_protagonist
+evilperk_skill_gorgu
+  Include = evilperk_base
+  UiDataGeneric
+    Icon = 04101271f82b9034792710c0a35762c4
+    Title = evilperk_skill_gorgu_capt
+    Description = evilperk_skill_gorgu_desc
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_skill_gorgu.buff
+    IsActivePerk = True
+  ChallengeProgress
+evilperk_skill_gorgu.buff
+  Buff
+    Parts = Append
+      Item = BuffResearchUnlock
+    TargetSelector = bts_player_own
+  BuffResearchUnlock
+    Unlocks = Append
+      Item = anim_skill_summon_dungeonlord
+evilperk_skill_storm
+  Include = evilperk_base
+  UiDataGeneric
+    Icon = b4927216f1346e34c9b1345cc83724d7
+    Title = evilperk_skill_storm_capt
+    Description = evilperk_skill_storm_desc
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_skill_storm.buff
+    IsActivePerk = True
+  ChallengeProgress
+evilperk_skill_storm.buff
+  Buff
+    Parts = Append
+      Item = BuffResearchUnlock
+    TargetSelector = bts_player_own
+  BuffResearchUnlock
+    Unlocks = Append
+      Item = anim_skill_storm_of_evil
+evilperk_skill_tentacle
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_skill_tentacle.buff
+    IsActivePerk = True
+  UiDataGeneric
+    Icon = bd55e1702ca05624bbb2d2443dc9e1fd
+    Title = evilperk_skill_tentacle_capt
+    Description = evilperk_skill_tentacle_desc
+  ChallengeProgress
+evilperk_skill_tentacle.buff
+  Buff
+    Parts
+      Item = BuffResearchUnlock
+    TargetSelector = bts_player_own
+  BuffResearchUnlock
+    Unlocks
+      Item = anim_skill_tentacle_protagonist
+evilperk_thalya_damage
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_thalya_damage.buff
+  UiDataGeneric
+    Icon = 6f00ca90e1078fe4580a8ac6f1e76224
+    Title = evilperk_thalya_damage_capt
+    Description = evilperk_thalya_damage_desc
+    Flavour = cha_main17stone_research_desc
+  ChallengeProgress
+evilperk_thalya_damage.buff
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = DynamicAttackValueBuffPart
+    TargetSelector = bts_protagonist_tentacle
+  BuffProperties
+    Properties
+      Item
+        Property = Attack.AttackDamageFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+      Item
+        Property = Attack.SkillDamageFactor
+        Value
+          ValueType = Constant
+          Value = 1
+  DynamicAttackValueBuffPart
+    TargetEntries = Append
+      Item
+        TargetTemplate = aura_protagonist_tentacle
+        Properties
+          Item
+            Target
+              Name = skill_damage
+              Template = aura_protagonist_tentacle
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = 0.5
+evilperk_thalya_health
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_thalya_health.buff
+  UiDataGeneric
+    Icon = 60a9aca80c6c96240871b721b1529fcb
+    Title = evilperk_thalya_health_capt
+    Description = evilperk_thalya_health_desc
+    Flavour = cha_main16ring_thalya_alive_desc
+  ChallengeProgress
+    CanFail = True
+    FailedVariable = Bool||cha_main16ring_thalya_alive_failed|False
+evilperk_thalya_health.buff
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    TargetSelector = bts_protagonist
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Combat.MaxHealthBonusFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+evilperk_thalya_skill_cost
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_thalya_skill_cost.buff
+  UiDataGeneric
+    Title = evilperk_thalya_skill_cost_capt
+    Description = evilperk_thalya_skill_cost_desc
+    Icon = f060d7131d2c50a438670e0fa2021743
+    Flavour = cha_main05evil_buildings_desc
+  ChallengeProgress
+    CanFail = True
+    FailedVariable = Bool||cha_main05evil_buildings_failed|False
+evilperk_thalya_skill_cost.buff
+  Buff
+    Parts = Append
+      Item = DynamicAttackValueBuffPart
+    TargetSelector = bts_protagonist
+  DynamicAttackValueBuffPart
+    TargetEntries = Append
+      Item
+        TargetTemplate = plot_protagonist_evil
+        Properties
+          Item
+            Target
+              Name = storm_cost
+              Template = plot_protagonist_evil
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = -0.5
+          Item
+            Target
+              Name = callback_cost
+              Template = plot_protagonist_evil
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = -0.5
+          Item
+            Target
+              Name = tentacle_cost
+              Template = plot_protagonist_evil
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = -0.5
+          Item
+            Target
+              Name = dungeonlord_cost
+              Template = plot_protagonist_evil
+            Operator = Percent
+            Value
+              ValueType = Constant
+              Value = -0.5
+evilperk_thalya_xp
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_thalya_xp.buff
+  UiDataGeneric
+    Icon = ff365af073168814ab27151765eb995b
+    Title = evilperk_thalya_xp_capt
+    Description = evilperk_thalya_xp_desc
+    Flavour = cha_main16ring_thalya_alive_desc
+  ChallengeProgress
+evilperk_thalya_xp.buff
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    TargetSelector = bts_protagonist
+  BuffProperties
+    Properties = Append
+      Item
+        Property = LevelUp.XpGainBonusFactor
+        Value
+          ValueType = Constant
+          Value = 1
+evilperk_undead_graveyard
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_undead_graveyard.buff
+  UiDataGeneric
+    Title = evilperk_undead_graveyard_capt
+    Description = evilperk_undead_graveyard_desc
+    Icon = 32e003906600d7b449bc07b8d96b3a4b
+  ChallengeProgress
+evilperk_undead_graveyard.buff
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    TargetSelector = bts_graveyard
+    BuffStrenghtScaler = BuffStrengthScalerStorageCurrent
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Room.EfficiencyBonus
+        Value
+          ValueType = Strength
+          Value = x
+  BuffStrengthScalerStorageCurrent
+    Multiplier = 0.05
+    DefaultStrength = 0
+evilperk_undead_minions
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_undead_minions.buff
+  UiDataGeneric
+    Title = evilperk_undead_minions_capt
+    Description = evilperk_undead_minions_desc
+    Icon = 0a62c5d8b057d884b91afbbd7d33a8d3
+    Flavour = cha_main08sacrifice_reach_level_desc
+  ChallengeProgress
+    CounterVariable = Int||cha_main08sacrifice_reach_level_count|0
+    TargetParamVariable = Int||cha_main08sacrifice_reach_level_para|0
+evilperk_undead_minions.buff
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    TargetSelector = bts_owner_all_units_minions
+  BuffProperties
+    Properties = Append
+      Item
+        Property = DestroyWhenKilled.ActivateKillSkill
+evilperk_undead_research
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_undead_research.buff
+  UiDataGeneric
+    Title = evilperk_undead_research_capt
+    Description = evilperk_undead_research_desc
+    Icon = 7b9b74d9b28590247a32f356206fdcf4
+    Flavour = cha_main11blessing_coffins_desc
+  ChallengeProgress
+    CounterVariable = Int||cha_main11blessing_coffins_count|0
+    TargetParamVariable = Int||cha_main11blessing_coffins_para|0
+    CounterVisualization = Percent
+evilperk_undead_research.buff
+  Buff
+    Parts = Append
+      Item = ModifyStaticFactor
+    TargetSelector = bts_player_own
+  ModifyStaticFactor
+    Factor = factor_cost_res_undead
+    Value
+      ValueType = Constant
+      Value = -0.15
+evilperk_undead_turned_hero
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs = Append
+      Item = evilperk_undead_turned_hero.buff
+  UiDataGeneric
+    Title = evilperk_undead_turned_hero_capt
+    Description = evilperk_undead_turned_hero_desc
+    Icon = 0c94042ba0c04504ca352da9559a18c7
+    Flavour = cha_main18unholy_turned_heroes_desc
+  ChallengeProgress
+    CounterVariable = Int||cha_main18unholy_turned_heroes_count|0
+    TargetParamVariable = Int||cha_main18unholy_turned_heroes_para|0
+evilperk_undead_turned_hero.buff
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    TargetSelector = bts_monster_no_turned
+  BuffProperties
+    Properties = Append
+      Item
+        Property = PerformSkillWhenKilled.Activate

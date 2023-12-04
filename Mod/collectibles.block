@@ -1,0 +1,231 @@
+﻿atmo_guru
+  Abstract = True
+  Include = base_collectible
+  Location
+  EvilSelectable
+    SelectionRadius = 0.5
+  EvilHandInteractable
+    RightClick = True
+  EvilHandPickup
+    PickupType = Guru
+  Collectible
+    ResourceManagerType = GuruManager
+  ServerAnimation
+  GuruWalkAround
+  ServerNavAgent
+  CasActorType
+base_collectible
+  Abstract = True
+  Location
+  EvilHandPickup
+    MayUsePortals = False
+  Collectible
+  Attachable
+  EvilSelectable
+    HasBigCollider = False
+    SelectionColliderHeight = 0.1
+  CurrencyConvertible
+    PossibleConversions = Append
+      Item
+        TargetCurrency = FaithManager
+        PointAmount = 10
+    EvilInterestPriority = 5
+  EntityType
+    Types = Append
+      Item = type_currency
+battery_collectible
+  Include = base_collectible
+  PrefabReference
+    ClientPrefab = 4db23420b84603946b9346dfa947fb56 9d7b5be7ba157b64087309665df57c89
+  EvilHandPickup
+    PickupType = Battery
+    MultiPickSurrounding = 2
+    PickupSound = hand_pick_battery
+    DropSound = hand_pick_battery
+  Collectible
+    ResourceManagerType = BatteryManager
+  EvilHandInteractable
+    RightClick = True
+  VisualRepresentation
+  VisualRepresentationRandom
+  EntityType
+    Types = Append
+      Item = type_currency_battery
+  UiDataGeneric
+    Icon = d79da578149549d41b01ef26ec53e7b3
+    Title = resource_Battery
+  CurrencyConvertible
+    PossibleConversions
+      Item
+        TargetCurrency = FaithManager
+        PointAmount = 300
+beer_collectible
+  Include = base_collectible
+  PrefabReference
+    ClientPrefab = 5f0c3f2077387f34d984bddfca4e3ae5 642f0897a9491b3449fa00d6da0e94c5 669767978e79b8d448feaf0224e04486 8678c85dceb960c45a00857869822a91
+  EvilHandPickup
+    PickupType = Beer
+    MultiPickSurrounding = 2
+    PickupSound = hand_pick_barrell
+    DropSound = hand_pick_barrell
+  Collectible
+    ResourceManagerType = BeerManager
+  EvilHandInteractable
+    RightClick = True
+  EntityType
+    Types = Append
+      Item = type_beer_collectible
+  ServerAnimation
+  VisualRepresentation
+  VisualRepresentationRandom
+  UiDataGeneric
+    Icon = 89aeae86cbd9a714b83746a9cc5f716e
+    Title = resource_Beer
+  CurrencyConvertible
+    PossibleConversions
+      Item
+        TargetCurrency = FaithManager
+        PointAmount = 100
+  SatisfyBeerWhenDroped
+gem_collectible
+  RemovedComponent = Collectible
+  PrefabReference
+    ClientPrefab = 8b4fae8d29eed03488d2649c2ab785ac 74a6c1c8d57b5704793b17d5729dd362
+  EvilHandPickup
+    PickupType = Gems
+    OnlyPickableWhenOwned = False
+    MayUsePortals = False
+    DropSound = hand_drop_gemstone
+  EvilHandInteractable
+    RightClick = True
+  VisualRepresentation
+  VisualRepresentationRandom
+  UiDataGeneric
+    Icon = 7ad1eb36987aed54db7b2e8c6508df7b
+    Title = gem_capt
+  Location
+  EvilSelectable
+  CurrencyConvertible
+    PossibleConversions = Append
+      Item
+        TargetCurrency = GoldManager
+        PointAmount = 5000
+      Item
+        TargetCurrency = FaithManager
+        PointAmount = 25000
+    EvilInterestPriority = 1
+  UiDataMinimapIcon
+    Icon = f0d0fec04502f734388998746c1dcd43
+  FogOfWarHide
+    Visibility = OnceSeen
+    CullInDungeonIfOwned = True
+guru_collectible
+  Include = atmo_guru
+  PrefabReference
+    ClientPrefab = fca308efc5d97934a92abaffb723d76f 5d6a92fe6d19dc1439f6281ffb18879e b898a785597051341a94cb1c3720ef5b 3cb47e024f51ea74790f8585f3840025
+  RemovedChild = DestroyBySlap
+  Owner = SinglePlayer
+  VisualRepresentation
+  VisualRepresentationRandom
+  Collectible
+    DestroyOnSlapped = True
+    AmountOfResourceOnSlap = 1
+    ResourceManagerTypeOnSlap = EvilnessManager
+    OverrideDestroyEffect = True
+    SlappedDestroyOverride = CasAnimation
+    OverrideCasName = slapped
+  UiDataGeneric
+    Icon = 32aa3af0152d645488dfa4049b5877ef
+    Title = resource_Guru
+  EntityType
+    Types = Append
+      Item = type_currency_guru
+  CurrencyConvertible
+    EvilInterestPriority = 1
+    PossibleConversions
+      Item
+        TargetCurrency = FaithManager
+        PointAmount = 10
+  SatisfyHungerWhenDroped
+  EvilHandPickup
+  EvilHandInteractable
+potion_collectible
+  Include = base_collectible
+  PrefabReference
+    ClientPrefab = 2ffbedcdda8a59346a46038f9e71265b 5d477277544466a4f814318d5acbed26 40c7df3aecf8c2f4e969a24d52c9f537 084463c753c3b7845ae4a1a672bd48ad b179fc34e0d449049a1ee5cc3accbfe6 762d6d4000336ac45a1e886b48df5545 d67617ba5287b7b489a7a48361077663 0879af5c01dbdb14ca20ebe1bbc9a8e1 59387f39b90b92b41aa91f37aca99c5c c657345abbf21874a816415fb2e6e403 785d2c801a8f60a469c6f8f1d116d490
+  Collectible
+    ResourceManagerType = PotionManager
+  EvilHandPickup
+    PickupType = Potion
+  PotionCollectible
+    Priority = 10
+    VisualsByPotion = Append
+      Item
+        TargetType = potion_brainwash
+        VisualID = 0
+      Item
+        TargetType = potion_earth
+        VisualID = 1
+      Item
+        TargetType = potion_explosion
+        VisualID = 2
+      Item
+        TargetType = potion_gold
+        VisualID = 3
+      Item
+        TargetType = potion_healing
+        VisualID = 4
+      Item
+        TargetType = potion_improvedungeon
+        VisualID = 5
+      Item
+        TargetType = potion_poison
+        VisualID = 6
+      Item
+        TargetType = potion_slimedoor
+        VisualID = 7
+      Item
+        TargetType = potion_speed
+        VisualID = 8
+      Item
+        TargetType = potion_strength
+        VisualID = 9
+      Item
+        TargetType = potion_perk
+        VisualID = 10
+  VisualRepresentation
+  UnitPerkCollectible
+  UiDataGeneric
+    Title = resource_Potion
+    Icon = 0fb4467e4dc301944b253c48158cd7c5
+  CurrencyConvertible
+    PossibleConversions
+      Item
+        TargetCurrency = FaithManager
+        PointAmount = 100
+toolbox_collectible
+  Include = base_collectible
+  PrefabReference
+    ClientPrefab = d7214b819815cd04badc49ba2aafec87 02f16f29cbedf6447bcd7a8d6c11782c 33a0d9870992887469fc89e295d4e9ee 2d030cb16543f5745a24a7a6a4ed75de
+  EvilHandPickup
+    PickupType = Toolbox
+    MultiPickSurrounding = 2
+    PickupSound = hand_pick_toolbox
+    DropSound = hand_pick_toolbox
+  Collectible
+    ResourceManagerType = ToolboxManager
+  EvilHandInteractable
+    RightClick = True
+  VisualRepresentation
+  VisualRepresentationRandom
+  UiDataGeneric
+    Icon = 8c9d2a7fd79bff14ebf8325221f321c6
+    Title = resource_Toolbox
+  EntityType
+    Types = Append
+      Item = type_currency_toolbox
+  CurrencyConvertible
+    PossibleConversions
+      Item
+        TargetCurrency = FaithManager
+        PointAmount = 50

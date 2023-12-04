@@ -1,0 +1,4293 @@
+﻿barricade_stone_destroyable
+  Include = attacable_barriers_basic
+  PrefabReference
+    ClientPrefab = e64a73ab77389f54e9810288dd04889e a744a9d5cff8c644481b9073fdebf0bf
+  Owner = AIPlayer5
+  EvilSelectable
+    VisualSelectionRadius = 7
+    SelectionRadius = 7
+    SelectionColliderHeight = 0.6666783
+  CostFieldAdditionalWhileAlive
+    Area = PhxOBBSensor
+      HalfWidth = 6.5
+      HalfHeight = 3.9
+      Offset = 0 -0.3 0
+  UiDataUnit
+    Title = level_props_barricade_stone_destroyable_capt
+    Description = level_props_barricade_stone_destroyable_desc
+    Portrait = bea94436c8804a8458640f081faffaee
+    Flavour = level_props_barricade_stone_destroyable_flav
+    Icon = bea94436c8804a8458640f081faffaee
+  VisualRepresentation
+  EntityType
+    Types = Append
+      Item = type_phalanx_destroyable
+      Item = type_structure
+  DestroyWhenKilled
+    TimeUntilDespawn = 5
+  EvilificationInfluencer
+  PlayAudioOnDestroy
+    Sfx = atmo_barrier_stone_destruction
+    PlayOnKill = True
+    MinDistance = 15
+    MaxDistance = 25
+barricade_wood_destroyable
+  Include = attacable_barriers_basic
+  PrefabReference
+    ClientPrefab = bb94f6ddc2130744aa1ffc856fa468d6 1f8b0eeb728b7fc45a1896efbb99bde5
+  Owner = AIPlayer5
+  EvilSelectable
+    VisualSelectionRadius = 5.5
+    SelectionRadius = 5.5
+    SelectionColliderHeight = 0.6666783
+  CostFieldAdditionalWhileAlive
+    Area = PhxOBBSensor
+      HalfWidth = 5
+      HalfHeight = 3
+      Offset = 0 0.5 0
+  UiDataUnit
+    Title = level_props_barricade_wood_destroyable_capt
+    Description = level_props_barricade_wood_destroyable_desc
+    Portrait = 299de3b8c7d32264e93506c47ddd952a
+    Flavour = level_props_barricade_wood_destroyable_flav
+    Icon = 299de3b8c7d32264e93506c47ddd952a
+  VisualRepresentation
+  EntityType
+    Types = Append
+      Item = type_phalanx_destroyable
+      Item = type_structure
+  DestroyWhenKilled
+    TimeUntilDespawn = 2
+  EvilificationInfluencer
+  PlayAudioOnDestroy
+    Sfx = atmo_barrier_wood_destruction
+    PlayOnKill = True
+    MinDistance = 15
+    MaxDistance = 25
+buff_hero_armor
+  BuffProperties
+    Properties
+      Item
+        Property = Combat.ArmorFactor
+        Value
+          ValueType = Constant
+          Value = 0.2
+  Buff
+    Parts
+      Item = BuffProperties
+    TargetSelector = bts_owner_list
+    WarnIfNoPartsAffectTarget = False
+buff_hero_damage
+  Buff
+    Parts
+      Item = BuffProperties
+    WarnIfNoPartsAffectTarget = False
+    TargetSelector = bts_owner_list
+  BuffProperties
+    Properties
+      Item
+        Property = Attack.AttackDamageFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+buff_hero_speed
+  Buff
+    Parts
+      Item = BuffProperties
+    WarnIfNoPartsAffectTarget = False
+    TargetSelector = bts_owner_list
+  BuffProperties
+    Properties
+      Item
+        Property = Mover.SpeedFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+      Item
+        Property = Attack.AttackSpeedFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+buff_stone_damage
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = BuffAnimation
+    TargetSelector = bts_owner_all_units
+    WarnIfNoPartsAffectTarget = False
+  BuffProperties
+    Properties
+      Item
+        Property = Attack.AttackDamageFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+  BuffAnimation
+    ContinuesAnimation = anim_buff_stone_damage
+buff_stone_efficiency
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = BuffAnimation
+    TargetSelector = bts_owner_all_rooms
+    WarnIfNoPartsAffectTarget = False
+  BuffProperties
+    Properties
+      Item
+        Property = Room.EfficiencyBonus
+        Value
+          ValueType = Constant
+          Value = 0.5
+  BuffAnimation
+    ContinuesAnimation = anim_buff_stone_efficiency
+buff_stone_health
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = BuffAnimation
+    TargetSelector = bts_owner_all_units
+    WarnIfNoPartsAffectTarget = False
+  BuffProperties
+    Properties
+      Item
+        Property = Combat.RegenerationRate
+        Value
+          ValueType = Constant
+          Value = 1
+  BuffAnimation
+    ContinuesAnimation = anim_buff_stone_health
+buff_stone_speed
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = BuffAnimation
+    TargetSelector = bts_owner_all_units
+    WarnIfNoPartsAffectTarget = False
+  BuffProperties
+    Properties
+      Item
+        Property = Mover.SpeedFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+      Item
+        Property = DigBrain.DigDamagePerSecondFactor
+        Value
+          ValueType = Constant
+          Value = -0.5
+  BuffAnimation
+    ContinuesAnimation = anim_buff_stone_speed
+buff_stone_xp
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = BuffAnimation
+    TargetSelector = bts_owner_all_units
+    WarnIfNoPartsAffectTarget = False
+  BuffProperties
+    Properties
+      Item
+        Property = LevelUp.XpGainBonus
+        Value
+          ValueType = Constant
+          Value = 0.5
+  BuffAnimation
+    ContinuesAnimation = anim_buff_stone_xp
+cameraregioneffect_common_falling_stone
+  PrefabReference
+    ClientPrefab = 26df1c0b54f60df498837890e4ad0a8d
+  CameraRegionEffectServer
+    Sound2dLoopedWhileEnabled = ""
+    OutsideEvilEnabled = False
+    OutsideGoodEnabled = False
+    DungeonMineEnabled = True
+    DungeonNotMineEnabled = True
+cameraregioneffect_common_falling_stone_light
+  PrefabReference
+    ClientPrefab = 5632ebd0a46434140b8be932a96d3b7a
+  CameraRegionEffectServer
+    DungeonMineEnabled = True
+    DungeonNotMineEnabled = True
+cameraregioneffect_common_skir_storm
+  PrefabReference
+    ClientPrefab = cfa20d1cf5ff5404eabce82b8ca2b3ee
+  CameraRegionEffectServer
+    Sound2dLoopedWhileEnabled = map_main07storm_storm_loop
+    OutsideEvilEnabled = True
+    OutsideGoodEnabled = True
+  CameraRegionEffectSpawnerServer
+    SpawnPrefabs = Append
+      Item
+        Prefab = d82d09f938e8eac4a8cfd9b2335a645d
+        SpawnAmountRange = 2.5 2.5
+        LifetimeRange = 3 3
+common_skir_storm_controller
+  ScriptVariableContainer
+    Variables
+      Item = Entity|StormStartInGoal|dominant/dominant_common_skir_storm_next|
+      Item = Entity|StormEndsInGoal|dominant/dominant_common_skir_storm_current|
+      Item = Float|StormStartInTimer|timer_storm_cooldown|0
+      Item = Float|StormEndsInTimer|timer_storm_length|0
+      Item = Bool|StormIsActive||False
+      Item = Entity|StormCameraEffect|cameraregioneffect_common_skir_storm|
+      Item = Entity|StormBuffHeros
+      Item = Bool|PlayerHasArtefact||False
+      Item = Entity|StormBuffPlayers
+      Item = Entity|artefact_ping|waypoints/waypoint_artefact|
+      Item = Entity|evil_vault_room|rooms/room_evilvault|
+      Item = Float|StormStrengthHero|storm_strength_hero|0
+      Item = Float|StormStrengthPlayer|storm_strength_player|0
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+        StartDelay = Float|||0
+    Actions
+      Item = EnableDominantCounter
+        DominantCounter = Entity||StormStartInGoal|
+      Item = StartDominantCountdown
+        DominantCounter = Entity||StormStartInGoal|
+        Count = Int||StormStartInTimer|0
+      Item = PingMiniMap
+        Location = Entity||artefact_ping|
+        Permanent = True
+        Type = QuestSide
+  CreateChildEntities
+    WhatToCreate = All
+common_skir_storm_controller.storm_artefact_active
+  ScriptContainer
+    Actions = Append
+      Item = SetBoolValue
+        Source = Bool|||True
+        Destination = Bool||PlayerHasArtefact|False
+      Item = FillList
+        List = EntityList||playerbuffs|
+        Owner = SinglePlayer
+        Filter = Append
+          Item = EntityListFilterEntityType
+            EntityType = type_buff_main07storm
+      Item = DestroyAllInSelectionGroup
+        SelectionGroup = EntityList||playerbuffs|
+    Triggers = Append
+      Item = EventTrigger
+        Global = True
+        RfEventType = ArtifactManager.OnActivated
+    AfterPlay = Nothing
+  ScriptVariableContainer
+    Variables = Append
+      Item = EntityList|playerbuffs||
+common_skir_storm_controller.storm_artefact_found
+  ScriptContainer
+    Triggers
+      Item = TileDiscovered
+        Tile = Tile|||166 201
+    Actions
+      Item = RemovePing
+        Location = Entity||artefact_ping|
+        Type = QuestSide
+      Item = ActivateEntity
+        Entity = Entity||evil_vault_room|
+        IgnoreIfAlreadyActive = True
+        IsCommentedOut = True
+      Item = SetBoolValue
+        Source = Bool|||True
+        Destination = Bool||PlayerHasArtefact|False
+  ScriptVariableContainer
+common_skir_storm_controller.storm_artefact_inactive
+  ScriptContainer
+    Actions = Append
+      Item = SetBoolValue
+        Source = Bool|||False
+        Destination = Bool||PlayerHasArtefact|False
+      Item = FillList
+        List = EntityList||playerbuffs|
+        Owner = SinglePlayer
+        Filter = Append
+          Item = EntityListFilterEntityType
+            EntityType = type_buff_main07storm
+      Item = DestroyAllInSelectionGroup
+        SelectionGroup = EntityList||playerbuffs|
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareBool
+            A = Bool||StormIsActive|False
+            B = Bool|||True
+        ThenActions = Append
+          Item = CreateBuff
+            Buff = buff_main07storm_storm
+            CreatedBuffVariable = Entity||StormBuffPlayers|
+            Strength = Float||StormStrengthPlayer|15
+    Triggers = Append
+      Item = EventTrigger
+        Global = True
+        RfEventType = ArtifactManager.OnDeactivated
+    AfterPlay = Nothing
+  ScriptVariableContainer
+    Variables = Append
+      Item = EntityList|playerbuffs||
+common_skir_storm_controller.storm_end
+  ScriptVariableContainer
+  ScriptContainer
+    Triggers
+      Item = DominantCountdownTrigger
+        DominantEntity = Entity||StormEndsInGoal|
+    Conditions
+    Actions
+      Item = CameraRegionEffect
+        CameraRegionEffectServer = Entity||StormCameraEffect|
+        Active = False
+      Item = FadeLightThemeAction
+        LightTheme = Dawn
+        LightThemeFadeDuration = 3
+      Item = FadeWeatherThemeAction
+        WeatherTheme = Dawn
+        WeatherThemeFadeDuration = 3
+      Item = SetBoolValue
+        Source = Bool|||False
+        Destination = Bool||StormIsActive|False
+      Item = EnableDominantCounter
+        DominantCounter = Entity||StormEndsInGoal|
+        Enable = False
+      Item = DestroyEntity
+        Entity = Entity||StormBuffHeros|
+      Item = DestroyEntity
+        Entity = Entity||StormBuffPlayers|
+      Item = EnableDominantCounter
+        DominantCounter = Entity||StormStartInGoal|
+      Item = StartDominantCountdown
+        DominantCounter = Entity||StormStartInGoal|
+        Count = Int||StormStartInTimer|0
+    AfterPlay = Nothing
+common_skir_storm_controller.storm_start
+  ScriptContainer
+    Triggers
+      Item = DominantCountdownTrigger
+        DominantEntity = Entity||StormStartInGoal|
+    Conditions
+    Actions
+      Item = SetBoolValue
+        Source = Bool|||True
+        Destination = Bool||StormIsActive|False
+      Item = FadeLightThemeAction
+        LightTheme = Storm
+        LightThemeFadeDuration = 3
+      Item = FadeWeatherThemeAction
+        WeatherTheme = Storm
+        WeatherThemeFadeDuration = 3
+      Item = CameraRegionEffect
+        CameraRegionEffectServer = Entity||StormCameraEffect|
+      Item = EnableDominantCounter
+        DominantCounter = Entity||StormStartInGoal|
+        Enable = False
+      Item = CreateBuff
+        Buff = buff_main07storm_storm
+        CreatedBuffVariable = Entity||StormBuffHeros|
+        Owner = AIPlayer5
+        Strength = Float||StormStrengthHero|0
+      Item = IfThenElse
+        Conditions
+          Item = CompareBool
+            A = Bool||PlayerHasArtefact|False
+            B = Bool|||False
+        ThenActions
+          Item = CreateBuff
+            Buff = buff_main07storm_storm
+            CreatedBuffVariable = Entity||StormBuffPlayers|
+            Owner = SinglePlayer
+            Strength = Float||StormStrengthPlayer|0
+      Item = EnableDominantCounter
+        DominantCounter = Entity||StormEndsInGoal|
+      Item = StartDominantCountdown
+        DominantCounter = Entity||StormEndsInGoal|
+        Count = Int||StormEndsInTimer|0
+    AfterPlay = Nothing
+  ScriptVariableContainer
+destroyable_object_barrels_01
+  Include = destroyable_object_crates_01
+  PrefabReference
+    ClientPrefab = c5a576bd11546af4eb4e28e569591de1 de28538ce649ce04daedd30382cd8b30
+  RoomDecorationEntity
+  Combat
+    MaxHealth = 250
+destroyable_object_crates_01
+  Include = destroyable_object_with_loot
+  PrefabReference
+    ClientPrefab = 3088620d98056ad408a406709ecadeec e97c5b815e05bfc48b361db4a44b0b84
+  Owner = AIPlayer5
+  Combat
+    MaxHealth = 250
+    NonThreat = True
+  EntityType
+    Types = Append
+      Item = type_evilness_destroyable_easy
+  UiDataUnit
+    Portrait = 3d4e9e2ce14375b4db0e742bdc1b618c
+    Icon = 3d4e9e2ce14375b4db0e742bdc1b618c
+    Title = plot_destroyable_object_crates_capt
+    Description = plot_destroyable_object_crates_desc
+    Flavour = plot_destroyable_object_crates_flav
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  PlayAudioOnDestroy
+    Sfx = map_main11blessing_destroy_coffin
+    PlayOnKill = True
+    MinDistance = 15
+    MaxDistance = 25
+  CasActorType
+  LowPriorityFightTarget
+  RoomDecorationEntity
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_gethit
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+destroyable_object_crates_02
+  Include = destroyable_object_crates_01
+  PrefabReference
+    ClientPrefab = f9b117f01f7598d48acc294ed69e14da 37771d7816f1fed48a8e2ab3fbdf5276
+destroyable_object_dwarf_bed
+  Include = destroyable_object_with_loot
+  PrefabReference
+    ClientPrefab = e77c2364a505aa048ab033e8b2b8a981 84105c37af2947542bc144bacd11e15e
+  Combat
+    MaxHealth = 250
+    NonThreat = True
+  EntityType
+    Types = Append
+      Item = type_evilness_destroyable_easy
+  UiDataUnit
+    Portrait = 3d4e9e2ce14375b4db0e742bdc1b618c
+    Icon = 3d4e9e2ce14375b4db0e742bdc1b618c
+    Title = plot_destroyable_object_dwarf_furniture_capt
+    Description = plot_destroyable_object_dwarf_furniture_desc
+    Flavour = plot_destroyable_object_dwarf_furniture_flav
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  PlayAudioOnDestroy
+    Sfx = map_main11blessing_destroy_coffin
+    PlayOnKill = True
+    MinDistance = 15
+    MaxDistance = 25
+  CasActorType
+  LowPriorityFightTarget
+  RoomDecorationEntity
+  FogOfWarHide
+destroyable_object_dwarf_shelf
+  Include = destroyable_object_dwarf_bed
+  PrefabReference
+    ClientPrefab = 281448c20839f4b4dbe621af907034b9 ace35c08c2bc71146bbd6e38a5585abd
+destroyable_object_dwarf_table_a
+  Include = destroyable_object_dwarf_bed
+  PrefabReference
+    ClientPrefab = ca9e8ee3d22107b4d9a1a189e00e608e 25f453f256cd9824d8e839af07001c7b
+destroyable_object_dwarf_table_b
+  Include = destroyable_object_dwarf_bed
+  PrefabReference
+    ClientPrefab = 412b1d609a6588949acde9178fa1e3f2 9db75a03fda7d754ab3c8a905f7c66bb
+  Combat
+    NonThreat = True
+destroyable_object_dwarf_weapon_rack_a
+  Include = destroyable_object_dwarf_bed
+  PrefabReference
+    ClientPrefab = 9bb96dd3b69cc6144927fad244857ace 074cbbf616310a2438e95aa7eaa65dc7
+destroyable_object_dwarf_weapon_rack_b
+  Include = destroyable_object_dwarf_bed
+  PrefabReference
+    ClientPrefab = 9395b7c5c9d479043bc8622941c74868 424cf9bff23f2b44ea69f114efb83997
+destroyable_object_statue_dwarfqueen
+  Include = destroyable_object_statue_fighter
+  PrefabReference
+    ClientPrefab = 8d49461799bdad248a99ed7cc87e7656 f6138c540a68ee945ac13b7bf7825c54
+  Combat
+    NonThreat = True
+  UiDataUnit
+    Portrait = 3d4e9e2ce14375b4db0e742bdc1b618c
+destroyable_object_statue_fighter
+  Include = destroyable_object_with_loot
+  PrefabReference
+    ClientPrefab = 148610cd2cdab1447b9635e4218b94f5 61581694672d4f844a5691fc3c46b530
+  Owner = AIPlayer5
+  Combat
+    MaxHealth = 500
+    NonThreat = True
+  EntityType
+    Types = Append
+      Item = type_evilness_destroyable_medium
+  UiDataUnit
+    Portrait = 3d4e9e2ce14375b4db0e742bdc1b618c
+    Icon = 3d4e9e2ce14375b4db0e742bdc1b618c
+    Title = plot_destroyable_object_statue_capt
+    Description = plot_destroyable_object_statue_desc
+    Flavour = plot_destroyable_object_statue_flav
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  PlayAudioOnDestroy
+    Sfx = atmo_barrier_stone_destruction
+    PlayOnKill = True
+    MinDistance = 15
+    MaxDistance = 25
+  CasActorType
+  LowPriorityFightTarget
+destroyable_object_statue_tanos
+  Include = destroyable_object_statue_fighter
+  PrefabReference
+    ClientPrefab = 4962f64804183394a8fcdbd01d57838f 9e6d73c95a62dab4eae3f21478d3081e
+destroyable_object_statue_tristan
+  Include = destroyable_object_statue_fighter
+  PrefabReference
+    ClientPrefab = 1fb3989b718fb0448b47bd69f9fba946 e795c9b56a34e5a409a211102eb4349c
+destroyable_object_windmill
+  Include = destroyable_object_with_loot
+  PrefabReference
+    ClientPrefab = 2e2bbacea7991794882f9048021d9049 889436713a89cb1409361f89e7d73d5a
+  Owner = AIPlayer5
+  Combat
+    MaxHealth = 750
+    NonThreat = False
+  EntityType
+    Types = Append
+      Item = type_evilness_destroyable_hard
+  UiDataUnit
+    Portrait = 3d4e9e2ce14375b4db0e742bdc1b618c
+    Icon = 3d4e9e2ce14375b4db0e742bdc1b618c
+    Title = plot_destroyable_object_windmill_capt
+    Description = plot_destroyable_object_windmill_desc
+    Flavour = plot_destroyable_object_windmill_flav
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  PlayAudioOnDestroy
+    Sfx = map_plot_construction_site_hammer_die
+    PlayOnKill = True
+    MinDistance = 15
+    MaxDistance = 25
+  Stunned
+  ServerAnimation
+    ServerIdle = anim_destroyable_object_windmill
+    ProvidedActors
+      Item = actor_gethit
+  CasActorType
+  LowPriorityFightTarget
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 3.2
+      Offset = 0 0
+  FarseerBody
+    Radius = 2.4
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+dominant_common_skir_storm_current
+  Include = dominant_base
+  UiDataDominant
+    Icon = 9e2f193cb9f53984f982fbdd8ee75a8d
+    Title = dom_main07storm_storm_info
+    Description = dom_main07storm_storm_info_desc
+    CountFormat = Time
+  DominantCounter
+    CountType = AutoCountDown
+dominant_common_skir_storm_info
+  Include = dominant_base
+  UiDataDominant
+    Icon = 9e2f193cb9f53984f982fbdd8ee75a8d
+    Title = dom_main07storm_storm_info
+    Description = dom_main07storm_storm_info_desc
+  DominantAction
+    InteractionEnabled = False
+dominant_common_skir_storm_next
+  Include = dominant_base
+  UiDataDominant
+    Icon = 4b2e15e9a82c20b42a28fb70026fb1b7
+    Title = dom_main07storm_storm_next_info
+    Description = dom_main07storm_storm_next_info_desc
+    CountFormat = Time
+  DominantCounter
+    CountType = AutoCountDown
+dominant_general_stone_of_damage
+  Include = dominant_general_stone_of_xp
+  DominantAction
+  UiDataDominant
+    Icon = 47da25cc8ab325646a2024ae4a1067d9
+    Title = dom_general_stone_of_damage_capt
+    Description = dom_general_stone_of_damage_desc
+  ScriptContainer
+    AfterPlay = Nothing
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+            ValidState = True
+            IsCommentedOut = False
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+            IsCommentedOut = False
+        ElseActions
+        IsCommentedOut = False
+      Item = CreateBuff
+        Buff = buff_stone_damage
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+        UseOwnerFromScriptLocation = False
+        Owner = SinglePlayer
+        IsCommentedOut = False
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_damage_random_01
+          Item = dlg_general_stone_buff_damage_random_02
+          Item = dlg_general_stone_buff_damage_random_03
+          Item = dlg_general_stone_buff_damage_random_04
+          Item = dlg_general_stone_buff_damage_random_05
+        Wait = True
+        SceneLocation = 
+        SceneNotWhenFighting = True
+        SceneUnlessAllInvulnerable = True
+        IsCommentedOut = False
+dominant_general_stone_of_efficiency
+  Include = dominant_general_stone_of_xp
+  DominantAction
+  UiDataDominant
+    Icon = db37429a7d33e004b859ee00215c4a75
+    Title = dom_general_stone_of_efficiency_capt
+    Description = dom_general_stone_of_efficiency_desc
+  ScriptContainer
+    AfterPlay = Nothing
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+            ValidState = True
+            IsCommentedOut = False
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+            IsCommentedOut = False
+        ElseActions
+        IsCommentedOut = False
+      Item = CreateBuff
+        Buff = buff_stone_efficiency
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+        UseOwnerFromScriptLocation = False
+        Owner = SinglePlayer
+        IsCommentedOut = False
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_efficiency_random_01
+          Item = dlg_general_stone_buff_efficiency_random_02
+          Item = dlg_general_stone_buff_efficiency_random_03
+          Item = dlg_general_stone_buff_efficiency_random_04
+          Item = dlg_general_stone_buff_efficiency_random_05
+        Wait = True
+        SceneLocation = 
+        SceneNotWhenFighting = True
+        SceneUnlessAllInvulnerable = True
+        IsCommentedOut = False
+dominant_general_stone_of_health
+  Include = dominant_general_stone_of_xp
+  DominantAction
+  UiDataDominant
+    Icon = df27290881bc3bd4991b5e8f7b53186c
+    Title = dom_general_stone_of_health_capt
+    Description = dom_general_stone_of_health_desc
+  ScriptContainer
+    AfterPlay = Nothing
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+            ValidState = True
+            IsCommentedOut = False
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+            IsCommentedOut = False
+        ElseActions
+        IsCommentedOut = False
+      Item = CreateBuff
+        Buff = buff_stone_health
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+        UseOwnerFromScriptLocation = False
+        Owner = SinglePlayer
+        IsCommentedOut = False
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_health_random_01
+          Item = dlg_general_stone_buff_health_random_02
+          Item = dlg_general_stone_buff_health_random_03
+          Item = dlg_general_stone_buff_health_random_04
+          Item = dlg_general_stone_buff_health_random_05
+        Wait = True
+        SceneLocation = 
+        SceneNotWhenFighting = True
+        SceneUnlessAllInvulnerable = True
+        IsCommentedOut = False
+dominant_general_stone_of_speed
+  Include = dominant_general_stone_of_xp
+  DominantAction
+  UiDataDominant
+    Icon = 849a2a0b3be583a459a6cd5056317808
+    Title = dom_general_stone_of_speed_capt
+    Description = dom_general_stone_of_speed_desc
+  ScriptContainer
+    AfterPlay = Nothing
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+            ValidState = True
+            IsCommentedOut = False
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+            IsCommentedOut = False
+        ElseActions
+        IsCommentedOut = False
+      Item = CreateBuff
+        Buff = buff_stone_speed
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+        UseOwnerFromScriptLocation = False
+        Owner = SinglePlayer
+        IsCommentedOut = False
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_speed_random_01
+          Item = dlg_general_stone_buff_speed_random_02
+          Item = dlg_general_stone_buff_speed_random_03
+          Item = dlg_general_stone_buff_speed_random_04
+          Item = dlg_general_stone_buff_speed_random_05
+        Wait = True
+        SceneLocation = 
+        SceneNotWhenFighting = True
+        SceneUnlessAllInvulnerable = True
+        IsCommentedOut = False
+dominant_general_stone_of_xp
+  Include = dominant_base
+  DominantAction
+  UiDataDominant
+    Icon = 9ae80b9c73b56454abe7fd717f9c894d
+    Title = dom_general_stone_of_xp_capt
+    Description = dom_general_stone_of_xp_desc
+  ScriptVariableContainer
+    Variables
+  ScriptContainer
+    Triggers
+      Item = DominantActionTrigger
+        DominantEntity = Entity||ScriptEntity|
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+      Item = CreateBuff
+        Buff = buff_stone_xp
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_xp_random_01
+          Item = dlg_general_stone_buff_xp_random_02
+          Item = dlg_general_stone_buff_xp_random_03
+          Item = dlg_general_stone_buff_xp_random_04
+          Item = dlg_general_stone_buff_xp_random_05
+    AfterPlay = Nothing
+    Priority = Idle
+edboss_influencer_evil
+  Location
+    CanNotMove = True
+  EvilificationInfluencer
+edboss_influencer_good
+  Location
+    CanNotMove = True
+  EvilificationInfluencer
+goal_common_skir_destroy_spawner
+  Include = mission_goal
+  MissionGoal
+    TopGoal = goal_common_skir_destroy_spawner
+    Title = goal_common_skir_destroy_spawner_capt
+    Description = ""
+    Type = Collect
+  CreateChildEntities
+    WhatToCreate = All
+  ScriptVariableContainer
+    Variables
+      Item = Int|skir_spawner_count||0
+      Item = Int|skir_spawner_max||0
+      Item = Entity|goal|goals/goal_common_skir_destroy_spawner|
+      Item = EntityList|tempList
+goal_common_skir_destroy_spawner.script_add
+  ScriptContainer
+    AfterPlay = Nothing
+    Triggers
+      Item = UnitDiedTrigger
+    Conditions
+      Item = HasEntityType
+        Unit = TriggeringEntity||TriggeringEntity|
+        Type = type_spawner
+    Actions
+      Item = IntOperation
+        A = Int||skir_spawner_count|0
+        B = Int|||1
+        Destination = Int||skir_spawner_count|0
+        IsCommentedOut = True
+      Item = UpdateCollectVariables
+        MissionGoal = Entity||goal|
+        Achieved = Int||skir_spawner_count|0
+        Required = Int||skir_spawner_max|0
+        IsCommentedOut = True
+      Item = ClearEntityList
+        EntityList = EntityList||tempList|
+      Item = FillList
+        List = EntityList||tempList|
+        Owner = SinglePlayer
+        Filter = Append
+          Item = EntityListFilterEntityType
+            EntityType = type_spawner
+          Item = EntityListFilterInRegion
+            Outside = true
+      Item = CountEntitiesInList
+        Count = Int||skir_spawner_count|0
+        EntityList = EntityList||tempList|
+      Item = UpdateCollectVariables
+        MissionGoal = Entity||goal|
+        Achieved = Int||skir_spawner_count|0
+        Required = Int||skir_spawner_max|0
+      Item = IfThenElse
+        Conditions
+          Item = CompareInt
+            A = Int||skir_spawner_count|0
+            B = Int||skir_spawner_max|0
+        ThenActions
+          Item = GameOver
+  ScriptVariableContainer
+    Variables = Append
+goal_common_skir_destroy_spawner.script_init
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+        StartDelay = Float|||5
+    Actions
+      Item = FillList
+        List = EntityList||tempList|
+        Owner = AIPlayer5
+        Filter
+          Item = EntityListFilterEntityType
+            EntityType = type_spawner
+          Item = EntityListFilterInRegion
+            Outside = true
+      Item = CountEntitiesInList
+        Count = Int||skir_spawner_max|0
+        EntityList = EntityList||tempList|
+      Item = UpdateCollectVariables
+        MissionGoal = Entity||goal|
+        Achieved = Int||skir_spawner_count|0
+        Required = Int||skir_spawner_max|0
+      Item = ChangeMissionGoalState
+        MissionGoal = Entity||goal|
+        NewState = Active
+  ScriptVariableContainer
+goal_common_skir_destroy_spawner.script_remove
+  ScriptContainer
+    Triggers
+      Item = EntityTypeCreatedTrigger
+        Player = AIPlayer5
+        EntityType = type_spawner
+        IsCommentedOut = True
+      Item = EvilDeedDynamicFailing
+    AfterPlay = Nothing
+    Actions
+      Item = IntOperation
+        A = Int||skir_spawner_count|0
+        Op = minus
+        B = Int|||1
+        Destination = Int||skir_spawner_count|0
+        IsCommentedOut = True
+      Item = UpdateCollectVariables
+        MissionGoal = Entity||goal|
+        Achieved = Int||skir_spawner_count|0
+        Required = Int||skir_spawner_max|0
+        IsCommentedOut = True
+      Item = ClearEntityList
+        EntityList = EntityList||tempList|
+      Item = FillList
+        List = EntityList||tempList|
+        Owner = SinglePlayer
+        Filter = Append
+          Item = EntityListFilterEntityType
+            EntityType = type_spawner
+          Item = EntityListFilterInRegion
+            Outside = true
+      Item = CountEntitiesInList
+        Count = Int||skir_spawner_count|0
+        EntityList = EntityList||tempList|
+      Item = UpdateCollectVariables
+        MissionGoal = Entity||goal|
+        Achieved = Int||skir_spawner_count|0
+        Required = Int||skir_spawner_max|0
+    Conditions = Append
+  ScriptVariableContainer
+    Variables = Append
+goal_common_skir_storm_disable
+  Include = mission_goal
+  Owner = SinglePlayer
+  MissionGoal
+    TopGoal = goal_main07storm_storm
+    Title = goal_main07storm_storm_length
+    Description = goal_main07storm_storm_length_desc
+    Type = Countdown
+goal_common_skir_storm_enable
+  Include = mission_goal
+  Owner = SinglePlayer
+  MissionGoal
+    TopGoal = goal_main07storm_storm
+    Title = goal_main07storm_storm_timer
+    Description = goal_main07storm_storm_timer_desc
+    Type = Countdown
+heromission_global_dig_player
+  Include = heromission
+  HeroMission
+    Goals
+      Item = DigTowards
+        Target = Entity||ThroneRoom|
+        DigTimePerTile = Float|||8
+      Item = DestroyDungeonheart
+invis_evil_influencer
+  PrefabReference
+    ClientPrefab = 230de3aa9f7d90a48b974acce12b1a94
+  Owner = AIPlayer5
+  Location
+    CanNotMove = True
+  EvilificationInfluencer
+    Strength = 1
+phalanx_destroyable_00
+  Include = attacable_barriers_basic
+  PrefabReference
+    ClientPrefab = 3a490ad106c69604d8a3fcf3f25127ad 7df8eaf25ec21e84a8e427d7b7d357be
+  UiDataUnit
+    Title = level_props_phalanx_destroyable_capt
+    Description = level_props_phalanx_destroyable_desc
+    Portrait = 1e99f2d231243164d83a58d09c1dd224
+    Flavour = level_props_phalanx_destroyable_flav
+    Icon = 1e99f2d231243164d83a58d09c1dd224
+  VisualRepresentation
+  EntityType
+    Types = Append
+      Item = type_phalanx_destroyable
+      Item = type_structure
+      Item = type_evilness_one
+phalanx_destroyable_01
+  Include = attacable_barriers_basic
+  PrefabReference
+    ClientPrefab = ae954fb5a34cfb443a58f10d7d5b4b25 c916fbf93ad3195479dd8d65355ab8db
+  EntityType
+    Types = Append
+      Item = type_phalanx_destroyable
+      Item = type_structure
+      Item = type_evilness_one
+  UiDataUnit
+    Portrait = 1e99f2d231243164d83a58d09c1dd224
+    Icon = 1e99f2d231243164d83a58d09c1dd224
+    Title = level_props_phalanx_destroyable_capt
+    Description = level_props_phalanx_destroyable_desc
+    Flavour = level_props_phalanx_destroyable_flav
+plot_cage_unit_base
+  Abstract = True
+  Include = destroyable_object
+  RemovedComponent = DestroyWhenKilled
+  PrefabReference
+    ClientPrefab = d7d03d01c8bf6bb47a4f1812bc15e81b 9989fedd659257544a54e41e573d6a9d
+  Owner = AIPlayer5
+  GUIStatusOverhead
+    Style = HeroStory
+  EvilSelectable
+    SelectableWhileDead = False
+    SelectionRadius = 2.9
+    SelectionColliderHeight = 2.917436
+  BuffResistances
+    EffectResistences = -1
+  UiDataUnit
+    Portrait = 8d8a3a521e75cd94194264b9540a2526
+    Icon = 8d8a3a521e75cd94194264b9540a2526
+    OverheadOffset = 2.5
+    OverheadPingOffset = 2.5
+    Title = plot_cage_unit_base_capt
+  Combat
+    MaxHealth = 1000
+    AggressiveEffect = 
+    NonThreat = False
+  ScriptVariableContainer
+    Variables
+      Item = Int|units||3
+      Item = Int|temp||0
+      Item = Entity|unit
+  ScriptContainer
+    Triggers
+      Item = UnitDiedTrigger
+        Units = EntityList||ScriptEntity|
+    Actions
+      Item = ForLoopAction
+        LoopVariable = Int||temp|0
+        LoopCounts = Int||units|0
+        Actions
+          Item = SpawnTemplate
+            Template = unit_orc
+            Owner = SinglePlayer
+            Location = PosHead||ScriptEntity|0 0 0
+            SpawnedEntityVariable = Entity||unit|
+          Item = SetOwnerAndWait
+            Entity = Entity||unit|
+            Owner = SinglePlayer
+            NoFocusPoints = True
+  Attack
+  VisualRepresentationWhileDead
+  VisualRepresentation
+  LowPriorityFightTarget
+  InformWhenDied
+    NotificationOverride = notification_cage_killed
+  ImpactEffects
+    Effects = Append
+      Item
+        Selector
+        ImpactVfxPrefab = fd70ed54b090c1047b9145cb77ce70fe
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = False
+        VfxLifeTime = 3
+        ImpactDecalConfig = 00000000000000000000000000000000
+        ImpactDecalColor = 1 0 0 1
+    ImpactSourceBone = projectile_target
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 2.9
+      Offset = 0 0
+plot_cage_unit_base_gnome
+  Include = plot_cage_unit_base
+  PrefabReference
+    ClientPrefab = c0a03501015a5de488390761e0e3ebe1 9989fedd659257544a54e41e573d6a9d
+  Owner = AIPlayer5
+  ScriptContainer
+    Actions
+      Item = ForLoopAction
+        LoopVariable = Int||temp|0
+        LoopCounts = Int||units|0
+        Actions
+          Item = SpawnTemplate
+            Template = unit_gnome
+            Owner = SinglePlayer
+            Location = PosHead||ScriptEntity|0 0 0
+            SpawnedEntityVariable = Entity||unit|
+            IsCommentedOut = False
+          Item = SetOwnerAndWait
+            Entity = Entity||unit|
+            Owner = SinglePlayer
+            NoFocusPoints = True
+            IsCommentedOut = False
+        IsCommentedOut = False
+  UiDataUnit
+    Description = plot_cage_unit_base_gnome_desc
+    Flavour = plot_cage_unit_base_gnome_flav
+plot_cage_unit_base_goblin
+  Include = plot_cage_unit_base
+  PrefabReference
+    ClientPrefab = 09e7325a0ccffc9408be83a99806f04b 9989fedd659257544a54e41e573d6a9d
+  Owner = AIPlayer5
+  ScriptContainer
+    Actions
+      Item = ForLoopAction
+        LoopVariable = Int||temp|0
+        LoopCounts = Int||units|0
+        Actions
+          Item = SpawnTemplate
+            Template = unit_goblin
+            Owner = SinglePlayer
+            Location = PosHead||ScriptEntity|0 0 0
+            SpawnedEntityVariable = Entity||unit|
+            IsCommentedOut = False
+          Item = SetOwnerAndWait
+            Entity = Entity||unit|
+            Owner = SinglePlayer
+            NoFocusPoints = True
+            IsCommentedOut = False
+        IsCommentedOut = False
+  UiDataUnit
+    Description = plot_cage_unit_base_goblin_desc
+    Flavour = plot_cage_unit_base_goblin_flav
+plot_cage_unit_base_imp
+  Include = plot_cage_unit_base
+  PrefabReference
+    ClientPrefab = c4f1e8d82c74fec40ad2bdef7551b061 9989fedd659257544a54e41e573d6a9d
+  RemovedChild = attack
+  Owner = AIPlayer5
+  ScriptContainer
+    Actions
+      Item = ForLoopAction
+        LoopVariable = Int||temp|0
+        LoopCounts = Int||units|0
+        Actions
+          Item = SpawnTemplate
+            Template = unit_imp
+            Owner = SinglePlayer
+            Location = PosHead||ScriptEntity|0 0 0
+            SpawnedEntityVariable = Entity||unit|
+          Item = SetOwnerAndWait
+            Entity = Entity||unit|
+            Owner = SinglePlayer
+            NoFocusPoints = True
+            IsCommentedOut = False
+        IsCommentedOut = False
+  UiDataUnit
+    Description = plot_cage_unit_base_imp_desc
+    Flavour = plot_cage_unit_base_imp_flav
+plot_cage_unit_base_naga
+  Include = plot_cage_unit_base
+  PrefabReference
+    ClientPrefab = 5764b9a4bca9f384ab91106c3c1542a0 9989fedd659257544a54e41e573d6a9d
+  Owner = AIPlayer5
+  ScriptContainer
+    Actions
+      Item = ForLoopAction
+        LoopVariable = Int||temp|0
+        LoopCounts = Int||units|0
+        Actions
+          Item = SpawnTemplate
+            Template = unit_naga
+            Owner = SinglePlayer
+            Location = PosHead||ScriptEntity|0 0 0
+            SpawnedEntityVariable = Entity||unit|
+            IsCommentedOut = False
+          Item = SetOwnerAndWait
+            Entity = Entity||unit|
+            Owner = SinglePlayer
+            NoFocusPoints = True
+            IsCommentedOut = False
+        IsCommentedOut = False
+  UiDataUnit
+    Description = plot_cage_unit_base_naga_desc
+    Flavour = plot_cage_unit_base_naga_flav
+plot_cage_unit_base_necromancer
+  Include = plot_cage_unit_base
+  PrefabReference
+    ClientPrefab = 2691461533f628d47960019ab5cbc8df 9989fedd659257544a54e41e573d6a9d
+  Owner = AIPlayer5
+  ScriptContainer
+    Actions
+      Item = ForLoopAction
+        LoopVariable = Int||temp|0
+        LoopCounts = Int||units|0
+        Actions
+          Item = SpawnTemplate
+            Template = unit_necromancer
+            Owner = SinglePlayer
+            Location = PosHead||ScriptEntity|0 0 0
+            SpawnedEntityVariable = Entity||unit|
+            IsCommentedOut = False
+          Item = SetOwnerAndWait
+            Entity = Entity||unit|
+            Owner = SinglePlayer
+            NoFocusPoints = True
+            IsCommentedOut = False
+        IsCommentedOut = False
+  UiDataUnit
+    Description = plot_cage_unit_base_necromancer_desc
+    Flavour = plot_cage_unit_base_necromancer_flav
+plot_cage_unit_base_orc
+  Include = plot_cage_unit_base
+  PrefabReference
+    ClientPrefab = b159b809201e3ff4ebd7f5f9933fd697 9989fedd659257544a54e41e573d6a9d
+  ScriptContainer
+  ServerAnimation
+  UiDataUnit
+    Description = plot_cage_unit_base_orc_desc
+    Flavour = plot_cage_unit_base_orc_flav
+plot_cage_unit_base_succubus
+  Include = plot_cage_unit_base
+  PrefabReference
+    ClientPrefab = 854f2b72446c5324e80a4f1802096d37 9989fedd659257544a54e41e573d6a9d
+  Owner = AIPlayer5
+  ScriptContainer
+    Actions
+      Item = ForLoopAction
+        LoopVariable = Int||temp|0
+        LoopCounts = Int||units|0
+        Actions
+          Item = SpawnTemplate
+            Template = unit_succubus
+            Owner = SinglePlayer
+            Location = PosHead||ScriptEntity|0 0 0
+            SpawnedEntityVariable = Entity||unit|
+            IsCommentedOut = False
+          Item = SetOwnerAndWait
+            Entity = Entity||unit|
+            Owner = SinglePlayer
+            NoFocusPoints = True
+            IsCommentedOut = False
+        IsCommentedOut = False
+  UiDataUnit
+    Description = plot_cage_unit_base_succubus_desc
+    Flavour = plot_cage_unit_base_succubus_flav
+  ScriptVariableContainer
+    Variables
+      Item = Int|units||1
+      Item = Int|temp||0
+      Item = Entity|unit
+plot_cage_unit_base_vampire_queen
+  Include = plot_cage_unit_base
+  PrefabReference
+    ClientPrefab = 14c9aa544f7130347be4c8f1eefb5ff2 9989fedd659257544a54e41e573d6a9d
+  Owner = AIPlayer5
+  ScriptContainer
+    Actions
+      Item = ForLoopAction
+        LoopVariable = Int||temp|0
+        LoopCounts = Int||units|0
+        Actions
+          Item = SpawnTemplate
+            Template = unit_vampire_queen
+            Owner = SinglePlayer
+            Location = PosHead||ScriptEntity|0 0 0
+            SpawnedEntityVariable = Entity||unit|
+            IsCommentedOut = False
+          Item = SetOwnerAndWait
+            Entity = Entity||unit|
+            Owner = SinglePlayer
+            NoFocusPoints = True
+            IsCommentedOut = False
+        IsCommentedOut = False
+  UiDataUnit
+    Description = plot_cage_unit_base_vampire_queen_desc
+    Flavour = plot_cage_unit_base_vampire_queen_flav
+plot_construction_site_hammer
+  Include = destroyable_object
+  PrefabReference
+    ClientPrefab = cfdd55af377bf8e40855cf2b57e34c92 f17be080a7c782d498a727fc33db9e51
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 8
+      Offset = 0 0
+  ScriptContainer
+    Triggers
+      Item = UnitDiedTrigger
+        Units = EntityList||ScriptEntity|
+    Actions
+      Item = SetOwnerAndWait
+        Entity = Entity||ScriptEntity|
+        Owner = SinglePlayer
+  ScriptVariableContainer
+  Combat
+    MaxHealth = 3000
+    NonThreat = False
+  UiDataUnit
+    Portrait = 4549b1293d4da264d92d2efc51476e1b
+    Icon = 4549b1293d4da264d92d2efc51476e1b
+    Title = plot_construction_site_hammer_capt
+    Description = plot_construction_site_hammer_desc
+    Flavour = plot_construction_site_hammer_flav
+    OverheadPingOffset = 3
+  VisualRepresentationWhileDead
+  VisualRepresentation
+  EvilificationInfluencer
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_gethit
+  PlayAudioOnDestroy
+    PlayOnKill = True
+    Sfx = map_plot_construction_site_hammer_die
+plot_damage_area
+  PrefabReference
+    ClientPrefab = 9de322a7f6a18764dbf483a2fb703b45
+  Owner = SinglePlayer
+  Location
+  Buff
+    Parts
+      Item = BuffTrueDamageInRandomInterval
+  ScriptContainer
+    AfterPlay = Nothing
+    Triggers
+      Item = SensorTrigger
+        Sensor = Entity||ScriptEntity|
+        OwnerOfTriggeringEntity = SinglePlayer
+    Actions
+      Item = AddUnitToBuff
+        Unit = TriggeringEntity||TriggeringEntity|
+        Buff = Entity||ScriptEntity|
+  ScriptVariableContainer
+  PhxSensorComponent
+    Radius = 30
+    Sensor = PhxCircleSensor
+  BuffTrueDamageInRandomInterval
+    FromDamagePercent = 0.0005
+    ToDamagePercent = 0.0005
+    FromInterval = 3
+    ToInterval = 3
+    ShowDamage = True
+  SummonedMonster
+plot_destroyable_object_coffin
+  Include = destroyable_object
+  RemovedComponent = FarseerBody
+  PrefabReference
+    ClientPrefab = 9166defbc28280b45b14f705dcc60d4b 8b2d8064233da3a42ba1c6f3ecdd921b
+  Combat
+    NonThreat = False
+    MaxHealth = 500
+  Maker
+  MakeThemGroupStrengthVariable
+    GroupStrengthVariable = Int|||0
+  MakeThenGiveMission
+    Mission = heromission_destroyheart
+  EntityType
+    Types = Append
+      Item = type_plot_destroyable_object_coffin
+  MakeSomeCombatTeam
+  UiDataUnit
+    Title = plot_destroyable_object_coffin_capt
+    Description = plot_destroyable_object_coffin_desc
+    Flavour = plot_destroyable_object_coffin_flav
+    Icon = c13650b09cd26fe489f1d2f05cfebf5e
+    Portrait = c13650b09cd26fe489f1d2f05cfebf5e
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  DestroyWhenKilled
+    TimeUntilDespawn = 10
+  PlayAudioOnDestroy
+    Sfx = map_main11blessing_destroy_coffin
+    PlayOnKill = True
+    MinDistance = 10
+    MaxDistance = 15
+plot_destroyable_object_mausoleum
+  Include = destroyable_object
+  RemovedComponent = CostFieldObstacle
+  RemovedComponent = FarseerBody
+  PrefabReference
+    ClientPrefab = b027f99fa58859e4daee185a38169a63
+  Combat
+    NonThreat = False
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 8
+      Offset = 0 0
+  CostFieldAdditionalWhileAlive
+    Area = PhxCombinedSensor
+      Sensors = Append
+        Item = PhxOBBSensor
+          HalfWidth = 4
+          HalfHeight = 4.5
+          Offset = 0 -0.1 0
+        Item = PhxOBBSensor
+          HalfWidth = 0.9
+          HalfHeight = 6
+          Offset = 3.5 1.1 0
+        Item = PhxOBBSensor
+          HalfWidth = 0.9
+          HalfHeight = 6
+          Offset = -3.3 1.1 0
+    RealCost = -1
+  EvilSelectable
+    VisualSelectionRadius = 8
+    SelectionRadius = 8
+    SelectionColliderHeight = 4.44668
+    HasBigCollider = False
+  UiDataUnit
+    Portrait = c13650b09cd26fe489f1d2f05cfebf5e
+    EntityType = None
+    IsChampion = False
+    Icon = 00000000000000000000000000000000
+    AlternativeIcon = 00000000000000000000000000000000
+    Title = plot_destroyable_object_mausoleum_capt
+    Description = plot_destroyable_object_mausoleum_desc
+    Flavour = plot_destroyable_object_mausoleum_flav
+    OverheadOffset = 6
+    OverheadPingOffset = 4
+    TutorialTag = None
+    OverheadPingPosOffset = 0 2
+  DestroyWhenKilled
+    TimeUntilDespawn = 0
+  FogOfWarHide
+    Visibility = Always
+    AlwaysShow = StaticMeshes
+    AlwaysShowMeshNames
+  EntityType
+    Types = Append
+      Item = type_structure
+      Item = type_mausolueum
+  TerrainCutout
+    Poly = Append
+      Item = -2.699823 -4.506559
+      Item = -3.675159 -2.951033
+      Item = -3.020632 2.712231
+      Item = -3.07156 6.20684
+      Item = 3.133511 6.293903
+      Item = 3.399244 5.234725
+      Item = 3.332293 -3.006906
+      Item = 2.545254 -4.489309
+    Depth = 3
+  Location
+    PlacementHeightOffset = 3
+    PlacementMode = Floor
+  LowPriorityFightTarget
+  SkillTargetProxyProvider
+    ProxyTemplate = plot_destroyable_object_mausoleum.combat_proxy
+    ProxyLocations = Append
+      Item = 2 5.2 0
+      Item = -2 5.2 0
+  EvilificationInfluencer
+  ServerAnimation
+    ProvidedActors
+      Item = actor_gethit
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+plot_destroyable_object_mausoleum.combat_proxy
+  Combat
+    MaxHealth = 1E+08
+    Unkillable = True
+    ShowOverhead = False
+    Invulnerable = True
+  IsSeenBy
+  Stunned
+  Location
+  CloseCombatTracker
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 3
+  SkillTargetProxy
+  BuffAnimationHandler
+  ServerAnimation
+plot_dwarf_queen
+  Include = unit_combat_base
+  RemovedComponent = Imprisoned
+  PrefabReference
+    ClientPrefab = 6853277c2444308448757c85e7e7bcf5
+  Owner = AIPlayer5
+  Attack
+    Area = 7
+    SkillArea = 45
+    Range = 3.5
+    SkillDuration = 20
+    DynamicValues = Append
+      Item
+        Name = sing_speed_buff
+        Value = 0.25
+      Item
+        Name = sing_damage_buff
+        Value = 0.5
+      Item
+        Name = jump_cooldown
+        Value = 30
+      Item
+        Name = jump_range
+        Value = 20
+      Item
+        Name = jump_area
+        Value = 4
+      Item
+        Name = jump_damage
+        Value = 20
+      Item
+        Name = jump_prepare_time
+        Value = 2
+      Item
+        Name = axe_duration
+        Value = 5
+      Item
+        Name = axe_range_main
+        Value = 10
+      Item
+        Name = axe_damage_main
+        Value = 20
+      Item
+        Name = axe_delay_min
+        Value = 1
+      Item
+        Name = axe_delay_max
+        Value = 1
+      Item
+        Name = axe_cooldown
+        Value = 30
+      Item
+        Name = sing_cooldown
+        Value = 45
+      Item
+        Name = lightning_prepare_time
+        Value = 10
+      Item
+        Name = lightning_prepare_area
+        Value = 15
+      Item
+        Name = lightning_damage_burst
+        Value = 20
+      Item
+        Name = lightning_cooldown
+        Value = 30
+      Item
+        Name = lightning_damage_chain
+        Value = 10
+      Item
+        Name = tennis_damage
+        Value = 50
+      Item
+        Name = tennis_cooldown
+        Value = 30
+  EntityType
+    Types = Append
+      Item = type_boss
+      Item = type_plot_dwarf_queen
+  GUIStatusOverhead
+    Style = HeroStory
+  EvilSelectable
+    SelectionRadius = 0.9836426
+    SelectionColliderHeight = 2.917436
+  ScriptContainer
+  BuffResistances
+    EffectResistences = -1
+  ScriptVariableContainer
+  UiDataUnit
+    Portrait = f34ac18664c935f449df63915f117299
+    Icon = 509cc8ace82fef34c82c1abc16190f5f
+    Title = plot_dwarf_queen_capt
+    Description = plot_dwarf_queen_desc
+    Flavour = plot_dwarf_queen_flav
+    AlternativeIcon = 777c55f25b58ae14f960d6ebb0c902ba
+    EntityType = Boss
+  Combat
+    ShowInvulnerableAsImmuneText = True
+    MaxHealth = 12000
+    Armor = 5
+  HeroMissionBrainComeToLeader
+  HeroRaidActivity
+  HeroRaidActivityExecuteGoal
+  RaidMember
+  Mover
+    Speed = 3
+  PuppetMove
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_agressive
+      Item = actor_unit_melee
+    VerifyActorSetup = True
+  UiDataMinimapIcon
+    Icon = a043ccf49f981bb46a3249c5e7bfee1d
+  FogOfWarHide
+    Visibility = Always
+    AlwaysShow = StaticMeshes
+  CanOnlyBeAttackedScriptable
+  SimpleSkillMaster
+    Skills = Append
+      Item
+        LocalName = defaultAttack
+        SkillDefinition = anim_default_attack_melee_cone
+      Item
+        LocalName = sing
+        SkillDefinition = anim_dwarf_queen_sing
+      Item
+        LocalName = jump
+        SkillDefinition = anim_dwarf_queen_jump
+      Item
+        LocalName = axe
+        SkillDefinition = anim_dwarf_queen_axe
+      Item
+        LocalName = lightning
+        SkillDefinition = anim_dwarf_queen_lightning
+      Item
+        LocalName = tennis
+        SkillDefinition = anim_dwarf_queen_tennis
+      Item
+        LocalName = jump_cin
+        SkillDefinition = anim_dwarf_queen_jump_cinematic_only
+  AttackTarget
+    SimpleSpecialSkills = Append
+      Item
+        Name = sing
+        Template = plot_dwarf_queen
+      Item
+        Name = jump
+        Template = plot_dwarf_queen
+      Item
+        Name = axe
+        Template = plot_dwarf_queen
+      Item
+        Name = lightning
+        Template = plot_dwarf_queen
+      Item
+        Name = tennis
+        Template = plot_dwarf_queen
+      Item
+        Name = defaultAttack
+        Template = plot_dwarf_queen
+  VisualScale
+    AnimationDuration = 2
+  DestroyObjectsHandler
+    DestroySkill
+      Name = defaultAttack
+      Template = plot_dwarf_queen
+    OnEffectEvent
+      Name = OnEffect
+      Template = anim_default_attack_melee_cone
+  FightActivity
+    AttackSkill
+      Name = defaultAttack
+      Template = plot_dwarf_queen
+  PuppetAttack
+  PuppetMoveAttack
+  ImpactEffects
+    ImpactSourceBone = projectile_target
+    Effects = Append
+      Item
+        Selector
+        ImpactVfxPrefab = 48e916568e5fb96489723399391c1224
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = False
+        VfxLifeTime = 3
+        ImpactDecalConfig = 00000000000000000000000000000000
+        ImpactDecalColor = 1 0 0 1
+plot_dynamite_carriage_movable
+  Include = unit_controllable
+  RemovedComponent = EvilHandPickup
+  PrefabReference
+    ClientPrefab = 190bb1436a8548040aa464b128cdc79c
+  Owner = AIPlayer5
+  GUIStatusOverhead
+    Style = HeroStory
+  EvilSelectable
+    SelectionRadius = 0.9836426
+    SelectionColliderHeight = 2.917436
+    GlobalSelectionCategory = 0
+    SelectableWhileDead = False
+  BuffResistances
+    EffectResistences = -1
+  UiDataUnit
+    Portrait = 8e8f5ae9c1a44774f8c0911d840a24ee
+    Icon = 62a726125816168429dea2ce0f582a5f
+    Title = plot_dynamite_carriage_capt
+    Description = plot_dynamite_carriage_desc
+    Flavour = plot_dynamite_carriage_flav
+  Attack
+    AttackDamageAmount = 500
+    AttackAspects = Append
+      Item = aspect_dynamite
+    AttackCooldown = 2
+    Area = 10
+  CannotUseTeleport
+  DestroyWhenKilled
+    TimeUntilDespawn = 3
+    DestroySkill
+      Name = explosion
+      Template = plot_dynamite_carriage_movable
+  Combat
+    AggressiveEffect = 
+    MaxHealth = 500
+  SimpleSkillMaster
+    Skills = Append
+      Item
+        LocalName = aoe_damage
+        SkillDefinition = anim_default_attack_melee_area_plot_dynamite_carriage_movable
+      Item
+        LocalName = explosion
+        SkillDefinition = anim_default_attack_melee_area_plot_dynamite_carriage_movable_death
+  ServerAnimation
+    ProvidedActors = Append
+  UiDataSkills
+    ActiveSkillTemplates = Append
+      Item = anim_default_attack_melee_area_plot_dynamite_carriage_movable
+    FirstActiveSkillIsDefaultAttack = False
+  ScriptVariableContainer
+  ScriptContainer
+    Triggers = Append
+      Item = UnitUsedSkill
+        Unit = Entity||ScriptEntity|
+        Skill
+          Name = aoe_damage
+          Template = plot_dynamite_carriage_movable
+    Actions = Append
+      Item = KillUnit
+        Unit = Entity||ScriptEntity|
+  UiDataMinimapIcon
+    Icon = 0d206cf57b190224b8d5bef8968c739a
+    DisableIfDead = True
+  EntityType
+    Types = Append
+      Item = type_dynamite_carriage
+  PlayerFightActivity
+    AttackSkill
+      Name = aoe_damage
+      Template = plot_dynamite_carriage_movable
+  ImpactEffects
+    ImpactSourceBone = projectile_target
+    Effects = Append
+      Item
+        Selector
+        ImpactVfxPrefab = fd70ed54b090c1047b9145cb77ce70fe
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = False
+        VfxLifeTime = 3
+        ImpactDecalConfig = 00000000000000000000000000000000
+        ImpactDecalColor = 1 0 0 1
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 2.9
+      Offset = 0 0
+  FarseerBody
+    Radius = 2.5
+  PlayAudioOnDestroy
+    Sfx = map_plot_dynamite_carriage_movable_explosion
+    PlayOnKill = True
+    MinDistance = 20
+    MaxDistance = 30
+plot_dynamite_carriage_pushable
+  Include = unit_combat_base
+  PrefabReference
+    ClientPrefab = 233142e26db5b4e47b01429c2de8a1bb
+  Owner = NeutralPlayer16
+  Attack
+    Area = 3
+  EntityType
+    Types = Append
+      Item = type_boss
+  GUIStatusOverhead
+    Style = HeroStory
+  EvilSelectable
+    SelectionRadius = 0.9836426
+    SelectionColliderHeight = 2.917436
+  BuffResistances
+    EffectResistences = -1
+  DropObjectWhenKilled
+    DropEntries
+      Item
+        Chance = 100
+        DroppedObjects
+          Item = evilness_orb
+    DropCount = 10
+  UiDataUnit
+    Portrait = a6fa40e89664fae41994d7e68ebbb1da
+    Icon = 9b87f4f5e430eea41989def172a9ea37
+  PitFiendDemoniconBrain
+    Path = EntityList||test_list|
+    Radius = 10
+    CurrentMovement = Float||dynamite_movement|0
+    StartPathIndex = 0
+    StartMovingDelay = 2
+    Movement = IF((e>0)&(o>0),0,SIGN(o-e))
+  Combat
+    AggressiveEffect = 
+  ImpactEffects
+    ImpactSourceBone = projectile_target
+    Effects = Append
+      Item
+        Selector
+        ImpactVfxPrefab = fd70ed54b090c1047b9145cb77ce70fe
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = False
+        VfxLifeTime = 3
+        ImpactDecalConfig = 00000000000000000000000000000000
+        ImpactDecalColor = 1 0 0 1
+plot_evil_perk
+  Include = destroyable_object
+  PrefabReference
+    ClientPrefab = 12924c46740784941b26534aa58b6aa7
+  Owner = AIPlayer5
+  Combat
+    MaxHealth = 600
+    NonThreat = False
+  ScriptContainer
+    Triggers = Append
+      Item = UnitDiedTrigger
+        Units = EntityList||ScriptEntity|
+    Actions = Append
+      Item = SetOwnerAndWait
+        Entity = Entity||ScriptEntity|
+        Owner = SinglePlayer
+      Item = UnlockEvilPerkAction
+  ScriptVariableContainer
+    Variables = Append
+  FogOfWarUncover
+    Radius = 50
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 6
+      Offset = 0 0
+  UiDataUnit
+plot_finityglove
+  PrefabReference
+    ClientPrefab = bf01dfac54d00f74696861dfe06f8438
+  Location
+  BounceAsideWhenCreated
+  CasActorType
+  ServerAnimation
+plot_gorgu
+  Include = unit_base
+  RemovedComponent = Attack
+  RemovedComponent = AttackTarget
+  RemovedComponent = PlayerFightActivity
+  RemovedComponent = IdleReturnToPositionNoStart
+  RemovedComponent = RtsControlledActivity
+  RemovedComponent = RtsDefend
+  RemovedComponent = RtsPuppetMove
+  RemovedComponent = PerformAnimation
+  RemovedComponent = PuppetAnimation
+  RemovedComponent = CurrencyConvertible
+  PrefabReference
+    ClientPrefab = 9fe35334e2067c3479d43b2401bc9840
+  Owner = SinglePlayer
+  Mover
+    Speed = 3
+  EvilHandInteractable
+    RightClick = True
+  LevelUp
+    LevelUpBuff = plot_gorgu.buff_levelup
+    LevelUpAnimation = anim_level_up
+  Combat
+    MaxHealth = 400
+    RegenerationRateOutsideCombat = 10
+    CombatType = None
+    Ignored = True
+  EvilHandPickup
+    CanBeDismissed = False
+    CanBeSacrificed = False
+    PickupSound = ""
+    DropSound = ""
+    PickupType = SameTemplate
+    MayUsePortals = False
+    CanDropOnEnemyDoors = False
+  GoofAround
+    IdleActivities = Append
+      Item
+        IdleActivity = WanderRandom
+      Item
+        IdleActivity = WaitRandom
+    StartActivity = WanderRandom
+  EvilSelectable
+    SelectionRadius = 0.6455078
+    SelectionColliderHeight = 3.352637
+    GlobalSelectionCategory = F1_Protagonist, F2_All, F4_Ranged, F3_IdleCreatures
+    RtsSelectionPriority = -100
+  EntityType
+    Types = Append
+      Item = type_gorgu
+  CustomUnitName
+    Name = unit_gorgu_capt
+    Gender = Other
+  UiDataMinimapIcon
+    Icon = 7909bdd5677c873408ee037426959f5c
+    Size = 50
+  UiDataUnit
+    Portrait = 8ff6cdbe9ed8fde4a8c128a4cac10b10
+    EntityType = None
+    IsChampion = True
+    Icon = 068a99dfd6812974eb67e75f17d54c50
+    Title = plot_gorgu_capt
+    OverheadOffset = 2
+    OverheadPingOffset = 2
+    Description = plot_gorgu_desc
+    Flavour = plot_gorgu_flav
+  WanderRandom
+    NeverLeavesPreferredRoom = True
+    MyFaction = Neutral
+    PreferredRooms = Append
+      Item = roomid_gorgu
+      Item = roomid_throneroom
+    PreferRoomsWithGimmicks = True
+  WaitRandom
+  OnlyGoofAround
+  ServerAnimation
+    ProvidedActors = Append
+  BoundToGimmick
+    GimmickTemplate = gimmick_gorgu
+  EvilHandCarriedBrain
+  PhxStimulus
+    Sensor = PhxCircleSensor
+plot_gorgu.buff_levelup
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    RemoveDeadTargets = False
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Combat.MaxHealthBase
+        Value
+          ValueType = Balancing
+          Value = 150|1.25|1|1|-1|-1
+      Item
+        Property = LevelUp.XpForNextLevel
+        Value
+          ValueType = Balancing
+          Value = 200|2|1|0|-1|-1
+      Item
+        Property = Attack.AttackDamageAmount
+        Value
+          ValueType = Balancing
+          Value = 7|1|1|1|2|-1
+      Item
+        Property = Attack.SkillDamageAmount
+        Value
+          ValueType = Balancing
+          Value = 7|1|1|1|2|-1
+plot_gorgu_cinematic
+  Include = unit_base
+  RemovedComponent = Combat
+  RemovedComponent = DestroyWhenKilled
+  RemovedComponent = AggroCanAttackTracker
+  RemovedComponent = CurrencyConvertible
+  RemovedComponent = CustomDestroyAnimation
+  RemovedComponent = PhxStimulus
+  RemovedComponent = CloseCombatTracker
+  RemovedComponent = Draggable
+  RemovedComponent = Attachable
+  RemovedComponent = FarseerBody
+  RemovedComponent = FogOfWarHide
+  RemovedComponent = FogOfWarUncover
+  RemovedComponent = Follower
+  RemovedComponent = WorkstationUser
+  RemovedComponent = Mover
+  RemovedComponent = Brain
+  RemovedComponent = PerformAnimation
+  PrefabReference
+    ClientPrefab = ab1cd7978e0c37b4ba35c03031228b83
+  Owner = SinglePlayer
+  EntityType
+    Types = Append
+      Item = type_gorgu
+  Interactor
+plot_gorgu_cinematic.buff_levelup
+  Buff
+    Parts = Append
+      Item = BuffProperties
+    RemoveDeadTargets = False
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Combat.MaxHealthBase
+        Value
+          ValueType = Balancing
+          Value = 150|1.25|1|1|-1|-1
+      Item
+        Property = LevelUp.XpForNextLevel
+        Value
+          ValueType = Balancing
+          Value = 200|2|1|0|-1|-1
+      Item
+        Property = Attack.AttackDamageAmount
+        Value
+          ValueType = Balancing
+          Value = 7|1|1|1|2|-1
+      Item
+        Property = Attack.SkillDamageAmount
+        Value
+          ValueType = Balancing
+          Value = 7|1|1|1|2|-1
+plot_main02horde_construction_site_01
+  Include = plot_main02horde_construction_site_main
+  PrefabReference
+    ClientPrefab = c9d1a0710d44c714bacb21868abe74a9 16dcc4ae2668dee42b657e5f5df9406a 8a1936b1f7ac49f40b493a36b88e6c11 6e33cb95e78c0c842946c7d71a528bb9 86ed23ec38581d543893f3e476ccb66f
+  ScriptVariableContainer
+plot_main02horde_construction_site_02
+  Include = plot_main02horde_construction_site_main
+  PrefabReference
+    ClientPrefab = f056a0a01eb7b4947bda59aa5229a454 2dc4cd4e1fdae204893b3980bd582ac9 d99d3eddfc0c402418fba6fef229d7bd 077df19bba755ca43bf204c8db54f480 139d8cb5d6ad2de46ac4efabefaab1d0
+plot_main02horde_construction_site_main
+  PrefabReference
+    ClientPrefab = c9d1a0710d44c714bacb21868abe74a9 16dcc4ae2668dee42b657e5f5df9406a 8a1936b1f7ac49f40b493a36b88e6c11 6e33cb95e78c0c842946c7d71a528bb9 86ed23ec38581d543893f3e476ccb66f
+  PhxStimulus
+    Sensor = PhxCircleSensor
+  Location
+    CanNotMove = True
+  VisualRepresentation
+  VisualRepresentationChangeHandler
+  PhxSensorComponent
+    Radius = 10
+  ScriptVariableContainer
+    Variables = Append
+      Item = Float|timer_change_phase||5
+      Item = Int|num_states_max||5
+      Item = Int|num_states_cur||1
+  ScriptContainer
+    Actions = Append
+      Item = DestroyEntity
+        Entity = TriggeringEntity||TriggeringEntity|
+        IsCommentedOut = True
+      Item = ForLoopAction
+        LoopVariable = Int||num_states_cur|0
+        LoopCounts = Int||num_states_max|0
+        Actions = Append
+          Item = ChangeVisualRepresentation
+            Visual = Entity||ScriptEntity|
+            Version = Int||num_states_cur|0
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||num_states_cur|0
+                Op = less
+                B = Int||num_states_max|0
+            ThenActions = Append
+              Item = Wait
+                Duration = Float||timer_change_phase|0
+    Triggers = Append
+      Item = SensorTrigger
+        Sensor = Entity||ScriptEntity|
+        OwnerOfTriggeringEntity = AIPlayer5
+    Conditions = Append
+      Item = HasEntityType
+        Unit = TriggeringEntity||TriggeringEntity|
+        Type = type_unit
+plot_main09journey_tristan_summon_ritual
+  PrefabReference
+    ClientPrefab = f4625991683fdfe418c2cf922d4045ae
+  Location
+  PlaySoundWhileInRegion
+    Region = Outside
+    OnlyLocal = True
+    MinHearableDistance = 55
+    MaxHearableDistance = 70
+    Sfx = map_main09journey_ritual_loop
+  ServerAnimation
+    ServerIdle = anim_main09_tristan_ritual_idle
+  CasActorType
+plot_main10fire_greatsept_basement_filling
+  PrefabReference
+    ClientPrefab = 5d93d364e097f0c4db3d1a4c3a2d6090 bfbb894b2ce244b4191752a35df6a33a 43abae07ab9f9b947a74124210a26202 03f1cb0ceaff9fc469a4d5c5b3333108 37bde24c610e07c408b05ddf28941a37
+  Location
+    CanNotMove = True
+  VisualRepresentation
+plot_main10fire_pyre
+  PrefabReference
+    ClientPrefab = 5aa5e78fdb424bc4b9ea7b43e922de2a b6ff62146cd88da4b88c3f524598c5db e407bd1852bd66a4ab9bd6b07a3c798c
+  Location
+    CanNotMove = True
+    PlacementMode = Floor
+  VisualRepresentation
+  AtmoSoundChannelModifier
+    Channel = Jingle
+plot_main13tanos_boss_destruction
+  PrefabReference
+    ClientPrefab = 686efaf9dfee35147b654fcb62417d2e
+  Location
+    CanNotMove = True
+plot_main13tanos_boss_destruction_stacked
+  PrefabReference
+    ClientPrefab = 43dd2ccdac1d47e43bd9bd9fe9efd3ad 544b3542042746747a59feb55779dd74 f118411907ab9be4685f0947dadab927
+  Location
+    CanNotMove = True
+    PlacementMode = Floor
+  VisualRepresentation
+  ScriptVariableContainer
+    Variables = Append
+      Item = Float|timer_change_phase||1.5
+      Item = Int|num_states_max||3
+      Item = Int|num_states_cur||1
+  ScriptContainer
+    Triggers = Append
+      Item = OnceAfter
+        StartDelay = Float|||1
+    Conditions = Append
+    Actions = Append
+      Item = ForLoopAction
+        LoopVariable = Int||num_states_cur|0
+        LoopCounts = Int||num_states_max|0
+        Actions = Append
+          Item = ChangeVisualRepresentation
+            Visual = Entity||ScriptEntity|
+            Version = Int||num_states_cur|0
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||num_states_cur|0
+                Op = less
+                B = Int||num_states_max|0
+              Item = CompareInt
+                A = Int||num_states_cur|0
+                Op = greater
+            ThenActions = Append
+              Item = Wait
+                Duration = Float||timer_change_phase|0
+plot_mana_shield
+  Include = gate_basic
+  RemovedComponent = Door
+  RemovedComponent = DoorOpenTracker
+  RemovedComponent = LowPriorityFightTarget
+  PrefabReference
+    ClientPrefab = 74045246db424454bae092ed6a8c4533
+  Owner = AIPlayer5
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 40
+    ApplyProjektileRadius = True
+  Combat
+    Unkillable = False
+    Ignored = False
+    RegenerationRateOutsideCombat = 0
+    DamageVisualRedirector = SkillTargetProxyProvider
+  EvilSelectable
+  Stunned
+  IsSeenBy
+  CloseCombatTracker
+  Brain
+  Puppet
+  Attack
+    Range = 0
+    Area = 20
+  Interactor
+  UiDataUnit
+    Portrait = 1c32c70ef52c53949b0f0decc94afdca
+    Icon = 6dc54cd2d5b82664ea64b65e8c1a1520
+    Description = plot_mana_shield_desc
+    Title = plot_mana_shield_capt
+    Flavour = plot_mana_shield_flav
+  ServerAnimation
+  SkillTargetProxyProvider
+    ProxyTemplate = plot_mana_shield.combat_proxy
+    ProxyLocations = Append
+      Item = 0 0
+      Item = 0 0
+      Item = 0 0
+  ComplexCostFieldPatch
+    CostField
+      Item
+        LockState = LockedForPlayer
+        AreaSource = Stimulus
+        ActiveWhenDead = False
+        BlockSight = False
+        Cost = Wall
+        HightLevel = 0
+  BuffAura
+    Auras = Append
+      Item
+        LocalName = immune
+        Definition = plot_mana_shield.buff_aura_immunity
+  BuffAuraPassiv
+    AuraToActivate = Append
+      Item
+        Name = immune
+        Template = plot_mana_shield
+  EntityType
+    Types = Append
+      Item = type_mana_shield
+  BuffAnimationHandler
+  EvilificationInfluencer
+  ModifyPriorityFightScore
+    ScoreModification = -100000
+  AtmoSoundChannelModifier
+    Channel = Jingle
+plot_mana_shield.combat_proxy
+  Combat
+    MaxHealth = 1E+08
+    Unkillable = True
+    ShowOverhead = False
+    Invulnerable = True
+  IsSeenBy
+  ServerAnimation
+  Stunned
+  Location
+  CloseCombatTracker
+  PhxStimulus
+    Sensor = PhxOBBSensor
+      HalfWidth = 1.5
+      HalfHeight = 1.5
+  SkillTargetProxy
+  BuffAnimationHandler
+plot_mana_shield.buff_aura_immunity
+  Buff
+    Parts = Append
+      Item = BuffProperties
+  SimpleSkillEffectBuff
+    TargetSelector = SkillTargetSensor
+    TargetFilter = Append
+      Item = SkillEntityFilterMustNotHaveEntityType
+  SkillTargetSensor
+    Sensor = PhxCircleSensor
+    AreaSource
+      Source = Area
+      CustomValue = 0
+      DynamicValueSource
+        Name = 
+        Template = 
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Combat.Invulnerable
+        Value
+          ValueType = Constant
+          Value = 
+  SkillEntityFilterMustNotHaveEntityType
+    EntityTypes = Append
+      Item = type_mana_shield
+plot_mana_transport
+  Include = unit_combat_base
+  PrefabReference
+    ClientPrefab = 199651e51bfdba7479e9ce3e2acd0a28
+  Owner = AIPlayer5
+  Attack
+    Area = 3
+    AttackDamageAmount = 1
+  EntityType
+    Types = Append
+      Item = type_boss
+      Item = type_mana_transporter
+  GUIStatusOverhead
+    Style = HeroStory
+  Puppet
+  PuppetMove
+  PuppetMoveAttack
+  EvilSelectable
+    SelectionRadius = 0.9836426
+    SelectionColliderHeight = 2.917436
+  ScriptContainer
+  DropObjectWhenKilled
+    DropEntries
+      Item
+        Chance = 100
+        DroppedObjects
+          Item = evilness_orb
+    DropCount = 10
+  ScriptVariableContainer
+  UiDataUnit
+    Portrait = 3ddcd44e930936a4fb500d3edec5e3f7
+    Icon = 1fbca88499399ed43b5897f56e3a5d48
+    Title = plot_mana_transport_capt
+    Description = plot_mana_transport_desc
+    Flavour = plot_mana_transport_flav
+  HeroRaidActivity
+  HeroRaidActivityExecuteGoal
+  HeroMissionBrainComeToLeader
+  RaidMember
+  Combat
+    AggressiveEffect = 
+    DeathEffect = anim_death
+  InCombatBuff
+    BuffTemplate = buff_hidden_immobilized
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_death
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 2.9
+      Offset = 0 0
+  FarseerBody
+    Radius = 2.5
+  PlayAudioOnDestroy
+    Sfx = atmo_plot_cage_unit_desctruction
+    PlayOnKill = True
+    MinDistance = 25
+    MaxDistance = 35
+plot_protagonist_evil
+  Include = unit_controllable
+  RemovedComponent = DestroyWhenKilled
+  RemovedComponent = CurrencyConvertible
+  PrefabReference
+    ClientPrefab = fff1e2f18b80aeb4d90e302a9e156f4b 2d4f7be170ad1c54a94d66242e6fcdcb ac2ee87cbc993124785c27fdf12bc1ac 0e13ce031115913429f247cd807650c8 2a56a9c90c14c0a488d47bdeb7e98e30
+  Owner = SinglePlayer
+  Mover
+    Speed = 3
+  Attack
+    Range = 10
+    CriticalHitChance = 5
+    AttackDamageAmount = 20
+    AttackCooldown = 2
+    DynamicValues = Append
+      Item
+        Name = tentacle_cooldown
+        Value = 120
+      Item
+        Name = callback_area
+        Value = 10
+      Item
+        Name = callback_cooldown
+        Value = 60
+      Item
+        Name = dungeonlord_cooldown
+        Value = 360
+      Item
+        Name = dungeonlord_cost
+        Value = 100
+      Item
+        Name = dungeonlord_range
+        Value = 20
+      Item
+        Name = storm_cost
+        Value = 40
+      Item
+        Name = storm_cooldown
+        Value = 300
+      Item
+        Name = storm_duration
+        Value = 60
+      Item
+        Name = storm_atk_speed
+        Value = -0.3
+      Item
+        Name = storm_move_speed
+        Value = 0.5
+      Item
+        Name = tentacle_duration
+        Value = 20
+      Item
+        Name = tentacle_range
+        Value = 20
+      Item
+        Name = callback_cost
+        Value = 25
+      Item
+        Name = tentacle_cost
+        Value = 10
+      Item
+        Name = tentable_damage
+        Value = 20
+    SkillArea = 15
+    SkillRange = 1
+  EvilHandInteractable
+    RightClick = True
+    ClickSound = hand_slap_thalya
+    IsMassSlappable = True
+  GettingSlapped
+    SlapBuffTemplate = buff_getting_slapped
+  LevelUp
+    LevelUpBuff = plot_protagonist_evil.buff_levelup
+    ReceiveFightXp = True
+    LevelUpAnimation = anim_level_up
+  PlayerFightActivity
+    AttackSkill
+      Name = default_attack
+      Template = plot_protagonist_evil
+  Combat
+    RegenerationRateOutsideCombat = 10
+    Unkillable = False
+    CombatType = Protagonist
+    MaxHealth = 400
+    AggressiveEffect = anim_unit_aggressive
+    Armor = 1
+    ShieldEffect = anim_buff_spell_manashield
+  EvilHandPickup
+    CanBeDismissed = False
+    CanBeSacrificed = False
+    PickupSound = hand_take_thalya
+    DropSound = hand_drop_thalya
+    PickupType = Monster
+  RtsControlledActivity
+    AlwaysDrawWeapon = True
+  GoofAround
+    IdleActivities
+      Item
+        IdleActivity = WanderRandom
+        Weight = 1
+      Item
+        IdleActivity = WaitRandom
+        Weight = 1
+      Item
+        IdleActivity = PerformRandomWorkstation
+        Weight = 5
+    StartActivity = WanderRandom
+  FightAlerted
+  EvilSelectable
+    SelectionColliderHeight = 3.352637
+    GlobalSelectionCategory = F1_Protagonist, F2_All, F4_Ranged, F3_IdleCreatures
+    SelectionRadius = 0.6455078
+    RtsSelectionPriority = -100
+    VisualSelectionRadius = 0.7430693
+  EntityType
+    Types = Append
+      Item = type_protagonist
+  InformWhenDied
+    NotificationFirstTimeDied = notification_general_fallen_hero_die_first
+    NotificationOverride = notification_general_fallen_hero_die
+  CustomUnitName
+    Gender = Female
+    Name = plot_protagonist_evil_capt
+  IdleReturnToPositionNoStart
+  UiDataMinimapIcon
+    Icon = 823151c0175fd0c4da4d04f25f49af59
+    Size = 50
+  UiDataSubtitleIcon
+    Icon = 76b51c498687aff4b9e2252d76eb3668
+  UiDataUnit
+    Portrait = 0fbbb0152f8f5104e95309059811e2f9
+    Icon = 76b51c498687aff4b9e2252d76eb3668
+    Title = plot_protagonist_evil_capt
+    Description = plot_protagonist_evil_desc
+    Flavour = plot_protagonist_evil_flav
+    EntityType = Protagonist
+    IsChampion = True
+    OverheadOffset = 2
+    OverheadPingOffset = 2
+  WanderRandom
+  WaitRandom
+  OnlyGoofAround
+  SimpleSkillMaster
+    Skills = Append
+      Item
+        LocalName = default_attack
+        SkillDefinition = anim_default_attack_ranged_thalya
+      Item
+        LocalName = callback
+        SkillDefinition = anim_skill_callback_protagonist
+      Item
+        LocalName = tentacle
+        SkillDefinition = anim_skill_tentacle_protagonist
+      Item
+        LocalName = dungeonlord
+        SkillDefinition = anim_skill_summon_dungeonlord
+      Item
+        LocalName = storm
+        SkillDefinition = anim_skill_storm_of_evil
+  AttackTarget
+    SimpleSpecialSkills
+      Item
+        Name = tentacle
+        Template = plot_protagonist_evil
+      Item
+        Name = default_attack
+        Template = plot_protagonist_evil
+      Item
+        Name = callback
+        Template = plot_protagonist_evil
+      Item
+        Name = dungeonlord
+        Template = plot_protagonist_evil
+      Item
+        Name = storm
+        Template = plot_protagonist_evil
+  ImpactEffects
+    ImpactSourceBone = projectile_target
+    Effects = Append
+      Item
+        Selector
+        ImpactVfxPrefab = a71ab9be6bc9ab741af8f03c97fd485f
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = False
+        VfxLifeTime = 3
+        ImpactDecalConfig = ed09df96082544b419c6c615ae4353ed
+        ImpactDecalColor = 1 0 0 1
+      Item
+        Selector
+          Item = anim_spell_manashield.impact_type_shield
+        ImpactVfxPrefab = 4e2741a4cc9fb2f4fa941d86bf6d8dee
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = True
+        VfxLifeTime = 3
+        ImpactDecalConfig = 00000000000000000000000000000000
+        ImpactDecalColor = 1 0 0 1
+      Item
+        Selector
+          Item = anim_spell_thorns.impact_type_thorns
+        ImpactVfxPrefab = 0dfe8cb666563a948985937dac578e0f
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = True
+        VfxLifeTime = 3
+        ImpactDecalConfig = 00000000000000000000000000000000
+        ImpactDecalColor = 1 0 0 1
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_unit_ranged
+      Item = actor_agressive
+      Item = actor_stunnable
+      Item = actor_react_hand
+    VerifyActorSetup = True
+  UiDataSkills
+    ActiveSkillTemplates = Append
+      Item = anim_default_attack_ranged_thalya
+      Item = anim_skill_callback_protagonist
+      Item = anim_skill_tentacle_protagonist
+      Item = anim_skill_storm_of_evil
+      Item = anim_skill_summon_dungeonlord
+  Interactor
+    InteractOnDrop = True
+  ResurrectWhenKilled
+    TimeUntilDecayNoTombstone = 0
+    TimeUntilTeleport = 4
+  BoundToGimmick
+    DestroyGimmickOnDestroy = False
+    GimmickTemplate = room_throneroom
+    AllowAutoBuildGimmick = False
+  GuardUnit
+  PerformRandomWorkstation
+    TargetInteractions = Append
+      Item
+        TargetInteraction = interaction_thalya_relax
+        Weight = 1
+        MinDelay = 25
+  Stunned
+    StunnedAnimation = anim_buff_status_stunned
+    FreezeAnimation = anim_buff_status_frozen
+  FarseerBody
+    Radius = 0.6344476
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 0.8789032
+      Offset = 0 0
+  UnitCorpse
+    PossibleStorages = Append
+      Item = room_throneroom.corpse_type
+  VisualRepresentation
+  VisualRepresentationBySkin
+    IndexBySkinId = Append
+      Item
+        SkinId = default
+        Index = 0
+      Item
+        SkinId = legacygood
+        Index = 1
+      Item
+        SkinId = legacyevil
+        Index = 2
+      Item
+        SkinId = sailor
+        Index = 3
+      Item
+        SkinId = defshorthair
+        Index = 4
+    SkinObjectName = thalya
+  VisualRepresentationSkinnedThalya
+  EvilHandReaction
+    ReactToHandAnimation = anim_react_hand
+plot_protagonist_evil.buff_levelup
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = DynamicAttackValueBuffPart
+    RemoveDeadTargets = False
+  BuffProperties
+    Properties
+      Item
+        Property = Combat.MaxHealthBase
+        Value
+          ValueType = Balancing
+          Value = 150|1.25|1|1|-1|-1
+      Item
+        Property = LevelUp.XpForNextLevel
+        Value
+          ValueType = Balancing
+          Value = 375|1.523|1|0|-1|-1
+      Item
+        Property = Attack.AttackDamageAmount
+        Value
+          ValueType = Balancing
+          Value = 7|1|1|1|2|-1
+      Item
+        Property = Attack.SkillDamageAmount
+        Value
+          ValueType = Balancing
+          Value = 10|1|1|1|2|-1
+  DynamicAttackValueBuffPart
+    TargetEntries = Append
+      Item
+        TargetTemplate = plot_protagonist_evil
+        Properties
+          Item
+            Target
+              Name = tentable_damage
+              Template = plot_protagonist_evil
+            Operator = Absolute
+            Value
+              ValueType = Balancing
+              Value = 5|1|1|1|2|-1
+plot_room_secret_base
+  Abstract = True
+  RemovedComponent = UiDataDetailsView
+  ScriptContainer
+    Triggers = Append
+      Item = TileDiscovered
+        Tile = Tile||ScriptEntity|-1 -1
+  ScriptVariableContainer
+  Location
+    CanNotMove = False
+  ActivateInactiveByGameSetting
+    ActivateIfOrAbove = gs_common_secretrooms_normal
+  ConvertTileArea
+plot_room_secret_base_beer
+  Include = plot_room_secret_base
+  ScriptContainer
+    Actions = Append
+      Item = GiveCurrency
+        Currency = BeerManager
+        Amount = Int||SpawnAmount|0
+        Position = PosHead||ScriptEntity|0 0 0
+  ScriptVariableContainer
+    Variables = Append
+      Item = Int|SpawnAmount||10
+  EntityType
+    Types = Append
+      Item = type_plot_room_secret
+plot_room_secret_base_gem
+  Include = plot_room_secret_base
+  ScriptContainer
+    Actions = Append
+      Item = SpawnTemplate
+        Template = gem_collectible
+        Owner = SinglePlayer
+        Location = PosHead||ScriptEntity|0 0 0
+plot_room_secret_base_guru
+  Include = plot_room_secret_base_beer
+  ScriptContainer
+    Actions
+      Item = GiveCurrency
+        Player = SinglePlayer
+        Currency = GuruManager
+        Amount = Int||SpawnAmount|0
+        FallbackStoreAnywhere = False
+        Position = PosHead||ScriptEntity|0 0 0
+        ShowFloatingNumber = False
+        IsCommentedOut = False
+plot_room_secret_base_mana
+  Include = plot_room_secret_base_beer
+  ScriptContainer
+    Actions
+      Item = GiveCurrency
+        Player = SinglePlayer
+        Currency = ManaManager
+        Amount = Int||SpawnAmount|0
+        FallbackStoreAnywhere = False
+        Position = PosHead||ScriptEntity|0 0 0
+        ShowFloatingNumber = False
+        IsCommentedOut = False
+  ScriptVariableContainer
+    Variables
+      Item = Int|SpawnAmount||250
+plot_room_secret_base_potion
+  Abstract = True
+  Include = plot_room_secret_base
+  ScriptContainer
+    Actions = Append
+      Item = SpawnSpecificPotion
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_damage
+plot_room_secret_base_potion_armor
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_armor
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_potion_aspect_fire
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_aspect_fire
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_potion_aspect_ice
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_aspect_ice
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_potion_aspect_magic
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_aspect_magic
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_potion_aspect_physical
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_aspect_physical
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_potion_damage
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_damage
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_potion_health
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_health
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_potion_payday
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_payday
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_potion_random
+  Include = plot_room_secret_base_potion
+  ScriptVariableContainer
+    Variables = Append
+      Item = Int|Amount||3
+      Item = Int|loop||0
+      Item = Int|random||0
+  ScriptContainer
+    Actions
+      Item = ForLoopAction
+        LoopVariable = Int||loop|0
+        LoopCounts = Int||Amount|0
+        Actions = Append
+          Item = SetRandomIntValue
+            Destination = Int||random|0
+            IntervalStart = 1
+            IntervalEnd = 10
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||1
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_damage
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||2
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_health
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||3
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_armor
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||4
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_randomdeaddrop
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||5
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_payday
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||6
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_aspect_fire
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||7
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_aspect_ice
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||8
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_aspect_magic
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||9
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_aspect_physical
+          Item = IfThenElse
+            Conditions = Append
+              Item = CompareInt
+                A = Int||random|0
+                B = Int|||10
+            ThenActions = Append
+              Item = SpawnSpecificPotion
+                Position = PosHead||ScriptEntity|0 0 0
+                PotionType = potion_perk
+                PerkType = buff_perk_potion_regeneration
+plot_room_secret_base_potion_randomdeaddrop
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_randomdeaddrop
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_potion_regeneration
+  Include = plot_room_secret_base_potion
+  ScriptContainer
+    Actions
+      Item = SpawnSpecificPotion
+        TargetOwner = SinglePlayer
+        Position = PosHead||ScriptEntity|0 0 0
+        PotionType = potion_perk
+        PerkType = buff_perk_potion_regeneration
+        ResultVariable = 
+        IsCommentedOut = False
+plot_room_secret_base_toolbox
+  Include = plot_room_secret_base_beer
+  ScriptContainer
+    Actions
+      Item = GiveCurrency
+        Player = SinglePlayer
+        Currency = ToolboxManager
+        Amount = Int||SpawnAmount|0
+        FallbackStoreAnywhere = False
+        Position = PosHead||ScriptEntity|0 0 0
+        ShowFloatingNumber = False
+        IsCommentedOut = False
+  ScriptVariableContainer
+    Variables
+      Item = Int|SpawnAmount||6
+plot_room_stonesocket
+  Include = room_base
+  Room
+    CanBeRemoved = False
+    RoomId = plot_roomid_stonesocket
+  UiDataRoom
+    Icon = 59bee9e6d1e35d548bf9a8ea5467ada1
+    Title = room_stonesocket_capt
+    Description = room_stonesocket_desc
+    Flavour = room_stonesocket_flav
+plot_room_stonesocket_gimmick
+  PrefabReference
+    ClientPrefab = af604523f5c4b044da1c0499ecb096c1 ac5805c3063752e42ab5dea7aa171b97 a8478d4204d75e049bba623dcb4532c1 4685bddda58e7804999712eb6a7f637b 706a68d316380eb448cbe8f741c8aeac 1f47818af2ed7e34fbfd8a9f3ac43c28
+  Owner = SinglePlayer
+  Location
+    CanNotMove = True
+  VisualRepresentation
+  CasActorType
+  ServerAnimation
+  Stunned
+  FogOfWarHide
+    CullInDungeonIfOwned = True
+    Visibility = OnceSeen
+  DimensionRequirement
+    X = 3
+    Y = 3
+  CostFieldSpecific
+    Bounds = -1 -1 3 3
+    Data = Append
+      Item = 3834658816
+      Item = 4289352960
+      Item = 453378304
+      Item = 3840206052
+      Item = 4294967295
+      Item = 454761243
+      Item = 4231396
+      Item = 5614335
+      Item = 67099
+  PlacementRestriction
+    Snapping = Tile
+plot_room_stonesocket_gimmick_attackable
+  Include = destroyable_object
+  RemovedComponent = CostFieldObstacle
+  PrefabReference
+    ClientPrefab = ac5805c3063752e42ab5dea7aa171b97 29a5bdca00d6fbd46a6405dcd6d107ab
+  Owner = SinglePlayer
+  VisualRepresentation
+  Combat
+    NonThreat = False
+    MaxHealth = 6000
+    RegenerationRateOutsideCombat = 10
+  FogOfWarUncover
+  LowPriorityFightTarget
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 6
+      Offset = 0 0
+  CasActorType
+  CostFieldSpecific
+  DimensionRequirement
+    X = 3
+    Y = 3
+  PlacementRestriction
+    Snapping = Tile
+  VisualRepresentationWhileDead
+  PlayAudioOnDestroy
+    PlayOnKill = True
+    Sfx = map_main19war_stone_destroyed
+plot_roomid_stonesocket
+  Include = roomid_base
+plot_shard_carriage
+  Include = unit_combat_base
+  PrefabReference
+    ClientPrefab = 233142e26db5b4e47b01429c2de8a1bb
+  RemovedChild = attack
+  Owner = SinglePlayer
+  Attack
+    Area = 3
+  EntityType
+    Types = Append
+      Item = type_plot_shard_carriage
+  GUIStatusOverhead
+    Style = HeroStory
+  EvilSelectable
+    SelectionRadius = 0.9836426
+    SelectionColliderHeight = 2.917436
+  BuffResistances
+    EffectResistences = -1
+  DropObjectWhenKilled
+    DropEntries
+      Item
+        Chance = 100
+        DroppedObjects
+          Item = evilness_orb
+    DropCount = 10
+  UiDataUnit
+    Portrait = 92b32e67c6dc5894d95f7d772d1664f1
+    Icon = b7eb0e3f4f3a48b41b7eb5c0df85f938
+    Title = plot_shard_carriage_capt
+    Description = plot_shard_carriage_desc
+    Flavour = plot_shard_carriage_flav
+  PitFiendDemoniconBrain
+    Path = EntityList||test_list|
+    Radius = 10
+    Movement = IF((e>0)&(o>0),0,SIGN(o-e))
+    CurrentMovement = Float||shard_movement|0
+  Combat
+    Ignored = True
+    Unkillable = True
+    AggressiveEffect = 
+  CannotUseTeleport
+  ImpactEffects
+    ImpactSourceBone = projectile_target
+    Effects = Append
+      Item
+        Selector
+        ImpactVfxPrefab = fd70ed54b090c1047b9145cb77ce70fe
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = False
+        VfxLifeTime = 3
+        ImpactDecalConfig = 00000000000000000000000000000000
+        ImpactDecalColor = 1 0 0 1
+  FarseerBody
+    Radius = 2.5
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 2.9
+      Offset = 0 0
+plot_stargate_teleporter
+  Include = plot_stargate_teleporter_base
+  RemovedComponent = ServerAnimation
+plot_stargate_teleporter_base
+  Abstract = True
+  Include = entrance_outside
+  RemovedComponent = EvilificationInfluencer
+  RemovedComponent = TerrainCutout
+  RemovedComponent = ServerAnimation
+  PrefabReference
+    ClientPrefab = bea8710342377e04fb46013990373058
+  Owner = SinglePlayer
+  UiDataGeneric
+    Icon = 051db74e2cb7d4c4cae1553ed3fb8188
+    Title = plot_stargate_teleporter_capt
+    Description = plot_stargate_teleporter_desc
+  UiDataMinimapIcon
+    Icon = 9dff50fde87931d4daca5c2bc5aac000
+    Size = 45
+  Location
+    PlacementHeightOffset = 0
+  EvilSelectable
+    VisualSelectionRadius = 4
+    SelectionRadius = 4
+plot_stone_of_finiteness
+  PrefabReference
+    ClientPrefab = 9798f516042ba7b44bf9dce2ed73fc13 133ae734b50ca444589c3e45afeec428 16d73a40e82d5014a8c746dfced063bf 8c54409616036c84a9f1779e6beedf8e 3cc5a7f827049d240903f2dfe1485456
+  Owner = SinglePlayer
+  Location
+  EntityType
+    Types = Append
+      Item = type_plot_stone_of_finiteness
+  EvilSelectable
+  UiDataGeneric
+    Title = plot_stone_of_finiteness_capt
+    Description = plot_stone_of_finiteness_desc
+    Icon = 7a34b87fab08fe24698723787f43a9a4
+    Flavour = plot_stone_of_finiteness_flav
+  VisualRepresentation
+  FogOfWarHide
+    Visibility = OnceSeen
+    CullInDungeonIfOwned = True
+plot_stone_of_finiteness_selectable
+  PrefabReference
+    ClientPrefab = 9798f516042ba7b44bf9dce2ed73fc13
+  Owner = SinglePlayer
+  Location
+  EvilHandPickup
+    PickupType = SameTemplate
+    MayUsePortals = False
+    CollectibleCarryPose = True
+    CanBeSacrificed = False
+    PickupSound = map_main18unholy_stone_pickup
+    DropSoundGround = map_main18unholy_stone_placed
+  EntityType
+    Types = Append
+      Item = type_plot_stone_of_finiteness
+  EvilSelectable
+  UiDataGeneric
+    Title = plot_stone_of_finiteness_capt
+    Description = plot_stone_of_finiteness_desc
+    Flavour = plot_stone_of_finiteness_flav
+    Icon = 7a34b87fab08fe24698723787f43a9a4
+  UiDataMinimapIcon
+    Icon = 7a34b87fab08fe24698723787f43a9a4
+plot_stonesocket_overworld_effect
+  PrefabReference
+    ClientPrefab = 489a98099c25bb04bb5d86086946d81e 28aab0dc66a32c64889645d0cfa25c63 cc702d2bea3404a4e89984942fa219ad af72e9f1dae29c24db2a0e386ae29b66 e7fe2dc5853baeb428f97efffdf7a970
+  Owner = SinglePlayer
+  Location
+    CanNotMove = True
+  FogOfWarHide
+    Visibility = Always
+  VisualRepresentation
+plot_storm_lightningbolt
+  PrefabReference
+    ClientPrefab = d82d09f938e8eac4a8cfd9b2335a645d
+  Location
+    CanNotMove = True
+plot_storm_lightningbolt_spawner
+  Location
+    CanNotMove = True
+  ScriptContainer
+    Conditions
+      Item = CompareBool
+        A = Bool|||True
+        B = Bool||isActive|False
+    Triggers
+    Actions
+      Item = SpawnTemplate
+        Template = plot_storm_lightningbolt
+        Owner = AIPlayer5
+        Location = PosHead||ScriptEntity|0 0 0
+        SpawnedEntityVariable = Entity||spawntTemplate|
+      Item = SetRandomIntValue
+        IntervalStart = 3
+        IntervalEnd = 8
+        Destination = Int||wait|0
+      Item = Wait
+        Duration = Float||wait|5
+      Item = DestroyEntity
+        Entity = Entity||spawntTemplate|
+    AfterPlay = Nothing
+  ScriptVariableContainer
+    Variables
+      Item = Bool|isActive|storm_is_enabled|False
+      Item = Float|spawnInterval||5
+      Item = Entity|spawntTemplate
+      Item = Int|wait||0
+plot_strong_stone
+  RemovedComponent = LowPriorityFightTarget
+  PrefabReference
+    ClientPrefab = e64a73ab77389f54e9810288dd04889e a744a9d5cff8c644481b9073fdebf0bf
+  Owner = AIPlayer5
+  Location
+    CanNotMove = True
+  EvilSelectable
+    SelectableWhileDead = False
+  GUIStatusOverhead
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 7
+  EntityType
+    Types = Append
+      Item = type_plot_strong_stone
+  VisualRepresentation
+  UiDataUnit
+    Portrait = 0c7f3df399b2c8f47aff8d0f24c3da1b
+    Title = level_props_barricade_stone_destroyable_capt
+    Description = level_props_barricade_stone_destroyable_desc
+    Icon = bea94436c8804a8458640f081faffaee
+    Flavour = level_props_barricade_stone_destroyable_flav
+  Combat
+    MaxHealth = 500
+    NonThreat = True
+  CloseCombatTracker
+  ServerAnimation
+  IsSeenBy
+  Stunned
+  VulnerableOnlyToAspect
+    Aspect = aspect_dynamite
+  VisualRepresentationWhileDead
+  ComplexCostFieldPatch
+    CostField = Append
+      Item
+        LockState = LockedForAll
+        AreaSource = Stimulus
+        ActiveWhenDead = False
+        BlockSight = False
+        Cost = Wall
+        HightLevel = 0
+  BuffAnimationHandler
+  EvilificationInfluencer
+  PlayAudioOnDestroy
+    Sfx = map_plot_strong_stone_a_die
+    PlayOnKill = True
+    MinDistance = 15
+    MaxDistance = 30
+  ScriptVariableContainer
+    Variables
+      Item = EntityList|temproom_list||
+      Item = Int|counter||0
+  ScriptContainer
+    Triggers
+      Item = UnitDiedTrigger
+    Conditions
+      Item = CompareEntity
+        A = TriggeringEntity||TriggeringEntity|
+        B = Entity||ScriptEntity|
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = RandomChanceCondition
+            Chance = Int|||100
+        ThenActions
+          Item = FillList
+            List = EntityList||temproom_list|
+            Owner = SinglePlayer
+            Filter
+              Item = EntityListFilterEntityType
+                EntityType = type_workshop
+          Item = CountEntitiesInList
+            Count = Int||counter|0
+            EntityList = EntityList||temproom_list|
+          Item = IfThenElse
+            Conditions
+              Item = CompareInt
+                A = Int||counter|0
+                Op = greater
+            ThenActions
+              Item = SpawnTemplate
+                Template = toolbox_orb
+                Owner = SinglePlayer
+                Location = PosHead||ScriptEntity|0 0 0
+      Item = SetIntValue
+        Source = Int|||0
+        Destination = Int||counter|0
+      Item = ClearEntityList
+        EntityList = EntityList||temproom_list|
+      Item = IfThenElse
+        Conditions
+          Item = RandomChanceCondition
+            Chance = Int|||25
+        ThenActions
+          Item = FillList
+            List = EntityList||temproom_list|
+            Owner = SinglePlayer
+            Filter
+              Item = EntityListFilterEntityType
+                EntityType = type_gurufarm
+          Item = CountEntitiesInList
+            Count = Int||counter|0
+            EntityList = EntityList||temproom_list|
+          Item = IfThenElse
+            Conditions
+              Item = CompareInt
+                A = Int||counter|0
+                Op = greater
+            ThenActions
+              Item = SpawnTemplate
+                Template = guru_orb
+                Owner = SinglePlayer
+                Location = PosHead||ScriptEntity|0 0 0
+      Item = SetIntValue
+        Source = Int|||0
+        Destination = Int||counter|0
+      Item = ClearEntityList
+        EntityList = EntityList||temproom_list|
+      Item = IfThenElse
+        Conditions
+          Item = RandomChanceCondition
+            Chance = Int|||25
+        ThenActions
+          Item = FillList
+            List = EntityList||temproom_list|
+            Owner = SinglePlayer
+            Filter
+              Item = EntityListFilterEntityType
+                EntityType = type_temple
+          Item = CountEntitiesInList
+            Count = Int||counter|0
+            EntityList = EntityList||temproom_list|
+          Item = IfThenElse
+            Conditions
+              Item = CompareInt
+                A = Int||counter|0
+                Op = greater
+            ThenActions
+              Item = SpawnTemplate
+                Template = faith_orb
+                Owner = SinglePlayer
+                Location = PosHead||ScriptEntity|0 0 0
+      Item = SetIntValue
+        Source = Int|||0
+        Destination = Int||counter|0
+      Item = ClearEntityList
+        EntityList = EntityList||temproom_list|
+      Item = IfThenElse
+        Conditions
+          Item = RandomChanceCondition
+            Chance = Int|||25
+        ThenActions
+          Item = FillList
+            List = EntityList||temproom_list|
+            Owner = SinglePlayer
+            Filter
+              Item = EntityListFilterEntityType
+                EntityType = type_brewery
+          Item = CountEntitiesInList
+            Count = Int||counter|0
+            EntityList = EntityList||temproom_list|
+          Item = IfThenElse
+            Conditions
+              Item = CompareInt
+                A = Int||counter|0
+                Op = greater
+            ThenActions
+              Item = SpawnTemplate
+                Template = beer_orb
+                Owner = SinglePlayer
+                Location = PosHead||ScriptEntity|0 0 0
+      Item = SetIntValue
+        Source = Int|||0
+        Destination = Int||counter|0
+      Item = ClearEntityList
+        EntityList = EntityList||temproom_list|
+      Item = IfThenElse
+        Conditions
+          Item = RandomChanceCondition
+            Chance = Int|||25
+        ThenActions
+          Item = FillList
+            List = EntityList||temproom_list|
+            Owner = SinglePlayer
+            Filter
+              Item = EntityListFilterEntityType
+                EntityType = type_arcanium
+          Item = CountEntitiesInList
+            Count = Int||counter|0
+            EntityList = EntityList||temproom_list|
+          Item = IfThenElse
+            Conditions
+              Item = CompareInt
+                A = Int||counter|0
+                Op = greater
+            ThenActions
+              Item = SpawnTemplate
+                Template = mana_orb
+                Owner = SinglePlayer
+                Location = PosHead||ScriptEntity|0 0 0
+      Item = SetIntValue
+        Source = Int|||0
+        Destination = Int||counter|0
+      Item = ClearEntityList
+        EntityList = EntityList||temproom_list|
+      Item = IfThenElse
+        Conditions
+          Item = RandomChanceCondition
+            Chance = Int|||100
+        ThenActions
+          Item = FillList
+            List = EntityList||temproom_list|
+            Owner = SinglePlayer
+            Filter
+              Item = EntityListFilterEntityType
+                EntityType = type_potionlodge
+          Item = CountEntitiesInList
+            Count = Int||counter|0
+            EntityList = EntityList||temproom_list|
+          Item = IfThenElse
+            Conditions
+              Item = CompareInt
+                A = Int||counter|0
+                Op = greater
+            ThenActions
+              Item = SpawnTemplate
+                Template = potion_orb
+                Owner = SinglePlayer
+                Location = PosHead||ScriptEntity|0 0 0
+      Item = IfThenElse
+        Conditions
+          Item = RandomChanceCondition
+            Chance = Int|||100
+        ThenActions
+          Item = SpawnTemplate
+            Template = gold_orb
+            Owner = SinglePlayer
+            Location = PosHead||ScriptEntity|0 0 0
+plot_stun_area
+  PrefabReference
+    ClientPrefab = 9de322a7f6a18764dbf483a2fb703b45
+  Owner = SinglePlayer
+  Location
+  BuffAura
+    Auras = Append
+      Item
+        LocalName = stun
+        Definition = plot_stun_area.buff
+    DeactivateAurasOnDeath = False
+  BuffAuraPassiv
+    AuraToActivate = Append
+      Item
+        Name = stun
+        Template = plot_stun_area
+plot_stun_area.buff
+  SimpleSkillEffectBuff
+    TargetSelector = SkillTargetSensor
+    TargetFilter = Append
+      Item = SkillEntityFilterFriend
+  SkillTargetSensor
+    Sensor = PhxCircleSensor
+      Radius = 30
+  SkillEntityFilterFriend
+  Buff
+    Parts = Append
+      Item = BuffProperties
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Combat.Stunned
+plot_stun_shield
+  Include = gate_basic
+  RemovedComponent = Door
+  RemovedComponent = DoorOpenTracker
+  RemovedComponent = AttackableBarrier
+  PrefabReference
+    ClientPrefab = 74045246db424454bae092ed6a8c4533
+  Owner = AIPlayer5
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 40
+      Offset = 0 0
+    ApplyProjektileRadius = True
+  Brain
+  Puppet
+  Attack
+  Interactor
+  UiDataUnit
+    Portrait = 1c32c70ef52c53949b0f0decc94afdca
+    Icon = 6dc54cd2d5b82664ea64b65e8c1a1520
+    Title = plot_mana_shield_capt
+    Description = plot_mana_shield_desc
+    Flavour = plot_mana_shield_flav
+  SkillTargetProxyProvider
+    ProxyTemplate = plot_stun_shield.combat_proxy
+    ProxyLocations = Append
+      Item = 0 0
+      Item = 0 0
+      Item = 0 0
+  ComplexCostFieldPatch
+    CostField
+      Item
+        LockState = LockedForPlayer
+        AreaSource = Stimulus
+        Area
+        ActiveWhenDead = False
+        BlockSight = False
+        Cost = Wall
+        HightLevel = 0
+  Combat
+    NonThreat = True
+plot_stun_shield.combat_proxy
+  Combat
+    MaxHealth = 1E+08
+    Unkillable = True
+    ShowOverhead = False
+    Invulnerable = True
+  IsSeenBy
+  ServerAnimation
+  Stunned
+  Location
+  CloseCombatTracker
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 10
+  SkillTargetProxy
+  BuffAnimationHandler
+plot_tanos
+  Include = unit_combat_base
+  RemovedComponent = Imprisoned
+  PrefabReference
+    ClientPrefab = 15c49214f23edfb4384c072e5a481fdb
+  Owner = AIPlayer5
+  Attack
+    Area = 3
+    AttackDamageAmount = 45
+    DynamicValues = Append
+      Item
+        Name = default_attack_half_arc
+        Value = 60
+      Item
+        Name = default attack_arc_range
+        Value = 3
+      Item
+        Name = default_attack_time
+        Value = 2
+      Item
+        Name = skill_melee_area
+        Value = 10
+      Item
+        Name = skill_melee_damage
+        Value = 250
+      Item
+        Name = skill_melee_knockback_dist
+        Value = 3
+      Item
+        Name = skill_melee_prepare_time
+        Value = 3
+      Item
+        Name = skill_melee_cooldown
+        Value = 40
+      Item
+        Name = skill_range_cooldown
+        Value = 20
+      Item
+        Name = skill_range_half_arc
+        Value = 15
+      Item
+        Name = skill_range_arc_range
+        Value = 15
+      Item
+        Name = skill_range_damage
+        Value = 200
+      Item
+        Name = skill_range_knockback_dist
+        Value = 1
+      Item
+        Name = skill_range_prepare_time
+        Value = 3
+      Item
+        Name = skill_ghost_cooldown
+        Value = 60
+      Item
+        Name = skill_ghost_min_dist
+        Value = 3
+      Item
+        Name = skill_ghost_max_dist
+        Value = 15
+      Item
+        Name = skill_ghost_prepare_time
+        Value = 2
+  EntityType
+    Types = Append
+      Item = type_boss
+      Item = type_tanos
+  GUIStatusOverhead
+    Style = HeroStory
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_unit_melee
+      Item = actor_agressive
+      Item = actor_stunnable
+  Puppet
+  PuppetMove
+  PuppetMoveAttack
+  EvilSelectable
+    SelectionColliderHeight = 2.917436
+    SelectedEffectOverride = ""
+    HighlightEffectOverride = ""
+    SelectionRadius = 0.9836426
+  ScriptContainer
+  DropObjectWhenKilled
+    DropEntries
+      Item
+        Chance = 100
+        DroppedObjects
+          Item = evilness_orb
+    DropCount = 10
+  ScriptVariableContainer
+  UiDataUnit
+    Portrait = a6fa40e89664fae41994d7e68ebbb1da
+    Icon = 9b87f4f5e430eea41989def172a9ea37
+    EntityType = Boss
+    Title = plot_thanos_capt
+    Description = plot_thanos_desc
+    Flavour = plot_thanos_flav
+    OverheadOffset = 1.5
+    OverheadPingOffset = 1.5
+    AlternativeIcon = 777c55f25b58ae14f960d6ebb0c902ba
+  Combat
+    ShowInvulnerableAsImmuneText = True
+    MaxHealth = 8000
+    Armor = 20
+  Mover
+    Speed = 3
+  HeroRaidActivity
+  HeroRaidActivityExecuteGoal
+  HeroMissionBrainComeToLeader
+  RaidMember
+  SimpleSkillMaster
+    Skills = Append
+      Item
+        LocalName = attack
+        SkillDefinition = anim_tanos_default_attack
+      Item
+        LocalName = skill_melee
+        SkillDefinition = anim_tanos_skill_melee
+      Item
+        LocalName = skill_range
+        SkillDefinition = anim_tanos_skill_range
+      Item
+        LocalName = skill_ghost
+        SkillDefinition = anim_tanos_skill_ghost
+  AttackTarget
+    SimpleSpecialSkills = Append
+      Item
+        Name = skill_range
+        Template = plot_tanos
+      Item
+        Name = skill_melee
+        Template = plot_tanos
+      Item
+        Name = attack
+        Template = plot_tanos
+    HealthTriggerdSkills = Append
+      Item
+        TargetHealthPercent = 75
+        Skill
+          Name = skill_ghost
+          Template = plot_tanos
+      Item
+        TargetHealthPercent = 50
+        Skill
+          Name = skill_ghost
+          Template = plot_tanos
+      Item
+        TargetHealthPercent = 25
+        Skill
+          Name = skill_ghost
+          Template = plot_tanos
+  UiDataMinimapIcon
+    Icon = c326897e86e15cb419c9852147f12a3a
+    Size = 34.2
+  FogOfWarHide
+    Visibility = Always
+    AlwaysShow = StaticMeshes
+  CanOnlyBeAttackedScriptable
+  DestroyObjectsHandler
+    DestroySkill
+      Name = attack
+      Template = plot_tanos
+    OnEffectEvent
+      Name = on_effect
+      Template = anim_tanos_default_attack
+  FightActivity
+    AttackSkill
+      Name = attack
+      Template = plot_tanos
+  ImpactEffects
+    ImpactSourceBone = projectile_target
+    Effects = Append
+      Item
+        Selector
+        ImpactVfxPrefab = fd70ed54b090c1047b9145cb77ce70fe
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = False
+        VfxLifeTime = 3
+        ImpactDecalConfig = 00000000000000000000000000000000
+        ImpactDecalColor = 1 0 0 1
+  BuffResistances
+    EffectResistences = -1
+plot_tanos_phantom
+  Include = plot_tanos
+  RemovedComponent = UiDataMinimapIcon
+  RemovedComponent = DropObjectWhenKilled
+  PrefabReference
+    ClientPrefab = 80f0f7a56598d1a40bd82bacd981f66b
+  AttackTarget
+    SimpleSpecialSkills
+      Item
+        Name = attack
+        Template = plot_tanos_phantom
+    HealthTriggerdSkills
+  Combat
+    MaxHealth = 1000
+    Armor = 5
+  SummonedMonster
+    UseBattleSpeedSameAsMaster = False
+    CountForMasterSummonCountWhenDead = False
+    InformMasterWhenEnterFight = True
+  SpawnAnimation
+    Animation = anim_tanos_phantom_spawn
+  SummonedMonsterFollowMaster
+  PuppetFollow
+  FightActivity
+    CopyEnemiesFromSummoner = True
+  Energy
+    Max = 60
+    EnergyRegeneration = -1
+    ShowAsCooldown = True
+  KillUnitWhenOutOfEnergy
+  EntityType
+    Types
+      Item = type_unit
+plot_transport_prisoner_base
+  Include = unit_combat_base
+  PrefabReference
+    ClientPrefab = 2788f24ec03e172439de4c672f5dd2ec
+  Owner = AIPlayer5
+  Attack
+    Area = 3
+  EntityType
+    Types = Append
+      Item = type_boss
+  GUIStatusOverhead
+    Style = HeroStory
+  Puppet
+  PuppetMove
+  PuppetMoveAttack
+  EvilSelectable
+    SelectionRadius = 0.9836426
+    SelectionColliderHeight = 2.917436
+  ScriptContainer
+  BuffResistances
+    EffectResistences = -1
+  DropObjectWhenKilled
+    DropEntries
+      Item
+        Chance = 100
+        DroppedObjects
+          Item = evilness_orb
+    DropCount = 10
+  ScriptVariableContainer
+  UiDataUnit
+    Portrait = 60991b8add458f142905fb9b24290fef
+    Icon = d065d7fbdb2845c4a90eace44047176c
+    Title = plot_transport_prisoner_base_capt
+    Description = plot_transport_prisoner_base_desc
+    Flavour = plot_transport_prisoner_base_flav
+    OverheadPingOffset = 3
+  Mover
+    Speed = 3
+  Combat
+    AggressiveEffect = 
+    DeathEffect = anim_death
+  ServerAnimation
+    ProvidedActors = Append
+  ServerNavAgent
+    Radius = 2
+plot_transport_prisoner_thalya
+  Include = plot_transport_prisoner_base
+  PrefabReference
+    ClientPrefab = b2b0cc69c4cb28047be176da78e98c93 d025306e7c7edb04383482bfdaa63e92 a38d6c77c9b856d42a732698124aa7fc 9add82a3f065b8548bd2a2a34a3aa9c7 345f4056a4d8dd9439c30d6062e5af7a c55056411510e1a40901407dd510295a
+  UiDataUnit
+    Portrait = 76b51c498687aff4b9e2252d76eb3668
+    Icon = 76b51c498687aff4b9e2252d76eb3668
+    Title = plot_transport_prisoner_thalya_capt
+    Description = plot_transport_prisoner_thalya_desc
+    Flavour = plot_transport_prisoner_thalya_flav
+  FogOfWarHide
+    Visibility = Always
+    AlwaysShow = StaticMeshes
+  ServerAnimation
+    ServerIdle = anim_thalya_locked
+    VerifyActorSetup = False
+  VisualRepresentationWhileDead
+    DeadIndex = 5
+  VisualRepresentation
+  PlayAudioOnDestroy
+    PlayOnKill = True
+    Sfx = map_main11blessing_destroy_coffin
+  VisualRepresentationBySkin
+    SkinObjectName = thalya
+    IndexBySkinId = Append
+      Item
+        SkinId = default
+      Item
+        SkinId = legacygood
+        Index = 1
+      Item
+        SkinId = legacyevil
+        Index = 2
+      Item
+        SkinId = sailor
+        Index = 3
+      Item
+        SkinId = defshorthair
+        Index = 4
+  VisualRepresentationSkinnedThalya
+plot_tristan
+  Include = unit_combat_base
+  RemovedComponent = Imprisoned
+  PrefabReference
+    ClientPrefab = 97127111ac33cb64e98e0289f253ca54
+  Owner = AIPlayer5
+  Attack
+    AttackDamageAmount = 50
+    DynamicValues = Append
+      Item
+        Name = cone_range
+        Value = 15
+      Item
+        Name = cone_arc
+        Value = 35
+      Item
+        Name = cone_cooldown
+        Value = 20
+      Item
+        Name = cone_prepare_time
+        Value = 5
+      Item
+        Name = cone_dmg
+        Value = 80
+      Item
+        Name = stun_range
+        Value = 10
+      Item
+        Name = dash_cooldown
+        Value = 20
+      Item
+        Name = dash_prepare_time
+        Value = 5
+      Item
+        Name = dash_area
+        Value = 4
+      Item
+        Name = stun_cooldown
+        Value = 20
+      Item
+        Name = dash_stun_duration
+        Value = 3
+      Item
+        Name = dash_dmg
+        Value = 100
+      Item
+        Name = stun_prepare_time
+        Value = 8
+      Item
+        Name = stun_duration
+        Value = 3
+      Item
+        Name = stun_dmg
+        Value = 80
+    AttackCooldown = 3
+    SkillDamageAmount = 0
+  EntityType
+    Types = Append
+      Item = type_boss
+  GUIStatusOverhead
+    Style = HeroStory
+  EvilSelectable
+    SelectionRadius = 0.9836426
+    SelectionColliderHeight = 2.917436
+  ScriptContainer
+  BuffResistances
+    EffectResistences = Slow, Charm
+  ScriptVariableContainer
+  UiDataUnit
+    Portrait = 054a5f2f5ea842e408b878b43a8ad34f
+    EntityType = Boss
+    Icon = 054a5f2f5ea842e408b878b43a8ad34f
+    Title = plot_tristran_capt
+    Description = plot_tristran_desc
+    Flavour = plot_tristran_flav
+    IsChampion = True
+    OverheadOffset = 1.5
+    OverheadPingOffset = 1.5
+    AlternativeIcon = 777c55f25b58ae14f960d6ebb0c902ba
+  HeroRaidActivityExecuteGoal
+  HeroRaidActivity
+  HeroMissionBrainComeToLeader
+  RaidMember
+  Mover
+    Speed = 3
+    BattleSpeed = 4.6
+  PuppetMove
+  PuppetMoveAttack
+  SimpleSkillMaster
+    Skills = Append
+      Item
+        LocalName = auto_attack
+        SkillDefinition = anim_default_attack_melee
+      Item
+        LocalName = aoe_cone
+        SkillDefinition = anim_tristan_cone_attack
+      Item
+        LocalName = aoe_stun
+        SkillDefinition = anim_tristan_aoe_stun
+      Item
+        LocalName = channeling
+        SkillDefinition = anim_base_skill_plot_tristan_channeling
+      Item
+        LocalName = dash
+        SkillDefinition = anim_tristan_dash
+  AttackTarget
+    SimpleSpecialSkills = Append
+      Item
+        Name = aoe_stun
+        Template = plot_tristan
+      Item
+        Name = aoe_cone
+        Template = plot_tristan
+      Item
+        Name = dash
+        Template = plot_tristan
+      Item
+        Name = auto_attack
+        Template = plot_tristan
+  PuppetAttack
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_unit_melee
+      Item = actor_agressive
+    VerifyActorSetup = True
+  UiDataMinimapIcon
+    Icon = 3261f3c5b2fbabe4cb9ee7e4f829f5b1
+  FogOfWarHide
+    Visibility = Always
+    AlwaysShow = StaticMeshes
+  Combat
+    MaxHealth = 25000
+    Armor = 20
+  CanOnlyBeAttackedScriptable
+  ServerNavAgent
+    SteerAroundEnemies = False
+  DestroyObjectsHandler
+    DestroySkill
+      Name = auto_attack
+      Template = plot_tristan
+    OnEffectEvent
+      Name = OnEffect
+      Template = anim_default_attack_melee
+  FightActivity
+    AttackSkill
+      Name = auto_attack
+      Template = plot_tristan
+  ImpactEffects
+    ImpactSourceBone = projectile_target
+    Effects = Append
+      Item
+        Selector
+        ImpactVfxPrefab = 48e916568e5fb96489723399391c1224
+        ImpactVfxStrenghtPropertyName = 
+        KeepVfxAttached = False
+        VfxLifeTime = 3
+        ImpactDecalConfig = 00000000000000000000000000000000
+        ImpactDecalColor = 1 0 0 1
+plot_vulcano_damage_area
+  PrefabReference
+    ClientPrefab = b777b82adb1ede346810e7b71fe148e3
+  Owner = SinglePlayer
+  BuffAura
+    Auras = Append
+      Item
+        LocalName = buff
+        Definition = plot_vulcano_damage_area.buff
+    DeactivateAurasOnDeath = False
+  BuffAuraPassiv
+    AuraToActivate = Append
+      Item
+        Name = buff
+        Template = plot_vulcano_damage_area
+  Location
+  Attack
+    SkillArea = 15
+  EntityType
+    Types = Append
+      Item = type_plot_vulcano_damage_area
+  FogOfWarHide
+    Visibility = Always
+    AlwaysShow = Specific
+    AlwaysShowMeshNames = Append
+      Item = prop_vfx_env_fire_neutral_huge01.2
+      Item = prop_vfx_env_fire_neutral_huge01.3
+      Item = prop_vfx_env_fire_neutral_huge01.4
+      Item = prop_vfx_env_fire_neutral_huge01.5
+      Item = prop_vfx_env_fire_neutral_huge01.6
+      Item = prop_vfx_env_fire_neutral_huge01.7
+      Item = prop_vfx_env_fire_neutral_huge01.8
+      Item = prop_vfx_env_fire_neutral_huge01.9
+      Item = prop_vfx_env_fire_neutral_huge01.10
+      Item = prop_vfx_env_fire_neutral_huge01.11
+  UiDataMinimapIcon
+    Icon = d31440fee697db64d938595ac922c66c
+  PlayAudioOnCreation
+    Sfx = map_main16ring_vulcano_damage_area_spawn
+    MinDistance = 15
+    MaxDistance = 30
+  PlayAudioOnDestroy
+    Sfx = map_main16ring_vulcano_damage_area_despawn
+    MinDistance = 15
+    MaxDistance = 30
+  PlaySoundWhileInRegion
+    Sfx = map_main16ring_vulcano_damage_area_loop
+    OnlyLocal = True
+    MinHearableDistance = 15
+    MaxHearableDistance = 30
+plot_vulcano_damage_area.buff
+  Buff
+    Parts = Append
+      Item = BuffProperties
+      Item = BuffDamageOverTime
+  BuffProperties
+    Properties = Append
+      Item
+        Property = Mover.SpeedFactor
+        Value
+          ValueType = Constant
+          Value = -0.15
+  SkillTargetSensor
+    AreaSource
+      Source = SkillArea
+      CustomValue = 0
+    Sensor = PhxCircleSensor
+  BuffDamageOverTime
+    CustomDamage
+      Amount = 35
+      AmountOfTrueDamage = 0
+      AdditionalAttacks = 0
+      Aspects
+      IgnoreArmorFactor = 0
+      CanBeAbsorbed = True
+    AllowFriendlyFire = True
+    DamageOwner = SinglePlayer
+    AdditionalAspects = Append
+      Item = aspect_main16ring_vulcano
+  SimpleSkillEffectBuff
+    TargetSelector = SkillTargetSensor
+portal_heroes
+  Include = unit_base
+  RemovedComponent = EntityType
+  PrefabReference
+    ClientPrefab = f74cf14ddc83ff64680c16008d4feb9f
+  Owner = AIPlayer5
+  Location
+  UiDataUnit
+    Portrait = 6d17bf0a2969b82418970ab22bd7f097
+    EntityType = None
+    Title = portal_heroes_capt
+    Description = portal_heroes_desc
+    Flavour = portal_heroes_flav
+  UiDataMinimapIcon
+    Icon = 814d660332f15fa4ab774f31ff769245
+    Size = 60
+    DisableIfDead = True
+  EvilSelectable
+  MakeRegularly
+    Interval = 120
+    DontTickWhileRaidAlive = True
+  Maker
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Heroes
+  MakeThemInCircle
+  PhxStimulus
+    Sensor = PhxCircleSensor
+  MakeThenGiveRandomStandardMission
+  ScriptVariableContainer
+  ScriptContainer
+    Triggers
+      Item = OnceAfter
+        StartDelay = Float|||10
+    Actions
+      Item = EnableSpawner
+        Spawner = Entity||ScriptEntity|
+      Item = SpawnIfUnrestricted
+        Spawner = Entity||ScriptEntity|
+  MakeExceptIfDisabled
+    DisableOnDie = True
+    Enabled = False
+  Combat
+    MaxHealth = 3000
+    DeathEffect = anim_death
+  FogOfWarHide
+    Visibility = Always
+  MakeThemGroupStrengthHeroLevel
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_death
+portal_town
+  PrefabReference
+    ClientPrefab = 121caa2af7bff8b42aa53ff4510f95ba
+  Owner = AIPlayer5
+  Location
+sandbox_cheat_pickup_base
+  Abstract = True
+  EvilHandPickup
+    PickupType = SameTemplate
+  EvilSelectable
+  GiveCurrencyIntoHandWhenPickedUp
+    Amount = 10
+  Location
+sandbox_cheat_room_base
+  Abstract = True
+  DungeonCloakObserver
+  KeepOneSpawnedEntity
+  NoRoomAllowed
+    NoDropAllowed = True
+    NoRoomUi = True
+    NoGimmicks = True
+  Room
+    CanBeRemoved = False
+    MarkerTexture = 5ffd03f3619c9f84bb6c13c031f4b8f1
+    RoomColor = 1 0 0 1
+    RoomId = roomid_creep_spider
+  TileArea
+spawner_artifact_armor
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||1
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_artifact_base
+  Abstract = True
+  Location
+    CanNotMove = True
+  ScriptVariableContainer
+    Variables = Append
+      Item = Int|index||1
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+  ScriptContainer
+    Triggers = Append
+      Item = HasTileConnected
+        Tile = Tile||ScriptEntity|-1 -1
+        IsCommentedOut = True
+      Item = OnceAfter
+        StartDelay = Float|||1
+    Actions = Append
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareBool
+            A = Bool||useRandom|False
+            B = Bool|||True
+        ThenActions = Append
+          Item = SetRandomIntValue
+            IntervalStart = 1
+            IntervalEnd = 11
+            Destination = Int||index|0
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||1
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_armor
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||2
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_evilness
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||3
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_evilness_improved
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||4
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_gold
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||5
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_gold_improved
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||6
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_guru
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||7
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_happy_horde
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||8
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_mana
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||9
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_spells
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+      Item = IfThenElse
+        Conditions = Append
+          Item = CompareInt
+            A = Int||index|0
+            B = Int|||10
+        ThenActions = Append
+          Item = SpawnTemplate
+            Template = artifact_strength
+            Location = PosHead||ScriptEntity|0 0 0
+            Owner = Invalid
+  InformWhenDiscovered
+    Dialog = dlg_general_artefact_found
+spawner_artifact_evilness
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||2
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_artifact_evilness_improved
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||3
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_artifact_gold
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||4
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_artifact_gold_improved
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||5
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_artifact_guru
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||6
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_artifact_happy_horde
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||7
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_artifact_mana
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||8
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_artifact_spells
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||9
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_artifact_strength
+  Include = spawner_artifact_base
+  ScriptVariableContainer
+    Variables
+      Item = Int|index||10
+      Item = Bool|useRandom||False
+      Item = Int|tempRandom||0
+spawner_template_dig_player
+  Owner = AIPlayer5
+  Location
+    CanNotMove = True
+  Maker
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Dwarves
+  MakeThenGiveMission
+    Mission = heromission_global_dig_player
+  MakeThemGroupStrengthFixed
+    GroupStrength = 1

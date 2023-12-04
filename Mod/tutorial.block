@@ -1,0 +1,1434 @@
+﻿tut_popup_blazing_beer
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 89aeae86cbd9a714b83746a9cc5f716e
+    Title = tut_popup_blazing_beer_capt
+    Explanations = Append
+      Item = tut_popup_blazing_beer_1
+    CategorieMain = Unit
+tut_popup_demon_died
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    Title = tut_popup_demon_died_capt
+    Explanations
+      Item = tut_popup_demon_died_1
+      Item = tut_popup_demon_died_2
+    HelpImage = 8acaba319dfcda14ba1fcbd7017d8e8f
+    CategorieMain = Unit
+    CategorieSub = Demon
+tut_popup_demon_info
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 8acaba319dfcda14ba1fcbd7017d8e8f
+    Title = tut_popup_demon_info_capt
+    Explanations
+      Item = tut_popup_demon_info_1
+      Item = tut_popup_demon_info_2
+      Item = tut_popup_demon_info_3
+    CategorieMain = Unit
+    CategorieSub = Demon
+tut_popup_demon_unit_no_gimmick
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 8acaba319dfcda14ba1fcbd7017d8e8f
+    Title = tut_popup_demon_unit_no_gimmick_capt
+    Explanations = Append
+      Item = tut_popup_demon_unit_no_gimmick_01
+    CategorieMain = Unit
+    CategorieSub = Demon
+tut_popup_dungeon_combat
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 895e66830c9bcbc40bc24eea367a8b41
+    Title = tut_popup_dungeon_combat_capt
+    Explanations
+      Item = tut_popup_dungeon_combat_1
+      Item = tut_popup_dungeon_combat_2
+      Item = tut_popup_dungeon_combat_3
+    CategorieSub = Controls
+tut_popup_dungeon_controlls
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 2415829117f3daf4fab52bea72f052ba
+    Title = tut_popup_dungeon_controlls_capt
+    Explanations
+      Item = tut_popup_unit_dungeon_controlls_1
+      Item = tut_popup_unit_dungeon_controlls_2
+    CategorieSub = Controls
+tut_popup_dungeon_heart_damage
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 041055e2506b4034c975329247caa77f
+    CategorieSub = Neutral
+    Title = tut_popup_dungeon_heart_damage_capt
+    Explanations = Append
+      Item = tut_popup_dungeon_heart_damage_1
+    CategorieMain = Room
+tut_popup_dwarves_room
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = d9612ef09c7d61940a6cc03a3c413a8c
+    Title = tut_popup_dwarves_room_capt
+    Explanations = Append
+      Item = tut_popup_dwarves_room_1
+      Item = tut_popup_dwarves_room_2
+      Item = tut_popup_dwarves_room_3
+    CategorieSub = Enemies
+tut_popup_edboss_collossus
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = fa761a88890008d41bb32338ea00d181
+    CategorieMain = Enemies
+    CategorieSub = Boss
+    Title = unit_boss_collossus_capt
+    Explanations = Append
+      Item = unit_boss_collossus_desc
+      Item = unit_boss_collossus_flav
+    LinkedTemplate = edboss_colossus
+tut_popup_edboss_crystalgolem
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = b0e301a5e2fa68d47a66998ee4230916
+    CategorieMain = Enemies
+    CategorieSub = Boss
+    Title = unit_boss_crystalgolem_capt
+    Explanations = Append
+      Item = unit_boss_crystalgolem_desc
+      Item = unit_boss_crystalgolem_flav
+    LinkedTemplate = edboss_crystalgolem
+tut_popup_edboss_hypnofrog
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = da5e10fd8342b9b428364551d2d91040
+    CategorieMain = Enemies
+    CategorieSub = Boss
+    Title = unit_boss_hypnofrog_capt
+    Explanations = Append
+      Item = unit_boss_hypnofrog_desc
+      Item = unit_boss_hypnofrog_flav
+    LinkedTemplate = edboss_hypnofrog
+tut_popup_edboss_unicorn
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 5abe76ff18c07fe4d9c44d05d88cae16
+    CategorieMain = Enemies
+    CategorieSub = Boss
+    Title = unit_boss_unicorn_capt
+    Explanations = Append
+      Item = unit_boss_unicorn_desc
+      Item = unit_boss_unicorn_flav
+    LinkedTemplate = edboss_unicorn
+tut_popup_evilness
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    Title = tut_popup_evilness_capt
+    Explanations
+      Item = tut_popup_evilness_1
+      Item = tut_popup_evilness_2
+      Item = tut_popup_evilness_3
+    HelpImage = 039c912a3d4b84546a6e147be2b69d76
+tut_popup_faction
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 2aee477d59aa44048abc6e159e1c26ef
+    Title = tut_popup_faction_capt
+    Explanations = Append
+      Item = tut_popup_faction_1
+tut_popup_graveyard_corpse
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 35bcac099a2a430499447f5cdedc9e2b
+    Title = tut_popup_graveyard_corpse_capt
+    Explanations = Append
+      Item = tut_popup_graveyard_corpse_1
+tut_popup_hero_bombardier
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 6890f254032734e438dd24a8928e4436
+    CategorieSub = Dwarfs
+    Title = hero_bombardier_capt
+    Explanations = Append
+      Item = hero_bombardier_desc
+      Item = hero_bombardier_flav
+    LinkedTemplate = hero_bombardier_common
+    CategorieMain = Enemies
+tut_popup_hero_bombardier_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 29717a9cdde70ed4dbebd6675afcf44d
+    CategorieSub = Dwarfs
+    Title = hero_bombardier_gold_capt
+    Explanations = Append
+      Item = hero_bombardier_gold_desc
+      Item = hero_bombardier_gold_flav
+    LinkedTemplate = hero_bombardier_gold
+    CategorieMain = Enemies
+tut_popup_hero_fighter
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 1b181259fd216314cafc6e5961621d8b
+    CategorieMain = Enemies
+    CategorieSub = Humans
+    Title = hero_fighter_capt
+    Explanations = Append
+      Item = hero_fighter_desc
+      Item = hero_fighter_flav
+    LinkedTemplate = hero_fighter_common
+tut_popup_hero_fighter_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 8c17c9608e1c2574e9e6fae722728c30
+    CategorieSub = Humans
+    Title = hero_fighter_gold_capt
+    Explanations = Append
+      Item = hero_fighter_gold_desc
+      Item = hero_fighter_gold_flav
+    LinkedTemplate = hero_fighter_gold
+    CategorieMain = Enemies
+tut_popup_hero_guardian
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 897c3c51f9870ad4f888af9b7dfdfb7f
+    CategorieSub = Elves
+    Title = hero_guardian_capt
+    Explanations = Append
+      Item = hero_guardian_desc
+      Item = hero_guardian_flav
+    LinkedTemplate = hero_guardian_common
+    CategorieMain = Enemies
+tut_popup_hero_guardian_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 04a293e0d7eb0e344a66e90bf7b1a475
+    CategorieSub = Elves
+    Title = hero_guardian_gold_capt
+    Explanations = Append
+      Item = hero_guardian_gold_desc
+      Item = hero_guardian_gold_flav
+    LinkedTemplate = hero_guardian_gold
+    CategorieMain = Enemies
+tut_popup_hero_mage
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 0786de9894b6e644ba805c9eaab103ea
+    CategorieSub = Humans
+    Title = hero_mage_capt
+    Explanations = Append
+      Item = hero_mage_desc
+      Item = hero_mage_flav
+    LinkedTemplate = hero_mage_common
+    CategorieMain = Enemies
+tut_popup_hero_mage_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 8447c30758331a048a8f134ac2b0a835
+    CategorieSub = Humans
+    Title = hero_mage_gold_capt
+    Explanations = Append
+      Item = hero_mage_gold_desc
+      Item = hero_mage_gold_flav
+    LinkedTemplate = hero_mage_gold
+    CategorieMain = Enemies
+tut_popup_hero_priestess
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 609abf4b99d1734459c2c6534d9c72a7
+    CategorieSub = Humans
+    Title = hero_priestess_capt
+    Explanations = Append
+      Item = hero_priestess_desc
+      Item = hero_priestess_flav
+    LinkedTemplate = hero_priestess_common
+    CategorieMain = Enemies
+tut_popup_hero_priestess_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 1844d3c71a1af9d4b852932773a0eced
+    CategorieSub = Humans
+    Title = hero_priestess_gold_capt
+    Explanations = Append
+      Item = hero_priestess_gold_desc
+      Item = hero_priestess_gold_flav
+    LinkedTemplate = hero_priestess_gold
+    CategorieMain = Enemies
+tut_popup_hero_pyro
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 30476e9a9c924a94cbaad5e947621d68
+    CategorieSub = Dwarfs
+    Title = hero_pyro_capt
+    Explanations = Append
+      Item = hero_pyro_desc
+      Item = hero_pyro_flav
+    LinkedTemplate = hero_pyro_common
+    CategorieMain = Enemies
+tut_popup_hero_pyro_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = c24827952eeb5a9428d20c7ad970926f
+    CategorieSub = Dwarfs
+    Title = hero_pyro_gold_capt
+    Explanations = Append
+      Item = hero_pyro_gold_desc
+      Item = hero_pyro_gold_flav
+    LinkedTemplate = hero_pyro_gold
+    CategorieMain = Enemies
+tut_popup_hero_ranger
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = c521e3515bb550e44a53b8a0304131ac
+    CategorieSub = Elves
+    Title = hero_ranger_capt
+    Explanations = Append
+      Item = hero_ranger_desc
+      Item = hero_ranger_flav
+    LinkedTemplate = hero_ranger_common
+    CategorieMain = Enemies
+tut_popup_hero_ranger_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 6ca1789e4f4b0634b9cec2d7627e3546
+    CategorieSub = Elves
+    Title = hero_ranger_gold_capt
+    Explanations = Append
+      Item = hero_ranger_gold_desc
+      Item = hero_ranger_gold_flav
+    LinkedTemplate = hero_ranger_gold
+    CategorieMain = Enemies
+tut_popup_hero_rider
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 8f597ed5e6776754fbc2c64c1c876934
+    CategorieSub = Dwarfs
+    Title = hero_rider_capt
+    Explanations = Append
+      Item = hero_rider_desc
+      Item = hero_rider_flav
+    LinkedTemplate = hero_rider_common
+    CategorieMain = Enemies
+tut_popup_hero_rider_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = e48c00d39d5e95942b39187a75842428
+    CategorieSub = Dwarfs
+    Title = hero_rider_gold_capt
+    Explanations = Append
+      Item = hero_rider_gold_desc
+      Item = hero_rider_gold_flav
+    LinkedTemplate = hero_rider_gold
+    CategorieMain = Enemies
+tut_popup_hero_rifleman
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = f2bd1c827687e24478f5ea9dfc31ae1d
+    CategorieSub = Humans
+    Title = hero_rifleman_capt
+    Explanations = Append
+      Item = hero_rifleman_desc
+      Item = hero_rifleman_flav
+    LinkedTemplate = hero_rifleman_common
+    CategorieMain = Enemies
+tut_popup_hero_rifleman_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 2a3733c0d3392694cad8a72a0898a41b
+    CategorieSub = Humans
+    Title = hero_rifleman_gold_capt
+    Explanations = Append
+      Item = hero_rifleman_gold_desc
+      Item = hero_rifleman_gold_flav
+    LinkedTemplate = hero_rifleman_gold
+    CategorieMain = Enemies
+tut_popup_hero_sneak
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = ce1c0bef19743574abfd3165f470064f
+    CategorieSub = Elves
+    Title = hero_sneak_capt
+    Explanations = Append
+      Item = hero_sneak_desc
+      Item = hero_sneak_flav
+    LinkedTemplate = hero_sneak_common
+    CategorieMain = Enemies
+tut_popup_hero_sneak_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 44333e72fad0fd843b60f1203c3b7947
+    CategorieSub = Elves
+    Title = hero_sneak_gold_capt
+    Explanations = Append
+      Item = hero_sneak_gold_desc
+      Item = hero_sneak_gold_flav
+    LinkedTemplate = hero_sneak_gold
+    CategorieMain = Enemies
+tut_popup_hero_stoneguard
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 432df421700f37d42b0bd1ad5c9c28b6
+    CategorieSub = Dwarfs
+    Title = hero_stoneguard_capt
+    Explanations = Append
+      Item = hero_stoneguard_desc
+      Item = hero_stoneguard_desc
+    LinkedTemplate = hero_stoneguard_common
+    CategorieMain = Enemies
+tut_popup_hero_stoneguard_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 9f3a0e258c1caa34f841adb5419da882
+    CategorieSub = Dwarfs
+    Title = hero_stoneguard_gold_capt
+    Explanations = Append
+      Item = hero_stoneguard_gold_desc
+      Item = hero_stoneguard_gold_flav
+    LinkedTemplate = hero_stoneguard_gold
+    CategorieMain = Enemies
+tut_popup_hero_warden
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = a4e78cd572a5d1e438eb80d741ac8372
+    CategorieSub = Elves
+    Title = hero_warden_capt
+    Explanations = Append
+      Item = hero_warden_desc
+      Item = hero_warden_flav
+    LinkedTemplate = hero_warden_common
+    CategorieMain = Enemies
+tut_popup_hero_warden_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 04675ff84871c934a9677313783e02c7
+    CategorieSub = Elves
+    Title = hero_warden_gold_capt
+    Explanations = Append
+      Item = hero_warden_gold_desc
+      Item = hero_warden_gold_flav
+    LinkedTemplate = hero_warden_gold
+    CategorieMain = Enemies
+tut_popup_horde_info
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cd108ab8e58805b488c714f2f83f255f
+    Title = tut_popup_horde_info_capt
+    Explanations
+      Item = tut_popup_horde_info_1
+      Item = tut_popup_horde_info_2
+      Item = tut_popup_horde_info_3
+    CategorieMain = Unit
+    CategorieSub = Horde
+tut_popup_horde_unit_no_gimmick
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cd108ab8e58805b488c714f2f83f255f
+    Title = tut_popup_horde_unit_no_gimmick_capt
+    Explanations = Append
+      Item = tut_popup_horde_unit_no_gimmick_01
+    CategorieMain = Unit
+    CategorieSub = Horde
+tut_popup_lavaling_spawned
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 180c786275813044a8803fea43063c6e
+    Title = tut_popup_lavaling_spawned_capt
+    Explanations = Append
+      Item = tut_popup_lavaling_spawned_01
+    CategorieSub = Creeps
+    CategorieMain = Enemies
+tut_popup_lavaling_spawner
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 180c786275813044a8803fea43063c6e
+    Title = tut_popup_lavaling_spawner_capt
+    Explanations = Append
+      Item = tut_popup_lavaling_spawner_01
+    CategorieSub = Creeps
+    CategorieMain = Enemies
+tut_popup_level_up
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    Title = tut_popup_level_up_capt
+    Explanations = Append
+      Item = tut_popup_level_up_1
+      Item = tut_popup_level_up_2
+      Item = tut_popup_level_up_3
+    CategorieMain = Unit
+tut_popup_main01begin_controlls
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = ab2842c7b8e3c6a4480ebbefb51dda06
+    Title = tut_popup_main01begin_controlls_capt
+    Explanations = Append
+      Item = tut_popup_main01begin_controlls_1
+      Item = tut_popup_main01begin_controlls_2
+      Item = tut_popup_main01begin_controlls_3
+    CategorieSub = Controls
+tut_popup_main01begin_dominant_button
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = f9f0d8a658846f94798a8c0c99629c9e
+    Title = tut_popup_main01begin_dominant_button_capt
+    Explanations = Append
+      Item = tut_popup_main01begin_dominant_button_1
+    ExplanationsGamePad = Append
+      Item = tut_popup_main01begin_dominant_button_1
+      Item = tut_popup_main01begin_dominant_button_2
+tut_popup_main01begin_unit_details
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 099cc34e3133f7349bdc1915d96d8270
+    Title = tut_popup_main01begin_unit_details_capt
+    Explanations = Append
+      Item = tut_popup_main01begin_unit_details_1
+      Item = tut_popup_main01begin_unit_details_2
+tut_popup_main01begin_unit_selection
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 099cc34e3133f7349bdc1915d96d8270
+    Title = tut_popup_main01begin_unit_selection_capt
+    Explanations = Append
+      Item = tut_popup_main01begin_unit_selection_1
+      Item = tut_popup_main01begin_unit_selection_2
+      Item = tut_popup_main01begin_unit_selection_3
+    CategorieSub = Controls
+    ExplanationsGamePad = Append
+      Item = tut_popup_main01begin_unit_selection_1
+tut_popup_main04undead_multiple_entrances
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 7b9e3006b947a5f49b96e499424004c4
+    Title = tut_popup_main04undead_multiple_entrances_capt
+    Explanations = Append
+      Item = tut_popup_main04undead_multiple_entrances_1
+      Item = tut_popup_main04undead_multiple_entrances_2
+tut_popup_main06transporter_tower_skill
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = dd92b29174ab66f4d87f7def739ea92e
+    Title = tut_popup_main06transporter_tower_skill_capt
+    Explanations = Append
+      Item = tut_popup_main06transporter_tower_skill_1
+tut_popup_main07storm_storm
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 9e2f193cb9f53984f982fbdd8ee75a8d
+    Title = tut_popup_main07storm_storm_capt
+    Explanations = Append
+      Item = tut_popup_main07storm_storm_1
+tut_popup_main07storm_storm_artifact
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = e4210f1829141ee4e8ad63ee11f817d6
+    Title = tut_popup_main07storm_storm_artifact_capt
+    Explanations = Append
+      Item = tut_popup_main07storm_storm_artifact_1
+tut_popup_main08sacrifice_gorgo_finish
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 229367cb4f7ddd645ab84daf518bb578
+    Title = tut_popup_main08sacrifice_gorgo_finish_capt
+    Explanations = Append
+      Item = tut_popup_main08sacrifice_gorgo_finish_1
+tut_popup_main09journey_dungeonlord
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 39f307d7192c1ca469e48da5a00d26b2
+    Title = tut_popup_main09journey_dungeonlord_capt
+    Explanations = Append
+      Item = tut_popup_main09journey_dungeonlord_1
+tut_popup_main12race_evilness_max
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = afd264ddc17cfc640a2e0cda9dd83af2
+    Title = tut_popup_main12race_evilness_max_capt
+    Explanations = Append
+      Item = tut_popup_main12race_evilness_max_1
+      Item = tut_popup_main12race_evilness_max_2
+tut_popup_main15drill_drill_pumps
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 65eaf3d3d7c62ed45b9a80f9f139e03b
+    Title = tut_popup_main15drill_drill_pumps_capt
+    Explanations = Append
+      Item = tut_popup_main15drill_drill_pumps_1
+tut_popup_main16ring_plot_ice_crystal
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = a597c2bbf9698984fb432048f0f132e8
+    Title = tut_popup_main16ring_plot_ice_crystal_capt
+    Explanations = Append
+      Item = tut_popup_main16ring_plot_ice_crystal_1
+      Item = tut_popup_main16ring_plot_ice_crystal_2
+tut_popup_main18unholy_stones_of_finiteness
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 47da25cc8ab325646a2024ae4a1067d9
+    Title = tut_popup_main18unholy_stones_of_finiteness_capt
+    Explanations = Append
+      Item = tut_popup_main18unholy_stones_of_finiteness_1
+      Item = tut_popup_main18unholy_stones_of_finiteness_2
+      Item = tut_popup_main18unholy_stones_of_finiteness_3
+tut_popup_manaling_big
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 23029e1c1ca1b2b43b16b2df2ea0c6e8
+    Title = tut_popup_manaling_big_capt
+    Explanations = Append
+      Item = tut_popup_manaling_big_01
+    CategorieSub = Creeps
+    CategorieMain = Enemies
+tut_popup_manaling_spawned
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 23029e1c1ca1b2b43b16b2df2ea0c6e8
+    Title = tut_popup_manaling_spawned_capt
+    Explanations = Append
+      Item = tut_popup_manaling_spawned_01
+    CategorieSub = Creeps
+    CategorieMain = Enemies
+tut_popup_manaling_transformed
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 23029e1c1ca1b2b43b16b2df2ea0c6e8
+    Title = tut_popup_manaling_transformed_capt
+    Explanations = Append
+      Item = tut_popup_manaling_transformed_01
+    CategorieSub = Creeps
+    CategorieMain = Enemies
+tut_popup_mechanic_artifact
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 3dc31abbfddcb1d4cac42820f29460c4
+    Title = tut_popup_mechanic_artifact_capt
+    Explanations = Append
+      Item = tut_popup_mechanic_artifact_1
+      Item = tut_popup_mechanic_artifact_2
+tut_popup_mechanic_dismissed
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 099cc34e3133f7349bdc1915d96d8270
+    Title = tut_popup_mechanic_dismissed_capt
+    Explanations = Append
+      Item = tut_popup_mechanic_dismissed_1
+tut_popup_mechanic_unit_difficulty
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = d8a0a28274897a54a83ae7f9d96deed8
+    Title = tut_popup_mechanic_unit_difficulty_capt
+    Explanations = Append
+      Item = tut_popup_mechanic_unit_difficulty_1
+tut_popup_mission_goal_evilness
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 039c912a3d4b84546a6e147be2b69d76
+    Title = tut_popup_mission_goal_evilness_capt
+    Explanations
+      Item = tut_popup_mission_goal_evilness_1
+      Item = tut_popup_mission_goal_evilness_2
+tut_popup_needs
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = c2d33a53da9e2c3429854a9f5123a6df
+    Title = tut_popup_needs_capt
+    Explanations
+      Item = tut_popup_needs_1
+      Item = tut_popup_needs_2
+    CategorieMain = Unit
+tut_popup_outside_controlls
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 73e556518c5fcc24092b8b5032959a4f
+    Title = tut_popup_outside_controlls_capt
+    Explanations
+      Item = tut_popup_outside_controlls_1
+      Item = tut_popup_outside_controlls_2
+      Item = tut_popup_outside_controlls_3
+    CategorieSub = Controls
+    ExplanationsGamePad = Append
+      Item = tut_popup_outside_controlls_1
+      Item = tut_popup_outside_controlls_2_gamepad
+      Item = tut_popup_outside_controlls_3_gamepad
+tut_popup_point_of_interest
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = c2a84f4afedf08144939bb4fe1132d9b
+    Title = tut_popup_point_of_interest_capt
+    Explanations
+      Item = tut_popup_point_of_interest_1
+tut_popup_research_spells_simple
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 84a9a197a9d6f2946bafdf089f899897
+    Title = tut_popup_research_spells_simple_capt
+    Explanations = Append
+      Item = tut_popup_research_spells_simple_1
+      Item = tut_popup_research_spells_simple_2
+      Item = tut_popup_research_spells_simple_3
+tut_popup_room_arcanium
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 208696f02321e5d43bcbc1bb78202fe9
+    Title = room_arcanium_capt
+    Explanations = Append
+      Item = tut_popup_room_arcanium_1
+      Item = tut_popup_room_arcanium_2
+    CategorieMain = Room
+    CategorieSub = Demon
+tut_popup_room_arena
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 4e5fd20fa2ccf7e4b8329eb25b5cfde5
+    Title = room_arena_capt
+    Explanations = Append
+      Item = tut_popup_room_arena_1
+      Item = tut_popup_room_arena_2
+    CategorieMain = Room
+    CategorieSub = Horde
+tut_popup_room_brewery
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 40365dd59d850604d9b75b6c22bad2ed
+    Title = room_brewery_capt
+    Explanations = Append
+      Item = tut_popup_room_brewery_1
+      Item = tut_popup_room_brewery_2
+      Item = tut_popup_room_brewery_3
+    CategorieMain = Room
+    CategorieSub = Horde
+tut_popup_room_crypta
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = d873908f5e08fee42af1156f9e14baf2
+    Title = room_crypta_capt
+    Explanations = Append
+      Item = tut_popup_room_crypta_1
+      Item = tut_popup_room_crypta_2
+      Item = tut_popup_room_crypta_3
+    CategorieMain = Room
+    CategorieSub = Undead
+tut_popup_room_efficiency
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    Title = tut_popup_room_efficiency_capt
+    Explanations = Append
+      Item = tut_popup_room_efficiency_1
+      Item = tut_popup_room_efficiency_2
+      Item = tut_popup_room_efficiency_3
+    HelpImage = b1d8a528bdd747a46803ab49a3b40b57
+    CategorieMain = Room
+    CategorieSub = General
+tut_popup_room_evilvault
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = b1a1b4ce523f573418a55a6f044b5554
+    Title = room_evilvault_capt
+    Explanations = Append
+      Item = tut_popup_room_evilvault_1
+      Item = tut_popup_room_evilvault_2
+    CategorieMain = Room
+    CategorieSub = Neutral
+tut_popup_room_graveyard
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 35bcac099a2a430499447f5cdedc9e2b
+    Title = room_graveyard_capt
+    Explanations = Append
+      Item = tut_popup_room_graveyard_1
+    CategorieMain = Room
+    CategorieSub = Undead
+tut_popup_room_guardroom
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = c5999a668f8b1b24b8c20536c0042057
+    Title = room_guardroom_capt
+    Explanations = Append
+      Item = tut_popup_room_guardroom_1
+      Item = tut_popup_room_guardroom_2
+      Item = tut_popup_room_guardroom_3
+    CategorieMain = Room
+    CategorieSub = Neutral
+tut_popup_room_gurufarm
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 6ee4cdd23c134744bb6b94db1f79de07
+    Title = room_gurufarm_capt
+    Explanations = Append
+      Item = tut_popup_room_gurufarm_1
+      Item = tut_popup_room_gurufarm_2
+    CategorieMain = Room
+    CategorieSub = Neutral
+tut_popup_room_hideout
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = a18985bac14a5b0408df5484afc00729
+    Title = room_hideout_capt
+    Explanations = Append
+      Item = tut_popup_room_hideout_1
+      Item = tut_popup_room_hideout_2
+    CategorieMain = Room
+    CategorieSub = Horde
+tut_popup_room_necrodancicon
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 7390d461c8c3c6c45a991f3d759a2fac
+    Title = room_necrodancicon_capt
+    Explanations = Append
+      Item = tut_popup_room_necrodancicon_1
+    CategorieMain = Room
+    CategorieSub = Undead
+tut_popup_room_potionlodge
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = d966506645a18304fa07a628db0a1777
+    Title = room_potionlodge_capt
+    Explanations = Append
+      Item = tut_popup_room_potionlodge_1
+      Item = tut_popup_room_potionlodge_2
+    CategorieMain = Room
+    CategorieSub = Horde
+tut_popup_room_powerchamber
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 9aeaf3fab3e3b5f41a2f8dd17fd1217d
+    Title = room_powerchamber_capt
+    Explanations = Append
+      Item = tut_popup_room_powerchamber_1
+      Item = tut_popup_room_powerchamber_2
+    CategorieMain = Room
+    CategorieSub = Demon
+tut_popup_room_prison
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = a69bd3d3f55f5c446a3ac03b3ccbb77b
+    Title = room_prison_capt
+    Explanations = Append
+      Item = tut_popup_room_prison_1
+      Item = tut_popup_room_prison_2
+    CategorieMain = Room
+    CategorieSub = Undead
+tut_popup_room_relaxchamber
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 2e44f330dfad9854686da28314c7b660
+    Title = room_relaxpool_capt
+    Explanations = Append
+      Item = tut_popup_room_relaxchamber_1
+      Item = tut_popup_room_relaxchamber_2
+    CategorieMain = Room
+    CategorieSub = Demon
+tut_popup_room_temple
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = afae4ea1ab46f414bbe5260c56f85ad6
+    Title = room_temple_capt
+    Explanations = Append
+      Item = tut_popup_room_temple_1
+      Item = tut_popup_room_temple_2
+      Item = tut_popup_room_temple_3
+    CategorieMain = Room
+    CategorieSub = Undead
+tut_popup_room_throneroom
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 041055e2506b4034c975329247caa77f
+    Title = room_throneroom_capt
+    Explanations = Append
+      Item = tut_popup_room_throneroom_1
+      Item = tut_popup_room_throneroom_2
+    CategorieMain = Room
+    CategorieSub = Neutral
+tut_popup_room_torturechamber
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 2cadde3d49ed47d4b956ee5076f178f7
+    Title = room_torture_capt
+    Explanations = Append
+      Item = tut_popup_room_torturechamber_1
+      Item = tut_popup_room_torturechamber_2
+      Item = tut_popup_room_torturechamber_3
+    CategorieMain = Room
+    CategorieSub = Demon
+tut_popup_room_totem
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = e238dc584c718044bb9001e4d979c7a0
+    Title = room_totem_capt
+    Explanations = Append
+      Item = tut_popup_room_totem_1
+      Item = tut_popup_room_totem_2
+    CategorieMain = Room
+    CategorieSub = Horde
+tut_popup_room_treasury
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 13099712cf8ebd24dbafe5b9b7b99090
+    Title = room_treasury_capt
+    Explanations = Append
+      Item = tut_popup_room_treasury_1
+      Item = tut_popup_room_treasury_2
+    CategorieMain = Room
+    CategorieSub = Neutral
+tut_popup_room_vortex
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = a95e7eddb4bfd6643b696fa6cf590dda
+    Title = room_vortex_capt
+    Explanations = Append
+      Item = tut_popup_room_vortex_1
+      Item = tut_popup_room_vortex_2
+    CategorieMain = Room
+    CategorieSub = Demon
+tut_popup_room_workshop
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 3eaef7a9d5899cd4491341bc5bb965bd
+    Title = room_workshop_capt
+    Explanations = Append
+      Item = tut_popup_room_workshop_1
+      Item = tut_popup_room_workshop_2
+    CategorieMain = Room
+    CategorieSub = Neutral
+tut_popup_skir01_cheat_rooms
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 2aee477d59aa44048abc6e159e1c26ef
+    Title = tut_popup_skir01play_cheat_rooms_capt
+    Explanations = Append
+      Item = tut_popup_skir01play_cheat_rooms_1
+tut_popup_slap
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    Title = tut_popup_slap_capt
+    Explanations
+      Item = tut_popup_slap_1
+      Item = tut_popup_slap_2
+    CategorieSub = Controls
+tut_popup_snot_job_task
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 5881ab7491eb4fe4c835e8947c9aa79a
+    CategorieSub = Controls
+    Title = tut_popup_snot_job_task_capt
+    Explanations = Append
+      Item = tut_popup_snot_job_task_1
+tut_popup_spiderling_spawned
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = f66e218cdcd224644ab110bcffa8bd7d
+    Title = tut_popup_spiderling_spawned_capt
+    Explanations = Append
+      Item = tut_popup_spiderling_spawned_01
+    CategorieSub = Creeps
+    CategorieMain = Enemies
+tut_popup_spiderling_spread
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = f66e218cdcd224644ab110bcffa8bd7d
+    Title = tut_popup_spiderling_spread_capt
+    Explanations = Append
+      Item = tut_popup_spiderling_spread_01
+    CategorieSub = Creeps
+    CategorieMain = Enemies
+tut_popup_tile_digged
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    Title = tut_popup_tile_digged_capt
+    Explanations
+      Item = tut_popup_tile_digged_1
+      Item = tut_popup_tile_digged_2
+      Item = tut_popup_tile_digged_3
+tut_popup_undead_died
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 90820f36fbc74c345a0798ce74d2fed1
+    Title = tut_popup_undead_died_capt
+    Explanations = Append
+      Item = tut_popup_undead_died_1
+tut_popup_undead_info
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 90820f36fbc74c345a0798ce74d2fed1
+    Title = tut_popup_undead_info_capt
+    Explanations
+      Item = tut_popup_undead_info_1
+      Item = tut_popup_undead_info_2
+      Item = tut_popup_undead_info_3
+    CategorieMain = Unit
+    CategorieSub = Undead
+tut_popup_undead_unit_no_gimmick
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 90820f36fbc74c345a0798ce74d2fed1
+    Title = tut_popup_undead_unit_no_gimmick_capt
+    Explanations = Append
+      Item = tut_popup_undead_unit_no_gimmick_01
+    CategorieMain = Unit
+    CategorieSub = Undead
+tut_popup_unit_banshee
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 7f26d0ceb0de38f4ba93b91b7001d2e1
+    Explanations = Append
+      Item = unit_banshee_desc
+      Item = unit_banshee_flav
+    Title = unit_banshee_capt
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_banshee
+tut_popup_unit_bombardier
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 647b2e3aaf33f0745a92e53675f04771
+    Title = unit_bombardier_capt
+    Explanations = Append
+      Item = unit_bombardier_desc
+      Item = unit_bombardier_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_bombardier
+tut_popup_unit_dungeon_lord
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 39f307d7192c1ca469e48da5a00d26b2
+    Title = unit_dungeonlord_capt
+    Explanations = Append
+      Item = unit_dungeonlord_desc
+      Item = unit_dungeonlord_flav
+    CategorieMain = Unit
+    CategorieSub = Neutral
+    LinkedTemplate = unit_dungeon_lord
+tut_popup_unit_fighter
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 1b181259fd216314cafc6e5961621d8b
+    Title = unit_fighter_capt
+    Explanations = Append
+      Item = unit_fighter_desc
+      Item = unit_fighter_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_fighter
+tut_popup_unit_gazer
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = fadf0299a5628354f9a1490366487aed
+    Title = unit_gazer_capt
+    Explanations = Append
+      Item = unit_gazer_desc
+      Item = unit_gazer_flav
+    CategorieMain = Unit
+    CategorieSub = Demon
+    LinkedTemplate = unit_gazer
+tut_popup_unit_gnome
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 9d93f5da37fa8a24aba3b0ada61d85c8
+    Title = unit_gnome_capt
+    Explanations = Append
+      Item = unit_gnome_desc
+      Item = unit_gnome_flav
+    CategorieMain = Unit
+    CategorieSub = Horde
+    LinkedTemplate = unit_gnome
+tut_popup_unit_gnome_champion
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 63669d680ee9eaf4d8581b2a7d554d6e
+    Title = unit_gnome_champion_capt
+    Explanations = Append
+      Item = unit_gnome_champion_desc
+      Item = unit_gnome_champion_flav
+    CategorieMain = Unit
+    CategorieSub = Horde
+    LinkedTemplate = unit_gnome_champion
+tut_popup_unit_goblin
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 72db0f3a48c12df459dbcf035b751281
+    Title = unit_goblin_capt
+    Explanations = Append
+      Item = unit_goblin_desc
+      Item = unit_goblin_flav
+    CategorieMain = Unit
+    CategorieSub = Horde
+    LinkedTemplate = unit_goblin
+tut_popup_unit_goblin_champion
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 7f0c15fe639fe9142ad0b812d8b705b4
+    Title = unit_goblin_champion_capt
+    Explanations = Append
+      Item = unit_goblin_champion_desc
+      Item = unit_goblin_champion_flav
+    CategorieMain = Unit
+    CategorieSub = Horde
+    LinkedTemplate = unit_goblin_champion
+tut_popup_unit_guardian
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 763c6baa4def0b248874687fe2074c63
+    Title = unit_guardian_capt
+    Explanations = Append
+      Item = unit_guardian_desc
+      Item = unit_guardian_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_guardian
+tut_popup_unit_imp
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 85213378c707f2445b778374910936e1
+    Title = unit_imp_capt
+    Explanations = Append
+      Item = unit_imp_desc
+      Item = unit_imp_flav
+    CategorieMain = Unit
+    CategorieSub = Demon
+    LinkedTemplate = unit_imp
+tut_popup_unit_infernal
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = e45ea68220dc95444b362b8ee6ad436d
+    Title = unit_infernal_capt
+    Explanations = Append
+      Item = unit_infernal_desc
+      Item = unit_infernal_flav
+    CategorieMain = Unit
+    CategorieSub = Demon
+    LinkedTemplate = unit_infernal
+tut_popup_unit_level
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    Title = tut_popup_unit_level_up_capt
+    Explanations
+      Item = tut_popup_unit_level_up_1
+    CategorieMain = Unit
+tut_popup_unit_limit
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    Title = tut_popup_unit_limit_capt
+    HelpImage = afd264ddc17cfc640a2e0cda9dd83af2
+    Explanations
+      Item = tut_popup_unit_limit_1
+      Item = tut_popup_unit_limit_2
+    CategorieMain = Unit
+tut_popup_unit_mage
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 222f451f1e1a4a54ea8c169d0e68267c
+    Title = unit_mage_capt
+    Explanations = Append
+      Item = unit_mage_desc
+      Item = unit_mage_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_mage
+tut_popup_unit_naga
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 19e225f096ef4d240b085c256876a2e1
+    Title = unit_naga_capt
+    Explanations = Append
+      Item = unit_naga_desc
+      Item = unit_naga_flav
+    CategorieMain = Unit
+    CategorieSub = Horde
+    LinkedTemplate = unit_naga
+tut_popup_unit_naga_champion
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = d00d3b3aa36dce447928b4f39bb93dc3
+    Title = unit_naga_champion_capt
+    Explanations = Append
+      Item = unit_naga_champion_desc
+      Item = unit_naga_champion_flav
+    CategorieMain = Unit
+    CategorieSub = Horde
+    LinkedTemplate = unit_naga_champion
+tut_popup_unit_necromancer
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 2e207a20d666b5245b8d3679bd8e3cf3
+    Title = unit_necromancer_capt
+    Explanations = Append
+      Item = unit_necromancer_desc
+      Item = unit_necromancer_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_necromancer
+tut_popup_unit_orc
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = a9c665ae9910c134e97439935d54ce51
+    Title = unit_orc_capt
+    Explanations = Append
+      Item = unit_orc_desc
+      Item = unit_orc_flav
+    CategorieMain = Unit
+    CategorieSub = Horde
+    LinkedTemplate = unit_orc
+tut_popup_unit_orc_champion
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = c9942ca40a5859341a6aa434899cb584
+    Title = unit_orc_champion_capt
+    Explanations = Append
+      Item = unit_orc_champion_desc
+      Item = unit_orc_champion_flav
+    CategorieMain = Unit
+    CategorieSub = Horde
+    LinkedTemplate = unit_orc_champion
+tut_popup_unit_pitfiend
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 79259dfe99af9c647ab84afa39c52df8
+    Title = unit_pitfiend_capt
+    Explanations = Append
+      Item = unit_pitfiend_desc
+      Item = unit_pitfiend_flav
+    CategorieMain = Unit
+    CategorieSub = Demon
+    LinkedTemplate = unit_pitfiend
+tut_popup_unit_priestess
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 07b37e027aa3304448a9e31f1d93725e
+    Title = unit_priestess_capt
+    Explanations = Append
+      Item = unit_priestess_desc
+      Item = unit_priestess_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_priestess
+tut_popup_unit_pyro
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = a15aad4a06b64e54f9d7cd30ebd4dd55
+    Title = unit_pyro_capt
+    Explanations = Append
+      Item = unit_pyro_desc
+      Item = unit_pyro_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_pyro
+tut_popup_unit_ranger
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 00d650c7c298a0449952e3f8fd6a2584
+    Title = unit_ranger_capt
+    Explanations = Append
+      Item = unit_ranger_desc
+      Item = unit_ranger_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_ranger
+tut_popup_unit_rider
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 00cdc03818714a945a5b2d7ea979f6ad
+    Title = unit_rider_capt
+    Explanations = Append
+      Item = unit_rider_desc
+      Item = unit_rider_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_rider
+tut_popup_unit_rifleman
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = d1533aecaff56384ba1517863f23b88f
+    Title = unit_rifleman_capt
+    Explanations = Append
+      Item = unit_rifleman_desc
+      Item = unit_rifleman_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_rifleman
+tut_popup_unit_skeleton
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 5622730e1476bb24e90413d0843bc9ed
+    Title = unit_skeleton_capt
+    Explanations = Append
+      Item = unit_skeleton_desc
+      Item = unit_skeleton_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_skeleton
+tut_popup_unit_sneak
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 54d00c76a0c079d429f17e840d3a6a9f
+    Title = unit_sneak_capt
+    Explanations = Append
+      Item = unit_sneak_desc
+      Item = unit_sneak_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_sneak
+tut_popup_unit_stoneguard
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = fa31cba465e96dd4ba16611a2bc08b31
+    Title = unit_stoneguard_capt
+    Explanations = Append
+      Item = unit_stoneguard_desc
+      Item = unit_stoneguard_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_stoneguard
+tut_popup_unit_strike
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 696d1bf3388bbc04eb1856b29bf16cad
+    Title = tut_popup_unit_strike_capt
+    Explanations
+      Item = tut_popup_unit_strike_1
+      Item = tut_popup_unit_strike_2
+    CategorieMain = Unit
+tut_popup_unit_succubus
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 7fc99c6abf957f24a96d76959e38969f
+    Title = unit_succubus_capt
+    Explanations = Append
+      Item = unit_succubus_desc
+      Item = unit_succubus_flav
+    CategorieMain = Unit
+    CategorieSub = Demon
+    LinkedTemplate = unit_succubus
+tut_popup_unit_thalya
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 76b51c498687aff4b9e2252d76eb3668
+    CategorieMain = Unit
+    CategorieSub = Neutral
+    Title = plot_protagonist_evil_capt
+    Explanations = Append
+      Item = plot_protagonist_evil_desc
+      Item = plot_protagonist_evil_flav
+    LinkedTemplate = plot_protagonist_evil
+tut_popup_unit_vampire_queen
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = c142eb8176bc5c147bcf4e9dc1e1d824
+    Title = unit_vampirequeen_capt
+    Explanations = Append
+      Item = unit_vampirequeen_desc
+      Item = unit_vampirequeen_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_vampire_queen
+tut_popup_unit_warden
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 651cc586a008db0408217871f44340c6
+    Title = unit_warden_capt
+    Explanations = Append
+      Item = unit_warden_desc
+      Item = unit_warden_flav
+    CategorieMain = Unit
+    CategorieSub = Undead
+    LinkedTemplate = unit_warden
+tut_popup_wall_brimstone
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 5ee28cc82e507a14d8a75faf85b909ae
+    Title = tut_popup_wall_brimstone_capt
+    Explanations = Append
+      Item = tut_popup_wall_brimstone_1
+    CategorieSub = Wall
+tut_popup_wall_diamond
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    Title = tut_popup_wall_diamond_capt
+    Explanations = Append
+      Item = tut_popup_wall_diamond_1
+    CategorieSub = Wall
+tut_popup_wall_gems
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = f0d0fec04502f734388998746c1dcd43
+    Title = tut_popup_wall_gems_capt
+    Explanations = Append
+      Item = tut_popup_wall_gems_1
+    CategorieSub = Wall
+tut_popup_wall_gems_found
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = f0d0fec04502f734388998746c1dcd43
+    Title = tut_popup_wall_gems_found_capt
+    Explanations = Append
+      Item = tut_popup_wall_gems_found_1
+    CategorieSub = Wall
+tut_popup_wall_hard
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    Title = tut_popup_wall_hard_capt
+    Explanations = Append
+      Item = tut_popup_wall_hard_1
+    CategorieSub = Wall
+tut_popup_wall_lake_discovered
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    Title = tut_popup_wall_lake_discovered_capt
+    Explanations = Append
+      Item = tut_popup_wall_lake_discovered_1
+    CategorieSub = Wall
+tut_popup_wall_lava_discovered
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    Title = tut_popup_wall_lava_discovered_capt
+    Explanations = Append
+      Item = tut_popup_wall_lava_discovered_1
+    CategorieSub = Wall
+tut_popup_wall_lava_room_efficiency
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    CategorieSub = Wall
+    Title = tut_popup_wall_lava_room_efficiency_capt
+    Explanations = Append
+      Item = tut_popup_wall_lava_room_efficiency_1
+tut_popup_wall_light_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = e4a70230ade0b63499c5df9337951a5f
+    Title = tut_popup_wall_light_gold_capt
+    Explanations = Append
+      Item = tut_popup_wall_light_gold_1
+    CategorieSub = Wall
+tut_popup_wall_mana
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = bd37e4647bf608744a33335ea0b1a1a9
+    Title = tut_popup_wall_mana_capt
+    Explanations = Append
+      Item = tut_popup_wall_mana_1
+    CategorieSub = Wall
+tut_popup_wall_medium
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = cbc9cac4c4bcc0240a5afe94018f9502
+    Title = tut_popup_wall_medium_capt
+    Explanations = Append
+      Item = tut_popup_wall_medium_1
+    CategorieSub = Wall
+tut_popup_wall_rich_gold
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 52f0da9cf45b4ed498cef7a955cd0e3c
+    Title = tut_popup_wall_rich_gold_capt
+    Explanations = Append
+      Item = tut_popup_wall_rich_gold_1
+    CategorieSub = Wall
+tutorial_popup_base
+  Abstract = True
+  UiDataTutorialPopup
