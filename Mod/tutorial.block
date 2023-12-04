@@ -353,7 +353,7 @@ tut_popup_hero_sneak
 tut_popup_hero_sneak_gold
   Include = tutorial_popup_base
   UiDataTutorialPopup
-    HelpImage = 44333e72fad0fd843b60f1203c3b7947
+    HelpImage = 0a417d4f1840ca245a32173dc159c264
     CategorieSub = Elves
     Title = hero_sneak_gold_capt
     Explanations = Append
@@ -743,10 +743,26 @@ tut_popup_room_guardroom
     Title = room_guardroom_capt
     Explanations = Append
       Item = tut_popup_room_guardroom_1
-      Item = tut_popup_room_guardroom_2
-      Item = tut_popup_room_guardroom_3
     CategorieMain = Room
     CategorieSub = Neutral
+tut_popup_room_guardroom_bell
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = a97ff790a48548d4ab2192f4f4892333
+    CategorieMain = Room
+    CategorieSub = Neutral
+    Title = gimmick_guardroom_capt
+    Explanations
+      Item = tut_popup_room_guardroom_bell_1
+tut_popup_room_guardroom_flag
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 0969a7ba5b825c943b32982bb3ad6e0e
+    CategorieMain = Room
+    CategorieSub = Neutral
+    Title = gimmick_guardroom_flag_capt
+    Explanations
+      Item = tut_popup_room_guardroom_flag_1
 tut_popup_room_gurufarm
   Include = tutorial_popup_base
   UiDataTutorialPopup
@@ -1002,7 +1018,7 @@ tut_popup_unit_dungeon_lord
 tut_popup_unit_fighter
   Include = tutorial_popup_base
   UiDataTutorialPopup
-    HelpImage = 1b181259fd216314cafc6e5961621d8b
+    HelpImage = 6d376324f50e745478e6934a2fcc4792
     Title = unit_fighter_capt
     Explanations = Append
       Item = unit_fighter_desc

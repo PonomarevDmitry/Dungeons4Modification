@@ -88,6 +88,8 @@ type_currency_mana
   Include = type_base
 type_currency_toolbox
   Include = type_base
+type_default_attack_protagonist
+  Include = type_base
 type_demon
   Include = type_base
 type_door
@@ -316,8 +318,6 @@ type_spiderling
   Include = type_base
 type_stone_guard
   Include = type_base
-type_strong_stone
-  Include = type_base
 type_structure
   Include = type_base
 type_succubus
@@ -391,6 +391,8 @@ type_undead_minion
 type_undead_summon
   Include = type_base
 type_unit
+  Include = type_base
+type_unit_pitfiend
   Include = type_base
 type_vampire_queen
   Include = type_base

@@ -56,6 +56,21 @@ effect_dance
   BuffNeedFulfillment
     TargetNeeds
       Item = need_dance
+effect_fill_torture
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = WorkstationEffect
+  BuffProperties
+    Properties
+      Item
+        Property = TortureModule.PreventRefillJob
+        Value
+          ValueType = Constant
+          Value = 
+  WorkstationEffect
+    Target = Workstation
+    Time = All
 effect_hold_body
   Include = effect_base
   WorkstationEffect
@@ -1299,6 +1314,8 @@ workplace_torture_fill
         Type = TortureModule
       Item = WorkplaceTriggerDefiniton
         Type = GimmickStateTrigger
+    Effects
+      Item = effect_fill_torture
   ConstantWorkplaceLocationModule
     RelativeLocation = 0 2.95 0
   SetupCorpseActionModule
@@ -1324,6 +1341,7 @@ workplace_torture_fill_worker
         Type = TortureModule
     Effects
       Item = effect_torture_worker
+      Item = effect_fill_torture
   ConstantWorkplaceLocationModule
   WaitingWorkplaceActionModule
     TimingModule = EndlessTimingModule

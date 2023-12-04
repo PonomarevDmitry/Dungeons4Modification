@@ -498,6 +498,8 @@ hero_bombardier_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Portrait = 43092eb14a0fe774799138f720bb4572
+    Icon = de8e55235116fc7489c88b774be0ed1d
   InformEnterDungeon
     Difficulty = 2
 hero_bombardier_gold
@@ -782,6 +784,8 @@ hero_fighter_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Portrait = fc6b5a35a32be63498a2ff325e96db48
+    Icon = 6416d18b80828744688397bd573b2a8c
   InformEnterDungeon
     Difficulty = 2
 hero_fighter_gold
@@ -1028,6 +1032,8 @@ hero_guardian_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Portrait = cc35ea2a7c448a44396e8c6ea27b0b6c
+    Icon = f223bed24375d3d4fb8dd0f06e51aa6c
   InformEnterDungeon
     Difficulty = 2
 hero_guardian_gold
@@ -1348,6 +1354,8 @@ hero_mage_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Portrait = 096f8d7be4d3af347bbbad03a53ffa38
+    Icon = 5d47b46ded3cb1343907e9e3c289bf65
   InformEnterDungeon
     Difficulty = 2
 hero_mage_gold
@@ -1681,6 +1689,8 @@ hero_priestess_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Portrait = 2adae673e0f3f2b479ac5fc933209c99
+    Icon = 438dd53d7a50a1446aad673f7b3213d1
   InformEnterDungeon
     Difficulty = 2
 hero_priestess_gold
@@ -1927,6 +1937,8 @@ hero_pyro_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Icon = 95cb19690889b254992683152e266cc4
+    Portrait = e7a82ba5094e85145946a330c96810d9
   InformEnterDungeon
     Difficulty = 2
 hero_pyro_gold
@@ -2184,6 +2196,8 @@ hero_ranger_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Icon = d703d450904a8ab4495cbea457fa047f
+    Portrait = a731750d6efee1d4083321baccffb3e9
   InformEnterDungeon
     Difficulty = 2
 hero_ranger_gold
@@ -2313,6 +2327,11 @@ hero_ranger_gold.aura_poison
       DynamicValueSource
         Name = buff_duration
         Template = hero_ranger_gold
+    RequiredTargetTypes
+      Required
+        Item = type_unit
+      Optional
+      Excluded
   SkillEntityFilterNeedsEntityType
     EntityType = type_unit
 hero_ranger_gold.aura_poison.buff
@@ -2480,6 +2499,8 @@ hero_rider_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Icon = 4e662fc2fa2bdb94eae7d36e3f31d8e3
+    Portrait = 7ffde40824f485b42a62712f5c95ab94
   InformEnterDungeon
     Difficulty = 2
 hero_rider_gold
@@ -2725,6 +2746,8 @@ hero_rifleman_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Portrait = 6277cdda4cb79eb40a05b456395520e7
+    Icon = e0a01bfafd83e6c4f854cf5719dd170e
   InformEnterDungeon
     Difficulty = 2
 hero_rifleman_gold
@@ -2971,6 +2994,8 @@ hero_sneak_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Icon = 2c1c1942c0bd3194597b12ef097508ae
+    Portrait = e0631474b850b7f4aad177a7494f27fc
   InformEnterDungeon
     Difficulty = 2
 hero_sneak_gold
@@ -3269,6 +3294,8 @@ hero_stoneguard_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Portrait = eb6d5c78abddb3444b4047b4eb16a065
+    Icon = 120d431c7083bf740bfcfe8976e71308
   InformEnterDungeon
     Difficulty = 2
 hero_stoneguard_gold
@@ -3588,6 +3615,8 @@ hero_warden_elite
       Item = type_hero_elite
   UiDataUnit
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
+    Portrait = d19d492e6e1259940b9ce80bdf5251fe
+    Icon = be6dbea580ad70c4da9dc7c4c3cc83f3
   InformEnterDungeon
     Difficulty = 2
   FarseerBody
@@ -8275,6 +8304,7 @@ unit_orc
   ServerAnimation
     ProvidedActors = Append
       Item = actor_unit_melee
+      Item = actor_revive
     VerifyActorSetup = True
   UiDataSkills
     ActiveSkillTemplates = Append
@@ -8292,7 +8322,7 @@ unit_orc
     InstantReviveHealthPercentage = 40
     BuffAppliedOnRevive = unit_orc.buff_revive
     RequiredLevelForRevive = 4
-    ReviveAnim = anim_orc_revive
+    ReviveAnim = anim_instant_revive
   PerformRandomWorkstation
   EvilHandPickup
     PickupSound = hand_pick_orc
@@ -8443,6 +8473,7 @@ unit_orc_champion
     ProvidedActors = Append
       Item = actor_unit_melee
       Item = unit_orc
+      Item = actor_revive
     VerifyActorSetup = True
   UiDataSkills
     ActiveSkillTemplates = Append
@@ -8481,8 +8512,12 @@ unit_orc_champion
         LocalName = blood_rush
         Definition = unit_orc_champion.aura_bloodrush
   NeedsHealingWhenKilled
+    InstantReviveHealthPercentage = 40
+    InstantReviveCooldown = 300
+    RequiredLevelForRevive = 4
     BuffAppliedOnRevive = unit_orc_champion.buff_revive
-    ReviveAnim = anim_orc_revive
+    BuffDuration = 15
+    ReviveAnim = anim_instant_revive
   EvilHandPickup
     PickupSound = hand_pick_orc
     DropSound = hand_drop_orc
@@ -8747,6 +8782,7 @@ unit_pitfiend
   EntityType
     Types = Append
       Item = type_demon
+      Item = type_unit_pitfiend
 unit_pitfiend.levelup_buff
   Buff
     Parts
@@ -9487,6 +9523,10 @@ unit_skeleton
   ResurrectWhenKilled
     InstantReviveHealthPercentage = 50
     InstantReviveCooldown = 300
+    RequiredLevelForRevive = 3
+    BuffDuration = 5
+    BuffAppliedOnRevive = unit_skeleton.buff_revive
+    ReviveAnim = anim_instant_revive
   SimpleSkillMaster
     Skills = Append
       Item
@@ -9517,6 +9557,7 @@ unit_skeleton
   ServerAnimation
     ProvidedActors = Append
       Item = actor_unit_melee
+      Item = actor_revive
   UiDataSkills
     ActiveSkillTemplates = Append
       Item = anim_default_attack_melee
@@ -9524,8 +9565,8 @@ unit_skeleton
     PassiveSkills = Append
       Item
         Icon = 4e15ffcadce203645a512a1e478747fc
-        Title = unit_skill_not_to_be_killed_capt
-        Description = unit_skill_not_to_be_killed_desc
+        Title = unit_skill_not_to_be_killed_skeleton_capt
+        Description = unit_skill_not_to_be_killed_skeleton_descc
         TutorialTag = None
   BuffAura
     Auras = Append
@@ -9654,6 +9695,18 @@ unit_skeleton.buff_levelup
         Value
           ValueType = Balancing
           Value = 0.111|1|1|1|2|-1
+unit_skeleton.buff_revive
+  Buff
+    Parts
+      Item = BuffProperties
+    AutoTargetCaster = True
+  BuffProperties
+    Properties
+      Item
+        Property = Attack.OverrideAttackDamageAmount
+        Value
+          ValueType = Constant
+          Value = 1
 unit_skeleton_minion
   Include = unit_minion_undead_base
   PrefabReference
@@ -10081,6 +10134,7 @@ unit_snot
   EvilHandReaction
     ReactToHandAnimation = anim_react_hand
   BuffedAttachmentHandler
+  DoRefillTortureModule
 unit_snot.buff_dash
   Buff
     Parts = Append

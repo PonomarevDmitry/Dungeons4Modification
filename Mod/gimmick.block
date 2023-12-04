@@ -606,6 +606,7 @@ gimmick_brewery
       Item
         VisualId = 1
         ProductionAnimation = anim_gimmick_production_up
+    MaxSpeed = 5
   CurrencyProductionModule
     ProductionOutput = BeerManager
     ProductionOutputPos = 2.75 3
@@ -1207,6 +1208,51 @@ gimmick_guardroom
     IsSelectable = True
   VisualRepresentation
   VisualRepresentationWhileDead
+  TutorialPopupTrigger
+    Trigger
+      Item
+        Key = OnGimmickBuild
+        Value = tut_popup_room_guardroom_flag
+gimmick_guardroom_flag
+  Include = gimmick_attackable_base
+  PrefabReference
+    ClientPrefab = 03e3facfb291dfe43a68ea541c124701 72cc1767e80c8794c97979e9a0352b43
+  Gimmick
+    NeedsRoom = roomid_guardroom
+    Cost
+      CostEntries
+        Item
+          Value = 750
+          ValueFactors
+          CurrencyManager = GoldManager
+        Item
+          Value = 2
+          ValueFactors
+          CurrencyManager = ToolboxManager
+      Time = 15
+  PlacementRestriction
+    Slot = False|                        T                        
+    PreventSameLocation = False
+  VisualRepresentationWhileDead
+  SignalFlagBase
+  EvilHandInteractable
+    RightClick = True
+  UiDataGeneric
+    Icon = 0969a7ba5b825c943b32982bb3ad6e0e
+    Title = gimmick_guardroom_flag_capt
+    Description = gimmick_guardroom_flag_desc
+    Flavour = gimmick_guardroom_flag_flav
+  EvilSelectable
+    IsSelectable = True
+  DimensionRequirement
+    X = 1
+    Y = 1
+  CostFieldSpecific
+  TutorialPopupTrigger
+    Trigger
+      Item
+        Key = OnGimmickBuild
+        Value = tut_popup_room_guardroom_flag
 gimmick_hideout_gnome
   Include = gimmick_unitbound_base
   PrefabReference
@@ -1806,7 +1852,7 @@ gimmick_temple
     OnlyLocal = True
     Sfx = gimmick_temple_idle_loop
 gimmick_torturechamber
-  Include = gimmick_base
+  Include = gimmick_attackable_base
   PrefabReference
     ClientPrefab = 9df6402ab1dce2a4eac2f07b42e5fdd8 90b14ec051838044796b292fe06c84e6
   PlacementRestriction
@@ -1838,6 +1884,7 @@ gimmick_torturechamber
     VictimActorSlot
       Name = victim
       Template = anim_torturechamber_torture
+    RefillInteraction = interaction_torture_prepare_hero
   CanProduceTrigger
   WorkplaceTriggerOtherWorkplace
   EntityType
@@ -1864,6 +1911,9 @@ gimmick_torturechamber
     RightClick = True
   EvilSelectable
     IsSelectable = True
+  DimensionRequirement
+    X = 2
+    Y = 2
 gimmick_totem
   Include = gimmick_attackable_base
   PrefabReference
@@ -3484,6 +3534,9 @@ trap_trigger_lootbox
       Item
         Name = knockback
         Value = 5
+      Item
+        Name = prevent_lure_duration
+        Value = 120
     AttackAspects = Append
       Item = aspect_trap
   LureHeroMissionRaids

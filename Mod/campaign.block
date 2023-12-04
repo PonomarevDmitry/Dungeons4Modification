@@ -14,3 +14,11 @@ campaign_user
   CampaignDescription
     Title = campaign_user
     SortOrder = 0
+skill_fixed_damage_thalya_main01
+  SimpleSkillEffect
+    Effects
+      Item = SkillDamage
+    TargetSelector = SkillSingleTarget
+  SkillSingleTarget
+  SkillDamage
+    DealAsTrueDamage = True

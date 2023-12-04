@@ -419,6 +419,7 @@ evilperk_demons_revive_resource
     Title = evilperk_demons_revive_resource_capt
     Description = evilperk_demons_revive_resource_desc
     Icon = ec051fbb96c182a49aa76079a68231ac
+    Flavour = cha_general_winmap_desc
   ChallengeProgress
 evilperk_demons_revive_resource.buff
   Buff
@@ -779,6 +780,33 @@ evilperk_general_traps_and_doors.buff_traps
             Value
               ValueType = Constant
               Value = 0.5
+evilperk_heroes
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_heroes.buff
+  UiDataGeneric
+    Title = evilperk_heroes_capt
+    Description = evilperk_heroes_desc
+    Icon = 37939c84604192a448061779367895d6
+    Flavour = cha_general_winmap_desc
+evilperk_heroes.buff
+  Buff
+    Parts
+      Item = BuffProperties
+    TargetSelector = bts_player_hero
+  BuffProperties
+    Properties
+      Item
+        Property = UnitEvilnessBonus.EvilnessBonusKillFactor
+        Value
+          ValueType = Constant
+          Value = 0.5
+      Item
+        Property = Combat.MaxHealthBonusFactor
+        Value
+          ValueType = Constant
+          Value = 0.2
 evilperk_horde_health
   Include = evilperk_base
   EvilPerk
@@ -931,6 +959,48 @@ evilperk_skill_tentacle.buff
   BuffResearchUnlock
     Unlocks
       Item = anim_skill_tentacle_protagonist
+evilperk_slap_guru
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_slap_guru.buff
+  UiDataGeneric
+    Title = evilperk_slap_guru_capt
+    Description = evilperk_slap_guru_desc
+    Icon = 1feca6bb9c99b384983745ac9bdc706b
+    Flavour = cha_general_winmap_desc
+evilperk_slap_guru.buff
+  Buff
+    Parts
+      Item = BuffProperties
+    TargetSelector = bts_guru
+  BuffProperties
+    Properties
+      Item
+        Property = EvilHandInteractable.IsMassSlappable
+evilperk_speed
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_speed.buff
+  ChallengeProgress
+  UiDataGeneric
+    Title = evilperk_speed_capt
+    Description = evilperk_speed_desc
+    Icon = c8373685c7fdccc44be7e1dad588cf78
+    Flavour = cha_general_winmap_desc
+evilperk_speed.buff
+  Buff
+    Parts
+      Item = BuffProperties
+    TargetSelector = bts_singleplayer_all_units_outside
+  BuffProperties
+    Properties
+      Item
+        Property = Mover.SpeedFactor
+        Value
+          ValueType = Constant
+          Value = 0.2
 evilperk_thalya_damage
   Include = evilperk_base
   EvilPerk

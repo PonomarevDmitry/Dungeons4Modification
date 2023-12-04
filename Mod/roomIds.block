@@ -2,6 +2,8 @@
   Include = roomid_base
 roomid_arena
   Include = roomid_base
+roomid_artifact
+  Include = roomid_base
 roomid_base
   Abstract = True
   RoomId

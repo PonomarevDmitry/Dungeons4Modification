@@ -2341,7 +2341,7 @@ player_playable
   PotionManager
     PileRoomId = roomid_potionlodge
     CarryMax = 1000000
-    WorkerCarryCapacity = 10
+    WorkerCarryCapacity = 1000
     CollectibleTemplates = Append
       Item = potion_collectible
     Piles = Append
@@ -2850,6 +2850,7 @@ world
         EntityType = type_hero_gold
         Evilness = 35
   BlockedDungeonTileManager
+  ModManagerServer
 world.buff_target_handler_entitylist
   BuffTargetEntityListHandler
 world.buff_target_handler_entitytag

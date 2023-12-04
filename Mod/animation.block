@@ -52,6 +52,8 @@ actor_relax
   CasActorType
 actor_reload
   CasActorType
+actor_revive
+  CasActorType
 actor_rider
   CasActorType
 actor_spawn
@@ -125,6 +127,152 @@ anim_atmo_guru_slapped
           InputNodes
             Item = Start
           OutputNodes
+anim_attack_dynamite_carriage
+  Include = anim_default_attack_melee_area
+  CasActorAnimation
+    AnimationGraph
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = start
+          InputNodes
+          OutputNodes
+            Item = wait
+        Item = CasActorAnimationClipNode
+          TargetSlot = vfx
+          AnimatorName = main
+          Clip = spawn
+          ForceTransitionInChain = False
+          Name = spawn
+          InputNodes
+            Item = attach_dynamite
+          OutputNodes
+        Item = CasActorAnimationLoopGateNode
+          Name = wait
+          InputNodes
+            Item = start
+          OutputNodes
+            Item = attach_dynamite
+          TimeSource = attach_dynamite
+          TimeGroup = Append
+            Item = attach_dynamite
+          AllowFastAbort = True
+        Item = CasActorAnimationClipNode
+          Name = attach_dynamite
+          InputNodes
+            Item = wait
+          OutputNodes
+            Item = spawn
+          TargetSlot = target_marker
+          Clip = attach_dynamite
+      ActorSlots
+        Item
+          Name = attacker
+          TargetType = plot_dynamite_carriage_movable
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = ForceRemoteActors
+        Item
+          Name = target
+          TargetType = 
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = Auto
+        Item
+          Name = target_marker
+          TargetType = 
+          AutoVisual = a88da66df2995f143a085fabb44890c7
+          ActorSynch = Auto
+        Item
+          Name = vfx
+          TargetType = 
+          AutoVisual = 1197fbd2113cfee429b35a1cbca1cfef
+          ActorSynch = Auto
+  SimpleSkillDefinition
+    MainTargetSelector = SkillAiTargetSelectionSelf
+    Effects
+      Item
+        EffectTarget
+          Name = 
+          Template = 
+        StartTrigger
+          Name = OnEffect
+          Template = anim_attack_dynamite_carriage
+        EndTrigger
+          Name = 
+          Template = 
+        Effect = skill_effect_use_energy
+      Item
+        EffectTarget
+          Name = 
+          Template = 
+        StartTrigger
+          Name = OnEffect
+          Template = anim_attack_dynamite_carriage
+        EndTrigger
+          Name = 
+          Template = 
+        Effect = skill_effect_simple_damage_area_dynamite_carriage
+    Conditions
+      Item = SkillCostEnergy
+    ManualSkillTargeting = None
+    VisualAreaRef
+      Source = Custom
+      CustomValue = 10
+      DynamicValueSource
+        Name = 
+        Template = 
+  SkillAiTargetSelectionSelf
+  UiDataGeneric
+    Icon = 76d522259820c2a45b41ac63c421181e
+    Title = gui_skill_plot_dynamite_boom_capt
+    Description = gui_skill_plot_dynamite_boom_desc
+  SkillCostEnergy
+    EnergyCost = 1
+anim_attack_dynamite_carriage_death
+  Include = anim_attack_dynamite_carriage
+  CasActorAnimation
+    AnimationGraph
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = start
+          InputNodes
+          OutputNodes
+            Item = spawn
+        Item = CasActorAnimationClipNode
+          TargetSlot = vfx
+          AnimatorName = main
+          Clip = spawn
+          ForceTransitionInChain = False
+          Name = spawn
+          InputNodes
+            Item = start
+          OutputNodes
+      ActorSlots
+        Item
+          Name = attacker
+          TargetType = plot_dynamite_carriage_movable
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = ForceRemoteActors
+        Item
+          Name = target
+          TargetType = 
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = Auto
+        Item
+          Name = target_marker
+          TargetType = 
+          AutoVisual = a88da66df2995f143a085fabb44890c7
+          ActorSynch = Auto
+        Item
+          Name = vfx
+          TargetType = 
+          AutoVisual = 1197fbd2113cfee429b35a1cbca1cfef
+          ActorSynch = Auto
+  SimpleSkillAnimationModule
+    OverrideSkillTime = False
+  SimpleSkillDefinition
+    Conditions
+      Item = SkillCostEnergy
+  SkillCostEnergy
+    EnergyCost = 1
 anim_attack_melee_lifeleech
   Include = anim_base_skill
   CasActorAnimation
@@ -6016,126 +6164,6 @@ anim_default_attack_melee_area
           InputNodes
             Item = start
           OutputNodes
-anim_default_attack_melee_area_plot_dynamite_carriage_movable
-  Include = anim_default_attack_melee_area
-  CasActorAnimation
-    AnimationGraph
-      Nodes
-        Item = CasActorAnimationStartNode
-          Name = start
-          InputNodes
-          OutputNodes
-            Item = wait
-        Item = CasActorAnimationClipNode
-          TargetSlot = vfx
-          AnimatorName = main
-          Clip = spawn
-          ForceTransitionInChain = False
-          Name = spawn
-          InputNodes
-            Item = attach_dynamite
-          OutputNodes
-        Item = CasActorAnimationLoopGateNode
-          Name = wait
-          InputNodes
-            Item = start
-          OutputNodes
-            Item = attach_dynamite
-          TimeSource = attach_dynamite
-          TimeGroup = Append
-            Item = attach_dynamite
-          AllowFastAbort = True
-        Item = CasActorAnimationClipNode
-          Name = attach_dynamite
-          InputNodes
-            Item = wait
-          OutputNodes
-            Item = spawn
-          TargetSlot = target_marker
-          Clip = attach_dynamite
-      ActorSlots
-        Item
-          Name = attacker
-          TargetType = plot_dynamite_carriage_movable
-          AutoVisual = 00000000000000000000000000000000
-          ActorSynch = ForceRemoteActors
-        Item
-          Name = target
-          TargetType = 
-          AutoVisual = 00000000000000000000000000000000
-          ActorSynch = Auto
-        Item
-          Name = target_marker
-          TargetType = 
-          AutoVisual = a88da66df2995f143a085fabb44890c7
-          ActorSynch = Auto
-        Item
-          Name = vfx
-          TargetType = 
-          AutoVisual = 1197fbd2113cfee429b35a1cbca1cfef
-          ActorSynch = Auto
-  SimpleSkillDefinition
-    ManualSkillTargeting = None
-    MainTargetSelector = SkillAiTargetSelectionSelf
-    Effects
-      Item
-        EffectTarget
-          Name = 
-          Template = 
-        StartTrigger
-          Name = OnEffect
-          Template = anim_default_attack_melee_area_plot_dynamite_carriage_movable
-        EndTrigger
-          Name = 
-          Template = 
-        Effect = skill_effect_simple_damage_area_dynamite_carriage
-  SkillAiTargetSelectionSelf
-  UiDataGeneric
-    Icon = 76d522259820c2a45b41ac63c421181e
-    Title = gui_skill_plot_dynamite_boom_capt
-    Description = gui_skill_plot_dynamite_boom_desc
-anim_default_attack_melee_area_plot_dynamite_carriage_movable_death
-  Include = anim_default_attack_melee_area_plot_dynamite_carriage_movable
-  CasActorAnimation
-    AnimationGraph
-      Nodes
-        Item = CasActorAnimationStartNode
-          Name = start
-          InputNodes
-          OutputNodes
-            Item = spawn
-        Item = CasActorAnimationClipNode
-          TargetSlot = vfx
-          AnimatorName = main
-          Clip = spawn
-          ForceTransitionInChain = False
-          Name = spawn
-          InputNodes
-            Item = start
-          OutputNodes
-      ActorSlots
-        Item
-          Name = attacker
-          TargetType = plot_dynamite_carriage_movable
-          AutoVisual = 00000000000000000000000000000000
-          ActorSynch = ForceRemoteActors
-        Item
-          Name = target
-          TargetType = 
-          AutoVisual = 00000000000000000000000000000000
-          ActorSynch = Auto
-        Item
-          Name = target_marker
-          TargetType = 
-          AutoVisual = a88da66df2995f143a085fabb44890c7
-          ActorSynch = Auto
-        Item
-          Name = vfx
-          TargetType = 
-          AutoVisual = 1197fbd2113cfee429b35a1cbca1cfef
-          ActorSynch = Auto
-  SimpleSkillAnimationModule
-    OverrideSkillTime = False
 anim_default_attack_melee_cone
   Include = anim_default_attack_melee
   SimpleSkillDefinition
@@ -9958,6 +9986,30 @@ anim_default_attack_ranged_thalya
             Item = spawn
   UiDataGeneric
     Icon = 2a6fa3e204656474c8aa2dc563481603
+  SimpleSkillDefinition
+    Effects
+      Item
+        EffectTarget
+          Name = 
+          Template = 
+        StartTrigger
+          Name = OnEffect
+          Template = anim_default_attack_ranged_thalya
+        EndTrigger
+          Name = ""
+          Template = ""
+        Effect = skill_default_attack_protagonist
+      Item
+        EffectTarget
+          Name = 
+          Template = 
+        StartTrigger
+          Name = OnEffect
+          Template = anim_default_attack_ranged_thalya
+        EndTrigger
+          Name = 
+          Template = 
+        Effect = skill_fixed_damage_thalya
 anim_default_attack_melee_banshee
   Include = anim_default_attack_melee
   SimpleSkillDefinition
@@ -12901,6 +12953,39 @@ anim_horde_drink
           OutputNodes
             Item = unit_drink
           InputNodes
+anim_instant_revive
+  CasActorAnimation
+    AnimationGraph
+      ActorSlots
+        Item
+          Name = caster
+          TargetType = actor_revive
+          ActorSynch = ForceRemoteActors
+        Item
+          Name = effect
+          AutoVisual = d783415a1f8d2474bbec66943ef29796
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = Start
+          InputNodes
+          OutputNodes
+            Item = spawn
+            Item = revive
+        Item = CasActorAnimationClipNode
+          TargetSlot = effect
+          Clip = spawn
+          Name = spawn
+          InputNodes
+            Item = Start
+          OutputNodes
+        Item = CasActorAnimationClipNode
+          Name = revive
+          InputNodes
+            Item = Start
+          OutputNodes
+          TargetSlot = caster
+          Clip = revive
+      Events = Append
 anim_laser_main14run_die
   Include = anim_base
   CasActorAnimation
@@ -14312,39 +14397,6 @@ anim_orc_champion_bloodrush
     Title = unit_skill_orc_bloodrush_capt
     Description = unit_skill_orc_champion_bloodrush_desc
   SimpleSkillAnimationModule
-anim_orc_revive
-  CasActorAnimation
-    AnimationGraph
-      ActorSlots
-        Item
-          Name = caster
-          TargetType = unit_orc
-          ActorSynch = ForceRemoteActors
-        Item
-          Name = effect
-          AutoVisual = d783415a1f8d2474bbec66943ef29796
-      Nodes
-        Item = CasActorAnimationStartNode
-          Name = Start
-          InputNodes
-          OutputNodes
-            Item = spawn
-            Item = revive
-        Item = CasActorAnimationClipNode
-          TargetSlot = effect
-          Clip = spawn
-          Name = spawn
-          InputNodes
-            Item = Start
-          OutputNodes
-        Item = CasActorAnimationClipNode
-          Name = revive
-          InputNodes
-            Item = Start
-          OutputNodes
-          TargetSlot = caster
-          Clip = revive
-      Events = Append
 anim_payday
   Include = anim_base
   CasActorAnimation

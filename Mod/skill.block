@@ -359,6 +359,19 @@ skill_corpse_explosion
       DynamicValueSource
         Name = corpse_explosion_dmg_base
         Template = unit_minion_undead_base
+skill_default_attack_protagonist
+  SimpleSkillEffect
+    Effects
+      Item = SkillDamage
+    TargetSelector = SkillSingleTarget
+    TargetFilter
+      Item = SkillEntityFilterAliveEnemy
+  SkillSingleTarget
+  SkillDamage
+  SkillEntityFilterAliveEnemy
+  EntityType
+    Types
+      Item = type_default_attack_protagonist
 skill_effec_dwarf_queen_jump
   SimpleSkillEffect
     Effects = Append
@@ -1727,6 +1740,116 @@ skill_effect_dwarfqueen_axe_single
         Template = dwarf_queen_axe_summon
         Name = area
     Sensor = PhxCircleSensor
+skill_effect_enviromental_spell_poison
+  SimpleSkillEffect
+    Effects
+      Item = SkillEnvironmentalInteraction
+    TargetSelector = SkillTargetSensor
+    TargetFilter
+      Item = SkillEntityFilterAliveEnemy
+      Item = SkillEntityFilterHaveComponent
+    Randomizer = RandomByUse
+  SkillTargetSensor
+    AreaSource
+      Source = Dynamic
+      CustomValue = 0
+      DynamicValueSource
+        Name = poison_area
+        Template = evil_hand
+    Sensor = PhxCircleSensor
+  SkillEntityFilterAliveEnemy
+  SkillEnvironmentalInteraction
+    TriggerEffects
+      Item = aspect_fire
+    Radius
+      Source = Dynamic
+      CustomValue = 0
+      DynamicValueSource
+        Name = poison_area
+        Template = evil_hand
+    TriggerEffect = skill_effect_enviromental_spell_poison.explosion
+    AbortSelf = True
+    EffectPosition = Self
+  SkillEntityFilterHaveComponent
+    Component = Combat
+skill_effect_enviromental_spell_poison.explosion
+  PrefabReference
+    ClientPrefab = 39b7e44cec91f164981c161c26382900
+  Brain
+  SimpleSkillMaster
+    Skills = Append
+      Item
+        LocalName = explode
+        SkillDefinition = skill_effect_enviromental_spell_poison.explosion.skill
+  ServerAnimation
+  Attack
+    AttackDamageAmount = 100
+    SkillDamageAmount = 200
+    SkillArea = 4
+    DynamicValues
+      Item
+        Name = damage_min
+        Value = 100
+      Item
+        Name = damage_max
+        Value = 200
+      Item
+        Name = area
+        Value = 7
+  SkillAutoStart
+    TargetSkill
+      Name = explode
+      Template = skill_effect_enviromental_spell_poison.explosion
+    DestroyOnFinish = True
+    DestroyWhenImpossible = True
+    DestroyOnAbort = True
+  CasActorType
+  EntityType
+    Types
+      Item = type_poison_explosion
+  Location
+skill_effect_enviromental_spell_poison.explosion.skill
+  SimpleSkillDefinition
+    VisualizationModule = SimpleSkillAnimationModule
+    Effects
+      Item
+        StartTrigger
+          Name = on_effect
+          Template = skill_effect_enviromental_spell_poison.explosion.skill
+        Effect = skill_effect_simple_damage_area_spell_poison_explosion
+  SimpleSkillAnimationModule
+  CasActorAnimation
+    AnimationGraph
+      ActorSlots
+        Item
+          Name = unit
+          TargetType = skill_effect_enviromental_spell_poison.explosion
+          ActorSynch = ForceRemoteActors
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = start
+          OutputNodes
+            Item = spawn
+            Item = sfx
+          InputNodes
+        Item = CasActorAnimationClipNode
+          TargetSlot = unit
+          Clip = spawn
+          Name = spawn
+          InputNodes
+            Item = start
+          OutputNodes
+        Item = CasActorAnimationClipNode
+          Name = sfx
+          InputNodes
+            Item = start
+          OutputNodes
+          TargetSlot = unit
+          Clip = sfx
+      Events
+        Item
+          Name = on_effect
+          Trigger = 8a9cfbb56da73b84eb848ebe270a0a98
 skill_effect_frog_push_back_arc
   SimpleSkillEffect
     Effects = Append
@@ -3341,6 +3464,7 @@ skill_effect_protagonist_callback
       Item = type_monster
       Item = type_protagonist
       Item = type_dungeonlord
+      Item = type_unit_pitfiend
   SkillEntityFilterMustNotHaveEntityType
     EntityTypes = Append
       Item = type_boss
@@ -3638,12 +3762,12 @@ skill_effect_simple_damage_area_spell_poison_explosion
         Source = Dynamic
         DynamicValueSource
           Name = damage_min
-          Template = skill_effect_spell_poison.explosion
+          Template = skill_effect_enviromental_spell_poison.explosion
       MaxDamageAmount
         Source = Dynamic
         DynamicValueSource
           Name = damage_max
-          Template = skill_effect_spell_poison.explosion
+          Template = skill_effect_enviromental_spell_poison.explosion
       Aspects
         Item = aspect_fire
   SimpleSkillEffect
@@ -3658,7 +3782,7 @@ skill_effect_simple_damage_area_spell_poison_explosion
       CustomValue = 0
       DynamicValueSource
         Name = area
-        Template = skill_effect_spell_poison.explosion
+        Template = skill_effect_enviromental_spell_poison.explosion
   SkillDamageTile
     DamageAspectSource = Custom
     CustomAspects = Append
@@ -3667,7 +3791,7 @@ skill_effect_simple_damage_area_spell_poison_explosion
       Source = Dynamic
       CustomValue = 0
       DynamicValueSource
-        Template = skill_effect_spell_poison.explosion
+        Template = skill_effect_enviromental_spell_poison.explosion
         Name = area
 skill_effect_simple_damage_area_tower_city_cannon
   Include = skill_effect_simple_damage_area_tower_vill_cannon
@@ -4044,15 +4168,6 @@ skill_effect_slow_spell_poison
   SkillEntityFilterHaveComponent
     Component = Mover
 skill_effect_spell_poison
-  SimpleSkillEffect
-    TargetSelector = SkillTargetSensor
-    Effects = Append
-      Item = SkillBuff
-      Item = SkillEnvironmentalInteraction
-    Randomizer = RandomByUse
-    TargetFilter = Append
-      Item = SkillEntityFilterAliveEnemy
-      Item = SkillEntityFilterHaveComponent
   SkillTargetSensor
     Sensor = PhxCircleSensor
     AreaSource
@@ -4061,14 +4176,10 @@ skill_effect_spell_poison
       DynamicValueSource
         Name = poison_area
         Template = evil_hand
-  SkillBuff
-    BuffTemplate = skill_effect_spell_poison.buff
-    Duration
-      Source = Dynamic
-      CustomValue = 0
-      DynamicValueSource
-        Name = poison_duration
-        Template = evil_hand
+  SkillEntityFilterAliveEnemy
+  SkillEntityFilterHaveComponent
+    Component = Combat
+  SimpleSkillEffectBuff
     Strength
       Source = Dynamic
       CustomValue = 1
@@ -4081,107 +4192,28 @@ skill_effect_spell_poison
       DynamicValueSource
         Name = poison_dmg
         Template = evil_hand
-  SkillEntityFilterAliveEnemy
-  SkillEnvironmentalInteraction
-    TriggerEffects = Append
-      Item = aspect_fire
-    Radius
-      Source = Dynamic
-      CustomValue = 0
-      DynamicValueSource
-        Name = poison_area
-        Template = evil_hand
-    AbortSelf = True
-    TriggerEffect = skill_effect_spell_poison.explosion
-  SkillEntityFilterHaveComponent
-    Component = Combat
-skill_effect_spell_poison.buff
+    TargetSelector = SkillTargetSensor
+    TargetFilter
+      Item = SkillEntityFilterAliveEnemy
+      Item = SkillEntityFilterHaveComponent
   Buff
-    Parts = Append
-      Item = BuffDamageOverTime
+    Parts
       Item = BuffAnimation
+      Item = BuffDamageOverTime
+    Category = skill_effect_spell_poison
+  BuffAnimation
+    ContinuesAnimation = anim_buff_status_poisoned
   BuffDamageOverTime
     CustomDamage
       Amount = 1
       AmountOfTrueDamage = 0
       AdditionalAttacks = 0
-      Aspects = Append
+      Aspects
         Item = aspect_spells
       IgnoreArmorFactor = 0
       CanBeAbsorbed = True
     ScaleByStrength = True
-  BuffAnimation
-    ContinuesAnimation = anim_buff_status_poisoned
-skill_effect_spell_poison.explosion
-  PrefabReference
-    ClientPrefab = 39b7e44cec91f164981c161c26382900
-  Brain
-  SimpleSkillMaster
-    Skills = Append
-      Item
-        LocalName = explode
-        SkillDefinition = skill_effect_spell_poison.explosion.skill
-  ServerAnimation
-  Attack
-    AttackDamageAmount = 100
-    SkillDamageAmount = 200
-    SkillArea = 4
-    DynamicValues = Append
-      Item
-        Name = damage_min
-        Value = 100
-      Item
-        Name = damage_max
-        Value = 200
-      Item
-        Name = area
-        Value = 7
-  SkillAutoStart
-    TargetSkill
-      Name = explode
-      Template = skill_effect_spell_poison.explosion
-    DestroyOnFinish = True
-    DestroyWhenImpossible = True
-    DestroyOnAbort = True
-  CasActorType
-  EntityType
-    Types = Append
-      Item = type_poison_explosion
-skill_effect_spell_poison.explosion.skill
-  SimpleSkillDefinition
-    VisualizationModule = SimpleSkillAnimationModule
-    Effects = Append
-      Item
-        StartTrigger
-          Name = on_effect
-          Template = skill_effect_spell_poison.explosion.skill
-        EndTrigger
-          Name = 
-          Template = 
-        Effect = skill_effect_simple_damage_area_spell_poison_explosion
-  SimpleSkillAnimationModule
-  CasActorAnimation
-    AnimationGraph
-      ActorSlots
-        Item
-          Name = unit
-          TargetType = skill_effect_spell_poison.explosion
-          AutoVisual = 00000000000000000000000000000000
-      Nodes
-        Item = CasActorAnimationStartNode
-          Name = start
-          OutputNodes = Append
-            Item = spawn
-        Item = CasActorAnimationClipNode
-          Name = spawn
-          InputNodes = Append
-            Item = start
-          TargetSlot = unit
-          Clip = spawn
-      Events = Append
-        Item
-          Name = on_effect
-          Trigger = 8a9cfbb56da73b84eb848ebe270a0a98
+  BuffCategory
 skill_effect_storm_of_evil_attack_buff
   SimpleSkillEffect
     Effects = Append
@@ -4319,6 +4351,7 @@ skill_effect_succubus.buff
       Item = BuffCharm
       Item = BuffEntityTag
       Item = CasterBasedBuffAnimation
+    CancleWhenCasterPickup = True
   BuffCharm
   BuffEntityTag
     Tags = Append
@@ -5376,6 +5409,28 @@ skill_effect_unicorn_rotate_towards
   SkillEntityFilterAlive
   SkillEntityFilterEnemy
   SkillSingleTarget
+skill_effect_use_energy
+  RemovedComponent = SkillDamage
+  SimpleSkillEffect
+    Effects = Append
+      Item = SkillUseEnergy
+    TargetSelector = SkillCasterOnly
+  SkillUseEnergy
+    Amount
+      Source = Custom
+      CustomValue = 1
+      DynamicValueSource
+        Name = 
+        Template = 
+  SkillCasterOnly
+skill_fixed_damage_thalya
+  SimpleSkillEffect
+    Effects = Append
+      Item = SkillDamage
+    TargetSelector = SkillSingleTarget
+  SkillSingleTarget
+  SkillDamage
+    DealAsTrueDamage = True
 skill_froggy_explosion
   Include = skill_effect_simple_damage_area
   SkillDamage
@@ -5546,6 +5601,7 @@ skill_target_dummy
   SkillDummyTarget
   CasActorType
   ServerAnimation
+  FogOfWarHide
 skill_tower_city_crossbow_special_damage
   SimpleSkillEffect
     TargetSelector = SkillSensorTowardsTargetInArc
@@ -5685,6 +5741,20 @@ skill_trap_explosion
   SimpleSkillEffect
     Effects = Append
       Item = SkillKnockback
+      Item = SkillBuff
+  SkillBuff
+    BuffTemplate = skill_trap_explosion.buff
+    Duration
+      Source = Dynamic
+      CustomValue = 0
+      DynamicValueSource
+        Name = prevent_lure_duration
+        Template = trap_trigger_lootbox
+skill_trap_explosion.buff
+  Buff
+    Parts
+      Item = BuffPartPreventLure
+  BuffPartPreventLure
 skill_trap_spike_damage_cold
   Include = skill_effect_simple_damage
   RemovedComponent = SkillSingleTarget

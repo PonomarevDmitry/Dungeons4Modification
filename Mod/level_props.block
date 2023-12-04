@@ -221,6 +221,227 @@ cameraregioneffect_common_skir_storm
         Prefab = d82d09f938e8eac4a8cfd9b2335a645d
         SpawnAmountRange = 2.5 2.5
         LifetimeRange = 3 3
+common_skir_stones_of_finiteness
+  ScriptContainer
+    Actions
+      Item = EnableDominantAction
+        DominantAction = Entity||Child: skir_general_stone_of_damage|
+      Item = EnableDominantAction
+        DominantAction = Entity||Child: skir_general_stone_of_efficiency|
+      Item = EnableDominantAction
+        DominantAction = Entity||Child: skir_general_stone_of_health|
+      Item = EnableDominantAction
+        DominantAction = Entity||Child: skir_general_stone_of_speed|
+      Item = EnableDominantAction
+        DominantAction = Entity||Child: skir_general_stone_of_xp|
+    Triggers
+      Item = OnceAfter
+  ScriptVariableContainer
+    Variables
+      Item = Entity|current_stone_buff||
+      Item = Entity|highlighted_dom||
+  CreateChildEntities
+    WhatToCreate = All
+common_skir_stones_of_finiteness.skir_general_stone_of_damage
+  UiDataDominant
+    Icon = 47da25cc8ab325646a2024ae4a1067d9
+    Title = dom_general_stone_of_damage_capt
+    Description = dom_general_stone_of_damage_desc
+  ScriptContainer
+    Priority = Idle
+    AfterPlay = Nothing
+    Triggers
+      Item = DominantActionTrigger
+        DominantEntity = Entity||ScriptEntity|
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
+      Item = CreateBuff
+        Buff = buff_stone_damage
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Source = Entity||ScriptEntity|
+        Destination = Entity||highlighted_dom|
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_damage_random_01
+          Item = dlg_general_stone_buff_damage_random_02
+          Item = dlg_general_stone_buff_damage_random_03
+          Item = dlg_general_stone_buff_damage_random_04
+          Item = dlg_general_stone_buff_damage_random_05
+  DominantAction
+  ScriptVariableContainer
+common_skir_stones_of_finiteness.skir_general_stone_of_efficiency
+  ScriptContainer
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
+      Item = CreateBuff
+        Buff = buff_stone_efficiency
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Source = Entity||ScriptEntity|
+        Destination = Entity||highlighted_dom|
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_efficiency_random_01
+          Item = dlg_general_stone_buff_efficiency_random_02
+          Item = dlg_general_stone_buff_efficiency_random_03
+          Item = dlg_general_stone_buff_efficiency_random_04
+          Item = dlg_general_stone_buff_efficiency_random_05
+    Priority = Idle
+    AfterPlay = Nothing
+    Triggers
+      Item = DominantActionTrigger
+        DominantEntity = Entity||ScriptEntity|
+  ScriptVariableContainer
+  DominantAction
+  UiDataDominant
+    Title = dom_general_stone_of_efficiency_capt
+    Description = dom_general_stone_of_efficiency_desc
+    Icon = db37429a7d33e004b859ee00215c4a75
+common_skir_stones_of_finiteness.skir_general_stone_of_health
+  ScriptContainer
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
+      Item = CreateBuff
+        Buff = buff_stone_health
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Source = Entity||ScriptEntity|
+        Destination = Entity||highlighted_dom|
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_health_random_01
+          Item = dlg_general_stone_buff_health_random_02
+          Item = dlg_general_stone_buff_health_random_03
+          Item = dlg_general_stone_buff_health_random_04
+          Item = dlg_general_stone_buff_health_random_05
+    Priority = Idle
+    AfterPlay = Nothing
+    Triggers
+      Item = DominantActionTrigger
+        DominantEntity = Entity||ScriptEntity|
+  ScriptVariableContainer
+  DominantAction
+  UiDataDominant
+    Title = dom_general_stone_of_health_capt
+    Description = dom_general_stone_of_health_desc
+    Icon = df27290881bc3bd4991b5e8f7b53186c
+common_skir_stones_of_finiteness.skir_general_stone_of_speed
+  ScriptContainer
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
+      Item = CreateBuff
+        Buff = buff_stone_speed
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Source = Entity||ScriptEntity|
+        Destination = Entity||highlighted_dom|
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_speed_random_01
+          Item = dlg_general_stone_buff_speed_random_02
+          Item = dlg_general_stone_buff_speed_random_03
+          Item = dlg_general_stone_buff_speed_random_04
+          Item = dlg_general_stone_buff_speed_random_05
+    Priority = Idle
+    AfterPlay = Nothing
+    Triggers
+      Item = DominantActionTrigger
+        DominantEntity = Entity||ScriptEntity|
+  ScriptVariableContainer
+  DominantAction
+  UiDataDominant
+    Title = dom_general_stone_of_speed_capt
+    Description = dom_general_stone_of_speed_desc
+    Icon = 849a2a0b3be583a459a6cd5056317808
+common_skir_stones_of_finiteness.skir_general_stone_of_xp
+  ScriptContainer
+    Actions
+      Item = IfThenElse
+        Conditions
+          Item = CompareEntityValidState
+            Entity = Entity||current_stone_buff|
+        ThenActions
+          Item = DestroyEntity
+            Entity = Entity||current_stone_buff|
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
+      Item = CreateBuff
+        Buff = buff_stone_xp
+        CreatedBuffVariable = Entity||current_stone_buff|
+        Strength = Float|||1
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Source = Entity||ScriptEntity|
+        Destination = Entity||highlighted_dom|
+      Item = PlayRandomDialog
+        Texts
+          Item = dlg_general_stone_buff_xp_random_01
+          Item = dlg_general_stone_buff_xp_random_02
+          Item = dlg_general_stone_buff_xp_random_03
+          Item = dlg_general_stone_buff_xp_random_04
+          Item = dlg_general_stone_buff_xp_random_05
+    Priority = Idle
+    AfterPlay = Nothing
+    Triggers
+      Item = DominantActionTrigger
+        DominantEntity = Entity||ScriptEntity|
+  ScriptVariableContainer
+  DominantAction
+  UiDataDominant
+    Title = dom_general_stone_of_xp_capt
+    Description = dom_general_stone_of_xp_desc
+    Icon = 9ae80b9c73b56454abe7fd717f9c894d
 common_skir_storm_controller
   ScriptVariableContainer
     Variables
@@ -620,6 +841,8 @@ dominant_general_stone_of_damage
           Item = DestroyEntity
             Entity = Entity||current_stone_buff|
             IsCommentedOut = False
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
         ElseActions
         IsCommentedOut = False
       Item = CreateBuff
@@ -629,6 +852,12 @@ dominant_general_stone_of_damage
         UseOwnerFromScriptLocation = False
         Owner = SinglePlayer
         IsCommentedOut = False
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Destination = Entity||highlighted_dom|
+        Source = Entity||ScriptEntity|
       Item = PlayRandomDialog
         Texts
           Item = dlg_general_stone_buff_damage_random_01
@@ -661,6 +890,8 @@ dominant_general_stone_of_efficiency
           Item = DestroyEntity
             Entity = Entity||current_stone_buff|
             IsCommentedOut = False
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
         ElseActions
         IsCommentedOut = False
       Item = CreateBuff
@@ -670,6 +901,12 @@ dominant_general_stone_of_efficiency
         UseOwnerFromScriptLocation = False
         Owner = SinglePlayer
         IsCommentedOut = False
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Source = Entity||ScriptEntity|
+        Destination = Entity||highlighted_dom|
       Item = PlayRandomDialog
         Texts
           Item = dlg_general_stone_buff_efficiency_random_01
@@ -702,6 +939,8 @@ dominant_general_stone_of_health
           Item = DestroyEntity
             Entity = Entity||current_stone_buff|
             IsCommentedOut = False
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
         ElseActions
         IsCommentedOut = False
       Item = CreateBuff
@@ -711,6 +950,12 @@ dominant_general_stone_of_health
         UseOwnerFromScriptLocation = False
         Owner = SinglePlayer
         IsCommentedOut = False
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Source = Entity||ScriptEntity|
+        Destination = Entity||highlighted_dom|
       Item = PlayRandomDialog
         Texts
           Item = dlg_general_stone_buff_health_random_01
@@ -743,6 +988,8 @@ dominant_general_stone_of_speed
           Item = DestroyEntity
             Entity = Entity||current_stone_buff|
             IsCommentedOut = False
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
         ElseActions
         IsCommentedOut = False
       Item = CreateBuff
@@ -752,6 +999,12 @@ dominant_general_stone_of_speed
         UseOwnerFromScriptLocation = False
         Owner = SinglePlayer
         IsCommentedOut = False
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Source = Entity||ScriptEntity|
+        Destination = Entity||highlighted_dom|
       Item = PlayRandomDialog
         Texts
           Item = dlg_general_stone_buff_speed_random_01
@@ -785,10 +1038,18 @@ dominant_general_stone_of_xp
         ThenActions
           Item = DestroyEntity
             Entity = Entity||current_stone_buff|
+          Item = DominantDisableHighlight
+            Dominant = Entity||highlighted_dom|
       Item = CreateBuff
         Buff = buff_stone_xp
         CreatedBuffVariable = Entity||current_stone_buff|
         Strength = Float|||1
+      Item = DominantHighlight
+        Dominant = Entity||ScriptEntity|
+        Permanent = True
+      Item = SetEntityValue
+        Source = Entity||ScriptEntity|
+        Destination = Entity||highlighted_dom|
       Item = PlayRandomDialog
         Texts
           Item = dlg_general_stone_buff_xp_random_01
@@ -1658,6 +1919,7 @@ plot_dynamite_carriage_movable
     SelectionColliderHeight = 2.917436
     GlobalSelectionCategory = 0
     SelectableWhileDead = False
+    VisualSelectionRadius = 3
   BuffResistances
     EffectResistences = -1
   UiDataUnit
@@ -1685,15 +1947,15 @@ plot_dynamite_carriage_movable
     Skills = Append
       Item
         LocalName = aoe_damage
-        SkillDefinition = anim_default_attack_melee_area_plot_dynamite_carriage_movable
+        SkillDefinition = anim_attack_dynamite_carriage
       Item
         LocalName = explosion
-        SkillDefinition = anim_default_attack_melee_area_plot_dynamite_carriage_movable_death
+        SkillDefinition = anim_attack_dynamite_carriage_death
   ServerAnimation
     ProvidedActors = Append
   UiDataSkills
     ActiveSkillTemplates = Append
-      Item = anim_default_attack_melee_area_plot_dynamite_carriage_movable
+      Item = anim_attack_dynamite_carriage
     FirstActiveSkillIsDefaultAttack = False
   ScriptVariableContainer
   ScriptContainer
@@ -1738,6 +2000,10 @@ plot_dynamite_carriage_movable
     PlayOnKill = True
     MinDistance = 20
     MaxDistance = 30
+  Energy
+    Max = 1
+    EnergyRegeneration = 0
+    ResetEnergyOnDeath = False
 plot_dynamite_carriage_pushable
   Include = unit_combat_base
   PrefabReference
@@ -3372,6 +3638,16 @@ plot_strong_stone
             Template = gold_orb
             Owner = SinglePlayer
             Location = PosHead||ScriptEntity|0 0 0
+  Interactable
+    Cursor = Attack
+    InteractDistance = 0.25
+    AlternativeInteractPositions
+      Item = -1.3 7.52
+    InteractDelta = 1.42 -7.61 0
+  PerformSkillWhenInteracting
+    TargetSkill
+      Name = aoe_damage
+      Template = plot_dynamite_carriage_movable
 plot_stun_area
   PrefabReference
     ClientPrefab = 9de322a7f6a18764dbf483a2fb703b45

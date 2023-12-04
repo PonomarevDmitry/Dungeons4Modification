@@ -2183,6 +2183,7 @@ res_guardroom.stage_1
     Unlocks
       Item = room_guardroom
       Item = gimmick_guardroom
+      Item = gimmick_guardroom_flag
   UiDataResearchStage
     Description = res_common_unlockroom
 res_guardroom.stage_2
@@ -4128,12 +4129,12 @@ res_potions_complex.stage_2
               ValueType = Constant
               Value = 200
       Item
-        TargetTemplate = skill_effect_spell_poison.explosion
+        TargetTemplate = skill_effect_enviromental_spell_poison.explosion
         Properties
           Item
             Target
               Name = area
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4141,7 +4142,7 @@ res_potions_complex.stage_2
           Item
             Target
               Name = damage_min
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4149,7 +4150,7 @@ res_potions_complex.stage_2
           Item
             Target
               Name = damage_max
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4303,12 +4304,12 @@ res_potions_complex.stage_3
               ValueType = Constant
               Value = 200
       Item
-        TargetTemplate = skill_effect_spell_poison.explosion
+        TargetTemplate = skill_effect_enviromental_spell_poison.explosion
         Properties
           Item
             Target
               Name = area
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4316,7 +4317,7 @@ res_potions_complex.stage_3
           Item
             Target
               Name = damage_min
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4324,7 +4325,7 @@ res_potions_complex.stage_3
           Item
             Target
               Name = damage_max
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
