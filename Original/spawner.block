@@ -1,0 +1,614 @@
+﻿gate_basic
+  Abstract = True
+  Owner = AIPlayer5
+  Location
+    CanNotMove = True
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 2.97
+  Combat
+  CloseCombatTracker
+  GUIStatusOverhead
+    NameVisibility = ForceHide
+  EvilSelectable
+    SelectableWhileDead = False
+  LowPriorityFightTarget
+  IsSeenBy
+  Stunned
+  ServerAnimation
+  AttackableBarrier
+  ComplexCostFieldPatch
+    CostField = Append
+      Item
+        LockState = LockedForPlayer
+        AreaSource = Stimulus
+        ActiveWhenDead = False
+        BlockSight = False
+        Cost = Gravel
+        HightLevel = 0
+  Door
+  DoorOpenTracker
+  BuffAnimationHandler
+gate_city
+  Include = gate_heroes
+  PrefabReference
+    ClientPrefab = 862e8f6416fc95d438ac57b9b02044b0 b62643f36afb63e48bd29fc689ba6292
+  EvilSelectable
+    SelectionRadius = 3.372848
+    SelectionColliderHeight = 3.42
+    VisualSelectionRadius = 3.216131
+  Unit
+  Combat
+    MaxHealth = 2000
+    Armor = 0
+  ServerAnimation
+  EntityType
+    Types = Append
+      Item = type_structure
+      Item = type_wood_gore
+  FogOfWarHide
+    AlwaysShow = None
+    Visibility = Always
+  UiDataUnit
+    Title = gate_city_capt
+    Description = gate_city_desc
+    EntityType = Hero
+    Icon = a321df1fd1cdd2049bfe468955c61ce9
+    Portrait = a321df1fd1cdd2049bfe468955c61ce9
+  ScriptContainer
+    Triggers
+      Item = UnitDiedTrigger
+        Units = EntityList||ScriptEntity|
+    Actions
+      Item = SetOwnerAndWait
+        Entity = Entity||ScriptEntity|
+        Owner = SinglePlayer
+  ScriptVariableContainer
+gate_city_b
+  Include = gate_heroes
+  PrefabReference
+    ClientPrefab = 019745b559d285c46a6de761d8f55f58 b62643f36afb63e48bd29fc689ba6292
+  Owner = AIPlayer5
+  EvilSelectable
+    VisualSelectionRadius = 3.216131
+  Combat
+    Armor = 0
+    MaxHealth = 1500
+  EntityType
+    Types = Append
+      Item = type_structure
+      Item = type_wood_gore
+  FogOfWarHide
+    Visibility = Always
+    AlwaysShow = None
+  UiDataUnit
+  ScriptContainer
+    Actions
+      Item = SetOwnerAndWait
+        Entity = Entity||ScriptEntity|
+        Owner = SinglePlayer
+  FarseerBody
+    Mass = 500
+    Radius = 2
+gate_city_gate_a_01
+  Include = gate_city
+  PrefabReference
+    ClientPrefab = 0afcf45a4baf5704fb0c8939bc4971de a0030c31ebfed0c4eb6c9b461f1a1796
+  Owner = AIPlayer5
+gate_city_gate_a_02
+  Include = gate_city_gate_a_01
+  PrefabReference
+    ClientPrefab = 0d0c3abfe1d3f9949a0995d23b1b640b be0d8e69d71bedc40a66b77ba8a8deb7
+  Owner = AIPlayer5
+gate_city_gate_a_03
+  Include = gate_city_gate_a_02
+  PrefabReference
+    ClientPrefab = 862e8f6416fc95d438ac57b9b02044b0 b62643f36afb63e48bd29fc689ba6292
+  Owner = AIPlayer5
+gate_city_gate_a_04
+  Include = gate_city_gate_a_03
+  PrefabReference
+    ClientPrefab = a2522b2e18ac9794fb1f124eb42d63c3 bb768e89c0cd70745827e1b04df2afe5
+  Owner = AIPlayer5
+gate_city_gate_a_05
+  Include = gate_city_gate_a_04
+  PrefabReference
+    ClientPrefab = 016fe3c26ce4e0a418df15c1920e0a9c 4d6c6a777eca0204597f4ee6307c9569
+  Owner = AIPlayer5
+gate_city_gate_b_01
+  Include = gate_city_b
+  PrefabReference
+    ClientPrefab = 019745b559d285c46a6de761d8f55f58 156b200bfd4d0e741a4e925dc1e53c45
+  Owner = AIPlayer5
+gate_city_gate_b_02
+  Include = gate_city_gate_b_01
+  PrefabReference
+    ClientPrefab = 6c9d175bdaa013946ae3efb003b58845 ed8937cb564df694fbbdc8fb951a5dd4
+  Owner = AIPlayer5
+  SkillTargetProxyProvider
+    ProxyLocations = Append
+      Item = 0 -2 0
+      Item = 0 2 0
+gate_city_gate_b_03
+  Include = gate_city_gate_b_02
+  PrefabReference
+    ClientPrefab = 703388ad501267a4591e91947602fbb8 b462598048a96214093728d64d5f6bfe
+  Owner = AIPlayer5
+gate_city_gate_b_04
+  Include = gate_city_gate_b_03
+  PrefabReference
+    ClientPrefab = 1ec8432cb3d6c934e8a5e75b1a685919 6ffd2e13e78a9d34085fb1f5aed6da3c
+  Owner = AIPlayer5
+gate_city_gate_b_05
+  Include = gate_city_gate_b_04
+  PrefabReference
+    ClientPrefab = 626c9c634d6bb4d418f6e87c6d698839 8a3a9a8a250813341bb6f24d785ddb6d
+  Owner = AIPlayer5
+gate_heroes
+  Abstract = True
+  Include = gate_basic
+  PrefabReference
+    ClientPrefab = f4af712c2675ad2438568c92d4bdfe75
+  Owner = AIPlayer5
+  EvilSelectable
+    VisualSelectionRadius = 5.216131
+    SelectionRadius = 3.372848
+    SelectionColliderHeight = 3.42
+  Unit
+  EntityType
+    Types = Append
+      Item = type_structure
+      Item = type_wood_gore
+  FogOfWarHide
+    AlwaysShow = Specific
+    AlwaysShowMeshNames
+      Item = city_WallSet_Gate_a_00
+      Item = city_WallSet_Gate_a_dmg
+  UiDataUnit
+    EntityType = Hero
+    Title = gate_city_capt
+    Description = gate_city_desc
+    Portrait = a321df1fd1cdd2049bfe468955c61ce9
+    Icon = a321df1fd1cdd2049bfe468955c61ce9
+  ScriptContainer
+    Triggers
+      Item = UnitDiedTrigger
+        Units = EntityList||ScriptEntity|
+    Actions
+      Item = SetOwnerAndWait
+        Entity = Entity||ScriptEntity|
+        Owner = SinglePlayer
+      Item = LockGate
+        Gate = Entity||ScriptEntity|
+        Locked = Unlocked
+  ScriptVariableContainer
+  Combat
+    Armor = 40
+    MaxHealth = 200
+    WorthXp = 20
+  VisualRepresentationWhileDead
+  VisualRepresentation
+  Door
+    OpenAnimation = anim_door_open
+    OpenCloseDelay = 1
+  ServerAnimation
+    ProvidedActors = Append
+      Item = door_base
+      Item = actor_gethit
+  PhxStimulus
+    Sensor = PhxOBBSensor
+      HalfWidth = 4.640196
+      HalfHeight = 1.133122
+  DoorOpenTracker
+    DoorSensor = PhxOBBSensor
+      HalfWidth = 4.640196
+      HalfHeight = 4
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+  SkillTargetProxyProvider
+    ProxyTemplate = gate_heroes.combat_proxy
+    ProxyLocations = Append
+      Item = 0 -2 0
+      Item = 0 2 0
+gate_heroes.combat_proxy
+  Combat
+    MaxHealth = 1E+08
+    Unkillable = True
+    Invulnerable = True
+    ShowOverhead = False
+  IsSeenBy
+  Stunned
+  Location
+  CloseCombatTracker
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 1.5
+  SkillTargetProxy
+  BuffAnimationHandler
+  ServerAnimation
+gate_vill
+  Include = gate_heroes
+  PrefabReference
+    ClientPrefab = 4cf24de71fb16374ba1092daa7ebaff3 d393770e259cba34f844603c951cd9a8
+  Owner = AIPlayer5
+  EvilSelectable
+    SelectionRadius = 3.372848
+    SelectionColliderHeight = 3.25
+    VisualSelectionRadius = 4
+  Unit
+  Combat
+    MaxHealth = 850
+    Armor = 0
+    WorthXp = 20
+  EntityType
+    Types = Append
+      Item = type_structure
+      Item = type_wood_gore
+  FogOfWarHide
+    AlwaysShow = None
+    AlwaysShowMeshNames
+      Item = vill_WallSet_Gate_a_00
+      Item = vill_WallSet_Gate_a_dmg
+    Visibility = Always
+  UiDataUnit
+    Title = gate_vill_capt
+    Description = gate_vill_desc
+    EntityType = Hero
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  ServerAnimation
+gate_vill_gate_a_01
+  Include = gate_vill
+  PrefabReference
+    ClientPrefab = bd96326f6e70c0d42b874b3cf8a76861 817f371077246f04698cd0e3a0822280
+  Owner = AIPlayer5
+gate_vill_gate_a_02
+  Include = gate_vill_gate_a_01
+  PrefabReference
+    ClientPrefab = 4cf24de71fb16374ba1092daa7ebaff3 d393770e259cba34f844603c951cd9a8
+  Owner = AIPlayer5
+gate_vill_gate_a_03
+  Include = gate_vill_gate_a_02
+  PrefabReference
+    ClientPrefab = eb0ea9537c57ea54f90bcb312a59bc35 60c7099c3874d5542a7b60d96306d3ca
+  Owner = AIPlayer5
+spawner_building_golden_portal
+  Include = destroyable_object
+  RemovedComponent = FarseerBody
+  PrefabReference
+    ClientPrefab = 8b289b7d178240445ae7a3705e002c74 5dc39dbda4fdc144b935694c02789360
+  Combat
+    MaxHealth = 2000
+  Teleport
+    OnlyUsableWhenPreferred = True
+    DestroyTargetWhenDestroyed = True
+    OnlyUsableWhenOwned = True
+    ShowErrorWhenDisabled = False
+  Interactable
+    Cursor = Default
+    WhenDisabledRtsAction = AttackIfUnownedAndInteractIfMine
+    Enabled = False
+  GoldenPortal
+    PortalTargetTemplate = spawner_building_golden_portal_inside
+  UiDataGeneric
+    Title = portal_heroes_capt
+    Description = portal_heroes_desc
+    Icon = a321df1fd1cdd2049bfe468955c61ce9
+  UiDataMinimapIcon
+    Icon = 814d660332f15fa4ab774f31ff769245
+  VisualRepresentationWhileDead
+  VisualRepresentation
+  DestroyWhenKilled
+    TimeUntilDespawn = 5
+spawner_building_golden_portal_inside
+  Include = destroyable_object
+  RemovedComponent = FarseerBody
+  PrefabReference
+    ClientPrefab = f74cf14ddc83ff64680c16008d4feb9f
+  Combat
+    MaxHealth = 500
+    NonThreat = False
+  Teleport
+    OnlyUsableWhenPreferred = True
+    OnlyUsableWhenOwned = True
+    ShowErrorWhenDisabled = False
+  Interactable
+    WhenDisabledRtsAction = AttackIfUnownedAndInteractIfMine
+    Cursor = Default
+    Enabled = False
+  GoldenPortalInside
+  UiDataMinimapIcon
+    Icon = 0b044e1d3f40d154a885a78a8b153117
+  ModifyPriorityFightScore
+    ScoreModification = -100000
+  PathDistanceTracker
+  DestroyWhenKilled
+spawner_camp
+  Include = spawner_template_overworld
+  PrefabReference
+    ClientPrefab = 6b56d055280aaae4da60843aa4e38e2e d8dd89f78d52fe94c8b82b6fb59d19b7
+  Owner = AIPlayer5
+  FarseerBody
+    Radius = 3.3
+  PhxStimulus
+    Sensor = PhxOBBSensor
+      HalfWidth = 3.8
+      HalfHeight = 3.8
+  EvilSelectable
+    SelectionRadius = 4
+    SelectionColliderHeight = 4.44668
+    HasBigCollider = False
+    VisualSelectionRadius = 4.345288
+  MakeThemInCircle
+    Offset = 0 1.53
+  Unit
+  MakeThenStoreInVariable
+  EntityType
+    Types = Append
+      Item = type_evilness_easy
+  Combat
+    MaxHealth = 3000
+    WorthXp = 20
+  CostFieldAdditionalWhileAlive
+    Area = PhxCombinedSensor
+      Sensors
+        Item = PhxOBBSensor
+          HalfWidth = 3.6
+          HalfHeight = 3.6
+          Offset = 0 0 0
+  UiDataMinimapIcon
+    Icon = 6d17bf0a2969b82418970ab22bd7f097
+    DisableIfDead = True
+    AlternativeIcon = 84271b77f016d90428776595989a50bb
+  UiDataUnit
+    Portrait = a321df1fd1cdd2049bfe468955c61ce9
+    Title = spawner_camp_capt
+    Description = spawner_camp_desc
+    Flavour = spawner_camp_flav
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Balanced
+  BounceAsideOriginDelta
+    Offset = 0.28 5.42 0
+    OverrideDropArea = True
+    DropArea
+      Arc = 90
+      MinDistance = 1
+      MaxDistance = 2
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_gethit
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+spawner_city
+  Include = spawner_template_overworld
+  PrefabReference
+    ClientPrefab = a07873b62726c5e418613c71732d662b cb3ceb27e81a45d42b7a33dd118fe831
+  Owner = AIPlayer5
+  FarseerBody
+    Radius = 4.315721
+  EvilSelectable
+    SelectionRadius = 5
+    SelectionColliderHeight = 6.79656
+    AboveHeadHeightDelta = 2.61344
+    VisualSelectionRadius = 6
+  PhxStimulus
+    Sensor = PhxCombinedSensor
+      Sensors = Append
+        Item = PhxOBBSensor
+          HalfWidth = 6
+          HalfHeight = 4.3
+          Offset = -0.45 0 0
+        Item = PhxOBBSensor
+          HalfWidth = 4.6
+          HalfHeight = 1.35
+          Offset = 0.8 -5.65 0
+  Unit
+  EntityType
+    Types = Append
+      Item = type_evilness_hard
+  CostFieldAdditionalWhileAlive
+    Area = PhxCombinedSensor
+      Sensors
+        Item = PhxOBBSensor
+          HalfWidth = 6
+          HalfHeight = 4
+          Offset = -0.5 0 0
+        Item = PhxOBBSensor
+          Offset = -0.8 -5 0
+          HalfWidth = 2.8
+          HalfHeight = 1.6
+        Item = PhxCircleSensor
+          Offset = 3.2 -4.4
+          Radius = 2.2
+  UiDataUnit
+    Title = spawner_city_capt
+    Description = spawner_city_desc
+    Portrait = a321df1fd1cdd2049bfe468955c61ce9
+    Flavour = spawner_city_flav
+  UiDataMinimapIcon
+    Icon = 6d17bf0a2969b82418970ab22bd7f097
+    DisableIfDead = True
+    AlternativeIcon = 84271b77f016d90428776595989a50bb
+  Combat
+    MaxHealth = 8000
+    Armor = 1
+    WorthXp = 20
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  MakeThenStoreInVariable
+    CombatTeamVariable = 
+    RaidVariable = 
+  MakeThemInCircle
+    SpawnArea
+      Arc = 180
+      MinDistance = 0
+      MaxDistance = 3
+    Offset = 0 6.5
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Balanced
+  BounceAsideOriginDelta
+    Offset = 0.28 6.38
+    OverrideDropArea = True
+    DropArea
+      Arc = 90
+      MinDistance = 1
+      MaxDistance = 2
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_gethit
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+spawner_invisible
+  Include = spawner_template
+  RemovedComponent = MakeThenGiveMission
+  Owner = AIPlayer5
+  MakeThemInCircle
+  MakeThenGiveRandomStandardMission
+  MakeThenStoreInVariable
+  MakeThemGroupStrengthHeroLevel
+spawner_invisible_dwarfs
+  Include = spawner_template
+  RemovedComponent = MakeThenGiveMission
+  Owner = AIPlayer5
+  MakeThemInCircle
+  MakeThenGiveRandomStandardMission
+  MakeThenStoreInVariable
+  MakeThemGroupStrengthHeroLevel
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Dwarves
+spawner_invisible_heroes
+  Include = spawner_invisible
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Heroes
+spawner_template
+  Abstract = True
+  Location
+    CanNotMove = True
+  MakeThenGiveMission
+    Mission = heromission_destroyheart
+  Maker
+  MakeSomeCombatTeam
+spawner_template_building
+  Abstract = True
+  Include = destroyable_object
+  MakeExceptIfDead
+  Combat
+    NonThreat = False
+  MakeThenGiveRandomStandardMission
+    FindGoldenPortalAreaAround = 15
+  EntityType
+    Types = Append
+      Item = type_structure
+      Item = type_spawner
+  EvilSelectable
+    SelectionColliderHeight = 0.1
+    HasBigCollider = False
+  LowPriorityFightTarget
+  Maker
+  UiDataUnit
+    Title = spawner_camp_capt
+    Description = ""
+    EntityType = None
+spawner_template_overworld
+  Abstract = True
+  Include = spawner_template_building
+  FogOfWarHide
+    Visibility = Always
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Heroes
+  MakeThemGroupStrengthHeroLevel
+  UiDataMinimapIcon
+    Size = 60
+  UiDataUnit
+    Title = ""
+    OverheadPingOffset = 3
+  CaptureWhenDefeated
+  CaptureNotification
+    NotificationLost = notification_spawnerlost
+    NotificationConquered = notification_spawnerconquered
+  FogOfWarUncover
+    Radius = 30
+  OutbuildingBuilder
+  EvilificationInfluencer
+    Strength = 1
+  EntityType
+    Types = Append
+      Item = type_hero_building
+  MakeThenGiveRandomStandardMission
+    FindGoldenPortalAreaAround = 30
+spawner_vil
+  Include = spawner_template_overworld
+  PrefabReference
+    ClientPrefab = 4189b687c1106b54a95c9a729618d1c2 5be63060834077945bd32042b011cc4d
+  Owner = AIPlayer5
+  PhxStimulus
+    Sensor = PhxOBBSensor
+      HalfWidth = 5.8
+      HalfHeight = 5.4
+      Offset = 0 0.7 0
+  FarseerBody
+    Radius = 6
+  EvilSelectable
+    SelectionRadius = 4.062213
+    SelectionColliderHeight = 7.005664
+    VisualSelectionRadius = 8
+  EntityType
+    Types = Append
+      Item = type_wood_gore
+      Item = type_evilness_medium
+  MakeThenStoreInVariable
+  CostFieldAdditionalWhileAlive
+    Area = PhxCombinedSensor
+      Sensors
+        Item = PhxOBBSensor
+          HalfWidth = 5.8
+          HalfHeight = 5.2
+          Offset = 0 1 0
+        Item = PhxOBBSensor
+          Offset = 3.8 6.2 0
+          HalfHeight = 0.6
+          HalfWidth = 2
+  UiDataUnit
+    Title = spawner_vil_capt
+    Description = spawner_vil_desc
+    Portrait = a321df1fd1cdd2049bfe468955c61ce9
+    Flavour = spawner_vil_flav
+  UiDataMinimapIcon
+    Icon = 6d17bf0a2969b82418970ab22bd7f097
+    DisableIfDead = True
+    AlternativeIcon = 84271b77f016d90428776595989a50bb
+  Combat
+    Armor = 0
+    MaxHealth = 6000
+    WorthXp = 20
+  VisualRepresentation
+  VisualRepresentationWhileDead
+  MakeThemInCircle
+    SpawnArea
+      Arc = 180
+      MinDistance = 0
+      MaxDistance = 3
+    Offset = 0 9
+  Unit
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Balanced
+  BounceAsideOriginDelta
+    Offset = 0.28 6.38
+    OverrideDropArea = True
+    DropArea
+      Arc = 90
+      MinDistance = 1
+      MaxDistance = 2
+  ServerAnimation
+    ProvidedActors = Append
+      Item = actor_gethit
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit

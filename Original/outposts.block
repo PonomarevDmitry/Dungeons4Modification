@@ -1,0 +1,297 @@
+﻿outpost
+  Owner = AIPlayer5
+  HeroOutpost
+    MainHall = outpost_room_main_hall
+    MissionFinders
+      Item = HeroMissionFinderExpandOutpost
+        RoomTemplate = outpost_room_guard
+        RoomSize = 5 5
+        Chance = 50
+        MaxRoomsWithSameTemplate = 3
+      Item = HeroMissionFinderExpandMine
+        RoomTemplate = outpost_room_mine
+        MaxRoomsWithSameTemplate = 1
+        Chance = 75
+      Item = HeroMissionFinderStealArtefact
+        TargetRoom = roomid_evilvault
+        Chance = 30
+      Item = HeroMissionFinderStealGold
+        Chance = 25
+      Item = HeroMissionFinderFreePrisoner
+        Chance = 33
+      Item = HeroMissionFinderDestroyRoom
+        Chance = 25
+  Location
+outpost_addon
+  Abstract = True
+  Include = destroyable_object
+  Location
+    CanNotMove = True
+  HeroOutpostAddon
+  EntityType
+    Types = Append
+      Item = type_structure
+  EvilSelectable
+    SelectionColliderHeight = 2.5
+  EvilHandInteractable
+    RightClick = True
+  Combat
+    NonThreat = False
+  GUIStatusOverhead
+    NameVisibility = ForceHide
+  FallThroughFloorOnDespawn
+outpost_addon_arcane_shield
+  Include = outpost_addon
+  HeroOutpostAddon
+    PlacementPreference = BackWall
+    TimeToBuild = 3
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 1.83
+  EvilSelectable
+    SelectionColliderHeight = 4
+  CostFieldObstacle
+    Cost = Rough
+    BlockSight = False
+  Unit
+  FarseerBody
+    Radius = 1.5
+  Attack
+  UiDataUnit
+outpost_addon_healing_well
+  Include = outpost_addon
+  HeroOutpostAddon
+    PlacementPreference = BackWall
+    TimeToBuild = 3
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 1.82
+  Attack
+    SkillCooldown = 20
+  Brain
+  CostFieldObstacle
+    Cost = Rough
+    BlockSight = False
+  Unit
+  Puppet
+  Interactor
+  FarseerBody
+    Radius = 1.5
+  UiDataUnit
+outpost_addon_runestone
+  Include = outpost_addon
+  RemovedComponent = CostFieldObstacle
+  RemovedComponent = FarseerBody
+  PrefabReference
+    ClientPrefab = 10cbe1334e6acae42a7ba47200185207 db7537d6983bf7642ba648bb923a9934
+  HeroOutpostAddon
+    PlacementPreference = Center
+    TimeToBuild = 3
+  HeroOutpostSpawner
+    Tags
+      Item = Balanced
+      Item = Dwarves
+    Interval = 240
+  EvilSelectable
+    SelectionColliderHeight = 3
+  Unit
+  DestroyRoomWhenKilled
+  EntityType
+    Types = Append
+      Item = type_outpost_addon_runestone
+      Item = type_evilness_easy
+  UiDataUnit
+    Title = gimmick_dwarfarkenstone_capt
+    Description = gimmick_dwarfarkenstone_desc
+    Portrait = 015b761f9ff8d334e889f70d5c41214b
+  VisualRepresentationWhileDead
+  VisualRepresentation
+  LowPriorityFightTarget
+    Category = 2
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 5
+      Offset = 0 0
+  DestroyWhenKilled
+    TimeUntilDespawn = 10
+  CostFieldSpecific
+    Bounds = -2 -2 5 5
+    Data = Append
+      Item = 0
+      Item = 0
+      Item = 2104033280
+      Item = 0
+      Item = 0
+      Item = 0
+      Item = 0
+      Item = 2105376125
+      Item = 0
+      Item = 0
+      Item = 1356914768
+      Item = 1442840405
+      Item = 1431655765
+      Item = 1442840405
+      Item = 84609797
+      Item = 0
+      Item = 0
+      Item = 2105376125
+      Item = 0
+      Item = 0
+      Item = 0
+      Item = 0
+      Item = 27005
+      Item = 0
+      Item = 0
+  FogOfWarHide
+  Combat
+    MaxHealth = 2500
+    SpellResistance = 1
+  Location
+    PlacementMode = Zero
+outpost_addon_turret
+  Include = outpost_addon
+  HeroOutpostAddon
+    PlacementPreference = Entrance
+    TimeToBuild = 3
+  ActivityFightAwareStartBrain
+  AggroCanAttackTracker
+  Attack
+    Range = 19
+    Area = 1.5
+    CriticalHitChance = 5
+    AttackBonusAttacks = 3
+    AttackDamageAmount = 22
+    AttackAspects
+      Item = aspect_horde
+    AttackCooldown = 3
+  Brain
+  FogOfWarHide
+  FogOfWarUncover
+  PhxStimulus
+    Sensor = PhxCircleSensor
+      Radius = 1.17
+  DestroyWhenKilled
+    TimeUntilDespawn = 2
+  CostFieldObstacle
+    Cost = Rough
+    BlockSight = False
+  Unit
+  Interactor
+  Puppet
+  Combat
+    MaxHealth = 300
+  FarseerBody
+    Radius = 1
+  UiDataUnit
+  FightActivity
+  IdleReturnToPositionNoStart
+outpost_room
+  Abstract = True
+  Location
+    PlacementMode = Zero
+  Room
+    RoomId = roomid_outpost
+    CanBeRemoved = False
+    SurroundingWallFaction = Dwarven
+  TileArea
+  NoRoomAllowed
+    NoRoomUi = True
+    NoPickupOrbs = True
+  HeroOutpostRoom
+    RoomDoor = door_dwarves
+  KillDoorsWhenDestroyed
+  PlaySoundWhileInRegion
+    Region = Inside
+    OnlyLocal = True
+    Sfx = atmo_room_dwarf_room_atmo_loop
+outpost_room_guard
+  Include = outpost_room
+  HeroOutpostRoom
+  Room
+    RoomColor = 0.5 0.5 0.5 1
+  RoomDecoration
+    Decorations = Append
+      Item = destroyable_object_dwarf_bed
+      Item = destroyable_object_dwarf_shelf
+      Item = destroyable_object_dwarf_table_a
+      Item = destroyable_object_dwarf_table_b
+      Item = destroyable_object_dwarf_weapon_rack_a
+      Item = destroyable_object_dwarf_weapon_rack_b
+    Density = 0.1
+    AllowOnBorder = False
+    RotateRandomly = True
+outpost_room_guard_with_guards
+  Include = creep_room_base
+  RemovedComponent = FloodFillTileArea
+  RemovedComponent = MakeThenDestroyMakerOnceRaidDies
+  Owner = AIPlayer5
+  Room
+    MarkerTexture = 5ffd03f3619c9f84bb6c13c031f4b8f1
+    RoomColor = 1 0 0 1
+    RoomId = roomid_outpost
+    SurroundingWallFaction = Dwarven
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Dwarves
+  MakeThenGiveMission
+    Mission = heromission_outpostduty
+    Parameter = Append
+      Item = Entity|OutpostRoom|ScriptEntity|
+  ScriptVariableContainer
+  HeroOutpostRoom
+    RoomDoor = door_dwarves
+  RoomLikeFillTileArea
+  KillDoorsWhenDestroyed
+  RoomDecoration
+    Decorations = Append
+      Item = destroyable_object_dwarf_bed
+      Item = destroyable_object_dwarf_shelf
+      Item = destroyable_object_dwarf_table_a
+      Item = destroyable_object_dwarf_table_b
+      Item = destroyable_object_dwarf_weapon_rack_a
+      Item = destroyable_object_dwarf_weapon_rack_b
+    RotateRandomly = True
+    Density = 0.1
+    AllowOnBorder = False
+outpost_room_main_hall
+  Include = outpost_room
+  HeroOutpostRoom
+    MandatoryAddons
+      Item = outpost_addon_runestone
+    InstantBuildAddonsOnCreation = True
+    RoomDoor = door_dwarves_t2
+  Room
+    RoomColor = 0.5 0.5 0.5 1
+    RoomId = roomid_outpost_special
+outpost_room_mine
+  Include = outpost_room
+  Room
+    RoomId = roomid_dwarf_treasury
+    RoomColor = 0.5 0.5 0.5 1
+outpost_room_mine_with_guards
+  Include = outpost_room_mine
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Dwarves
+  MakeThemGroupStrengthFixed
+    GroupStrength = 1
+  MakeThenDestroyMakerOnceRaidDies
+  MakeThenGiveMission
+    Mission = heromission_outpostduty
+    Parameter = Append
+      Item = Entity|OutpostRoom|ScriptEntity|
+  Maker
+  MakeOnceSeen
+  ScriptVariableContainer
+outpost_room_storage
+  Include = outpost_room
+  Room
+    RoomColor = 0.5 0.5 0.5 1
+outpost_room_treasury
+  Include = outpost_room
+  GoldLairStorage
+  Room
+    RoomId = roomid_dwarf_treasury
+    RoomColor = 0.5 0.5 0.5 1
+  HeroOutpostRoom
+    RoomDoor = door_dwarves_t2

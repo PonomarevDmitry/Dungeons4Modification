@@ -1,0 +1,85 @@
+﻿combat_team
+  Include = combat_team_base
+  DebugIcon = sv_label_7
+  Owner = AIPlayer5
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Heroes
+  EntityType
+    Types = Append
+      Item = type_combatteam
+combat_team_base
+  Abstract = True
+  DebugIcon = sv_label_7
+  Owner = AIPlayer5
+  MakeOnceSeen
+  Location
+    CanNotMove = True
+  MakeThenDestroyMaker
+  MakeThenSetSpecificDropLoot
+  MakeThenStoreInVariable
+  Maker
+  MakeThemGroupStrengthFixed
+combat_team_dwarves
+  Include = combat_team_base
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Dwarves
+combat_team_dwarves_with_dlg
+  Include = combat_team_dwarves
+  MakeThemWithRaid
+    Raid = raid_base_with_dlg_guards
+combat_team_elves
+  Include = combat_team_base
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Elves
+combat_team_elves_with_dlg
+  Include = combat_team_elves
+  MakeThemWithRaid
+    Raid = raid_base_with_dlg_guards
+combat_team_humans
+  Include = combat_team_base
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Humans
+combat_team_humans_with_dlg
+  Include = combat_team_humans
+  MakeThemWithRaid
+    Raid = raid_base_with_dlg_guards
+combat_team_melee
+  Include = combat_team_base
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Heroes
+      Item = Melee
+combat_team_melee_with_dlg
+  Include = combat_team_melee
+  MakeThemWithRaid
+    Raid = raid_base_with_dlg_guards
+combat_team_peasant
+  Include = combat_team_base
+  Owner = AIPlayer5
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Peasants
+combat_team_peasant_with_dlg
+  Include = combat_team_peasant
+  MakeThemWithRaid
+    Raid = raid_base_with_dlg_peasant
+combat_team_range
+  Include = combat_team_base
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Heroes
+      Item = Ranged
+combat_team_range_with_dlg
+  Include = combat_team_range
+  MakeThemWithRaid
+    Raid = raid_base_with_dlg_guards
+combat_team_sheeps
+  Include = combat_team_base
+  Owner = AIPlayer5
+  MakeSomeCombatTeam
+    Tags = Append
+      Item = Sheeps

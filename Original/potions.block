@@ -1,0 +1,116 @@
+﻿potion_base
+  Abstract = True
+  PotionType
+    WeightMultiplierByCount = 19*(1/(2^x))+1
+  UiDataGeneric
+potion_brainwash
+  Include = potion_base
+  PotionType
+    Weight = 50
+  UiDataGeneric
+    Title = spell_brainwash_capt
+    Icon = 6934119d9cd86b84eb4943f1dc4a3129
+potion_earth
+  Include = potion_base
+  PotionType
+    Weight = 100
+  UiDataGeneric
+    Icon = cc537723a848b7440ac01acf9c7bab4f
+    Title = spell_earth_capt
+potion_explosion
+  Include = potion_base
+  PotionType
+    Weight = 10
+  UiDataGeneric
+    Icon = bd0945138c4c7a349ae11035c0eb9c80
+    Title = spell_explosion_capt
+potion_gold
+  Include = potion_base
+  PotionType
+    Weight = 5
+  UiDataGeneric
+    Icon = b5899df9fd813af46a5b828eea26b7c4
+    Title = spell_gold_capt
+potion_healing
+  Include = potion_base
+  PotionType
+    Weight = 100
+  UiDataGeneric
+    Icon = 5f2115326777c4c48aef1f7590b74057
+    Title = spell_healing_capt
+potion_improvedungeon
+  Include = potion_base
+  PotionType
+    Weight = 100
+  UiDataGeneric
+    Icon = 7d8a7ac3106b5844881f2db2c0ed8eb4
+    Title = spell_improvedungeon_capt
+potion_perk
+  Include = potion_base
+  PotionType
+    Weight = 5
+    Perks = Append
+      Item
+        Perk = buff_perk_potion_damage
+        Weight = 50
+      Item
+        Perk = buff_perk_potion_health
+        Weight = 50
+      Item
+        Perk = buff_perk_potion_armor
+        Weight = 50
+      Item
+        Perk = buff_perk_potion_randomdeaddrop
+        Weight = 1
+      Item
+        Perk = buff_perk_potion_payday
+        Weight = 1
+      Item
+        Perk = buff_perk_potion_aspect_fire
+        Weight = 1
+      Item
+        Perk = buff_perk_potion_aspect_ice
+        Weight = 1
+      Item
+        Perk = buff_perk_potion_aspect_magic
+        Weight = 1
+      Item
+        Perk = buff_perk_potion_aspect_physical
+        Weight = 1
+      Item
+        Perk = buff_perk_potion_regeneration
+        Weight = 1
+  UiDataGeneric
+    Icon = 9a7cca574ad753d4fba8e79f7527dcc1
+    Title = spell_perk_capt
+    ShowAdditionalResearchInfo = True
+    Description = ""
+    Short = spell_perk_desc
+potion_poison
+  Include = potion_base
+  PotionType
+    Weight = 50
+  UiDataGeneric
+    Icon = de5d6563072307c4cb771b9a6668226b
+    Title = spell_poison_capt
+potion_slimedoor
+  Include = potion_base
+  PotionType
+    Weight = 20
+  UiDataGeneric
+    Icon = b5e4060223880a8439283b9fc4820b5b
+    Title = spell_slimedoor_capt
+potion_speed
+  Include = potion_base
+  PotionType
+    Weight = 100
+  UiDataGeneric
+    Icon = a3419367c759dbc4f844dbc4bd324d1b
+    Title = spell_speed_capt
+potion_strength
+  Include = potion_base
+  PotionType
+    Weight = 50
+  UiDataGeneric
+    Icon = 681cdefa342101944a67be385eccdd2f
+    Title = spell_strength_capt

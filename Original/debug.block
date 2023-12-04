@@ -1,0 +1,62 @@
+﻿debug_overlay_buffs
+  DebugOverlayBuffs
+    Name = Buffs
+    Category = Brain
+debug_overlay_build_queue
+  GimmickBuildOrderOverlay
+    Name = Gimmick Build Queue
+    Category = Brain
+debug_overlay_currency_storage
+  InternalCurrencStorageDebugOverlay
+    Name = Currency Storage
+    Category = Brain
+debug_overlay_needs
+  DebugNeedOverlay
+    Name = Needs
+    Category = Brain
+debug_overlay_production
+  ProductionDebugOverlay
+    Name = Production
+    Category = Brain
+debug_overlay_skill_effects
+  DebugOverlaySkillTargetSensor
+    Name = Skill Effects
+    Category = Brain
+debug_overlay_skill_targets
+  SkillTargetOverlay
+    Name = Skill Targets
+    Category = Brain
+unit_orc_superhero
+  Include = unit_orc
+  Combat
+    Unkillable = True
+  Attack
+    AttackDamageAmount = 99999
+  HiringInfo
+    FocusPoints = 0
+  Mover
+    Speed = 6
+  MonsterPayday
+  BuffResistances
+    EffectResistences = -1
+  MonsterNeedData
+    NoAngerGeneration = True
+  LevelUp
+    ChangeIntoTemplate = 
+  ImpactEffects
+  UiDataUnit
+    Portrait = 15a728bf28fbc0c43b4532c923f49829
+    Icon = 15a728bf28fbc0c43b4532c923f49829
+unit_orc_superhero_no_move
+  Include = unit_orc_superhero
+  RemovedComponent = GoofAround
+  RemovedComponent = ThinkBrainBase
+  OnlyWait
+debug_overlay_current_activities
+  BrainDebugOverlayComponent
+    Name = Current Brain Activities
+    Category = Brain
+debug_overlay_hero_missions
+  HeroMissionDebugOverlay
+    Name = Hero Missions
+    Category = Brain

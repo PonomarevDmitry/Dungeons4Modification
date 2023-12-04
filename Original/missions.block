@@ -1,0 +1,33 @@
+﻿heromission
+  Include = raid_base
+  DebugIcon = sv_label_3
+  HeroMission
+    EnemyPlayer = SinglePlayer
+    Goals
+      Item = DestroyDungeonheart
+  Whiteboard
+  ScriptVariableContainer
+heromission_debug
+  Include = heromission
+  HeroMission
+    Goals
+heromission_destroyheart
+  Include = heromission
+  HeroMission
+    Goals
+      Item = DestroyDungeonheart
+    EnemyPlayer = SinglePlayer
+heromission_guardspawner
+  Include = heromission
+  HeroMission
+    Goals
+      Item = GuardObject
+        TargetObject = Entity||GuardTarget|
+      Item = DestroyDungeonheart
+  ScriptVariableContainer
+heromission_outpostduty
+  Include = heromission
+  HeroMission
+    Goals
+      Item = OutpostRoomDuty
+        OutpostRoom = Entity||OutpostRoom|

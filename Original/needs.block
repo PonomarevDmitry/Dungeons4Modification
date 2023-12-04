@@ -1,0 +1,94 @@
+﻿need_base
+  Abstract = True
+  MonsterNeedType
+need_bath
+  Include = need_base
+  PrefabReference
+    ClientPrefab = 00000000000000000000000000000000
+  MonsterNeedType
+    AssosiatedCurrencyManager = ManaManager
+    ProtestSignPrefab = 8655353aeb66bb44dbc66f70ab832ae8
+    AngerNotification = notification_creature_relaxpool
+  UiDataGeneric
+    Icon = 13793c68ae09aa34c8359c2e73efa931
+    AlternativeIcon = 00000000000000000000000000000000
+    Title = ui_need_bath_capt
+need_dance
+  Include = need_base
+  PrefabReference
+    ClientPrefab = 00000000000000000000000000000000
+  UiDataGeneric
+    Icon = c2f8bd4401d640b4e83eb7c7fd7b404c
+    Title = ui_need_dance_capt
+  MonsterNeedType
+    ProtestSignPrefab = 74b037faa50389d44ae385c4544e4f14
+need_healing
+  Include = need_base
+  PrefabReference
+    ClientPrefab = 00000000000000000000000000000000
+  UiDataGeneric
+    Icon = cfa7c24e697942a448f0a33acbe857e5
+    Title = ui_need_healing_capt
+  MonsterNeedType
+    ProtestSignPrefab = 6fb614224530c974699141429eb2ca4f
+    ExcludeFromNeedPause = True
+need_hunger
+  Include = need_base
+  PrefabReference
+    ClientPrefab = 00000000000000000000000000000000
+  MonsterNeedType
+    AssosiatedCurrencyManager = GuruManager
+    ProtestSignPrefab = f54545e660289444eadba079691be9ce
+    AngerNotification = notification_creature_hungry
+  UiDataGeneric
+    Icon = c2d33a53da9e2c3429854a9f5123a6df
+    Title = ui_need_hunger_capt
+need_sleep
+  Include = need_base
+  PrefabReference
+    ClientPrefab = 00000000000000000000000000000000
+  UiDataGeneric
+    Icon = e151895243a076c4b943ac0d26891805
+    Title = ui_need_sleep_capt
+  MonsterNeedType
+    ProtestSignPrefab = 223cf30547f748c4e9f0df2b0fb2b4d9
+    AngerNotification = notification_creature_sleeping
+need_thirst
+  Include = need_base
+  PrefabReference
+    ClientPrefab = 00000000000000000000000000000000
+  MonsterNeedType
+    AssosiatedCurrencyManager = BeerManager
+    ProtestSignPrefab = 9a619d485eeae544888b1ad088cf6c12
+    AngerNotification = notification_creature_thirsty
+  UiDataGeneric
+    Icon = a824331ceaa37b14c9aae8e7074b4a03
+    Title = ui_need_thirst_capt
+need_torture
+  Include = need_base
+  PrefabReference
+    ClientPrefab = 00000000000000000000000000000000
+  UiDataGeneric
+    Icon = d80dde358b1f9c34a8681b0fa9637980
+    Title = ui_need_torture_capt
+  MonsterNeedType
+    ProtestSignPrefab = 903bfba05e0f7014897a59084aa63469
+need_train
+  Include = need_base
+  PrefabReference
+    ClientPrefab = 00000000000000000000000000000000
+  UiDataGeneric
+    Icon = 62fce33589600d54d81fe8a25a200f84
+    Title = ui_need_train_capt
+  MonsterNeedType
+    ProtestSignPrefab = fccec3e42a5870f488b2accaa523828d
+need_worship
+  Include = need_base
+  PrefabReference
+    ClientPrefab = 00000000000000000000000000000000
+  UiDataGeneric
+    Icon = 2dff7e8e94fb06746ae20afb0955cb05
+    Title = ui_need_worship_capt
+  MonsterNeedType
+    ProtestSignPrefab = 358c2b32937db0c4aa65412cec8005ba
+    AngerNotification = notification_creature_worship
