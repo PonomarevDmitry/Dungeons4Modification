@@ -17238,7 +17238,6 @@ anim_skill_summon_dungeonlord
   SimpleSkillDefinition
     Conditions = Append
       Item = SkillMasterNeedsLevel
-      Item = SkillNeedsLineOfWalkToOwnUnit
     Effects
       Item
         EffectTarget
@@ -17330,7 +17329,6 @@ anim_skill_summon_dungeonlord
     TargetPartnerSlot
       Name = target
       Template = anim_skill_summon_dungeonlord
-  SkillNeedsLineOfWalkToOwnUnit
 anim_skill_summon_frog
   Include = anim_skill_summon
   RemovedComponent = SkillAiTargetSelectionSelf

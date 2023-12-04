@@ -1612,8 +1612,6 @@ anim_spell_pitfiend
           Template = 
         Effect = skill_effect_pitfiend
     AlternativeModule = SkillAlternativeDismissSummon
-    Conditions = Append
-      Item = SkillNeedsLineOfWalkToOwnUnit
     UseCountStat = stat_used_spells
   SpellSkillVisualizationModule
     UseAnimationTime = True
@@ -1701,7 +1699,6 @@ anim_spell_pitfiend
   SkillConditionWalkable
   Spell
     HotKey = HotKeys/Spell_10
-  SkillNeedsLineOfWalkToOwnUnit
 anim_spell_poison
   Include = anim_spell_base
   CasActorAnimation
@@ -1871,7 +1868,6 @@ anim_spell_portal
         Name = 
         Template = 
     Conditions = Append
-      Item = SkillNeedsLineOfWalkToOwnUnit
       Item = SkillTargetOnlyOutside
     Range
       Source = Custom
@@ -1963,8 +1959,6 @@ anim_spell_portal
     TutorialTag = Spell_Portal
     ShowAdditionalResearchInfo = True
     Short = spell_portal_essn
-  SkillNeedsLineOfWalkToOwnUnit
-    Range = 16
 anim_spell_portal.effect_create_portals
   SimpleSkillEffect
     TargetSelector = SkillSingleTarget
