@@ -2985,6 +2985,8 @@ skill_effect_potion_heal
       Item = type_demon
       Item = type_protagonist
       Item = type_snot
+      Item = type_undead
+      Item = type_undead_minion
   SkillEntityFilterNeedsEntityType
     EntityType = type_unit
   SkillEntityFilterHaveAllComponents
