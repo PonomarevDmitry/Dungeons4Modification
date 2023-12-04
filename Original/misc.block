@@ -2187,12 +2187,12 @@ player_playable
   Include = player_base
   DigManager
   ImpersonateManager
-    FocusPointsMax = 20
+    FocusPointsMax = 5
   JobManager
   ManaManager
     CarriedTemplate = mana_carried
-    CarryMax = 1000000
-    WorkerCarryCapacity = 50000
+    CarryMax = 100000
+    WorkerCarryCapacity = 500
     Aspects
       Item = aspect_laser
     NotEnoughError = not_enough_mana
@@ -2204,9 +2204,9 @@ player_playable
     DefaultTransferVisuals = default_transfer_mana
   GoldManager
     CarriedTemplate = gold_carried
-    CarryMax = 1000000
-    WorkerCarryCapacity = 50000
-    GlobalCapacity = 10000000
+    CarryMax = 100000
+    WorkerCarryCapacity = 500
+    GlobalCapacity = 1000
     GlobalCurrent = 750
     Aspects
       Item = aspect_laser
@@ -2220,14 +2220,14 @@ player_playable
     GemChanceBlackStone = 3
     DefaultTransferVisuals = default_transfer_gold
   ToolboxManager
-    CarryMax = 1000000
+    CarryMax = 100
     CollectibleTemplates
       Item = toolbox_collectible
     PileRoomId = roomid_workshop
     Piles
       Item = toolbox_pile_2x1
       Item = toolbox_pile_1x1
-    WorkerCarryCapacity = 10
+    WorkerCarryCapacity = 4
     Aspects
       Item = aspect_laser
     NotEnoughError = not_enough_toolboxes
@@ -2237,19 +2237,18 @@ player_playable
       Item = aspect_laser
     NotEnoughError = not_enough_evilness
     GoldEquivalent = 10
-    GlobalEvilnessFactor = 5
     OverworldOrbTemplate = evilness_orb
     CarriedTemplate = evilness_carried
-    WorkerCarryCapacity = 50000
-    CarryMax = 1000000
+    WorkerCarryCapacity = 500
+    CarryMax = 100000
     NotificationFull = notification_full_evilness
     ProxyVisuals = Append
       Item = f93b09f497e4e6d46b1e9f6a67af1c97
     DefaultTransferVisuals = default_transfer_evilness
   ThroneRoomSpawner
     WorkerTemplate = unit_snot
-    MaxWorker = 20
-    WorkerRespawnTime = 5
+    MaxWorker = 8
+    WorkerRespawnTime = 30
   FillManager
   EvilHandManager
     Template = evil_hand
@@ -2263,7 +2262,7 @@ player_playable
   FightAlarmManager
   NotificationManager
   BeerManager
-    CarryMax = 1000000
+    CarryMax = 100
     WorkerCarryCapacity = 1
     CollectibleTemplates
       Item = beer_collectible
@@ -2281,7 +2280,7 @@ player_playable
     WorkerCarryCapacity = 1
     CollectibleTemplates
       Item = guru_collectible
-    CarryMax = 1000000
+    CarryMax = 100
     DespawnGuruWhenPayOutsiderOnceEffect = 00927a92c2484424f8781727cc9d99ed
     Aspects
       Item = aspect_laser
@@ -2290,13 +2289,13 @@ player_playable
     ConstructionAreaTemplate = player_playable.construction_area
   ResurrectionManager
   BatteryManager
-    CarryMax = 1000000
+    CarryMax = 25
     CollectibleTemplates
       Item = battery_collectible
     Piles
       Item = gimmick_workshop_battery
     PileRoomId = roomid_workshop
-    WorkerCarryCapacity = 10
+    WorkerCarryCapacity = 4
     Aspects
       Item = aspect_laser
     NotEnoughError = not_enough_batteries
@@ -2340,8 +2339,8 @@ player_playable
   EnvironmentalInteractionManager
   PotionManager
     PileRoomId = roomid_potionlodge
-    CarryMax = 1000000
-    WorkerCarryCapacity = 10
+    CarryMax = 25
+    WorkerCarryCapacity = 5
     CollectibleTemplates = Append
       Item = potion_collectible
     Piles = Append
@@ -2850,6 +2849,7 @@ world
         EntityType = type_hero_gold
         Evilness = 35
   BlockedDungeonTileManager
+  ModManagerServer
 world.buff_target_handler_entitylist
   BuffTargetEntityListHandler
 world.buff_target_handler_entitytag

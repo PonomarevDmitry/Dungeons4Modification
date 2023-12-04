@@ -151,6 +151,11 @@ room_arena
     Region = Inside
     OnlyLocal = True
     Sfx = atmo_room_arena_loop
+room_artifact
+  Include = room_base
+  Room
+    RoomId = roomid_artifact
+  UiDataGeneric
 room_base
   Abstract = True
   Room
@@ -409,7 +414,8 @@ room_guardroom
     PatroleInteraction = interaction_patrol
     GuardTag = tag_guarding_unit
     SignalFlag = room_guardroom.signal_flag
-    SignalFlagOffset = 1.5 2.5 180
+    SignalFlagOffset = 0 0 180
+    SignalFlagBase = gimmick_guardroom_flag
   Room
     GoldCostPerTile = 30
     RoomId = roomid_guardroom
@@ -1438,6 +1444,7 @@ room_torturechamber
     Description = room_torture_desc
     Flavour = room_torture_flav
     TutorialTag = Build_Torturechamber
+    ResourceStoredIcon = 6955de08e841f3143a3d8eb32f28dc57
   BuffAura
     Auras = Append
       Item
@@ -1467,6 +1474,10 @@ room_torturechamber
     Region = Inside
     OnlyLocal = True
     Sfx = atmo_room_torturechamber_room_atmo_loop
+  RoomTortureCache
+  GeneralStorageRoom
+    DefaultCapacityPerTile = 0
+    CapacityTileCount = None
 room_totem
   Include = room_base
   Room

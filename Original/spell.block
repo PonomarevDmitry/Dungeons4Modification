@@ -1731,6 +1731,7 @@ anim_spell_poison
             Item = Start
           OutputNodes
             Item = cast_loop
+          AllowFastAbort = False
         Item = CasActorAnimationClipNode
           TargetSlot = hand
           Clip = cast_loop
@@ -1739,7 +1740,6 @@ anim_spell_poison
             Item = prepare_time
           OutputNodes
             Item = cast
-            Item = spawn_effect
         Item = CasActorAnimationClipNode
           TargetSlot = hand
           Clip = cast
@@ -1747,17 +1747,36 @@ anim_spell_poison
           InputNodes
             Item = cast_loop
           OutputNodes
+            Item = sfx
         Item = CasActorAnimationClipNode
           TargetSlot = effect
           Clip = spawn
           Name = spawn_effect
           InputNodes
-            Item = cast_loop
+            Item = effect_loop
           OutputNodes
+        Item = CasActorAnimationLoopGateNode
+          Name = effect_loop
+          InputNodes
+            Item = sfx
+          OutputNodes
+            Item = spawn_effect
+          TimeSource = spawn_effect
+        Item = CasActorAnimationClipNode
+          Name = sfx
+          InputNodes
+            Item = cast
+          OutputNodes
+            Item = effect_loop
+          TargetSlot = effect
+          Clip = sfx
       Events = Append
         Item
-          Name = on_effect
-          Trigger = 8a9cfbb56da73b84eb848ebe270a0a98
+          Name = on_start_effect
+          Trigger = f5e8155e720da7342be9a7cb8bb20e35
+        Item
+          Name = on_end_effect
+          Trigger = b75e561be80a2284ca55615cf890ba2c
   Spell
     IsPotion = True
     VisualArea
@@ -1784,14 +1803,31 @@ anim_spell_poison
     Effects = Append
       Item
         StartTrigger
-          Name = on_effect
+          Name = on_start_effect
           Template = anim_spell_poison
         Effect = skill_effect_slow_spell_poison
+        EndTrigger
+          Name = on_end_effect
+          Template = anim_spell_poison
       Item
         StartTrigger
-          Name = on_effect
+          Name = on_start_effect
           Template = anim_spell_poison
         Effect = skill_effect_spell_poison
+        EndTrigger
+          Name = on_end_effect
+          Template = anim_spell_poison
+      Item
+        EffectTarget
+          Name = 
+          Template = 
+        StartTrigger
+          Name = on_start_effect
+          Template = anim_spell_poison
+        EndTrigger
+          Name = on_end_effect
+          Template = anim_spell_poison
+        Effect = skill_effect_enviromental_spell_poison
     Costs = Append
       Item = SkillUsePotion
     UseCountStat = stat_used_potions
@@ -1802,7 +1838,16 @@ anim_spell_poison
     SpellPreperationTime
       Name = prepare_time
       Template = anim_spell_poison
-    UseAnimationTime = True
+    UseAnimationTime = False
+    CastTimeSource
+      Source = Dynamic
+      CustomValue = 0
+      DynamicValueSource
+        Name = poison_duration
+        Template = evil_hand
+    SpellCastingTime
+      Name = effect_loop
+      Template = anim_spell_poison
   UiDataGeneric
     Icon = 582960a32bd4339418ee1378ace18481
     Title = spell_poison_capt

@@ -110,9 +110,6 @@ gem_collectible
       Item
         TargetCurrency = GoldManager
         PointAmount = 5000
-      Item
-        TargetCurrency = FaithManager
-        PointAmount = 25000
     EvilInterestPriority = 1
   UiDataMinimapIcon
     Icon = f0d0fec04502f734388998746c1dcd43

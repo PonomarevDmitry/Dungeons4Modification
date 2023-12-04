@@ -624,7 +624,7 @@ res_demons.stage_1
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 2
   BuffChangeUnitDamageResearchBuffStrength
     StrengthChange = 0.01
 res_demons.stage_10
@@ -659,7 +659,7 @@ res_demons.stage_10
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -704,7 +704,7 @@ res_demons.stage_2
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -737,7 +737,7 @@ res_demons.stage_3
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -787,7 +787,7 @@ res_demons.stage_4
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -832,7 +832,7 @@ res_demons.stage_5
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -878,7 +878,7 @@ res_demons.stage_6
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -925,7 +925,7 @@ res_demons.stage_7
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -964,7 +964,7 @@ res_demons.stage_8
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -1009,7 +1009,7 @@ res_demons.stage_9
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -1159,7 +1159,7 @@ res_dungeon.stage_1
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 4
   BuffResearchUnlock
     Unlocks
       Item = res_evilvault
@@ -1208,7 +1208,7 @@ res_dungeon.stage_10
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
   UiDataResearchStage
     Description = res_dungeon_X_desc
   BuffChangeUnitDamageResearchBuffStrength
@@ -1241,7 +1241,7 @@ res_dungeon.stage_2
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 4
   BuffResearchUnlock
     Unlocks
       Item = res_guardroom
@@ -1291,7 +1291,7 @@ res_dungeon.stage_3
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 3
   BuffResearchUnlock
     Unlocks
       Item = res_throneroom.stage_3
@@ -1338,7 +1338,7 @@ res_dungeon.stage_4
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 2
   BuffResearchUnlock
     Unlocks
       Item = res_guardroom.stage_3
@@ -1385,7 +1385,7 @@ res_dungeon.stage_5
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 2
   BuffResearchUnlock
     Unlocks
       Item = res_snot.stage_5
@@ -1431,7 +1431,7 @@ res_dungeon.stage_6
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 2
   BuffResearchUnlock
     Unlocks
       Item = res_snot.stage_6
@@ -1477,7 +1477,7 @@ res_dungeon.stage_7
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 2
   BuffResearchUnlock
     Unlocks
       Item = res_workshop.stage_5
@@ -1520,7 +1520,7 @@ res_dungeon.stage_8
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 2
   BuffResearchUnlock
     Unlocks
       Item = res_workshop.stage_6
@@ -1562,7 +1562,7 @@ res_dungeon.stage_9
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
   UiDataResearchStage
     Description = res_dungeon_X_desc
   BuffChangeUnitDamageResearchBuffStrength
@@ -2183,6 +2183,7 @@ res_guardroom.stage_1
     Unlocks
       Item = room_guardroom
       Item = gimmick_guardroom
+      Item = gimmick_guardroom_flag
   UiDataResearchStage
     Description = res_common_unlockroom
 res_guardroom.stage_2
@@ -2657,7 +2658,7 @@ res_horde.stage_1
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 3
   BuffChangeUnitDamageResearchBuffStrength
     StrengthChange = 0.01
 res_horde.stage_10
@@ -2688,7 +2689,7 @@ res_horde.stage_10
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -2734,7 +2735,7 @@ res_horde.stage_2
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 2
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -2777,7 +2778,7 @@ res_horde.stage_3
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -2829,7 +2830,7 @@ res_horde.stage_4
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -2878,7 +2879,7 @@ res_horde.stage_5
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -2928,7 +2929,7 @@ res_horde.stage_6
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -2972,7 +2973,7 @@ res_horde.stage_7
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -3015,7 +3016,7 @@ res_horde.stage_8
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -3053,7 +3054,7 @@ res_horde.stage_9
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -4128,12 +4129,12 @@ res_potions_complex.stage_2
               ValueType = Constant
               Value = 200
       Item
-        TargetTemplate = skill_effect_spell_poison.explosion
+        TargetTemplate = skill_effect_enviromental_spell_poison.explosion
         Properties
           Item
             Target
               Name = area
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4141,7 +4142,7 @@ res_potions_complex.stage_2
           Item
             Target
               Name = damage_min
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4149,7 +4150,7 @@ res_potions_complex.stage_2
           Item
             Target
               Name = damage_max
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4303,12 +4304,12 @@ res_potions_complex.stage_3
               ValueType = Constant
               Value = 200
       Item
-        TargetTemplate = skill_effect_spell_poison.explosion
+        TargetTemplate = skill_effect_enviromental_spell_poison.explosion
         Properties
           Item
             Target
               Name = area
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4316,7 +4317,7 @@ res_potions_complex.stage_3
           Item
             Target
               Name = damage_min
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -4324,7 +4325,7 @@ res_potions_complex.stage_3
           Item
             Target
               Name = damage_max
-              Template = skill_effect_spell_poison.explosion
+              Template = skill_effect_enviromental_spell_poison.explosion
             Operator = Absolute
             Value
               ValueType = Constant
@@ -7309,7 +7310,7 @@ res_undead.stage_1
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 2
   BuffChangeUnitDamageResearchBuffStrength
     StrengthChange = 0.01
 res_undead.stage_10
@@ -7339,7 +7340,7 @@ res_undead.stage_10
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -7383,7 +7384,7 @@ res_undead.stage_2
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -7420,7 +7421,7 @@ res_undead.stage_3
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -7468,7 +7469,7 @@ res_undead.stage_4
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -7526,7 +7527,7 @@ res_undead.stage_5
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -7551,7 +7552,7 @@ res_undead.stage_6
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -7613,7 +7614,7 @@ res_undead.stage_7
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -7665,7 +7666,7 @@ res_undead.stage_8
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
@@ -7703,7 +7704,7 @@ res_undead.stage_9
         Property = ImpersonateManager.FocusPointsMax
         Value
           ValueType = Constant
-          Value = 5
+          Value = 1
       Item
         Property = LevelUp.MaxLevel
         Value
