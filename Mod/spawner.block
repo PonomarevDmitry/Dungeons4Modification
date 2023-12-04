@@ -534,7 +534,7 @@ spawner_template_overworld
     NotificationLost = notification_spawnerlost
     NotificationConquered = notification_spawnerconquered
   FogOfWarUncover
-    Radius = 30
+    Radius = 700
   OutbuildingBuilder
   EvilificationInfluencer
     Strength = 1

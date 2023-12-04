@@ -167,6 +167,7 @@ outpost_addon_turret
   Brain
   FogOfWarHide
   FogOfWarUncover
+    Radius = 700
   PhxStimulus
     Sensor = PhxCircleSensor
       Radius = 1.17

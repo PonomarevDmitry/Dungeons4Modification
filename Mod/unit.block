@@ -3444,6 +3444,7 @@ hero_vill_tower_base
     SelectableWhileDead = False
   Brain
   FogOfWarUncover
+    Radius = 700
   CloseCombatTracker
   ServerAnimation
   GUIStatusOverhead
@@ -4677,6 +4678,7 @@ unit_base
   Draggable
   FogOfWarHide
   FogOfWarUncover
+    Radius = 700
   AggroCanAttackTracker
   DestroyWhenKilled
     TimeUntilDespawn = 60
@@ -6838,7 +6840,7 @@ unit_monster_base
     NotificationFirstTimeDied = notification_creature_lost
     NotificationOverride = notification_creature_lost
   FogOfWarUncover
-    Radius = 40
+    Radius = 700
   UnitPerkSlot
   Interactor
     InteractOnDrop = True

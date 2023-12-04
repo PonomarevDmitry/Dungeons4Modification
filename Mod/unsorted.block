@@ -315,11 +315,13 @@ destroyable_object_with_loot
             Location = PosHead||ScriptEntity|0 0 0
 fog_of_war_uncover
   FogOfWarUncover
+    Radius = 700
     IgnoreHeights = True
   Location
 fog_of_war_uncover_inside
   Location
   FogOfWarUncoverInside
+    Radius = 700
 hero_peasant_base
   Abstract = True
   Include = unit_combat_base

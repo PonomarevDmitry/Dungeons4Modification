@@ -1253,6 +1253,7 @@ entrance_outside
     VisualSelectionRadius = 8.470361
     IsMultiSelectable = False
   FogOfWarUncover
+    Radius = 700
   ServerAnimation
   Puppet
   Interactor
@@ -1296,6 +1297,7 @@ entrance_outside_dwarfmine
     SelectionRadius = 4
     IsMultiSelectable = False
   FogOfWarUncover
+    Radius = 700
   ServerAnimation
   Puppet
   Interactor
@@ -1338,6 +1340,7 @@ entrance_outside_dwarfs
     SelectionRadius = 4
     IsMultiSelectable = False
   FogOfWarUncover
+    Radius = 700
   ServerAnimation
   Puppet
   Interactor
@@ -1390,6 +1393,7 @@ entrance_outside_mausoleum
     SelectionRadius = 4
     IsMultiSelectable = False
   FogOfWarUncover
+    Radius = 700
   ServerAnimation
   Puppet
   Interactor

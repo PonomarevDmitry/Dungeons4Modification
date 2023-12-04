@@ -2056,7 +2056,7 @@ anim_spell_portal.portal_outside
     SelectionColliderHeight = 5.8
   FogOfWarHide
   FogOfWarUncover
-    Radius = 7
+    Radius = 700
   LowPriorityFightTarget
   UiDataGeneric
     Icon = 3c8c9f53d91dc5f42aa026ad22a8c5ee

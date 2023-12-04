@@ -2071,7 +2071,7 @@ plot_evil_perk
   ScriptVariableContainer
     Variables = Append
   FogOfWarUncover
-    Radius = 50
+    Radius = 700
   PhxStimulus
     Sensor = PhxCircleSensor
       Radius = 6
@@ -3214,6 +3214,7 @@ plot_room_stonesocket_gimmick_attackable
     MaxHealth = 6000
     RegenerationRateOutsideCombat = 10
   FogOfWarUncover
+    Radius = 700
   LowPriorityFightTarget
   PhxStimulus
     Sensor = PhxCircleSensor
