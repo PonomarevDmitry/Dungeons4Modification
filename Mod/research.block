@@ -1160,6 +1160,11 @@ res_dungeon.stage_1
         Value
           ValueType = Constant
           Value = 5
+      Item
+        Property = EvilnessManager.GlobalEvilnessFactor
+        Value
+          ValueType = Constant
+          Value = 5
   BuffResearchUnlock
     Unlocks
       Item = res_evilvault
