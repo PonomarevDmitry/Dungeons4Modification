@@ -2241,7 +2241,6 @@ player_playable
       Item = aspect_laser
     NotEnoughError = not_enough_evilness
     GoldEquivalent = 10
-    GlobalEvilnessFactor = 5
     OverworldOrbTemplate = evilness_orb
     CarriedTemplate = evilness_carried
     WorkerCarryCapacity = 50000
@@ -2260,6 +2259,7 @@ player_playable
     MultipickAreaCurve = 0.001647949 -0.00201416 0.1595449 0.1595449|0.502592 0.06666667 0.4541329 0.4541329|0.852454 1 0.004628657 0.004628657|0.9499785 0.91875 0.02306642 0.02306642|1.018059 1 0.3083664 0.3083664
   GameOverManager
   UnitEvilnessBonus
+    GlobalEvilnessFactor = 5
   PlayerStats
     Evil = True
     LifeDrainBonusFactor = 0.25

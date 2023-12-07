@@ -1154,14 +1154,14 @@ res_dungeon.stage_1
       Item = BuffChangeUnitDamageResearchBuffStrength
     TargetSelector = bts_player_own
   BuffProperties
-    Properties
+    Properties = Append
       Item
         Property = ThroneRoomSpawner.MaxWorker
         Value
           ValueType = Constant
           Value = 5
       Item
-        Property = EvilnessManager.GlobalEvilnessFactor
+        Property = UnitEvilnessBonus.GlobalEvilnessFactor
         Value
           ValueType = Constant
           Value = 5
