@@ -819,7 +819,7 @@ evilperk_horde_health
   ChallengeProgress
 evilperk_horde_health.buff
   Buff
-    TargetSelector = bts_horde
+    TargetSelector = bts_owner_all_units
     Parts = Append
       Item = BuffProperties
   BuffProperties
@@ -875,7 +875,7 @@ evilperk_horde_xp.buff
         Parameter
           ValueType = Constant
           Value = 400
-    TargetSelector = bts_horde
+    TargetSelector = bts_owner_all_units
   BuffProperties
     Properties = Append
       Item
