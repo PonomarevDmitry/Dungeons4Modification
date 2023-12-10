@@ -875,7 +875,7 @@ evilperk_horde_xp.buff
         Parameter
           ValueType = Constant
           Value = 400
-    TargetSelector = bts_owner_all_units
+    TargetSelector = bts_moster
   BuffProperties
     Properties = Append
       Item
