@@ -3306,7 +3306,7 @@ res_naga.stage_2
         Property = Attack.SkillRangeBase
         Value
           ValueType = Constant
-          Value = 2
+          Value = 20
 res_naga.stage_3
   Buff
     Parts
@@ -3335,7 +3335,7 @@ res_naga.stage_3
         Property = Combat.RegenerationRateBonusFactor
         Value
           ValueType = Constant
-          Value = 0.25
+          Value = 2
 res_naga.stage_4
   Buff
     Parts
@@ -3364,7 +3364,7 @@ res_naga.stage_4
         Property = Attack.SkillBonusAttacks
         Value
           ValueType = Constant
-          Value = 1
+          Value = 5
 res_naga.stage_5
   Buff
     Parts = Append
