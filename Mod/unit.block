@@ -10014,7 +10014,7 @@ unit_snot
     SlowWhenTransportingFactor = 1
     BattleSpeed = 9
   GoldDigBrain
-    DiggingGoldCapacity = 100
+    DiggingGoldCapacity = 2000
     DigAnimation = anim_snot_dig
     DigDamageBonusPerSecond = 2000
   CustomUnitName
