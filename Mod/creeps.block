@@ -245,6 +245,10 @@ creep_manaling
     SwitchEvent
       Name = on_visual_change
       Template = anim_manaling_visual_change
+  UiDataUnit
+    Portrait = c9d4c8e3699a48d4ba971aad5e2242c1
+    Icon = 23029e1c1ca1b2b43b16b2df2ea0c6e8
+    Title = unit_npc_manaling_capt
 creep_manaling.buff_level_up
   Buff
     Parts = Append

@@ -590,6 +590,17 @@ bts_demon
   BuffTargetEntityType
     AllTargetTypes
       Item = type_demon
+bts_demon_no_pitfiend
+  Include = bts_base
+  BuffTargetSelector
+    TargetConditions = Append
+      Item = BuffTargetEntityTypeStatic
+  BuffTargetEntityType
+    AllTargetTypes
+      Item = type_demon
+    NonTargetTypes
+      Item = type_unit_pitfiend
+    Condition = Any
 bts_door
   Include = bts_base
   BuffTargetSelector
@@ -1047,6 +1058,19 @@ bts_player_demon
     Condition = Any
   BuffTargetPlayer
     Condition = Any
+bts_player_demon_no_pitfiend
+  Include = bts_player_own
+  BuffTargetSelector
+    TargetConditions = Append
+      Item = BuffTargetEntityTypeStatic
+  BuffTargetEntityType
+    AllTargetTypes
+      Item = type_demon
+    Condition = Any
+    NonTargetTypes
+      Item = type_unit_pitfiend
+  BuffTargetPlayer
+    Condition = Any
 bts_player_door
   Include = bts_base
   BuffTargetSelector
@@ -1276,6 +1300,15 @@ bts_player_hero
     AllTargetTypes = Append
       Item = type_hero
     Condition = Any
+bts_player_hero_prison
+  Include = bts_player_hero
+  BuffTargetSelector
+    TargetConditions = Append
+  BuffTargetEntityType
+    AnyTargetTypes
+      Item = type_hero
+      Item = type_prison
+    AllTargetTypes
 bts_player_horde
   Include = bts_player_own
   BuffTargetSelector

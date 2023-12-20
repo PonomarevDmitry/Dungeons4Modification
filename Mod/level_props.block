@@ -208,6 +208,13 @@ cameraregioneffect_common_falling_stone_light
   CameraRegionEffectServer
     DungeonMineEnabled = True
     DungeonNotMineEnabled = True
+cameraregioneffect_common_skir_snow
+  PrefabReference
+    ClientPrefab = 3c773db06e88e31468f798ca9835460b
+  CameraRegionEffectServer
+    Sound2dLoopedWhileEnabled = ""
+    OutsideEvilEnabled = False
+    OutsideGoodEnabled = True
 cameraregioneffect_common_skir_storm
   PrefabReference
     ClientPrefab = cfa20d1cf5ff5404eabce82b8ca2b3ee
@@ -221,6 +228,11 @@ cameraregioneffect_common_skir_storm
         Prefab = d82d09f938e8eac4a8cfd9b2335a645d
         SpawnAmountRange = 2.5 2.5
         LifetimeRange = 3 3
+cameraregioneffect_skir07sleep_night
+  CameraRegionEffectServer
+    Sound2dLoopedWhileEnabled = amb_night_sounds_loop
+    OutsideEvilEnabled = True
+    OutsideGoodEnabled = True
 common_skir_stones_of_finiteness
   ScriptContainer
     Actions
@@ -483,7 +495,7 @@ common_skir_storm_controller.storm_artefact_active
       Item = FillList
         List = EntityList||playerbuffs|
         Owner = SinglePlayer
-        Filter = Append
+        Filter
           Item = EntityListFilterEntityType
             EntityType = type_buff_main07storm
       Item = DestroyAllInSelectionGroup
@@ -522,17 +534,17 @@ common_skir_storm_controller.storm_artefact_inactive
       Item = FillList
         List = EntityList||playerbuffs|
         Owner = SinglePlayer
-        Filter = Append
+        Filter
           Item = EntityListFilterEntityType
             EntityType = type_buff_main07storm
       Item = DestroyAllInSelectionGroup
         SelectionGroup = EntityList||playerbuffs|
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareBool
             A = Bool||StormIsActive|False
             B = Bool|||True
-        ThenActions = Append
+        ThenActions
           Item = CreateBuff
             Buff = buff_main07storm_storm
             CreatedBuffVariable = Entity||StormBuffPlayers|
@@ -661,6 +673,10 @@ destroyable_object_crates_01
       Item = actor_gethit
   TakeDamageAnimation
     HitFromFront = anim_door_hit
+  CostFieldAdditionalWhileAlive
+    Area = PhxOBBSensor
+      HalfWidth = 1
+      HalfHeight = 1
 destroyable_object_crates_02
   Include = destroyable_object_crates_01
   PrefabReference
@@ -748,6 +764,10 @@ destroyable_object_statue_fighter
     MaxDistance = 25
   CasActorType
   LowPriorityFightTarget
+  CostFieldAdditionalWhileAlive
+    Area = PhxOBBSensor
+      HalfWidth = 1
+      HalfHeight = 1
 destroyable_object_statue_tanos
   Include = destroyable_object_statue_fighter
   PrefabReference
@@ -1107,7 +1127,7 @@ goal_common_skir_destroy_spawner.script_add
       Item = FillList
         List = EntityList||tempList|
         Owner = SinglePlayer
-        Filter = Append
+        Filter
           Item = EntityListFilterEntityType
             EntityType = type_spawner
           Item = EntityListFilterInRegion
@@ -1179,7 +1199,7 @@ goal_common_skir_destroy_spawner.script_remove
       Item = FillList
         List = EntityList||tempList|
         Owner = SinglePlayer
-        Filter = Append
+        Filter
           Item = EntityListFilterEntityType
             EntityType = type_spawner
           Item = EntityListFilterInRegion
@@ -1326,6 +1346,11 @@ plot_cage_unit_base
     Sensor = PhxCircleSensor
       Radius = 2.9
       Offset = 0 0
+  TakeDamageAnimation
+    HitFromFront = anim_door_hit
+  ServerAnimation
+    ProvidedActors
+      Item = actor_gethit
 plot_cage_unit_base_gnome
   Include = plot_cage_unit_base
   PrefabReference
@@ -2279,17 +2304,17 @@ plot_main02horde_construction_site_main
       Item = ForLoopAction
         LoopVariable = Int||num_states_cur|0
         LoopCounts = Int||num_states_max|0
-        Actions = Append
+        Actions
           Item = ChangeVisualRepresentation
             Visual = Entity||ScriptEntity|
             Version = Int||num_states_cur|0
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||num_states_cur|0
                 Op = less
                 B = Int||num_states_max|0
-            ThenActions = Append
+            ThenActions
               Item = Wait
                 Duration = Float||timer_change_phase|0
     Triggers = Append
@@ -2354,12 +2379,12 @@ plot_main13tanos_boss_destruction_stacked
       Item = ForLoopAction
         LoopVariable = Int||num_states_cur|0
         LoopCounts = Int||num_states_max|0
-        Actions = Append
+        Actions
           Item = ChangeVisualRepresentation
             Visual = Entity||ScriptEntity|
             Version = Int||num_states_cur|0
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||num_states_cur|0
                 Op = less
@@ -2367,7 +2392,7 @@ plot_main13tanos_boss_destruction_stacked
               Item = CompareInt
                 A = Int||num_states_cur|0
                 Op = greater
-            ThenActions = Append
+            ThenActions
               Item = Wait
                 Duration = Float||timer_change_phase|0
 plot_mana_shield
@@ -2544,7 +2569,7 @@ plot_protagonist_evil
   RemovedComponent = DestroyWhenKilled
   RemovedComponent = CurrencyConvertible
   PrefabReference
-    ClientPrefab = fff1e2f18b80aeb4d90e302a9e156f4b 2d4f7be170ad1c54a94d66242e6fcdcb ac2ee87cbc993124785c27fdf12bc1ac 0e13ce031115913429f247cd807650c8 2a56a9c90c14c0a488d47bdeb7e98e30
+    ClientPrefab = fff1e2f18b80aeb4d90e302a9e156f4b
   Owner = SinglePlayer
   Mover
     Speed = 3
@@ -2568,7 +2593,7 @@ plot_protagonist_evil
         Value = 360
       Item
         Name = dungeonlord_cost
-        Value = 100
+        Value = 150
       Item
         Name = dungeonlord_range
         Value = 20
@@ -2602,6 +2627,9 @@ plot_protagonist_evil
       Item
         Name = tentable_damage
         Value = 20
+      Item
+        Name = default_attack_area
+        Value = 0
     SkillArea = 15
     SkillRange = 1
   EvilHandInteractable
@@ -2679,7 +2707,6 @@ plot_protagonist_evil
     OverheadOffset = 2
     OverheadPingOffset = 2
   WanderRandom
-  WaitRandom
   OnlyGoofAround
   SimpleSkillMaster
     Skills = Append
@@ -2787,27 +2814,9 @@ plot_protagonist_evil
     PossibleStorages = Append
       Item = room_throneroom.corpse_type
   VisualRepresentation
-  VisualRepresentationBySkin
-    IndexBySkinId = Append
-      Item
-        SkinId = default
-        Index = 0
-      Item
-        SkinId = legacygood
-        Index = 1
-      Item
-        SkinId = legacyevil
-        Index = 2
-      Item
-        SkinId = sailor
-        Index = 3
-      Item
-        SkinId = defshorthair
-        Index = 4
-    SkinObjectName = thalya
-  VisualRepresentationSkinnedThalya
   EvilHandReaction
     ReactToHandAnimation = anim_react_hand
+  WaitRandom
 plot_protagonist_evil.buff_levelup
   Buff
     Parts
@@ -3020,107 +3029,107 @@ plot_room_secret_base_potion_random
       Item = ForLoopAction
         LoopVariable = Int||loop|0
         LoopCounts = Int||Amount|0
-        Actions = Append
+        Actions
           Item = SetRandomIntValue
             Destination = Int||random|0
             IntervalStart = 1
             IntervalEnd = 10
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||1
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
                 PerkType = buff_perk_potion_damage
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||2
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
                 PerkType = buff_perk_potion_health
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||3
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
                 PerkType = buff_perk_potion_armor
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||4
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
                 PerkType = buff_perk_potion_randomdeaddrop
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||5
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
                 PerkType = buff_perk_potion_payday
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||6
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
                 PerkType = buff_perk_potion_aspect_fire
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||7
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
                 PerkType = buff_perk_potion_aspect_ice
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||8
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
                 PerkType = buff_perk_potion_aspect_magic
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||9
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
                 PerkType = buff_perk_potion_aspect_physical
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||random|0
                 B = Int|||10
-            ThenActions = Append
+            ThenActions
               Item = SpawnSpecificPotion
                 Position = PosHead||ScriptEntity|0 0 0
                 PotionType = potion_perk
@@ -4382,111 +4391,111 @@ spawner_artifact_base
         StartDelay = Float|||1
     Actions = Append
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareBool
             A = Bool||useRandom|False
             B = Bool|||True
-        ThenActions = Append
+        ThenActions
           Item = SetRandomIntValue
             IntervalStart = 1
             IntervalEnd = 11
             Destination = Int||index|0
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||1
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_armor
             Location = PosHead||ScriptEntity|0 0 0
             Owner = Invalid
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||2
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_evilness
             Location = PosHead||ScriptEntity|0 0 0
             Owner = Invalid
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||3
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_evilness_improved
             Location = PosHead||ScriptEntity|0 0 0
             Owner = Invalid
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||4
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_gold
             Location = PosHead||ScriptEntity|0 0 0
             Owner = Invalid
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||5
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_gold_improved
             Location = PosHead||ScriptEntity|0 0 0
             Owner = Invalid
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||6
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_guru
             Location = PosHead||ScriptEntity|0 0 0
             Owner = Invalid
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||7
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_happy_horde
             Location = PosHead||ScriptEntity|0 0 0
             Owner = Invalid
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||8
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_mana
             Location = PosHead||ScriptEntity|0 0 0
             Owner = Invalid
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||9
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_spells
             Location = PosHead||ScriptEntity|0 0 0
             Owner = Invalid
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = CompareInt
             A = Int||index|0
             B = Int|||10
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = artifact_strength
             Location = PosHead||ScriptEntity|0 0 0

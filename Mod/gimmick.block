@@ -137,7 +137,7 @@ door_iron
         Item
           Value = 350
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 2
@@ -178,7 +178,7 @@ door_security
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 3
@@ -228,7 +228,7 @@ door_slime
         Value = 3
       Item
         Name = poison_strength
-        Value = 3
+        Value = 1
   EntityType
     Types
       Item = type_door_slime
@@ -301,7 +301,7 @@ door_wood
         Item
           Value = 250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 1
@@ -606,7 +606,7 @@ gimmick_brewery
       Item
         VisualId = 1
         ProductionAnimation = anim_gimmick_production_up
-    MaxSpeed = 5
+    MinDuration = 4
   CurrencyProductionModule
     ProductionOutput = BeerManager
     ProductionOutputPos = 2.75 3
@@ -721,6 +721,7 @@ gimmick_crypta
       Item
         Name = turn_cost
         Template = gimmick_crypta
+    TurnPositionOffset = 0.01 1.29 359.45
   GimmickStateTrigger
   CostFieldSpecific
     Bounds = -1 -1 3 3
@@ -748,6 +749,7 @@ gimmick_crypta
     CorpseType = room_crypta.ghost_storage_id
     RevivePercent = 100
     PreventProgressWithoutCorpse = False
+    ReviveLocationOffset = 0.01 1.29 359.45
   Workstation
     Definition = workstation_crypta
   ServerAnimation
@@ -1724,7 +1726,7 @@ gimmick_powerchamber
         Item
           Value = 750
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_powerchamber_gimmick
       Time = 20
   CostFieldSpecific
@@ -1981,7 +1983,7 @@ gimmick_totem
           Name = auto_reveive
           Template = gimmick_totem
         Fuel = BatteryManager
-        Duration = 300000
+        Duration = 300
         VisualOverride = 1
         ActivateAnimation = anim_gimmick_battery_activate
         FuelPartnerSlot
@@ -2124,7 +2126,9 @@ gimmick_vortex
   CasActorType
   UiDataGeneric
     Icon = 208dfe2b872b68c43b0a542101be7a23
-    Title = gimmick_vortex_imp_capt
+    Title = gimmick_vortex_capt
+    XGimmickPlacementRestrictionOverwrite = 5
+    YGimmickPlacementRestrictionOverwrite = 5
 gimmick_vortex.buff_cost_by_level
   Buff
     Parts = Append
@@ -2476,7 +2480,7 @@ trap_ground_slime_medium
       CostEntries = Append
         Item
           Value = 650
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
           CurrencyManager = GoldManager
         Item
@@ -2532,6 +2536,9 @@ trap_ground_slime_medium
     TutorialTag = Build_TrapGroundSlime
     ShowAdditionalResearchInfo = True
     Short = trap_slime_essn
+    AdditionalResearchLoca
+      Item = res_trap_ground_slime_stage_2_desc
+      Item = res_trap_ground_slime_stage_3_desc
   Workstation
     Definition = workstation_trap
   Cutout
@@ -2567,7 +2574,8 @@ trap_ground_slime_small
       CostEntries
         Item
           Value = 400
-          ValueFactors = Append
+          ValueFactors
+            Item = factor_cost_gold_door_trap
           CurrencyManager = GoldManager
         Item
           Value = 1
@@ -2588,7 +2596,7 @@ trap_ground_spike_medium
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 3
@@ -2666,6 +2674,9 @@ trap_ground_spike_medium
     EffectSlow = True
     ShowAdditionalResearchInfo = True
     Short = trap_spike_essn
+    AdditionalResearchLoca
+      Item = res_trap_ground_spike_stage_2_desc
+      Item = res_trap_ground_spike_stage_3_desc
   Cutout
   Workstation
     Definition = workstation_trap
@@ -2764,7 +2775,7 @@ trap_simple_pusher
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 2
@@ -2823,6 +2834,9 @@ trap_simple_pusher
     EffectStun = True
     ShowAdditionalResearchInfo = True
     Short = trap_pusher_essn
+    AdditionalResearchLoca
+      Item = res_trap_simple_pusher_stage_2_desc
+      Item = res_trap_simple_pusher_stage_3_desc
   Workstation
     Definition = workstation_trap
   PlaySoundWhileInRegion
@@ -2880,7 +2894,7 @@ trap_simple_saw
         Item
           Value = 800
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 3
@@ -2921,6 +2935,9 @@ trap_simple_saw
     TutorialTag = Build_TrapSaw
     ShowAdditionalResearchInfo = True
     Short = trap_saw_essn
+    AdditionalResearchLoca
+      Item = res_trap_simple_saw_stage_2_desc
+      Item = res_trap_simple_saw_stage_3_desc
   Workstation
     Definition = workstation_trap
   PlaySoundWhileInRegion
@@ -2947,7 +2964,7 @@ trap_simple_thresher
         Item
           Value = 1200
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 4
@@ -3027,6 +3044,9 @@ trap_simple_thresher
     TrapCategory = Category2
     ShowAdditionalResearchInfo = True
     Short = trap_thresher_essn
+    AdditionalResearchLoca
+      Item = res_trap_simple_thresher_stage_2_desc
+      Item = res_trap_simple_thresher_stage_3_desc
   Workstation
     Definition = workstation_trap
   EvilHandReaction
@@ -3061,7 +3081,7 @@ trap_trigger_beer
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 6
@@ -3157,6 +3177,9 @@ trap_trigger_beer
     EffectKnockdown = True
     ShowAdditionalResearchInfo = True
     Short = trap_beer_essn
+    AdditionalResearchLoca
+      Item = res_trap_trigger_beer_stage_2_desc
+      Item = res_trap_trigger_beer_stage_3_desc
   Workstation
     Definition = workstation_trap_complex
     ParameterOverrides = Append
@@ -3226,7 +3249,7 @@ trap_trigger_guru
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 6
@@ -3305,6 +3328,9 @@ trap_trigger_guru
     EffectWeakFire = True
     ShowAdditionalResearchInfo = True
     Short = trap_guru_essn
+    AdditionalResearchLoca
+      Item = res_trap_trigger_guru_stage_2_desc
+      Item = res_trap_trigger_guru_stage_3_desc
   RoomGuruContainer
     TargetTiles = StayOnTile
   Workstation
@@ -3361,7 +3387,7 @@ trap_trigger_hamster
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 8
@@ -3426,6 +3452,9 @@ trap_trigger_hamster
     EffectKnockdown = True
     ShowAdditionalResearchInfo = True
     Short = trap_hamster_essn
+    AdditionalResearchLoca
+      Item = res_trap_trigger_hamster_stage_2_desc
+      Item = res_trap_trigger_hamster_stage_3_desc
   Attack
     AttackAspects = Append
       Item = aspect_trap
@@ -3491,7 +3520,7 @@ trap_trigger_lootbox
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 1
@@ -3575,6 +3604,9 @@ trap_trigger_lootbox
     TutorialTag = Build_TrapLootbox
     ShowAdditionalResearchInfo = True
     Short = trap_lootbox_essn
+    AdditionalResearchLoca
+      Item = res_trap_trigger_lootbox_stage_2_desc
+      Item = res_trap_trigger_lootbox_stage_3_desc
   CostFieldSpecific
     Bounds = -1 -1 3 3
     Data
@@ -3614,7 +3646,7 @@ trap_trigger_slimeball
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_gold_door_trap
         Item
           Value = 3
@@ -3676,6 +3708,9 @@ trap_trigger_slimeball
     TrapCategory = Category3
     ShowAdditionalResearchInfo = True
     Short = trap_slimeball_essn
+    AdditionalResearchLoca
+      Item = res_trap_trigger_slimeball_stage_2_desc
+      Item = res_trap_trigger_slimeball_stage_3_desc
   Cutout
   CostFieldSpecific
     Bounds = 0 -1 1 2

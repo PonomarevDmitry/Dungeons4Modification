@@ -1478,6 +1478,8 @@ room_torturechamber
   GeneralStorageRoom
     DefaultCapacityPerTile = 0
     CapacityTileCount = None
+  TileArea
+    WorkstationByInnerTiles = True
 room_totem
   Include = room_base
   Room

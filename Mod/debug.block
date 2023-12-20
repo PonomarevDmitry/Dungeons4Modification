@@ -26,6 +26,10 @@ debug_overlay_skill_targets
   SkillTargetOverlay
     Name = Skill Targets
     Category = Brain
+debug_overlay_socialize
+  SocializeOverlay
+    Name = Socialize
+    Category = Brain
 unit_orc_superhero
   Include = unit_orc
   Combat

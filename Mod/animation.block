@@ -56,6 +56,8 @@ actor_revive
   CasActorType
 actor_rider
   CasActorType
+actor_socialize
+  CasActorType
 actor_spawn
   CasActorType
 actor_strike
@@ -74,6 +76,31 @@ actor_unit_rest
   CasActorType
 actor_warden
   CasActorType
+anim_apply_perk
+  CasActorAnimation
+    AnimationGraph
+      ActorSlots
+        Item
+          Name = caster
+          ActorSynch = ForceRemoteActors
+        Item
+          Name = effect
+          AutoVisual = a0b0c7eb7ccd3824684391fb5040affe
+          ActorSynch = ForceRemoteActors
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = Start
+          OutputNodes
+            Item = spawn
+          InputNodes
+        Item = CasActorAnimationClipNode
+          TargetSlot = effect
+          Clip = spawn
+          Name = spawn
+          InputNodes
+            Item = Start
+          OutputNodes
+      Events = Append
 anim_apply_progress
   Include = anim_base
   CasActorAnimation
@@ -440,7 +467,7 @@ anim_attack_trap_beer
           OutputNodes
             Item = fly_loop
           TimeSource = fly_loop
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
         Item = CasActorAnimationClipNode
           Name = fly_loop
@@ -472,7 +499,7 @@ anim_attack_trap_beer
           OutputNodes
             Item = vfx_fire
           TimeSource = vfx_fire
-          TimeGroup = Append
+          TimeGroup
             Item = vfx_fire
         Item = CasActorAnimationClipNode
           Name = attack
@@ -583,7 +610,7 @@ anim_attack_trap_guru
           OutputNodes
             Item = fly_loop
           TimeSource = fly_loop
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
         Item = CasActorAnimationClipNode
           Name = fly_loop
@@ -687,7 +714,7 @@ anim_attack_trap_hamster_wheel
           OutputNodes
             Item = skill_charge_loop
           TimeSource = skill_charge_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_charge_loop
             Item = skill_charge_start
         Item = CasActorAnimationClipNode
@@ -837,7 +864,7 @@ anim_attack_trap_saw
           OutputNodes
             Item = attack_loop
           TimeSource = attack_loop
-          TimeGroup = Append
+          TimeGroup
             Item = attack_loop
         Item = CasActorAnimationClipNode
           Name = attack_loop
@@ -984,7 +1011,7 @@ anim_attack_trap_slime_ball
           OutputNodes
             Item = skill_charge_loop
           TimeSource = skill_charge_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_charge_start
             Item = skill_charge_loop
         Item = CasActorAnimationClipNode
@@ -1214,15 +1241,15 @@ anim_base_buff
             Item = New Node
         Item = CasActorAnimationClipNode
           Name = fly_loop
-          InputNodes = Append
+          InputNodes
             Item = New Node
           TargetSlot = effect
           Clip = fly_loop
         Item = CasActorAnimationLoopGateNode
           Name = New Node
-          InputNodes = Append
+          InputNodes
             Item = Start
-          OutputNodes = Append
+          OutputNodes
             Item = fly_loop
           TimeSource = fly_loop
 anim_base_buff_hidden_stunn
@@ -1545,7 +1572,7 @@ anim_brimstone_explosion
             Item = fly_loop
           TimeSource = fly_loop
           AllowFastAbort = True
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
         Item = CasActorAnimationClipNode
           Name = fly_loop
@@ -2087,6 +2114,86 @@ anim_buff_main19war_hero_speed
           Name = effect
           TargetType = 
           AutoVisual = 084086a85789d42418d54e659269b0ca
+anim_buff_skir07sleep_heroes_buff_day
+  Include = anim_base_buff
+  CasActorAnimation
+    AnimationGraph
+      ActorSlots
+        Item
+          Name = target
+          TargetType = 
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = Auto
+        Item
+          Name = effect
+          TargetType = 
+          AutoVisual = 8f0315120331c334697d3a88fa378bf6
+          ActorSynch = Auto
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = Start
+          InputNodes
+          OutputNodes
+            Item = New Node
+        Item = CasActorAnimationClipNode
+          TargetSlot = effect
+          AnimatorName = main
+          Clip = fly_loop
+          ForceTransitionInChain = False
+          Name = fly_loop
+          InputNodes
+            Item = New Node
+          OutputNodes
+        Item = CasActorAnimationLoopGateNode
+          TimeSource = fly_loop
+          ApplyTimeSourceToAll = True
+          TimeGroup
+          AllowFastAbort = False
+          Name = New Node
+          InputNodes
+            Item = Start
+          OutputNodes
+            Item = fly_loop
+anim_buff_skir07sleep_heroes_sleep
+  Include = anim_base_buff
+  CasActorAnimation
+    AnimationGraph
+      ActorSlots
+        Item
+          Name = target
+          TargetType = 
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = Auto
+        Item
+          Name = effect
+          TargetType = 
+          AutoVisual = 8f532c708614186498a7a8d1c81b0fa8
+          ActorSynch = Auto
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = Start
+          InputNodes
+          OutputNodes
+            Item = New Node
+        Item = CasActorAnimationClipNode
+          TargetSlot = effect
+          AnimatorName = main
+          Clip = fly_loop
+          ForceTransitionInChain = False
+          Name = fly_loop
+          InputNodes
+            Item = New Node
+          OutputNodes
+        Item = CasActorAnimationLoopGateNode
+          TimeSource = fly_loop
+          ApplyTimeSourceToAll = True
+          TimeGroup
+          AllowFastAbort = False
+          Name = New Node
+          InputNodes
+            Item = Start
+          OutputNodes
+            Item = fly_loop
 anim_buff_spell_manashield
   Include = anim_base_buff
   CasActorAnimation
@@ -2868,7 +2975,7 @@ anim_charge_attack_goblin_champion
           OutputNodes
             Item = skill_charge_run_loop
           TimeSource = skill_charge_run_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_charge_run_loop
         Item = CasActorAnimationClipNode
           Name = skill_charge_run_stop
@@ -2892,7 +2999,7 @@ anim_charge_attack_goblin_champion
           OutputNodes
             Item = skill_charge_prepare_loop
           TimeSource = skill_charge_prepare_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_charge_prepare_loop
             Item = skill_charge_run_start
         Item = CasActorAnimationClipNode
@@ -3014,7 +3121,7 @@ anim_charge_attack_rider
           OutputNodes
             Item = skill_charge_run_loop
           AllowFastAbort = True
-          TimeGroup = Append
+          TimeGroup
             Item = skill_charge_run_loop
         Item = CasActorAnimationClipNode
           Name = skill_charge_run_stop
@@ -3038,7 +3145,7 @@ anim_charge_attack_rider
           OutputNodes
             Item = skill_charge_prepare_loop
           TimeSource = skill_charge_prepare_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_charge_prepare_loop
             Item = skill_charge_run_start
         Item = CasActorAnimationClipNode
@@ -3118,7 +3225,7 @@ anim_charge_attack_rider_unit
         Item = CasActorAnimationLoopGateNode
           TimeSource = skill_charge_run_loop
           ApplyTimeSourceToAll = True
-          TimeGroup = Append
+          TimeGroup
             Item = skill_charge_run_loop
           AllowFastAbort = True
           Name = loop_time
@@ -3148,7 +3255,7 @@ anim_charge_attack_rider_unit
         Item = CasActorAnimationLoopGateNode
           TimeSource = skill_charge_prepare_loop
           ApplyTimeSourceToAll = True
-          TimeGroup = Append
+          TimeGroup
             Item = skill_charge_prepare_loop
             Item = skill_charge_run_start
           AllowFastAbort = False
@@ -3188,10 +3295,11 @@ anim_colossus_beer
             Item = colossus_beer_stop_3
             Item = colossus_beer_stop_4
             Item = colossus_beer_stop_5
-          TimeGroup = Append
+          TimeGroup
             Item = skill_beer_start
             Item = skill_beer_loop
           TimeSource = skill_beer_loop
+          AllowFastAbort = False
         Item = CasActorAnimationClipNode
           Name = skill_beer_start
           InputNodes
@@ -3324,7 +3432,7 @@ anim_colossus_beer
           OutputNodes
             Item = fly_loop
           TimeSource = fly_loop
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
         Item = CasActorAnimationClipNode
           Name = fly_loop
@@ -3441,7 +3549,7 @@ anim_colossus_beer
           OutputNodes
             Item = fly_loop2
           TimeSource = fly_loop2
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop2
           ApplyTimeSourceToAll = False
         Item = CasActorAnimationLoopGateNode
@@ -3451,7 +3559,7 @@ anim_colossus_beer
           OutputNodes
             Item = fly_loop3
           TimeSource = fly_loop3
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop3
         Item = CasActorAnimationLoopGateNode
           Name = fly4
@@ -3460,7 +3568,7 @@ anim_colossus_beer
           OutputNodes
             Item = fly_loop4
           TimeSource = fly_loop4
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop4
         Item = CasActorAnimationLoopGateNode
           Name = fly5
@@ -3469,7 +3577,7 @@ anim_colossus_beer
           OutputNodes
             Item = fly_loop5
           TimeSource = fly_loop5
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop5
       ActorSlots
         Item
@@ -3796,7 +3904,7 @@ anim_colossus_charge
           OutputNodes
             Item = charge_prepare_loop
           TimeSource = charge_prepare_loop
-          TimeGroup = Append
+          TimeGroup
             Item = charge_prepare_loop
         Item = CasActorAnimationClipNode
           Name = charge_prepare_loop
@@ -3814,7 +3922,7 @@ anim_colossus_charge
             Item = charge_run_loop
             Item = charge_loop
           TimeSource = charge_run_loop
-          TimeGroup = Append
+          TimeGroup
             Item = charge_run_loop
           AllowFastAbort = False
         Item = CasActorAnimationClipNode
@@ -3885,7 +3993,7 @@ anim_colossus_charge
           OutputNodes
             Item = sit_loop
           TimeSource = sit_loop
-          TimeGroup = Append
+          TimeGroup
             Item = sit
             Item = sit_loop
             Item = rise
@@ -4078,7 +4186,7 @@ anim_colossus_slam
             Item = colossus_stop_attach_l
             Item = colossus_stop_attach_r
           TimeSource = slam_loop
-          TimeGroup = Append
+          TimeGroup
             Item = slam_loop
             Item = slam_start
         Item = CasActorAnimationClipNode
@@ -4105,7 +4213,7 @@ anim_colossus_slam
             Item = hit_l
             Item = hit_r
           TimeSource = slam_stop
-          TimeGroup = Append
+          TimeGroup
             Item = slam_stop
         Item = CasActorAnimationClipNode
           Name = colossus_attach_l
@@ -4358,7 +4466,7 @@ anim_colossus_swipe
             Item = swipe_loop
             Item = colossus_stop_attach_swipe
           TimeSource = swipe_loop
-          TimeGroup = Append
+          TimeGroup
             Item = swipe_loop
             Item = swipe_start
         Item = CasActorAnimationLoopGateNode
@@ -4369,7 +4477,7 @@ anim_colossus_swipe
             Item = swipe_stop
             Item = hit
           TimeSource = swipe_stop
-          TimeGroup = Append
+          TimeGroup
             Item = swipe_stop
         Item = CasActorAnimationClipNode
           Name = swipe_stop
@@ -5894,7 +6002,7 @@ anim_default_attack_crossbow_tower_city
           OutputNodes
         Item = CasActorAnimationLoopGateNode
           TimeSource = synch_release
-          TimeGroup = Append
+          TimeGroup
             Item = synch_release
           Name = casting
           InputNodes
@@ -5911,7 +6019,7 @@ anim_default_attack_crossbow_tower_city
             Item = fly
         Item = CasActorAnimationLoopGateNode
           TimeSource = fly_anim
-          TimeGroup = Append
+          TimeGroup
             Item = fly_anim
           Name = fly
           InputNodes
@@ -6011,7 +6119,7 @@ anim_default_attack_crossbow_tower_village
           OutputNodes
         Item = CasActorAnimationLoopGateNode
           TimeSource = synch_release
-          TimeGroup = Append
+          TimeGroup
             Item = synch_release
           Name = casting
           InputNodes
@@ -6028,7 +6136,7 @@ anim_default_attack_crossbow_tower_village
             Item = fly
         Item = CasActorAnimationLoopGateNode
           TimeSource = fly_anim
-          TimeGroup = Append
+          TimeGroup
             Item = fly_anim
           Name = fly
           InputNodes
@@ -6419,7 +6527,7 @@ anim_default_attack_melee_pitfiend
           OutputNodes
             Item = synch_release
           TimeSource = synch_release
-          TimeGroup = Append
+          TimeGroup
             Item = synch_release
         Item = CasActorAnimationSynchEventNode
           Name = synch_release
@@ -10009,7 +10117,7 @@ anim_default_attack_ranged_thalya
         EndTrigger
           Name = 
           Template = 
-        Effect = skill_fixed_damage_thalya
+        Effect = skill_damage_thalya_area
 anim_default_attack_melee_banshee
   Include = anim_default_attack_melee
   SimpleSkillDefinition
@@ -10506,7 +10614,7 @@ anim_door_locked
         Item
           Name = visual
           TargetType = 
-          AutoVisual = 87b18c84a6c8b4340ac07b417a9b9495
+          AutoVisual = c3c29206781a60f4cb74906c33d84f32
           ActorSynch = Auto
       Nodes
         Item = CasActorAnimationStartNode
@@ -10559,7 +10667,7 @@ anim_door_open
           OutputNodes
             Item = open_front_loop
           TimeSource = open_front_loop
-          TimeGroup = Append
+          TimeGroup
             Item = open_front_loop
           AllowFastAbort = True
         Item = CasActorAnimationClipNode
@@ -10601,7 +10709,7 @@ anim_door_open_reverse
             Item = loop_time
         Item = CasActorAnimationLoopGateNode
           TimeSource = open_back_loop
-          TimeGroup = Append
+          TimeGroup
             Item = open_back_loop
           Name = loop_time
           InputNodes
@@ -10851,7 +10959,7 @@ anim_dwarf_queen_axe
             Item = skill_axe_loop
             Item = spawn
           TimeSource = skill_axe_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_axe_loop
         Item = CasActorAnimationClipNode
           Name = skill_axe_loop
@@ -11009,7 +11117,7 @@ anim_dwarf_queen_axe_single
           OutputNodes
             Item = spawn
           TimeSource = spawn
-          TimeGroup = Append
+          TimeGroup
             Item = spawn
         Item = CasActorAnimationClipNode
           Name = caster
@@ -11109,7 +11217,7 @@ anim_dwarf_queen_jump
           OutputNodes
         Item = CasActorAnimationLoopGateNode
           TimeSource = skill_jump_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_jump_loop
           Name = prepare_time
           InputNodes
@@ -11297,7 +11405,7 @@ anim_dwarf_queen_lightning
             Item = skill_lightning_loop
             Item = charge
           TimeSource = skill_lightning_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_lightning_start
             Item = skill_lightning_loop
         Item = CasActorAnimationClipNode
@@ -11541,7 +11649,7 @@ anim_dwarf_queen_tennis
           OutputNodes
             Item = fly_loop
           TimeSource = fly_loop
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
         Item = CasActorAnimationClipNode
           Name = fly_loop
@@ -11804,7 +11912,7 @@ anim_gimmick_arcanium_workplace
           Name = snot
           TargetType = unit_snot
           AutoVisual = 00000000000000000000000000000000
-          ActorSynch = Auto
+          ActorSynch = ForceRemoteActors
 anim_gimmick_battery_activate
   Include = anim_base
   CasActorAnimation
@@ -13196,7 +13304,7 @@ anim_main13_boss_attack_dungeonlord
         Item = CasActorAnimationLoopGateNode
           TimeSource = fly_loop
           ApplyTimeSourceToAll = True
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
           AllowFastAbort = False
           Name = fly_time
@@ -13314,7 +13422,7 @@ anim_main13_boss_attack_tanos
           OutputNodes
             Item = fly_loop
           TimeSource = fly_loop
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
       ActorSlots
         Item
@@ -13561,7 +13669,7 @@ anim_manaling_eat
           OutputNodes
             Item = eat_loop
           TimeSource = eat_loop
-          TimeGroup = Append
+          TimeGroup
             Item = eat_loop
         Item = CasActorAnimationClipNode
           Name = eat_loop
@@ -15203,7 +15311,7 @@ anim_skill_frog_hypnosis
             Item = attach_frog_hypno_3
             Item = fly_loop
           TimeSource = fly_loop
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
           ApplyTimeSourceToAll = True
         Item = CasActorAnimationClipNode
@@ -15384,7 +15492,7 @@ anim_skill_frog_tongue_lash
             Item = skill_lash_loop
             Item = spawn
           TimeSource = skill_lash_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_lash_loop
         Item = CasActorAnimationClipNode
           Name = skill_lash_loop
@@ -16289,7 +16397,7 @@ anim_skill_quake_crystal_golem
           OutputNodes
             Item = anim_loop
           TimeSource = anim_loop
-          TimeGroup = Append
+          TimeGroup
             Item = anim_loop
             Item = anim_start
         Item = CasActorAnimationClipNode
@@ -16460,7 +16568,7 @@ anim_skill_ray_crystal_golem
           OutputNodes
             Item = anim_loop
           TimeSource = anim_loop
-          TimeGroup = Append
+          TimeGroup
             Item = anim_loop
         Item = CasActorAnimationClipNode
           Name = spawn
@@ -16911,7 +17019,7 @@ anim_skill_succubus
           OutputNodes
             Item = synch_release
           TimeSource = synch_release
-          TimeGroup = Append
+          TimeGroup
             Item = synch_release
           AllowFastAbort = False
         Item = CasActorAnimationSynchEventNode
@@ -16937,7 +17045,7 @@ anim_skill_succubus
           OutputNodes
             Item = fly_loop
           TimeSource = fly_loop
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
         Item = CasActorAnimationClipNode
           Name = fly_loop
@@ -17323,6 +17431,11 @@ anim_skill_summon_dungeonlord
         Template = plot_protagonist_evil
     CostFactor = factor_cost_thalya_skill
   SkillAlternativeDismissSummon
+    RelevantTypes
+      Required
+        Item = type_dungeonlord
+      Optional
+      Excluded
   SkillMasterNeedsLevel
     Level = 6
   SimpleSkillAnimationModule
@@ -17412,7 +17525,7 @@ anim_skill_summon_frog
           OutputNodes
             Item = wait
           TimeSource = wait
-          TimeGroup = Append
+          TimeGroup
             Item = wait
   SimpleSkillAnimationModule
     TargetPartnerSlot
@@ -17993,7 +18106,7 @@ anim_skill_unicorn_nova
             Item = loop_time
         Item = CasActorAnimationLoopGateNode
           TimeSource = skill_nova_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_nova_loop
           Name = loop_time
           InputNodes
@@ -18482,6 +18595,72 @@ anim_snot_pray
           OutputNodes
           TargetSlot = sfx
           Clip = stop_sfx
+anim_socialize
+  Include = anim_base
+  CasActorAnimation
+    AnimationGraph
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = Start
+          InputNodes
+          OutputNodes
+            Item = New Node
+        Item = CasActorAnimationSynchTimeNode
+          Name = New Node
+          InputNodes
+            Item = Start
+          OutputNodes
+            Item = talk_active
+            Item = talk_passive
+          TimeSource = talk_active
+        Item = CasActorAnimationClipNode
+          Name = talk_active
+          InputNodes
+            Item = New Node
+          OutputNodes
+            Item = New Node 2
+          TargetSlot = unit_A
+          Clip = talk_active
+        Item = CasActorAnimationClipNode
+          Name = talk_passive
+          InputNodes
+            Item = New Node
+          OutputNodes
+          TargetSlot = unit_B
+          Clip = talk_passive
+        Item = CasActorAnimationSynchTimeNode
+          Name = New Node 2
+          InputNodes
+            Item = talk_active
+          OutputNodes
+            Item = main_talk_b
+            Item = main_talk_a
+          TimeSource = main_talk_b
+        Item = CasActorAnimationClipNode
+          Name = main_talk_b
+          InputNodes
+            Item = New Node 2
+          OutputNodes
+          TargetSlot = unit_A
+          Clip = talk_passive
+        Item = CasActorAnimationClipNode
+          Name = main_talk_a
+          InputNodes
+            Item = New Node 2
+          OutputNodes
+          TargetSlot = unit_B
+          Clip = talk_active
+      ActorSlots
+        Item
+          Name = unit_A
+          TargetType = actor_socialize
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = ForceRemoteActors
+        Item
+          Name = unit_B
+          TargetType = actor_socialize
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = ForceRemoteActors
 anim_spawn
   Include = anim_base
   CasActorAnimation
@@ -18517,6 +18696,33 @@ anim_spell_earth_tile
           TargetType = 
           AutoVisual = 68b7a1b137959dc489685940d459a349
           ActorSynch = Auto
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = start
+          InputNodes
+          OutputNodes
+            Item = spawn
+        Item = CasActorAnimationClipNode
+          TargetSlot = effect
+          Clip = spawn
+          Name = spawn
+          InputNodes
+            Item = start
+          OutputNodes
+      Events
+        Item
+          Name = on_dig
+          Trigger = 8a9cfbb56da73b84eb848ebe270a0a98
+anim_spell_gold_tile
+  Include = anim_base
+  CasActorAnimation
+    AnimationGraph
+      ActorSlots
+        Item
+          Name = tile
+        Item
+          Name = effect
+          AutoVisual = 9280de31e1eb2cc4b8ec517599c61030
       Nodes
         Item = CasActorAnimationStartNode
           Name = start
@@ -18672,7 +18878,7 @@ anim_tanos_blinded
             Item = blind_looop
         Item = CasActorAnimationLoopGateNode
           TimeSource = main14_blinded_loop
-          TimeGroup = Append
+          TimeGroup
             Item = main14_blinded_start
             Item = main14_blinded_loop
             Item = main14_blinded_stop
@@ -18796,7 +19002,7 @@ anim_tanos_fire
           OutputNodes
             Item = fly_loop
           TimeSource = fly_loop
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop
         Item = CasActorAnimationClipNode
           Name = fly_loop
@@ -18858,7 +19064,7 @@ anim_tanos_laser
           OutputNodes
             Item = main14_laser_loop
           TimeSource = main14_laser_loop
-          TimeGroup = Append
+          TimeGroup
             Item = main14_laser_start
             Item = main14_laser_loop
         Item = CasActorAnimationClipNode
@@ -18885,7 +19091,7 @@ anim_tanos_laser
           OutputNodes
             Item = main14_blinded_loop
           TimeSource = main14_blinded_loop
-          TimeGroup = Append
+          TimeGroup
             Item = main14_blinded_start
             Item = main14_blinded_loop
             Item = main14_blinded_stop
@@ -19140,7 +19346,7 @@ anim_tanos_skill_ghost
             Item = attach_tanos_ghost_2
             Item = attach_tanos_ghost_3
           TimeSource = skill_ghost_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_ghost_start
             Item = skill_ghost_loop
         Item = CasActorAnimationClipNode
@@ -19308,7 +19514,7 @@ anim_tanos_skill_melee
           OutputNodes
             Item = skill_meele_loop
           TimeSource = skill_meele_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_meele_start
             Item = skill_meele_loop
         Item = CasActorAnimationClipNode
@@ -19429,7 +19635,7 @@ anim_tanos_skill_range
             Item = skill_range_loop
             Item = spawn
           TimeSource = skill_range_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_range_loop
             Item = skill_range_start
         Item = CasActorAnimationClipNode
@@ -19536,6 +19742,56 @@ anim_tanos_skill_range
         Template = plot_tanos
     StopAtRooms = False
     StopAtGimmicks = False
+anim_teleport
+  Include = anim_base
+  CasActorAnimation
+    AnimationGraph
+      Nodes
+        Item = CasActorAnimationStartNode
+          Name = Start
+          InputNodes
+          OutputNodes
+            Item = depart
+            Item = arrive
+        Item = CasActorAnimationClipNode
+          Name = depart
+          InputNodes
+            Item = Start
+          OutputNodes
+          TargetSlot = vfx_unit
+          Clip = depart
+        Item = CasActorAnimationClipNode
+          Name = arrive
+          InputNodes
+            Item = Start
+          OutputNodes
+          TargetSlot = vfx_target
+          Clip = arrive
+      ActorSlots
+        Item
+          Name = unit
+          TargetType = 
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = Auto
+        Item
+          Name = target
+          TargetType = 
+          AutoVisual = 00000000000000000000000000000000
+          ActorSynch = Auto
+        Item
+          Name = vfx_unit
+          TargetType = 
+          AutoVisual = 40adf3d3eb1452246a8f21f64f5ce053
+          ActorSynch = Auto
+        Item
+          Name = vfx_target
+          TargetType = 
+          AutoVisual = c22b693a7cde8fa4f8db78f5a8e69d28
+          ActorSynch = Auto
+      Events
+        Item
+          Name = do_teleport
+          Trigger = 8a9cfbb56da73b84eb848ebe270a0a98
 anim_thalya_locked
   Include = anim_base
   CasActorAnimation
@@ -20456,7 +20712,7 @@ anim_tower_city_hammer_special
             Item = aim
             Item = tower_city_hammer_special_attach
           TimeSource = aim
-          TimeGroup = Append
+          TimeGroup
             Item = aim
         Item = CasActorAnimationClipNode
           Name = attack
@@ -20541,7 +20797,7 @@ anim_tower_vill_electric_attack
             Item = attach_tower_vill_electric
           TimeSource = attach_tower_vill_electric
           AllowFastAbort = False
-          TimeGroup = Append
+          TimeGroup
             Item = spawn_nocharge_1
             Item = attach_tower_vill_electric
         Item = CasActorAnimationClipNode
@@ -20561,7 +20817,7 @@ anim_tower_vill_electric_attack
             Item = dmg_area
             Item = attack
           TimeSource = fly_loop_1
-          TimeGroup = Append
+          TimeGroup
             Item = fly_loop_1
         Item = CasActorAnimationClipNode
           Name = spawn_nocharge_1
@@ -20952,7 +21208,7 @@ anim_trap_hamster_driver
             Item = workplace_start
           OutputNodes
             Item = workplace_loop
-            Item = run_loop
+            Item = gimmick_workshop_run_loop
             Item = attach_to_wheel
           TimeSource = workplace_loop
           ApplyTimeSourceToAll = False
@@ -20964,11 +21220,11 @@ anim_trap_hamster_driver
           Clip = workplace_loop
           OutputNodes
         Item = CasActorAnimationClipNode
-          Name = run_loop
+          Name = gimmick_workshop_run_loop
           InputNodes
             Item = loop_wheel
           TargetSlot = driver
-          Clip = run_loop
+          Clip = gimmick_workshop_run_loop
           OutputNodes
         Item = CasActorAnimationClipNode
           Name = attach_to_wheel
@@ -21258,7 +21514,7 @@ anim_tristan_aoe_stun
           OutputNodes
             Item = loop
           TimeSource = loop
-          TimeGroup = Append
+          TimeGroup
             Item = loop
         Item = CasActorAnimationClipNode
           Name = loop
@@ -21488,7 +21744,7 @@ anim_tristan_dash
             Item = skill_dash_start
         Item = CasActorAnimationLoopGateNode
           TimeSource = skill_dash_run
-          TimeGroup = Append
+          TimeGroup
             Item = skill_dash_run
           Name = run_time
           InputNodes
@@ -21524,7 +21780,7 @@ anim_tristan_dash
             Item = run_time
         Item = CasActorAnimationLoopGateNode
           TimeSource = skill_dash_loop
-          TimeGroup = Append
+          TimeGroup
             Item = skill_dash_loop
           Name = prepare_time
           InputNodes
@@ -21814,7 +22070,7 @@ anim_unicorn_dash
             Item = look_at
         Item = CasActorAnimationLoopGateNode
           TimeSource = dash_run_loop
-          TimeGroup = Append
+          TimeGroup
             Item = dash_run_loop
           Name = run_time
           InputNodes
@@ -21848,7 +22104,7 @@ anim_unicorn_dash
             Item = start_run
         Item = CasActorAnimationLoopGateNode
           TimeSource = prepare_loop
-          TimeGroup = Append
+          TimeGroup
             Item = prepare_loop
           Name = prepare_time
           InputNodes

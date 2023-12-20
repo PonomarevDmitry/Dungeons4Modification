@@ -911,6 +911,14 @@ tut_popup_skir01_cheat_rooms
     Title = tut_popup_skir01play_cheat_rooms_capt
     Explanations = Append
       Item = tut_popup_skir01play_cheat_rooms_1
+tut_popup_skir07sleep_daynight_info
+  Include = tutorial_popup_base
+  UiDataTutorialPopup
+    HelpImage = 2aee477d59aa44048abc6e159e1c26ef
+    Title = tut_popup_skir07sleep_daynight_info_capt
+    Explanations
+      Item = tut_popup_skir07sleep_daynight_info_1
+      Item = tut_popup_skir07sleep_daynight_info_2
 tut_popup_slap
   Include = tutorial_popup_base
   UiDataTutorialPopup

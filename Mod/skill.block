@@ -359,6 +359,20 @@ skill_corpse_explosion
       DynamicValueSource
         Name = corpse_explosion_dmg_base
         Template = unit_minion_undead_base
+skill_damage_thalya_area
+  SimpleSkillEffect
+    Effects
+      Item = SkillDamage
+    TargetSelector = SkillTargetSensor
+  SkillDamage
+  SkillTargetSensor
+    Sensor = PhxCircleSensor
+    AreaSource
+      Source = Dynamic
+      CustomValue = 0
+      DynamicValueSource
+        Name = default_attack_area
+        Template = plot_protagonist_evil
 skill_default_attack_protagonist
   SimpleSkillEffect
     Effects
@@ -2924,6 +2938,7 @@ skill_effect_potion_gold
     AllowedWallTypes
       Item = Wall
       Item = Mana
+    TransformAnimation = anim_spell_gold_tile
   SkillSingleTarget
 skill_effect_potion_heal
   SimpleSkillEffect
@@ -3392,11 +3407,17 @@ skill_effect_priestess_gold_heal
       Item = SkillEntityFilterAlive
       Item = SkillEntityFilterFriend
       Item = SkillEntityFilterMustBeInjured
+      Item = SkillEntityFilterOnlyOwnRaidGroup
+      Item = SkillEntityFilterMustNotHaveEntityType
   SkillHeal
     Value
       Source = SkillDamageAmount
   SkillTargetOnlyRaidGroup
     IncludeSelf = False
+  SkillEntityFilterOnlyOwnRaidGroup
+  SkillEntityFilterMustNotHaveEntityType
+    EntityTypes
+      Item = type_structure
 skill_effect_priestess_heal
   SkillEntityFilterAlive
   SkillEntityFilterFriend
@@ -5425,14 +5446,6 @@ skill_effect_use_energy
         Name = 
         Template = 
   SkillCasterOnly
-skill_fixed_damage_thalya
-  SimpleSkillEffect
-    Effects = Append
-      Item = SkillDamage
-    TargetSelector = SkillSingleTarget
-  SkillSingleTarget
-  SkillDamage
-    DealAsTrueDamage = True
 skill_froggy_explosion
   Include = skill_effect_simple_damage_area
   SkillDamage

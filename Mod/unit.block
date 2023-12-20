@@ -500,6 +500,7 @@ hero_bombardier_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Portrait = 43092eb14a0fe774799138f720bb4572
     Icon = de8e55235116fc7489c88b774be0ed1d
+    Title = hero_bombardier_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_bombardier_gold
@@ -786,6 +787,7 @@ hero_fighter_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Portrait = fc6b5a35a32be63498a2ff325e96db48
     Icon = 6416d18b80828744688397bd573b2a8c
+    Title = hero_fighter_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_fighter_gold
@@ -1034,6 +1036,7 @@ hero_guardian_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Portrait = cc35ea2a7c448a44396e8c6ea27b0b6c
     Icon = f223bed24375d3d4fb8dd0f06e51aa6c
+    Title = hero_guardian_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_guardian_gold
@@ -1212,10 +1215,6 @@ hero_guardian_minion
     ProvidedActors = Append
       Item = actor_unit_melee
       Item = actor_spawn
-  EvilSelectable
-    VisualSelectionRadius = 0.4316551
-    SelectionColliderHeight = 2
-    SelectionColliderOffset = 0 0.6 0
   FightActivity
     AttackSkill
       Name = defaultAttack
@@ -1356,6 +1355,7 @@ hero_mage_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Portrait = 096f8d7be4d3af347bbbad03a53ffa38
     Icon = 5d47b46ded3cb1343907e9e3c289bf65
+    Title = hero_mage_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_mage_gold
@@ -1691,6 +1691,7 @@ hero_priestess_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Portrait = 2adae673e0f3f2b479ac5fc933209c99
     Icon = 438dd53d7a50a1446aad673f7b3213d1
+    Title = hero_priestess_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_priestess_gold
@@ -1939,6 +1940,7 @@ hero_pyro_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Icon = 95cb19690889b254992683152e266cc4
     Portrait = e7a82ba5094e85145946a330c96810d9
+    Title = hero_pyro_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_pyro_gold
@@ -2198,6 +2200,7 @@ hero_ranger_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Icon = d703d450904a8ab4495cbea457fa047f
     Portrait = a731750d6efee1d4083321baccffb3e9
+    Title = hero_ranger_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_ranger_gold
@@ -2501,6 +2504,7 @@ hero_rider_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Icon = 4e662fc2fa2bdb94eae7d36e3f31d8e3
     Portrait = 7ffde40824f485b42a62712f5c95ab94
+    Title = hero_rider_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_rider_gold
@@ -2748,6 +2752,7 @@ hero_rifleman_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Portrait = 6277cdda4cb79eb40a05b456395520e7
     Icon = e0a01bfafd83e6c4f854cf5719dd170e
+    Title = hero_rifleman_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_rifleman_gold
@@ -2996,6 +3001,7 @@ hero_sneak_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Icon = 2c1c1942c0bd3194597b12ef097508ae
     Portrait = e0631474b850b7f4aad177a7494f27fc
+    Title = hero_sneak_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_sneak_gold
@@ -3296,6 +3302,7 @@ hero_stoneguard_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Portrait = eb6d5c78abddb3444b4047b4eb16a065
     Icon = 120d431c7083bf740bfcfe8976e71308
+    Title = hero_stoneguard_elite_capt
   InformEnterDungeon
     Difficulty = 2
 hero_stoneguard_gold
@@ -3618,6 +3625,7 @@ hero_warden_elite
     AlternativeIcon = a33c0f7da70a39f48a56063029e3a410
     Portrait = d19d492e6e1259940b9ce80bdf5251fe
     Icon = be6dbea580ad70c4da9dc7c4c3cc83f3
+    Title = hero_warden_elite_capt
   InformEnterDungeon
     Difficulty = 2
   FarseerBody
@@ -5661,17 +5669,17 @@ unit_gnome_champion.buff_levelup
         Property = Attack.AttackDamageAmount
         Value
           ValueType = Balancing
-          Value = 6|1|1|1|1|-1
+          Value = 7.5|1|1|1|1|-1
       Item
         Property = Attack.SkillDamageAmount
         Value
           ValueType = Balancing
-          Value = 8|1|1|1|2|-1
+          Value = 10|1|1|1|2|-1
       Item
         Property = Combat.MaxHealthBase
         Value
           ValueType = Balancing
-          Value = 42|1|1|1|-1|-1
+          Value = 52|1|1|1|-1|-1
       Item
         Property = LevelUp.XpForNextLevel
         Value
@@ -5992,12 +6000,12 @@ unit_goblin_champion.buff_levelup
         Property = Combat.MaxHealthBase
         Value
           ValueType = Balancing
-          Value = 46|1|1|1|-1|-1
+          Value = 58|1|1|1|-1|-1
       Item
         Property = Attack.AttackDamageAmount
         Value
           ValueType = Balancing
-          Value = 3.4|1|1|1|2|-1
+          Value = 4.25|1|1|1|2|-1
       Item
         Property = MonsterPayday.SalaryBonusFactor
         Value
@@ -6007,7 +6015,7 @@ unit_goblin_champion.buff_levelup
         Property = Attack.SkillDamageAmount
         Value
           ValueType = Balancing
-          Value = 6|1|1|1|0|-1
+          Value = 8|1|1|1|0|-1
 unit_guardian
   Include = unit_monster_turned_base
   PrefabReference
@@ -6211,6 +6219,7 @@ unit_hero_base
       Item = actor_ball_attach
       Item = actor_torture
       Item = actor_imprisoned
+      Item = actor_spawn
     VerifyActorSetup = True
   UiDataSkills
   CanOnlyBeAttackedScriptable
@@ -6224,6 +6233,8 @@ unit_hero_base
     OnlyWhenSacrificed = True
     MinDistance = 18
     MaxDistance = 36
+  SpawnAnimation
+    Animation = anim_spawn
 unit_imp
   Include = unit_monster_demon_base
   PrefabReference
@@ -6842,6 +6853,7 @@ unit_monster_base
   FogOfWarUncover
     Radius = 700
   UnitPerkSlot
+    PerkApplyAnim = anim_apply_perk
   Interactor
     InteractOnDrop = True
   Stunned
@@ -7023,6 +7035,7 @@ unit_monster_demon_base
       Item = actor_spawn
       Item = actor_payday
       Item = actor_train
+      Item = actor_socialize
   ResurrectWhenKilled
     TimeUntilDecayNoTombstone = 10
     TimeUntilTeleport = 5
@@ -7034,6 +7047,13 @@ unit_monster_demon_base
     Animation = anim_spawn
   MonsterPayday
     PayDayAnim = anim_payday
+  Socialize
+    SocializeAnimation = anim_socialize
+    Partner
+      Name = unit_B
+      Template = anim_socialize
+  GoofAround
+    SocializeChance = 25
 unit_monster_demon_base.buff_levelup
   Buff
     Parts
@@ -7221,8 +7241,16 @@ unit_monster_horde_base
       Item = actor_unit_rest
       Item = actor_payday
       Item = actor_train
+      Item = actor_socialize
   MonsterPayday
     PayDayAnim = anim_payday
+  Socialize
+    SocializeAnimation = anim_socialize
+    Partner
+      Name = unit_B
+      Template = anim_socialize
+  GoofAround
+    SocializeChance = 25
 unit_monster_horde_base.buff_levelup
   Buff
     Parts
@@ -7343,11 +7371,14 @@ unit_monster_turned_base
         IgnoreMinNeedForEvilInterest = False
   ServerAnimation
     ProvidedActors = Append
+      Item = actor_spawn
   MonsterNeedData
     Healing
       Need = need_healing
       BaseDuration = 30
       ResourceAmount = 1
+  SpawnAnimation
+    Animation = anim_spawn
 unit_monster_undead_base
   Abstract = True
   Include = unit_monster_base
@@ -7455,6 +7486,7 @@ unit_monster_undead_base
       Item = actor_spawn
       Item = actor_payday
       Item = actor_train
+      Item = actor_socialize
   PerformRandomWorkstation
     TargetInteractions
       Item
@@ -7508,6 +7540,13 @@ unit_monster_undead_base
     LimitToBoundGimmick = True
   SpawnAnimation
     Animation = anim_spawn
+  GoofAround
+    SocializeChance = 25
+  Socialize
+    SocializeAnimation = anim_socialize
+    Partner
+      Name = unit_B
+      Template = anim_socialize
 unit_monster_undead_base.buff_levelup
   Buff
     Parts
@@ -7876,7 +7915,7 @@ unit_naga_champion.buff_levelup
         Property = Combat.MaxHealthBase
         Value
           ValueType = Balancing
-          Value = 50|1|1|1|-1|-1
+          Value = 63|1|1|1|-1|-1
       Item
         Property = LevelUp.XpForNextLevel
         Value
@@ -7886,12 +7925,12 @@ unit_naga_champion.buff_levelup
         Property = Attack.AttackDamageAmount
         Value
           ValueType = Balancing
-          Value = 4|1|1|1|2|-1
+          Value = 5|1|1|1|2|-1
       Item
         Property = Attack.SkillStrengthBase
         Value
           ValueType = Balancing
-          Value = 2|1|1|1|2|-1
+          Value = 4|1|1|1|2|-1
       Item
         Property = MonsterPayday.SalaryBonusFactor
         Value
@@ -8603,7 +8642,7 @@ unit_orc_champion.buff_levelup
         Property = Combat.MaxHealthBase
         Value
           ValueType = Balancing
-          Value = 80|1|1|1|-1|-1
+          Value = 100|1|1|1|-1|-1
       Item
         Property = LevelUp.XpForNextLevel
         Value
@@ -8613,12 +8652,12 @@ unit_orc_champion.buff_levelup
         Property = Attack.AttackDamageAmount
         Value
           ValueType = Balancing
-          Value = 3.25|1|1|1|0|-1
+          Value = 4.25|1|1|1|0|-1
       Item
         Property = Combat.ArmorBase
         Value
           ValueType = Balancing
-          Value = 0.5|1|1|1|1|-1
+          Value = 1|1|1|1|1|-1
       Item
         Property = MonsterPayday.SalaryBonusFactor
         Value
@@ -9570,7 +9609,7 @@ unit_skeleton
       Item
         Icon = 4e15ffcadce203645a512a1e478747fc
         Title = unit_skill_not_to_be_killed_skeleton_capt
-        Description = unit_skill_not_to_be_killed_skeleton_descc
+        Description = unit_skill_not_to_be_killed_skeleton_desc
         TutorialTag = None
   BuffAura
     Auras = Append
@@ -10139,6 +10178,19 @@ unit_snot
     ReactToHandAnimation = anim_react_hand
   BuffedAttachmentHandler
   DoRefillTortureModule
+  TeleportHandler
+    TeleportAnimation = anim_teleport
+    TeleportTarget
+      Name = target
+      Template = anim_teleport
+    TeleportEvent
+      Name = do_teleport
+      Template = anim_teleport
+  PlayAudioOnDestroy
+    OnlyWhenSacrificed = True
+    MinDistance = 18
+    MaxDistance = 36
+    Sfx = gimmick_temple_sacrifice_snot
 unit_snot.buff_dash
   Buff
     Parts = Append

@@ -86,6 +86,9 @@ potion_perk
     ShowAdditionalResearchInfo = True
     Description = ""
     Short = spell_perk_desc
+    AdditionalResearchLoca
+      Item = res_potion_perk_stage_2
+      Item = res_potion_perk_stage_3
 potion_poison
   Include = potion_base
   PotionType

@@ -11,12 +11,12 @@
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -49,12 +49,12 @@ res_arcanium.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_common_capacitypertile
@@ -78,12 +78,12 @@ res_arcanium.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_common_efficiency
@@ -100,12 +100,12 @@ res_arcanium.stage_4
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffProperties
     Properties
@@ -134,12 +134,12 @@ res_arena.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 175
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -160,12 +160,12 @@ res_arena.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_arena_2_desc
@@ -186,12 +186,12 @@ res_arena.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks = Append
@@ -210,12 +210,12 @@ res_arena.stage_4
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks = Append
@@ -235,7 +235,7 @@ res_banshee.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffResearchUnlock
     Unlocks
@@ -255,12 +255,12 @@ res_banshee.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_banshee_2_desc
@@ -284,12 +284,12 @@ res_banshee.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties
@@ -313,12 +313,12 @@ res_banshee.stage_4
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_banshee_4_desc
@@ -341,12 +341,12 @@ res_banshee.stage_5
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_banshee_5_desc
@@ -378,12 +378,12 @@ res_brewery.stage_1
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -403,12 +403,12 @@ res_brewery.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffProperties
     Properties = Append
@@ -436,12 +436,12 @@ res_brewery.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffProperties
     Properties = Append
@@ -469,7 +469,7 @@ res_crypt.stage_1
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffResearchUnlock
     Unlocks
@@ -490,12 +490,12 @@ res_crypt.stage_2
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties
@@ -530,7 +530,7 @@ res_crypt.stage_3
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
 res_crypt.stage_4
   Buff
@@ -546,12 +546,12 @@ res_crypt.stage_4
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties = Append
@@ -574,12 +574,12 @@ res_crypt.stage_5
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties = Append
@@ -608,7 +608,7 @@ res_demons.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -642,12 +642,12 @@ res_demons.stage_10
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -683,7 +683,7 @@ res_demons.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -729,7 +729,7 @@ res_demons.stage_3
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffProperties
     Properties
@@ -768,7 +768,7 @@ res_demons.stage_4
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -812,12 +812,12 @@ res_demons.stage_5
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -861,7 +861,7 @@ res_demons.stage_6
         Item
           Value = 450
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
       Time = 0
   BuffResearchUnlock
@@ -870,8 +870,9 @@ res_demons.stage_6
       Item = res_arcanium.stage_3
       Item = res_relaxchamber.stage_2
       Item = res_spells_charge.stage_2
-      Item = res_torturechamber.stage_2
+      Item = res_torturechamber
       Item = res_vortex.stage_6
+      Item = res_torturechamber.stage_1
   BuffProperties
     Properties
       Item
@@ -903,12 +904,12 @@ res_demons.stage_7
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 450
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -917,8 +918,7 @@ res_demons.stage_7
       Item = res_spells_simple.stage_3
       Item = res_relaxchamber.stage_3
       Item = res_torturechamber.stage_3
-      Item = res_torturechamber
-      Item = res_torturechamber.stage_1
+      Item = res_torturechamber.stage_2
   BuffProperties
     Properties
       Item
@@ -951,12 +951,12 @@ res_demons.stage_8
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffProperties
     Properties
@@ -988,6 +988,7 @@ res_demons.stage_9
       Item = ResearchStage
       Item = BuffProperties
       Item = BuffChangeUnitDamageResearchBuffStrength
+      Item = BuffResearchUnlock
     TargetSelector = bts_player_demon
   ResearchStage
     Cost
@@ -996,12 +997,12 @@ res_demons.stage_9
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffProperties
     Properties
@@ -1019,6 +1020,9 @@ res_demons.stage_9
     Description = res_demon_X_desc
   BuffChangeUnitDamageResearchBuffStrength
     StrengthChange = 0.01
+  BuffResearchUnlock
+    Unlocks
+      Item = res_succubus.stage_6
 res_doors
   Include = res_base
   Research
@@ -1049,7 +1053,7 @@ res_doors.stage_1
         Item
           Value = 800
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_doors_1_desc
@@ -1071,12 +1075,12 @@ res_doors.stage_2
         Item
           Value = 800
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_doors_2_desc
@@ -1095,12 +1099,12 @@ res_doors.stage_3
         Item
           Value = 800
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_doors_3_desc
@@ -1117,12 +1121,12 @@ res_doors.stage_4
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
       Time = 0
   UiDataResearchStage
@@ -1144,7 +1148,7 @@ res_dungeon.stage_1
         Item
           Value = 200
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1154,7 +1158,7 @@ res_dungeon.stage_1
       Item = BuffChangeUnitDamageResearchBuffStrength
     TargetSelector = bts_player_own
   BuffProperties
-    Properties = Append
+    Properties
       Item
         Property = ThroneRoomSpawner.MaxWorker
         Value
@@ -1189,12 +1193,12 @@ res_dungeon.stage_10
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1226,7 +1230,7 @@ res_dungeon.stage_2
         Item
           Value = 300
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1276,7 +1280,7 @@ res_dungeon.stage_3
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1318,12 +1322,12 @@ res_dungeon.stage_4
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1365,12 +1369,12 @@ res_dungeon.stage_5
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1411,12 +1415,12 @@ res_dungeon.stage_6
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1457,12 +1461,12 @@ res_dungeon.stage_7
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1500,12 +1504,12 @@ res_dungeon.stage_8
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1543,12 +1547,12 @@ res_dungeon.stage_9
         Item
           Value = 1750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -1585,7 +1589,7 @@ res_evilvault.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffResearchUnlock
     Unlocks
@@ -1605,12 +1609,12 @@ res_evilvault.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffProperties
     Properties
@@ -1651,12 +1655,12 @@ res_evilvault.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_common_capacitypertile
@@ -1673,12 +1677,12 @@ res_gazer.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -1697,12 +1701,12 @@ res_gazer.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
       Time = 0
   UiDataResearchStage
@@ -1734,12 +1738,12 @@ res_gazer.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_gazer_3_desc
@@ -1754,12 +1758,12 @@ res_gazer.stage_4
       CostEntries = Append
         Item
           Value = 750
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
           CurrencyManager = GoldManager
         Item
           Value = 200
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
           CurrencyManager = EvilnessManager
   UiDataResearchStage
@@ -1784,12 +1788,12 @@ res_gnome.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 350
+          Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -1809,12 +1813,12 @@ res_gnome.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_gnome_2_desc
@@ -1834,12 +1838,12 @@ res_gnome.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffProperties
     Properties
@@ -1862,12 +1866,12 @@ res_gnome.stage_4
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
       Time = 0
   UiDataResearchStage
@@ -1894,12 +1898,12 @@ res_gnome.stage_5
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 300
+          Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_gnome_5_desc
@@ -1916,12 +1920,12 @@ res_goblin.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -1941,12 +1945,12 @@ res_goblin.stage_2
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_goblin_2_desc
@@ -1970,12 +1974,12 @@ res_goblin.stage_3
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_goblin_3_desc
@@ -1998,12 +2002,12 @@ res_goblin.stage_4
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_goblin_4_desc
@@ -2029,12 +2033,12 @@ res_goblin.stage_5
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 300
+          Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_goblin_5_desc
@@ -2051,7 +2055,7 @@ res_graveyard.stage_1
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffResearchUnlock
     Unlocks
@@ -2071,12 +2075,12 @@ res_graveyard.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_graveyard_2_desc
@@ -2099,12 +2103,12 @@ res_graveyard.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_graveyard_3_desc
@@ -2125,12 +2129,12 @@ res_graveyard.stage_4
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_common_efficiency
@@ -2153,12 +2157,12 @@ res_graveyard.stage_5
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_graveyard_5_desc
@@ -2182,7 +2186,7 @@ res_guardroom.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffResearchUnlock
     Unlocks
@@ -2204,12 +2208,12 @@ res_guardroom.stage_2
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_guardroom_2_desc
@@ -2233,12 +2237,12 @@ res_guardroom.stage_3
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_guardroom_3_desc
@@ -2302,12 +2306,12 @@ res_guardroom.stage_4
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_guardroom_4_desc
@@ -2331,7 +2335,7 @@ res_gurufarm.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffResearchUnlock
     Unlocks
@@ -2351,12 +2355,12 @@ res_gurufarm.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffProperties
     Properties = Append
@@ -2385,12 +2389,12 @@ res_gurufarm.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffProperties
     Properties = Append
@@ -2414,12 +2418,12 @@ res_gurufarm.stage_4
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffProperties
     Properties = Append
@@ -2447,12 +2451,12 @@ res_gurufarm.stage_5
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffProperties
     Properties = Append
@@ -2476,7 +2480,7 @@ res_hideout.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -2496,12 +2500,12 @@ res_hideout.stage_2
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_hideout_2_desc
@@ -2534,12 +2538,12 @@ res_hideout.stage_3
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_hideout_3_desc
@@ -2567,12 +2571,12 @@ res_hideout.stage_4
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_hideout_4_desc
@@ -2595,12 +2599,12 @@ res_hideout.stage_5
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_hideout_5_desc
@@ -2623,12 +2627,12 @@ res_hideout.stage_6
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
 res_horde.stage_1
   Buff
@@ -2645,7 +2649,7 @@ res_horde.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -2681,12 +2685,12 @@ res_horde.stage_10
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 500
+          Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffProperties
     Properties
@@ -2722,7 +2726,7 @@ res_horde.stage_2
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -2765,7 +2769,7 @@ res_horde.stage_3
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -2809,12 +2813,12 @@ res_horde.stage_4
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 250
+          Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -2861,12 +2865,12 @@ res_horde.stage_5
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 300
+          Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -2910,12 +2914,12 @@ res_horde.stage_6
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 350
+          Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -2960,12 +2964,12 @@ res_horde.stage_7
         Item
           Value = 1750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 400
+          Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -3003,12 +3007,12 @@ res_horde.stage_8
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 400
+          Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -3046,12 +3050,12 @@ res_horde.stage_9
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 500
+          Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffProperties
     Properties
@@ -3085,7 +3089,7 @@ res_imp.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -3105,12 +3109,12 @@ res_imp.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_imp_2_desc
@@ -3134,12 +3138,12 @@ res_imp.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_imp_3_desc
@@ -3163,12 +3167,12 @@ res_imp.stage_4
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_imp_4_desc
@@ -3188,12 +3192,12 @@ res_infernal.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -3213,12 +3217,12 @@ res_infernal.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_infernal_2_desc
@@ -3242,12 +3246,12 @@ res_infernal.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_infernal_3_desc
@@ -3271,7 +3275,7 @@ res_naga.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -3291,12 +3295,12 @@ res_naga.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_naga_2_desc
@@ -3306,7 +3310,7 @@ res_naga.stage_2
         Property = Attack.SkillRangeBase
         Value
           ValueType = Constant
-          Value = 20
+          Value = 2
 res_naga.stage_3
   Buff
     Parts
@@ -3320,12 +3324,12 @@ res_naga.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_naga_3_desc
@@ -3349,12 +3353,12 @@ res_naga.stage_4
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_naga_4_desc
@@ -3380,12 +3384,12 @@ res_naga.stage_5
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 300
+          Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_naga_5_desc
@@ -3419,12 +3423,12 @@ res_necrodancicon.stage_1
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffResearchUnlock
     Unlocks
@@ -3443,12 +3447,12 @@ res_necrodancicon.stage_2
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_necrodancicon_stage_2_desc
@@ -3475,7 +3479,7 @@ res_necrodancicon.stage_3
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_necrodancicon_stage_3_desc
@@ -3498,12 +3502,12 @@ res_necrodancicon.stage_4
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_necrodancicon_stage_4_desc
@@ -3525,12 +3529,12 @@ res_necromancer.stage_1
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 350
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffResearchUnlock
     Unlocks
@@ -3550,12 +3554,12 @@ res_necromancer.stage_2
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_necromancer_2_desc
@@ -3578,12 +3582,12 @@ res_necromancer.stage_3
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_necromancer_3_desc
@@ -3603,12 +3607,12 @@ res_necromancer.stage_4
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties
@@ -3632,12 +3636,12 @@ res_necromancer.stage_5
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_necromancer_5_desc
@@ -3667,7 +3671,7 @@ res_orc.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -3687,12 +3691,12 @@ res_orc.stage_2
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_orc_2_desc
@@ -3712,12 +3716,12 @@ res_orc.stage_3
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_orc_3_desc
@@ -3740,12 +3744,12 @@ res_orc.stage_4
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_orc_4_desc
@@ -3768,12 +3772,12 @@ res_orc.stage_5
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
-          Value = 300
+          Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_orc_5_desc
@@ -3808,12 +3812,12 @@ res_potionlodge.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -3836,12 +3840,12 @@ res_potionlodge.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffProperties
     Properties
@@ -3870,12 +3874,12 @@ res_potionlodge.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_potionlodge_3_desc
@@ -3916,6 +3920,27 @@ res_potionlodge.stage_3
             Value
               ValueType = Constant
               Value = 2
+          Item
+            Target
+              Name = speed_area
+              Template = evil_hand
+            Value
+              ValueType = Constant
+              Value = 2
+          Item
+            Target
+              Name = speed_strength_min
+              Template = evil_hand
+            Value
+              ValueType = Constant
+              Value = 0.25
+          Item
+            Target
+              Name = speed_strength_max
+              Template = evil_hand
+            Value
+              ValueType = Constant
+              Value = 0.25
 res_potionlodge.stage_4
   Buff
     Parts
@@ -3929,12 +3954,12 @@ res_potionlodge.stage_4
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffProperties
     Properties
@@ -3950,19 +3975,19 @@ res_potionlodge.stage_5
     Parts = Append
       Item = ResearchStage
       Item = DynamicAttackValueBuffPart
-    TargetSelector = bts_player_own
+    TargetSelector = bts_player_evilhand
   ResearchStage
     Cost
       CostEntries = Append
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_potionlodge_5_desc
@@ -3995,6 +4020,27 @@ res_potionlodge.stage_5
             Value
               ValueType = Constant
               Value = 110
+          Item
+            Target
+              Name = speed_area
+              Template = evil_hand
+            Value
+              ValueType = Constant
+              Value = 2
+          Item
+            Target
+              Name = speed_strength_min
+              Template = evil_hand
+            Value
+              ValueType = Constant
+              Value = 0.25
+          Item
+            Target
+              Name = speed_strength_max
+              Template = evil_hand
+            Value
+              ValueType = Constant
+              Value = 0.25
 res_potions_complex
   Include = res_base
   Research
@@ -4021,12 +4067,12 @@ res_potions_complex.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks = Append
@@ -4055,12 +4101,12 @@ res_potions_complex.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_potions_complex_X_desc
@@ -4133,6 +4179,22 @@ res_potions_complex.stage_2
             Value
               ValueType = Constant
               Value = 200
+          Item
+            Target
+              Name = gold_min_amount
+              Template = evil_hand
+            Operator = Absolute
+            Value
+              ValueType = Constant
+              Value = 400
+          Item
+            Target
+              Name = gold_max_amount
+              Template = evil_hand
+            Operator = Absolute
+            Value
+              ValueType = Constant
+              Value = 800
       Item
         TargetTemplate = skill_effect_enviromental_spell_poison.explosion
         Properties
@@ -4214,12 +4276,12 @@ res_potions_complex.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_potions_complex_X_desc
@@ -4308,6 +4370,22 @@ res_potions_complex.stage_3
             Value
               ValueType = Constant
               Value = 200
+          Item
+            Target
+              Name = gold_min_amount
+              Template = evil_hand
+            Operator = Absolute
+            Value
+              ValueType = Constant
+              Value = 800
+          Item
+            Target
+              Name = gold_max_amount
+              Template = evil_hand
+            Operator = Absolute
+            Value
+              ValueType = Constant
+              Value = 800
       Item
         TargetTemplate = skill_effect_enviromental_spell_poison.explosion
         Properties
@@ -4400,12 +4478,12 @@ res_potions_simple.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks = Append
@@ -4424,7 +4502,6 @@ res_potions_simple.stage_2
     Parts = Append
       Item = ResearchStage
       Item = DynamicAttackValueBuffPart
-      Item = BuffResearchUnlock
     TargetSelector = bts_player_evilhand
   ResearchStage
     Cost
@@ -4432,12 +4509,12 @@ res_potions_simple.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_potions_simple_X_desc
@@ -4446,30 +4523,6 @@ res_potions_simple.stage_2
       Item
         TargetTemplate = evil_hand
         Properties
-          Item
-            Target
-              Name = speed_area
-              Template = evil_hand
-            Operator = Absolute
-            Value
-              ValueType = Constant
-              Value = 2
-          Item
-            Target
-              Name = speed_strength_min
-              Template = evil_hand
-            Operator = Absolute
-            Value
-              ValueType = Constant
-              Value = 0.25
-          Item
-            Target
-              Name = speed_strength_max
-              Template = evil_hand
-            Operator = Absolute
-            Value
-              ValueType = Constant
-              Value = 0.25
           Item
             Target
               Name = brainwash_area
@@ -4526,9 +4579,6 @@ res_potions_simple.stage_2
             Value
               ValueType = Constant
               Value = 300
-  BuffResearchUnlock
-    Unlocks = Append
-      Item = door_slime.buff_poison
 res_potions_simple.stage_3
   Buff
     Parts = Append
@@ -4541,12 +4591,12 @@ res_potions_simple.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_potions_simple_X_desc
@@ -4555,30 +4605,6 @@ res_potions_simple.stage_3
       Item
         TargetTemplate = evil_hand
         Properties
-          Item
-            Target
-              Name = speed_area
-              Template = evil_hand
-            Operator = Absolute
-            Value
-              ValueType = Constant
-              Value = 2
-          Item
-            Target
-              Name = speed_strength_min
-              Template = evil_hand
-            Operator = Absolute
-            Value
-              ValueType = Constant
-              Value = 0.25
-          Item
-            Target
-              Name = speed_strength_max
-              Template = evil_hand
-            Operator = Absolute
-            Value
-              ValueType = Constant
-              Value = 0.25
           Item
             Target
               Name = brainwash_area
@@ -4634,6 +4660,14 @@ res_potions_simple.stage_3
             Value
               ValueType = Constant
               Value = 600
+          Item
+            Target
+              Name = slimedoor_poison_damage
+              Template = evil_hand
+            Operator = Absolute
+            Value
+              ValueType = Constant
+              Value = 3
       Item
         TargetTemplate = door_slime
         Properties
@@ -4658,12 +4692,12 @@ res_powerchamber.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -4684,12 +4718,12 @@ res_powerchamber.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_powerchamber_2_desc
@@ -4712,12 +4746,12 @@ res_powerchamber.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_powerchamber_3_desc
@@ -4740,12 +4774,12 @@ res_prison.stage_1
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffResearchUnlock
     Unlocks
@@ -4765,12 +4799,12 @@ res_prison.stage_2
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_common_capacitypertile
@@ -4796,12 +4830,12 @@ res_prison.stage_3
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties = Append
@@ -4817,19 +4851,19 @@ res_prison.stage_4
     Parts = Append
       Item = ResearchStage
       Item = BuffProperties
-    TargetSelector = bts_prison
+    TargetSelector = bts_player_prison
   ResearchStage
     Cost
       CostEntries = Append
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties = Append
@@ -4838,6 +4872,37 @@ res_prison.stage_4
         Value
           ValueType = Constant
           Value = 0.5
+res_prison.stage_5
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = ResearchStage
+    TargetSelector = bts_player_hero_prison
+  ResearchStage
+    Cost
+      CostEntries
+        Item
+          Value = 1250
+          ValueFactors
+          CurrencyManager = GoldManager
+        Item
+          Value = 300
+          ValueFactors
+          CurrencyManager = EvilnessManager
+  UiDataResearchStage
+    Description = res_prison_5_desc
+  BuffProperties
+    Properties
+      Item
+        Property = Prison.PreventJobs
+        Value
+          ValueType = Constant
+          Value = 
+      Item
+        Property = HeroDecayWhenKilled.AutoImprisonTime
+        Value
+          ValueType = Constant
+          Value = 7
 res_relaxchamber.stage_1
   Buff
     Parts
@@ -4851,12 +4916,12 @@ res_relaxchamber.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -4868,7 +4933,7 @@ res_relaxchamber.stage_2
     Parts
       Item = ResearchStage
       Item = MonsterNeedBuffPart
-    TargetSelector = bts_player_demon
+    TargetSelector = bts_player_demon_no_pitfiend
   ResearchStage
     Cost
       Time = 0
@@ -4876,12 +4941,12 @@ res_relaxchamber.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_relaxchamber_2_desc
@@ -4912,7 +4977,7 @@ res_relaxchamber.stage_3
     Parts
       Item = ResearchStage
       Item = MonsterNeedBuffPart
-    TargetSelector = bts_player_demon
+    TargetSelector = bts_player_demon_no_pitfiend
   ResearchStage
     Cost
       Time = 0
@@ -4920,12 +4985,12 @@ res_relaxchamber.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_relaxchamber_3_desc
@@ -4953,7 +5018,7 @@ res_relaxchamber.stage_4
     Parts
       Item = ResearchStage
       Item = MonsterNeedBuffPart
-    TargetSelector = bts_demon
+    TargetSelector = bts_demon_no_pitfiend
   ResearchStage
     Cost
       Time = 0
@@ -4961,12 +5026,12 @@ res_relaxchamber.stage_4
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_relaxchamber_4_desc
@@ -5005,7 +5070,7 @@ res_skeletonlord.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 100
@@ -5031,12 +5096,12 @@ res_skeletonlord.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_skeleton_2_desc
@@ -5060,12 +5125,12 @@ res_skeletonlord.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_skeleton_3_desc
@@ -5104,12 +5169,12 @@ res_skeletonlord.stage_4
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_skeleton_4_desc
@@ -5132,12 +5197,12 @@ res_skeletonlord.stage_5
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_skeleton_5_desc
@@ -5161,7 +5226,7 @@ res_snot.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_snot_1_desc
@@ -5185,12 +5250,12 @@ res_snot.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_snot_2_desc
@@ -5210,12 +5275,12 @@ res_snot.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_snot_3_desc
@@ -5237,12 +5302,12 @@ res_snot.stage_4
       CostEntries = Append
         Item
           Value = 1000
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = GoldManager
         Item
           Value = 250
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = EvilnessManager
   UiDataResearchStage
@@ -5262,12 +5327,12 @@ res_snot.stage_5
       CostEntries = Append
         Item
           Value = 1500
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = GoldManager
         Item
           Value = 300
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = EvilnessManager
   UiDataResearchStage
@@ -5290,12 +5355,12 @@ res_snot.stage_6
       CostEntries = Append
         Item
           Value = 1500
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = GoldManager
         Item
           Value = 300
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = EvilnessManager
   UiDataResearchStage
@@ -5332,12 +5397,12 @@ res_spells_charge.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks = Append
@@ -5360,12 +5425,12 @@ res_spells_charge.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_spells_charge_2_desc
@@ -5498,12 +5563,12 @@ res_spells_charge.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 600
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_spells_charge_3_desc
@@ -5637,12 +5702,12 @@ res_spells_simple.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_spells_simple_1_desc
@@ -5666,12 +5731,12 @@ res_spells_simple.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_spells_simple_2_desc
@@ -5733,12 +5798,12 @@ res_spells_simple.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_spells_simple_3_desc
@@ -5746,7 +5811,7 @@ res_spells_simple.stage_3
     TargetEntries = Append
       Item
         TargetTemplate = evil_hand
-        Properties = Append
+        Properties
           Item
             Target
               Name = portal_mana_cost
@@ -5803,12 +5868,12 @@ res_succubus.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_common_unlockcreature
@@ -5825,12 +5890,12 @@ res_succubus.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_succubus_2_desc
@@ -5854,12 +5919,12 @@ res_succubus.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_succubus_3_desc
@@ -5890,12 +5955,12 @@ res_succubus.stage_4
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_succubus_4_desc
@@ -5931,12 +5996,12 @@ res_succubus.stage_5
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
       Time = 0
   UiDataResearchStage
@@ -5952,12 +6017,12 @@ res_succubus.stage_6
       CostEntries = Append
         Item
           Value = 750
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
           CurrencyManager = GoldManager
         Item
           Value = 300
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
           CurrencyManager = EvilnessManager
   UiDataResearchStage
@@ -5992,12 +6057,12 @@ res_temple.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_common_unlockroom
@@ -6014,12 +6079,12 @@ res_temple.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_common_capacitypertile
@@ -6047,12 +6112,12 @@ res_temple.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_temple_3_desc
@@ -6076,12 +6141,12 @@ res_temple.stage_4
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_temple_4_desc
@@ -6111,12 +6176,12 @@ res_temple.stage_5
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties
@@ -6140,12 +6205,12 @@ res_temple.stage_6
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_temple_5_desc
@@ -6153,7 +6218,7 @@ res_temple.stage_6
     TargetEntries = Append
       Item
         TargetTemplate = unit_monster_undead_base
-        Properties = Append
+        Properties
           Item
             Target
               Name = summon_max_count
@@ -6174,12 +6239,12 @@ res_throneroom.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_throneroom_1_desc
@@ -6208,12 +6273,12 @@ res_throneroom.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_throneroom_2_desc
@@ -6233,12 +6298,12 @@ res_throneroom.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_throneroom_3_desc
@@ -6256,12 +6321,12 @@ res_throneroom.stage_4
       CostEntries = Append
         Item
           Value = 750
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = GoldManager
         Item
           Value = 100
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = EvilnessManager
   UiDataResearchStage
@@ -6277,12 +6342,12 @@ res_throneroom.stage_5
       CostEntries = Append
         Item
           Value = 750
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = GoldManager
         Item
           Value = 150
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = EvilnessManager
   Buff
@@ -6310,12 +6375,12 @@ res_throneroom.stage_6
       CostEntries = Append
         Item
           Value = 750
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = GoldManager
         Item
           Value = 150
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = EvilnessManager
   Buff
@@ -6340,12 +6405,12 @@ res_torturechamber.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -6366,12 +6431,12 @@ res_torturechamber.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_torturechamber_2_desc
@@ -6402,12 +6467,12 @@ res_torturechamber.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_common_efficiency
@@ -6424,12 +6489,12 @@ res_totem.stage_1
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   BuffResearchUnlock
     Unlocks
@@ -6450,12 +6515,12 @@ res_totem.stage_2
         Item
           Value = 1200
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_totem_2_desc
@@ -6479,12 +6544,12 @@ res_totem.stage_3
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_horde
   UiDataResearchStage
     Description = res_totem_3_desc
@@ -6523,7 +6588,7 @@ res_trap_ground.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_trap_ground_X_desc
@@ -6547,12 +6612,12 @@ res_trap_ground.stage_2
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
       Time = 200
   UiDataResearchStage
@@ -6586,6 +6651,7 @@ res_trap_ground.stage_3
       Item = BuffReduceHeroTrapResistance
       Item = BuffResearchUnlock
       Item = BuffPartLockSkillBuff
+      Item = BuffPartLockSkillDamage
     TargetSelector = bts_player_trap_ground_spike_skill
   ResearchStage
     Cost
@@ -6593,12 +6659,12 @@ res_trap_ground.stage_3
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
       Time = 300
   UiDataResearchStage
@@ -6607,7 +6673,7 @@ res_trap_ground.stage_3
     TargetEntries = Append
       Item
         TargetTemplate = trap_ground_slime_medium
-        Properties = Append
+        Properties
           Item
             Target
               Name = slow_duration
@@ -6636,6 +6702,7 @@ res_trap_ground.stage_3
       Item = skill_trap_spike_damage_cold
       Item = skill_trap_spike_damage_cold.buff
   BuffPartLockSkillBuff
+  BuffPartLockSkillDamage
 res_trap_simple
   Include = res_base
   Research
@@ -6665,7 +6732,7 @@ res_trap_simple.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_trap_simple_X_desc
@@ -6688,12 +6755,12 @@ res_trap_simple.stage_2
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
       Time = 200
   UiDataResearchStage
@@ -6789,12 +6856,12 @@ res_trap_simple.stage_3
         Item
           Value = 2500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
       Time = 300
   UiDataResearchStage
@@ -6803,7 +6870,7 @@ res_trap_simple.stage_3
     TargetEntries = Append
       Item
         TargetTemplate = trap_simple_pusher
-        Properties = Append
+        Properties
           Item
             Target
               Name = knockdown
@@ -6820,7 +6887,7 @@ res_trap_simple.stage_3
               Value = -15
       Item
         TargetTemplate = trap_simple_saw
-        Properties = Append
+        Properties
           Item
             Target
               Name = damage
@@ -6885,7 +6952,7 @@ res_trap_trigger.stage_1
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
       Time = 300
   UiDataResearchStage
@@ -6910,12 +6977,12 @@ res_trap_trigger.stage_2
         Item
           Value = 1750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
       Time = 500
   UiDataResearchStage
@@ -7044,12 +7111,12 @@ res_trap_trigger.stage_3
         Item
           Value = 2500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
       Time = 500
   UiDataResearchStage
@@ -7077,7 +7144,7 @@ res_trap_trigger.stage_3
               Value = 2
       Item
         TargetTemplate = trap_trigger_slimeball.ball
-        Properties = Append
+        Properties
           Item
             Target
               Name = damage
@@ -7087,7 +7154,7 @@ res_trap_trigger.stage_3
               Value = 60
       Item
         TargetTemplate = trap_trigger_guru
-        Properties = Append
+        Properties
           Item
             Target
               Name = fire_resistance_down
@@ -7120,7 +7187,7 @@ res_trap_trigger.stage_3
               Value = 50
       Item
         TargetTemplate = trap_trigger_hamster.wheel
-        Properties = Append
+        Properties
           Item
             Target
               Name = damage
@@ -7130,7 +7197,7 @@ res_trap_trigger.stage_3
               Value = 300
       Item
         TargetTemplate = trap_trigger_lootbox
-        Properties = Append
+        Properties
           Item
             Target
               Name = damage
@@ -7146,6 +7213,17 @@ res_trap_trigger.stage_3
             Value
               ValueType = Constant
               Value = 2
+      Item
+        TargetTemplate = trap_trigger_slimeball
+        Properties
+          Item
+            Target
+              Name = damage
+              Template = trap_trigger_slimeball
+            Operator = Absolute
+            Value
+              ValueType = Constant
+              Value = 60
   BuffReduceHeroTrapResistance
     ReductionValue = 50
     Aspect = aspect_trap_trigger
@@ -7165,7 +7243,7 @@ res_treasury.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_common_unlockroom
@@ -7182,12 +7260,12 @@ res_treasury.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffProperties
     Properties
@@ -7211,12 +7289,12 @@ res_treasury.stage_3
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffProperties
     Properties = Append
@@ -7240,12 +7318,12 @@ res_treasury.stage_4
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffProperties
     Properties = Append
@@ -7268,12 +7346,12 @@ res_treasury.stage_5
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   BuffProperties
     Properties = Append
@@ -7299,7 +7377,7 @@ res_undead.stage_1
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffResearchUnlock
     Unlocks
@@ -7332,12 +7410,12 @@ res_undead.stage_10
         Item
           Value = 2500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties
@@ -7369,7 +7447,7 @@ res_undead.stage_2
         Item
           Value = 1250
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 100
@@ -7414,7 +7492,7 @@ res_undead.stage_3
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 200
@@ -7461,12 +7539,12 @@ res_undead.stage_4
         Item
           Value = 1500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 250
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties
@@ -7509,12 +7587,12 @@ res_undead.stage_5
         Item
           Value = 1750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffResearchUnlock
     Unlocks
@@ -7580,12 +7658,12 @@ res_undead.stage_6
         Item
           Value = 1750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 350
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   UiDataResearchStage
     Description = res_undead_X_desc
@@ -7606,12 +7684,12 @@ res_undead.stage_7
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties
@@ -7652,12 +7730,12 @@ res_undead.stage_8
         Item
           Value = 2000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 400
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffResearchUnlock
     Unlocks
@@ -7665,6 +7743,7 @@ res_undead.stage_8
       Item = res_vampire.stage_5
       Item = res_necromancer.stage_4
       Item = res_crypt.stage_4
+      Item = res_prison.stage_5
   BuffProperties
     Properties
       Item
@@ -7696,12 +7775,12 @@ res_undead.stage_9
         Item
           Value = 2500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_undead
   BuffProperties
     Properties
@@ -7757,7 +7836,7 @@ res_vampire.stage_1
           ValueFactors
             Item = factor_cost_res_undead
         Item
-          Value = 450
+          Value = 350
           CurrencyManager = EvilnessManager
           ValueFactors
             Item = factor_cost_res_undead
@@ -7890,7 +7969,7 @@ res_vortex.stage_1
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffResearchUnlock
     Unlocks
@@ -7910,12 +7989,12 @@ res_vortex.stage_2
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffProperties
     Properties
@@ -7938,12 +8017,12 @@ res_vortex.stage_3
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_vortex_3_desc
@@ -7977,12 +8056,12 @@ res_vortex.stage_4
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   UiDataResearchStage
     Description = res_vortex_4_desc
@@ -8003,12 +8082,12 @@ res_vortex.stage_5
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 300
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffProperties
     Properties = Append
@@ -8031,12 +8110,12 @@ res_vortex.stage_6
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
         Item
           Value = 500
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_demon
   BuffProperties
     Properties = Append
@@ -8073,7 +8152,7 @@ res_workshop.stage_1
         Item
           Value = 500
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -8094,12 +8173,12 @@ res_workshop.stage_2
         Item
           Value = 750
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 50
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -8126,12 +8205,12 @@ res_workshop.stage_3
       CostEntries = Append
         Item
           Value = 1000
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = GoldManager
         Item
           Value = 200
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
           CurrencyManager = EvilnessManager
   Buff
@@ -8157,12 +8236,12 @@ res_workshop.stage_4
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 150
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   UiDataResearchStage
     Description = res_common_efficiency
@@ -8181,12 +8260,12 @@ res_workshop.stage_5
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 100
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -8215,12 +8294,12 @@ res_workshop.stage_6
         Item
           Value = 1000
           CurrencyManager = GoldManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
         Item
           Value = 200
           CurrencyManager = EvilnessManager
-          ValueFactors = Append
+          ValueFactors
             Item = factor_cost_res_dungeon
   Buff
     Parts
@@ -8775,6 +8854,7 @@ res_prison
       Item = res_prison.stage_2
       Item = res_prison.stage_3
       Item = res_prison.stage_4
+      Item = res_prison.stage_5
     AllowRandomLock = True
   UiDataResearch
     Icon = a69bd3d3f55f5c446a3ac03b3ccbb77b

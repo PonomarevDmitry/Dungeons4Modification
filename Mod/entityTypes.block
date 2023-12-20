@@ -29,6 +29,8 @@ tag_raging_orc
   Include = tag_base
 tag_slapped
   Include = tag_base
+tag_sleep_buff_immune
+  Include = tag_base
 tag_sticky
   Include = tag_base
 tag_vulcano_buff_immune

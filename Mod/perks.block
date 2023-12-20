@@ -27,6 +27,7 @@
     BuffStrengthSource = RandomBetweenMinAndMax
   UiDataGeneric
     Description = perk_potion_armor_desc
+    Title = perk_potion_armor_capt
 buff_perk_potion_aspect_fire
   Include = buff_perk_potion_base
   Buff
@@ -58,6 +59,7 @@ buff_perk_potion_aspect_fire
       Item = perk_potion_aspect_fire_suffix_f_3
   UiDataGeneric
     Description = perk_potion_aspect_fire_desc
+    Title = perk_potion_aspect_fire_capt
 buff_perk_potion_aspect_fire.buff
   Buff
     Parts = Append
@@ -99,6 +101,7 @@ buff_perk_potion_aspect_ice
       Item = perk_potion_aspect_ice_suffix_f_3
   UiDataGeneric
     Description = perk_potion_aspect_ice_desc
+    Title = perk_potion_aspect_ice_capt
 buff_perk_potion_aspect_ice.buff
   Buff
     Parts = Append
@@ -140,6 +143,7 @@ buff_perk_potion_aspect_magic
       Item = perk_potion_aspect_magic_suffix_f_3
   UiDataGeneric
     Description = perk_potion_aspect_magic_desc
+    Title = perk_potion_aspect_magic_capt
 buff_perk_potion_aspect_magic.buff
   Buff
     Parts = Append
@@ -181,6 +185,7 @@ buff_perk_potion_aspect_physical
       Item = perk_potion_aspect_physical_suffix_f_3
   UiDataGeneric
     Description = perk_potion_aspect_physical_desc
+    Title = perk_potion_aspect_physical_capt
 buff_perk_potion_aspect_physical.buff
   Buff
     Parts = Append
@@ -233,6 +238,7 @@ buff_perk_potion_damage
     BuffStrengthSource = RandomBetweenMinAndMax
   UiDataGeneric
     Description = perk_potion_damage_desc
+    Title = perk_potion_damage_capt
 buff_perk_potion_health
   Include = buff_perk_potion_base
   Buff
@@ -262,6 +268,7 @@ buff_perk_potion_health
     BuffStrengthSource = RandomBetweenMinAndMax
   UiDataGeneric
     Description = perk_potion_health_desc
+    Title = perk_potion_health_capt
 buff_perk_potion_payday
   Include = buff_perk_potion_base
   Buff
@@ -289,6 +296,7 @@ buff_perk_potion_payday
     BuffStrengthSource = PotionLevel
   UiDataGeneric
     Description = perk_potion_payday_desc
+    Title = perk_potion_payday_capt
 buff_perk_potion_randomdeaddrop
   Include = buff_perk_potion_base
   Buff
@@ -306,6 +314,7 @@ buff_perk_potion_randomdeaddrop
       Item = perk_potion_randomdeaddrop_suffix_f_3
   UiDataGeneric
     Description = perk_potion_randomdeaddrop_desc
+    Title = perk_potion_randomdeaddrop_capt
   BuffDropRandomResourceOnEvent
     EventType = Combat.OnDied
     Entries
@@ -352,6 +361,7 @@ buff_perk_potion_regeneration
       Item = perk_potion_regeneration_suffix_f_3
   UiDataGeneric
     Description = perk_potion_regeneration_desc
+    Title = perk_potion_regeneration_capt
 evilperk_base
   Abstract = True
   EvilPerk
@@ -670,7 +680,7 @@ evilperk_general_traps_and_doors.buff_traps
               Value = 0.5
       Item
         TargetTemplate = trap_ground_spike_small
-        Properties = Append
+        Properties
           Item
             Target
               Name = dmg_fire
@@ -1001,6 +1011,48 @@ evilperk_speed.buff
         Value
           ValueType = Constant
           Value = 0.2
+evilperk_thalya_canonier
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_thalya_canonier.buff
+  UiDataGeneric
+    Icon = 2c8a88f085eb3b545ab76adea74e8993
+    Title = evilperk_thalya_canonier_capt
+    Description = evilperk_thalya_canonier_desc
+    Flavour = cha_general_winmap_desc
+evilperk_thalya_canonier.buff
+  Buff
+    Parts
+      Item = BuffProperties
+      Item = BuffPartLockSkillDamage
+      Item = BuffResearchUnlock
+      Item = DynamicAttackValueBuffPart
+    TargetSelector = bts_player_protagonist_skill
+  BuffProperties
+    Properties
+      Item
+        Property = Attack.RangeBonus
+        Value
+          ValueType = Constant
+          Value = 4
+  BuffResearchUnlock
+    Unlocks
+      Item = skill_damage_thalya_area
+  BuffPartLockSkillDamage
+  DynamicAttackValueBuffPart
+    TargetEntries
+      Item
+        TargetTemplate = plot_protagonist_evil
+        Properties
+          Item
+            Target
+              Name = default_attack_area
+              Template = plot_protagonist_evil
+            Operator = Absolute
+            Value
+              ValueType = Constant
+              Value = 3
 evilperk_thalya_damage
   Include = evilperk_base
   EvilPerk
@@ -1043,6 +1095,33 @@ evilperk_thalya_damage.buff
             Value
               ValueType = Constant
               Value = 0.5
+evilperk_thalya_glass_canon
+  Include = evilperk_base
+  EvilPerk
+    PerkBuffs
+      Item = evilperk_thalya_glass_canon.buff
+  UiDataGeneric
+    Title = evilperk_thalya_glass_canon_capt
+    Description = evilperk_thalya_glass_canon_desc
+    Icon = 1f698327a528be04fa1b6f5e05015418
+    Flavour = cha_general_winmap_desc
+evilperk_thalya_glass_canon.buff
+  Buff
+    Parts
+      Item = BuffProperties
+    TargetSelector = bts_protagonist
+  BuffProperties
+    Properties
+      Item
+        Property = Combat.MaxHealthBonusFactorMultiplicative
+        Value
+          ValueType = Constant
+          Value = -0.8
+      Item
+        Property = Attack.AttackDamageFactor
+        Value
+          ValueType = Constant
+          Value = 3
 evilperk_thalya_health
   Include = evilperk_base
   EvilPerk

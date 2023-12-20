@@ -65,9 +65,6 @@ effect_fill_torture
     Properties
       Item
         Property = TortureModule.PreventRefillJob
-        Value
-          ValueType = Constant
-          Value = 
   WorkstationEffect
     Target = Workstation
     Time = All
@@ -538,7 +535,7 @@ interaction_relaxchamber_bath
     TargetWorkstation = workstation_room_relaxchamber
     Interaction
       Item = SelectorInstructionEntry
-        ToSelectFrom = Append
+        ToSelectFrom
           Item
             Extern = False
             TargetWorkplace = workplace_relaxchamber_bath
@@ -775,6 +772,7 @@ interaction_worship
         Required = RequireAllway
         Instruction
           TargetWorkplace = workplace_worship
+        PreventWait = True
     ActivityType = Worship
 workplace_base
   Abstract = True
@@ -842,7 +840,7 @@ workplace_heal_graveyard
     ActionModule = HealWithCargoActionModule
     Trigger = Append
       Item = OtherWorkplaceTriggerDefinition
-        Targets = Append
+        Targets
           Item
             Target = workplace_sleep
             TargetState = Action
@@ -1386,7 +1384,7 @@ workplace_torture_master_backup
   Include = workplace_base
   Workplace
     LocationModule = ConstantWorkplaceLocationModule
-    ActionModule = AnimationWorkplaceActionModule
+    ActionModule = AnimationWorkplaceTortureModule
     Effects
       Item = effect_torture_master
       Item = effect_prevent_strike_visual
@@ -1408,18 +1406,15 @@ workplace_torture_master_backup
   NeedDurationModule
     TargetNeeds
       Item = need_torture
-  AnimationWorkplaceActionModule
+  AnimationWorkplaceTortureModule
     TimingModule = NeedDurationModule
-    Config
-      Animation = anim_demon_torture
-      UserActorSlot
-        Name = unit
-        Template = anim_demon_torture
-      UpdateUserPosition = False
-      TeleportOnAbort = True
-      PositionUpdateEvent
-        Name = 
-        Template = 
+    Animation = anim_demon_torture
+    UserSlot
+      Name = unit
+      Template = anim_demon_torture
+    TorturesUnitSlot
+      Name = target
+      Template = anim_demon_torture
 workplace_torture_wait
   Include = workplace_base
   Workplace
@@ -1858,7 +1853,7 @@ workstation_gimmick_workshop_battery.deliver_boxes
         Type = GimmickStateTrigger
       Item = InternalStorageTriggerDefinition
         Type = AutoRestockInternalStorage
-        TargetStorage = Append
+        TargetStorage
           Item
             Name = box_input
             Template = gimmick_workshop_battery
@@ -1887,7 +1882,7 @@ workstation_gimmick_workshop_battery.deliver_mana
         Type = GimmickStateTrigger
       Item = InternalStorageTriggerDefinition
         Type = AutoRestockInternalStorage
-        TargetStorage = Append
+        TargetStorage
           Item
             Name = mana_input
             Template = gimmick_workshop_battery

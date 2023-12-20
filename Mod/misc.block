@@ -825,7 +825,7 @@ artifact_spells.buff
     TargetEntries = Append
       Item
         TargetTemplate = evil_hand
-        Properties = Append
+        Properties
           Item
             Target
               Name = portal_mana_cost
@@ -1150,12 +1150,13 @@ entrance
     SelectionColliderHeight = 0
     SelectionRadius = 7
   FogOfWarHide
+    CullInDungeonIfOwned = True
   UiDataMinimapIcon
     Icon = 8a8c94deb83885e43abc4ba2a4d598e0
     Size = 60
   UiDataGeneric
     Title = entrance_capt
-    Description = ""
+    Description = entrance_desc
     Flavour = ""
     Icon = 7b9e3006b947a5f49b96e499424004c4
   EntityType
@@ -1220,6 +1221,7 @@ entrance_dwarfs
   EvilSelectable
     SelectionColliderHeight = 2.88
   FogOfWarHide
+    CullInDungeonIfOwned = True
   UiDataMinimapIcon
     Icon = 8a8c94deb83885e43abc4ba2a4d598e0
   VisualRepresentation
@@ -1263,7 +1265,7 @@ entrance_outside
   UiDataGeneric
     Icon = 7b9e3006b947a5f49b96e499424004c4
     Title = entrance_capt
-    Description = entrance_capt
+    Description = entrance_desc
     Flavour = ""
   TerrainCutout
     Poly = Append
@@ -1307,7 +1309,7 @@ entrance_outside_dwarfmine
   UiDataGeneric
     Icon = 3729af479492afd49bc9a5e06f1d925e
     Title = entrance_capt
-    Description = entrance_capt
+    Description = entrance_desc
     OverheadPingOffset = 3
     OverheadPingPosOffset = -1 0
   TerrainCutout
@@ -1350,7 +1352,7 @@ entrance_outside_dwarfs
   UiDataGeneric
     Icon = 3729af479492afd49bc9a5e06f1d925e
     Title = entrance_capt
-    Description = entrance_capt
+    Description = entrance_desc
   TerrainCutout
     Depth = 5
     Poly = Append
@@ -1422,7 +1424,7 @@ entrance_outside_mausoleum
   EvilificationInfluencer
 evil_hand
   PrefabReference
-    ClientPrefab = 979f8b9db2a996046a463e1fe0341969 33e356fcab9f5064c8ec819029d58246 aa09eec8a37742c4fb1c3d299362c3f9 422c26b151f966544962e0f4a1778f47 2c28207d120b8ed48b5dd7f9ee7c8ab6 c9c7c46d8c742bb498f00cc69a109f3d 51ace6ff876d17f4aa68f3466bd37ef1 4518f1389ebca1545951ec40da6e9d26 913f957325c8ba645a2200a78dfa2d8e
+    ClientPrefab = 979f8b9db2a996046a463e1fe0341969 979f8b9db2a996046a463e1fe0341969
   Owner = SinglePlayer
   ServerEvilHand
   SpellCaster
@@ -1501,7 +1503,7 @@ evil_hand
         Value = 80
       Item
         Name = airwave_stun_duration
-        Value = 0
+        Value = 0.5
       Item
         Name = batrain_area
         Value = 11
@@ -1645,7 +1647,7 @@ evil_hand
         Value = 5
       Item
         Name = slimedoor_poison_damage
-        Value = 2
+        Value = 1
       Item
         Name = slimedoor_poison_duration
         Value = 3
@@ -1730,34 +1732,6 @@ evil_hand
     Types = Append
       Item = type_evilhand
   CasActorType
-  VisualRepresentationBySkin
-    SkinObjectName = hand
-    IndexBySkinId = Append
-      Item
-        SkinId = default
-        Index = 2
-      Item
-        SkinId = skin
-        Index = 0
-      Item
-        SkinId = fachorde
-        Index = 5
-      Item
-        SkinId = facdemon
-        Index = 4
-      Item
-        SkinId = facundead
-        Index = 6
-      Item
-        SkinId = gold
-        Index = 3
-      Item
-        SkinId = legacy
-        Index = 1
-  VisualRepresentationSkinnedHand
-  VisualRepresentationDefaultHandByCampaignProgress
-    IndexAfterMain15 = 7
-    IndexAfterMain16 = 8
 evilness_carried
   Include = base_carried_currency
   PrefabReference
@@ -1980,7 +1954,7 @@ location_only
 mana_carried
   Include = base_carried_currency
   PrefabReference
-    ClientPrefab = a7bf614aa3b190c4688eab256567b04a
+    ClientPrefab = 701110cef450d634283263f3142c631d
   EvilHandPickup
     PickupType = Mana
     PickupSound = hand_pick_mana
@@ -2101,18 +2075,6 @@ occupation_toolbox
     Icon = ca60ea619b8b52a48a3450c2131b4f1f
     Title = ui_occupation_toolbox_capt
     Description = ui_occupation_toolbox_desc
-occupation_beer
-  JobOccupation
-    Categories = Append
-      Item = ReviveThalia
-      Item = BrewBeer
-    UiOrder = 4
-    IdleRoomFromCurrency = BeerManager
-    IdleNeedsGimmick = True
-  UiDataGeneric
-    Icon = 883ec7b1c6c990b4ea43887a405ccb62
-    Title = ui_occupation_beer_capt
-    Description = ui_occupation_beer_desc
 occupation_mana
   JobOccupation
     Categories = Append
@@ -2129,7 +2091,7 @@ occupation_none
   JobOccupation
     UiOrder = 0
   UiDataGeneric
-    Icon = 8f963855d38cf2b48a951407b739d52f
+    Icon = 5881ab7491eb4fe4c835e8947c9aa79a
     Title = ui_occupation_none_capt
     Description = ui_occupation_none_desc
 occupation_potion
@@ -2137,7 +2099,7 @@ occupation_potion
     Categories = Append
       Item = ReviveThalia
       Item = ProducePotion
-    UiOrder = 5
+    UiOrder = 4
     IdleRoomFromCurrency = PotionManager
     IdleNeedsGimmick = True
   UiDataGeneric
@@ -2357,6 +2319,8 @@ player_playable
     ManalingTemplate = creep_manaling
     SpawnChance = 10
     MaxAmmountToSpawn = 1
+  JobOccupationManager
+  GuardManager
 player_playable.buff_preferred_target
   Buff
     RemoveDeadTargets = False
@@ -2569,7 +2533,6 @@ world
     FogOfWarUncoverTemplate = fog_of_war_uncover
     EvilInterestDuration = 70
     FightAlarmDistanceNormal = 30
-    FightAlarmDistanceGuardRoom = 100
     FightAlarmDistanceHeart = 75
     TimeToGetUpAfterKnockback = 3.5
     RaidTemplate = raid_base

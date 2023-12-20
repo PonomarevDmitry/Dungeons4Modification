@@ -136,25 +136,25 @@ destroyable_object_with_loot
         B = Entity||ScriptEntity|
     Actions = Append
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = RandomChanceCondition
             Chance = Int|||25
-        ThenActions = Append
+        ThenActions
           Item = FillList
             List = EntityList||temproom_list|
             Owner = SinglePlayer
-            Filter = Append
+            Filter
               Item = EntityListFilterEntityType
                 EntityType = type_workshop
           Item = CountEntitiesInList
             Count = Int||counter|0
             EntityList = EntityList||temproom_list|
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||counter|0
                 Op = greater
-            ThenActions = Append
+            ThenActions
               Item = SpawnTemplate
                 Template = toolbox_orb
                 Owner = SinglePlayer
@@ -165,25 +165,25 @@ destroyable_object_with_loot
       Item = ClearEntityList
         EntityList = EntityList||temproom_list|
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = RandomChanceCondition
             Chance = Int|||25
-        ThenActions = Append
+        ThenActions
           Item = FillList
             List = EntityList||temproom_list|
             Owner = SinglePlayer
-            Filter = Append
+            Filter
               Item = EntityListFilterEntityType
                 EntityType = type_gurufarm
           Item = CountEntitiesInList
             Count = Int||counter|0
             EntityList = EntityList||temproom_list|
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||counter|0
                 Op = greater
-            ThenActions = Append
+            ThenActions
               Item = SpawnTemplate
                 Template = guru_orb
                 Owner = SinglePlayer
@@ -194,25 +194,25 @@ destroyable_object_with_loot
       Item = ClearEntityList
         EntityList = EntityList||temproom_list|
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = RandomChanceCondition
             Chance = Int|||25
-        ThenActions = Append
+        ThenActions
           Item = FillList
             List = EntityList||temproom_list|
             Owner = SinglePlayer
-            Filter = Append
+            Filter
               Item = EntityListFilterEntityType
                 EntityType = type_temple
           Item = CountEntitiesInList
             Count = Int||counter|0
             EntityList = EntityList||temproom_list|
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||counter|0
                 Op = greater
-            ThenActions = Append
+            ThenActions
               Item = SpawnTemplate
                 Template = faith_orb
                 Owner = SinglePlayer
@@ -223,25 +223,25 @@ destroyable_object_with_loot
       Item = ClearEntityList
         EntityList = EntityList||temproom_list|
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = RandomChanceCondition
             Chance = Int|||25
-        ThenActions = Append
+        ThenActions
           Item = FillList
             List = EntityList||temproom_list|
             Owner = SinglePlayer
-            Filter = Append
+            Filter
               Item = EntityListFilterEntityType
                 EntityType = type_brewery
           Item = CountEntitiesInList
             Count = Int||counter|0
             EntityList = EntityList||temproom_list|
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||counter|0
                 Op = greater
-            ThenActions = Append
+            ThenActions
               Item = SpawnTemplate
                 Template = beer_orb
                 Owner = SinglePlayer
@@ -252,25 +252,25 @@ destroyable_object_with_loot
       Item = ClearEntityList
         EntityList = EntityList||temproom_list|
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = RandomChanceCondition
             Chance = Int|||25
-        ThenActions = Append
+        ThenActions
           Item = FillList
             List = EntityList||temproom_list|
             Owner = SinglePlayer
-            Filter = Append
+            Filter
               Item = EntityListFilterEntityType
                 EntityType = type_arcanium
           Item = CountEntitiesInList
             Count = Int||counter|0
             EntityList = EntityList||temproom_list|
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||counter|0
                 Op = greater
-            ThenActions = Append
+            ThenActions
               Item = SpawnTemplate
                 Template = mana_orb
                 Owner = SinglePlayer
@@ -281,34 +281,34 @@ destroyable_object_with_loot
       Item = ClearEntityList
         EntityList = EntityList||temproom_list|
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = RandomChanceCondition
             Chance = Int|||25
-        ThenActions = Append
+        ThenActions
           Item = FillList
             List = EntityList||temproom_list|
             Owner = SinglePlayer
-            Filter = Append
+            Filter
               Item = EntityListFilterEntityType
                 EntityType = type_potionlodge
           Item = CountEntitiesInList
             Count = Int||counter|0
             EntityList = EntityList||temproom_list|
           Item = IfThenElse
-            Conditions = Append
+            Conditions
               Item = CompareInt
                 A = Int||counter|0
                 Op = greater
-            ThenActions = Append
+            ThenActions
               Item = SpawnTemplate
                 Template = potion_orb
                 Owner = SinglePlayer
                 Location = PosHead||ScriptEntity|0 0 0
       Item = IfThenElse
-        Conditions = Append
+        Conditions
           Item = RandomChanceCondition
             Chance = Int|||25
-        ThenActions = Append
+        ThenActions
           Item = SpawnTemplate
             Template = gold_orb
             Owner = SinglePlayer
@@ -532,6 +532,8 @@ plot_ice_crystal.vulcano_immune
       DynamicValueSource
         Name = 
         Template = 
+    TargetFilter
+      Item = SkillEntityFilterNeedsEntityType
   SkillTargetSensor
     AreaSource
       Source = Custom
@@ -555,6 +557,8 @@ plot_ice_crystal.vulcano_immune
   CombatDamageAspectImmunity
     ImmuneAspects = Append
       Item = aspect_lava
+  SkillEntityFilterNeedsEntityType
+    EntityType = type_unit
 plot_ice_crystal_marker
   PrefabReference
     ClientPrefab = 3e76fc0eac3027f41bfb54ab20d25843

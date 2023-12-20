@@ -24,7 +24,7 @@ script_skir_hero_spawner_manager
       Item = FillList
         List = EntityList||all_spawner|
         Owner = AIPlayer5
-        Filter = Append
+        Filter
           Item = EntityListFilterAlive
           Item = EntityListFilterInRegion
             Outside = True
