@@ -1910,7 +1910,6 @@ anim_spell_portal
         Name = 
         Template = 
     Conditions = Append
-      Item = SkillNeedsLineOfWalkToOwnUnit
       Item = SkillTargetOnlyOutside
     Range
       Source = Custom
