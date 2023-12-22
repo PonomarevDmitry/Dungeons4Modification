@@ -5237,6 +5237,11 @@ res_snot.stage_1
         Value
           ValueType = Constant
           Value = 0.25
+      Item
+        Property = WorkerBrain.WorkSpeedupFactor
+        Value
+          ValueType = Constant
+          Value = 100
 res_snot.stage_2
   Buff
     Parts
