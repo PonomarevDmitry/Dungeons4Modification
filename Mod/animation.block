@@ -180,7 +180,7 @@ anim_attack_dynamite_carriage
           OutputNodes
             Item = attach_dynamite
           TimeSource = attach_dynamite
-          TimeGroup = Append
+          TimeGroup
             Item = attach_dynamite
           AllowFastAbort = True
         Item = CasActorAnimationClipNode
