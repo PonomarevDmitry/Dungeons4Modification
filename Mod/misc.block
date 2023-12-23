@@ -2193,7 +2193,7 @@ player_playable
     Piles
       Item = toolbox_pile_2x1
       Item = toolbox_pile_1x1
-    WorkerCarryCapacity = 10
+    WorkerCarryCapacity = 100
     Aspects
       Item = aspect_laser
     NotEnoughError = not_enough_toolboxes
@@ -2230,7 +2230,7 @@ player_playable
   NotificationManager
   BeerManager
     CarryMax = 1000000
-    WorkerCarryCapacity = 1
+    WorkerCarryCapacity = 100
     CollectibleTemplates
       Item = beer_collectible
     Piles
@@ -2244,7 +2244,7 @@ player_playable
     ExplosionSkill = beer_explosion_master
     ConstructionAreaTemplate = player_playable.construction_area
   GuruManager
-    WorkerCarryCapacity = 1
+    WorkerCarryCapacity = 100
     CollectibleTemplates
       Item = guru_collectible
     CarryMax = 1000000
@@ -2262,7 +2262,7 @@ player_playable
     Piles
       Item = gimmick_workshop_battery
     PileRoomId = roomid_workshop
-    WorkerCarryCapacity = 10
+    WorkerCarryCapacity = 100
     Aspects
       Item = aspect_laser
     NotEnoughError = not_enough_batteries
