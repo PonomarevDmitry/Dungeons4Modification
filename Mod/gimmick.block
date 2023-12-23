@@ -1983,7 +1983,7 @@ gimmick_totem
           Name = auto_reveive
           Template = gimmick_totem
         Fuel = BatteryManager
-        Duration = 300
+        Duration = 300000
         VisualOverride = 1
         ActivateAnimation = anim_gimmick_battery_activate
         FuelPartnerSlot
